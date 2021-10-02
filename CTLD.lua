@@ -52,14 +52,14 @@ ctld.slingLoad = false -- if false, crates can be used WITHOUT slingloading, by 
 
 ctld.enableSmokeDrop = true -- if false, helis and c-130 will not be able to drop smoke
 
-ctld.maxExtractDistance = 125 -- max distance from vehicle to troops to allow a group extraction
+ctld.maxExtractDistance = 126 -- max distance from vehicle to troops to allow a group extraction
 ctld.maximumDistanceLogistic = 200 -- max distance from vehicle to logistics to allow a loading or spawning operation
 ctld.maximumSearchDistance = 4000 -- max distance for troops to search for enemy
 ctld.maximumMoveDistance = 2000 -- max distance for troops to move from drop point if no enemy is nearby
 
 ctld.minimumDeployDistance = 1000 -- minimum distance from a friendly pickup zone where you can deploy a crate
 
-ctld.numberOfTroops = 10 -- default number of troops to load on a transport heli or C-130 
+ctld.numberOfTroops = 10 -- default number of troops to load on a transport heli or C-130
 							-- also works as maximum size of group that'll fit into a helicopter unless overridden
 ctld.enableFastRopeInsertion = true -- allows you to drop troops by fast rope
 ctld.fastRopeMaximumHeight = 18.28 -- in meters which is 60 ft max fast rope (not rappell) safe height
@@ -542,7 +542,7 @@ ctld.spawnableCrates = {
         { weight = 545, desc = "HAWK Search Radar", unit = "Hawk sr", side = 2 },
         { weight = 546, desc = "HAWK Track Radar", unit = "Hawk tr", side = 2 },
         { weight = 547, desc = "HAWK PCP", unit = "Hawk pcp" , side = 2 }, -- Remove this if on 1.2
-	{ weight = 548, desc = "HAWK CWAR", unit = "Hawk cwar" , side = 2 }, -- Remove this if on 2.5	
+	{ weight = 548, desc = "HAWK CWAR", unit = "Hawk cwar" , side = 2 }, -- Remove this if on 2.5
         { weight = 549, desc = "HAWK Repair", unit = "HAWK Repair" , side = 2 },
         -- End of HAWK
 
@@ -5160,7 +5160,7 @@ function ctld.JTACAutoLase(_jtacGroupName, _laserCode, _smoke, _lock, _colour, _
                 ctld.logTrace(string.format("_frequency=%s", ctld.p(_frequency)))
                 _radio.freq = _frequency
                 _radio.mod = "fm"
-            end        
+            end
         end
     end
 
@@ -5287,7 +5287,7 @@ function ctld.JTACAutoLase(_jtacGroupName, _laserCode, _smoke, _lock, _colour, _
         ctld.jtacSmokeMarks[_tempUnitInfo.name] = nil
 
     	-- JTAC Unit: resume his route ------------
-	    trigger.action.groupContinueMoving(Group.getByName(_jtacGroupName)) 	
+	    trigger.action.groupContinueMoving(Group.getByName(_jtacGroupName))
 
         -- remove from target list
         ctld.jtacCurrentTargets[_jtacGroupName] = nil
@@ -5319,7 +5319,7 @@ function ctld.JTACAutoLase(_jtacGroupName, _laserCode, _smoke, _lock, _colour, _
 
 	        -- JTAC Unit stop his route -----------------
 	        trigger.action.groupStopMoving(Group.getByName(_jtacGroupName)) -- stop JTAC
-            
+
             -- create smoke
             if _smoke == true then
 
@@ -5394,10 +5394,10 @@ function ctld.notifyCoalition(_message, _displayFor, _side, _radio, _shortMessag
     ctld.logTrace(string.format("_radio=%s", ctld.p(_radio)))
 
     local _shortMessage = _shortMessage
-    if _shortMessage == nil then 
+    if _shortMessage == nil then
         _shortMessage = _message
     end
-    
+
     if STTS and STTS.TextToSpeech and _radio and _radio.freq then
         local _freq = _radio.freq
         local _modulation = _radio.mod or "FM"
