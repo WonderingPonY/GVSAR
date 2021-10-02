@@ -6,7 +6,7 @@
 -- # Situation:
 --
 -- This mission demonstrates the dynamic task dispatching for cargo Transport operations of various cargo types.
---
+--penis
 
 HQ = GROUP:FindByName( "HQ", "Bravo" )
 
