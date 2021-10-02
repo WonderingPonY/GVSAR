@@ -17,7 +17,7 @@ yak52:SetDeparture("CYPRUSRAT")
 yak52:SetTakeoff("cold")
 yak52:SetMaxDistance(100)
 yak52:ContinueJourney()
-yak52:Spawn(2)
+yak52:Spawn(1)
 
 local aeroflot=RAT:New("Aeroflot")
 aeroflot:SetDeparture("CYPRUSRAT")
