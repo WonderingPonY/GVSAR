@@ -343,7 +343,7 @@ function CSAR:New(Coalition, Template, Alias)
   self.loadtimemax = 135 -- seconds
   self.radioSound = "beacon.ogg" -- the name of the sound file to use for the Pilot radio beacons. If this isnt added to the mission BEACONS WONT WORK!
   self.allowFARPRescue = true --allows pilot to be rescued by landing at a FARP or Airbase
-  self.FARPRescueDistance = 1000 -- you need to be this close to a FARP or Airport for the pilot to be rescued.
+  self.FARPRescueDistance = 100 -- you need to be this close to a FARP or Airport for the pilot to be rescued.
   self.max_units = 6 --max number of pilots that can be carried
   self.useprefix = true  -- Use the Prefixed defined below, Requires Unit have the Prefix defined below
   self.csarPrefix = { "helicargo", "MEDEVAC"} -- prefixes used for useprefix=true - DON\'T use # in names!
@@ -1166,7 +1166,7 @@ function CSAR:_CheckCloseWoundedGroup(_distance, _heliUnit, _heliName, _woundedG
                   self:_OrderGroupToMoveToPoint(_woundedGroup, _heliUnit:GetCoordinate())
                   self:_DisplayMessageToSAR(_heliUnit, "Wait till " .. _pilotName .. " gets in. \nETA " .. _time .. " more seconds.", self.messageTime, false)
               else
-                  _time = self.landedStatus[_lookupKeyHeli] - 10
+                  _time = self.landedStatus[_lookupKeyHeli] - 45
                   self.landedStatus[_lookupKeyHeli] = _time
               end
               if _time <= 0 or _distance < self.loadDistance then
@@ -1201,7 +1201,7 @@ function CSAR:_CheckCloseWoundedGroup(_distance, _heliUnit, _heliName, _woundedG
 
           if _heliUnit:InAir() and _unitsInHelicopter + 1 <= _maxUnits then
 
-              if _distance < 8.0 then
+              if _distance < 10.0 then
 
                   --check height!
                   local leaderheight = _woundedLeader:GetHeight()
@@ -1213,10 +1213,10 @@ function CSAR:_CheckCloseWoundedGroup(_distance, _heliUnit, _heliName, _woundedG
                       local _time = self.hoverStatus[_lookupKeyHeli]
 
                       if _time == nil then
-                          self.hoverStatus[_lookupKeyHeli] = 10
-                          _time = 10
+                          self.hoverStatus[_lookupKeyHeli] = 45
+                          _time = 45
                       else
-                          _time = self.hoverStatus[_lookupKeyHeli] - 10
+                          _time = self.hoverStatus[_lookupKeyHeli] - 45
                           self.hoverStatus[_lookupKeyHeli] = _time
                       end
 
@@ -1234,7 +1234,7 @@ function CSAR:_CheckCloseWoundedGroup(_distance, _heliUnit, _heliName, _woundedG
                       end
                       _reset = false
                   else
-                      self:_DisplayMessageToSAR(_heliUnit, "Too high to winch " .. _pilotName .. " \nReduce height and hover for 10 seconds!", self.messageTime, true,true)
+                      self:_DisplayMessageToSAR(_heliUnit, "Too high to winch " .. _pilotName .. " \nReduce height and hover for 45 seconds!", self.messageTime, true,true)
                   end
               end
 
