@@ -1,8 +1,5 @@
 ClientGroup = Group.getByName("ClientGroup")
 
 --Messages
-welcomemessage = MESSAGE:New("Welcome"):ToaLlIf(enter)
--- welcomemessage:ToaLlIf(OnEventPlayerEnterUnit)
-
--- Birth Event
-enter:OnEventPlayerEnterUnit(ClientGroup)
+welcomemessage = MESSAGE:New("Welcome"):ToClient()--defines the message and why it will display
+welcomemessage:ToAllIf(OnEventPlayerEnterUnit)--sends the message
