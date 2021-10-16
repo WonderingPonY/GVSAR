@@ -6,7 +6,7 @@ DetectionSetGroup:FilterStart()
 Detection = DETECTION_AREAS:New( DetectionSetGroup, 300000 )
 Detection:SetRefreshTimeInterval( 10 )
 --Filter Catagories
-DetectionSetGroup:FilterCategories( Unit.Category.AIRPLANE ) 
+DetectionSetGroup:FilterCategories( Unit.Category.AIRPLANE )
 
 -- Setup the A2A dispatcher, and initialize it.
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
@@ -21,14 +21,39 @@ A2ADispatcher:SetBorderZone( BorderZone )
 
 --Here we will make the squadrons and set options for each squadron
 -- Squadron 1
-A2ADispatcher:SetSquadron( "Sq 1", "Marj Ruhayyil", { "SFighterMiG29" }, 15 )
+A2ADispatcher:SetSquadron( "Sq 1", "Palmyra", { "SFighterMiG29" }, 15 )
 CAPZoneMid = ZONE:New("CAPZONEREDMID")
+CAPZoneHigh = Zone:New("CAPZONEREDHIGH")
 A2ADispatcher:SetSquadronCap( "Sq 1", CAPZoneMid, 4000, 8000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "Sq 1", 1000, 1500 )
+A2ADispatcher:SetSquadronLandingAtRunway( "Sq 1" )
+A2ADispatcher:SetSquadronGrouping( "Sq 1", 2 )
+A2ADispatcher:SetSquadronOverhead( "Sq 1", 0.1)
+A2ADispatcher:SetSquadronFuelThreshold( "Sq 1", 0.25 )
 --Squadron 2
-A2ADispatcher:SetSquadron( "Sq 2", "Marj Ruhayyil", { "SPatrolMiG21" }, 40 )
+A2ADispatcher:SetSquadron( "Sq 2", "Palmyra", { "SPatrolMiG21" }, 40 )
 A2ADispatcher:SetSquadronCap( "Sq 2", CAPZoneMid, 4000, 8000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "Sq 2", 500, 1500 )
+A2ADispatcher:SetSquadronLandingAtRunway( "Sq 2" )
+A2ADispatcher:SetSquadronGrouping( "Sq 2", 2 )
+A2ADispatcher:SetSquadronOverhead( "Sq 2", 0.1)
+A2ADispatcher:SetSquadronFuelThreshold( "Sq 2", 0.25 )
+--Squadron 3
+A2ADispatcher:SetSquadron( "Sq 3", "Sayqal", { "SPatrolMiG21" }, 40 )
+A2ADispatcher:SetSquadronCap( "Sq 3", CAPZoneHigh, 4000, 8000, 600, 800, 800, 1200, "BARO" )
+A2ADispatcher:SetSquadronGci( "Sq 3", 500, 1500 )
+A2ADispatcher:SetSquadronLandingAtRunway( "Sq 2" )
+A2ADispatcher:SetSquadronGrouping( "Sq 3", 2 )
+A2ADispatcher:SetSquadronOverhead( "Sq 3", 0.1)
+A2ADispatcher:SetSquadronFuelThreshold( "Sq 3", 0.25 )
+--Squadron 4
+A2ADispatcher:SetSquadron( "Sq 4", "Sayqal", { "SPatrolMiG21" }, 40 )
+A2ADispatcher:SetSquadronCap( "Sq 4", CAPZoneHigh, 4000, 8000, 600, 800, 800, 1200, "BARO" )
+A2ADispatcher:SetSquadronGci( "Sq 4", 500, 1500 )
+A2ADispatcher:SetSquadronLandingAtRunway( "Sq 4" )
+A2ADispatcher:SetSquadronGrouping( "Sq 4", 2 )
+A2ADispatcher:SetSquadronOverhead( "Sq 4", 0.1)
+A2ADispatcher:SetSquadronFuelThreshold( "Sq 4", 0.25 )
 
 A2ADispatcher:SetDefaultTakeoffInAir()
 A2ADispatcher:SetDefaultLandingNearAirbase()
