@@ -60,9 +60,7 @@ A2GDispatcher:SetSquadronBaiPatrolInterval( "Khalkhalah BAI", 5, 30, 60, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Khalkhalah BAI" )
 A2GDispatcher:SetSquadronOverhead( "Khalkhalah BAI", 0.1 )
 
--- We set for each squadron a takeoff interval, as each helicopter will launch from a FARP.
--- This to prevent helicopters to clutter.
--- Each helicopter group is taking off the FARP in hot start.
+--Intercals for the Squadrons
 A2GDispatcher:SetSquadronTakeoffInterval( "Marj CAS", 10 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Marj SEAD", 10 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Khalkhalah CAS", 60 )
