@@ -10,7 +10,7 @@ DetectionSetGroup:FilterCategories( Unit.Category.AIRPLANE )
 
 -- Setup the A2A dispatcher, and initialize it.
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
-A2ADispatcher:SetTacticalDisplay( true )
+A2ADispatcher:SetTacticalDisplay( false )
 A2ADispatcher:SetRefreshTimeInterval( 10 )
 
 

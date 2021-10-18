@@ -22,7 +22,7 @@ A2GDispatcher:SetDefenseRadius( 200000 ) -- Defense radius wide enough to also t
 A2GDispatcher:SetCommandCenter( HQ_CC )
 
 -- Show a tactical display.
-A2GDispatcher:SetTacticalDisplay( true )
+A2GDispatcher:SetTacticalDisplay( false )
 
 
 -- Setup the patrols.
