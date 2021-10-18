@@ -1,5 +1,5 @@
 --Northern Spawns Zones
-NorhternSpawnZones = {
+NorthernSpawnZones = {
 ZONE:New( "Northern Border Spawn Zone-1" ),
 ZONE:New( "Northern Border Spawn Zone-2" ),
 ZONE:New( "Northern Border Spawn Zone-3" ),
@@ -38,7 +38,7 @@ NBU = {
 "Northern Border Units-3" }
 
 --Central Unit Template
-CBU = {
+CBU1 = {
 "Central Border Units-1",
 "Central Border Units-2",
 "Central Border Units-3" }
@@ -49,14 +49,14 @@ NorthernSpawnForces = SPAWN:New( "Northern Border Forces" )
 :InitRandomizeTemplate(NBU)
 :InitLimit( 104, 0 )
 :InitRandomizeRoute( 0, 1, 200 )
-:InitRandomizeZones( NorhternSpawnZones )
+:InitRandomizeZones( NorthernSpawnZones )
 :InitRandomizePosition(NBU)
 :SpawnScheduled( 5, .5 )
 
 CentralSpawnForces = SPAWN:New( "Central Border Forces" )
-:InitRandomizeTemplate(CBU)
+:InitRandomizeTemplate(CBU1)
 :InitLimit( 104, 0 )
 :InitRandomizeRoute( 0, 1, 200 )
 :InitRandomizeZones( CentralSpawnZones )
-:InitRandomizePosition(CBU)
+:InitRandomizePosition(CBU1)
 :SpawnScheduled( 5, .5 )
