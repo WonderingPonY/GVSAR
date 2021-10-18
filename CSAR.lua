@@ -1,4 +1,4 @@
-
+--Civilian SAR
 _SETTINGS:SetPlayerMenuOff()
 _SETTINGS:SetA2G_BR()
 _SETTINGS:SetA2A_BULLS()
