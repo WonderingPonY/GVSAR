@@ -3,10 +3,17 @@ local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha"},"Lufttransportbrigade I")
 my_ctld:__Start(5)
 
 --Available Cargo Types
-my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4)
-my_ctld:AddTroopsCargo("Anti-Tank Small",{"ATS"},CTLD_CARGO.Enum.TROOPS,2,45)
-my_ctld:AddTroopsCargo("Regular Squad",{"Squad"},CTLD_CARGO.Enum.TROOPS,10,45)
-my_ctld:AddTroopsCargo("Anti-Air Small",{"AAS"},CTLD_CARGO.Enum.TROOPS,2,45)
+my_ctld:AddCratesCargo("Forward Ops Base 4",{"FOB"},CTLD_CARGO.Enum.FOB,1)
+my_ctld:AddTroopsCargo("Anti-Tank Small 2",{"ATS"},CTLD_CARGO.Enum.TROOPS,2,45)
+my_ctld:AddTroopsCargo("Regular Squad 10",{"Squad"},CTLD_CARGO.Enum.TROOPS,10,45)
+my_ctld:AddTroopsCargo("Anti-Air Small 2",{"AAS"},CTLD_CARGO.Enum.TROOPS,2,45)
+my_ctld:AddCratesCargo("MBT Merkava 4",{"Merkava"},CTLD_CARGO.Enum.VEHICLE,1)
+my_ctld:AddCratesCargo("TPz Fuchs 2",{"TPzFuchs"},CTLD_CARGO.Enum.VEHICLE,1)
+my_ctld:AddCratesCargo("Paladin 4",{"Paladin"},CTLD_CARGO.Enum.VEHICLE,1)
+my_ctld:AddCratesCargo("Patriot 6",{"ISRAELPATRIOT"},CTLD_CARGO.Enum.VEHICLE,1)
+my_ctld:AddCratesCargo("Rapier 1",{"Rapier"},CTLD_CARGO.Enum.VEHICLE,1)
+my_ctld:AddTroopsCargo("Engineers 4",{"Engineers"},CTLD_CARGO.Enum.ENGINEERS,4)
+my_ctld:AddCratesRepair("FOB Repair","FOB",CTLD_CARGO.Enum.REPAIR,1)
 my_ctld:AddStaticsCargo("Ammunition",500)
 
 --Available Load Zones
@@ -18,6 +25,8 @@ my_ctld.minimumHoverHeight = 10
 my_ctld.forcehoverload = false
 my_ctld.enableslingload = true
 my_ctld.pilotmustopendoors = false
+my_ctld.repairtime = 300
+my_ctld.EngineerSearch = 2000
 
 --Available Recources
 
