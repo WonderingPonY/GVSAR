@@ -34,6 +34,10 @@ AICargoDispatcherAPC = AI_CARGO_DISPATCHER_APC:New( SetAPC, CargoInfantrySet, ni
 AICargoDispatcherAPC:SetPickupOffRoad(false, Formation)
 AICargoDispatcherAPC:SetDeployOffRoad(false, Formation)
 
+AICargoDispatcherAPC = AI_CARGO_DISPATCHER_APC:New( SetAPC, CargoInfantrySet, nil, DeployZonesSet, 0 )
+AICargoDispatcherAPC:SetPickupOffRoad(false, Formation)
+AICargoDispatcherAPC:SetDeployOffRoad(false, Formation)
+
 -- This will work too, so the combat range can be provided, but must be 0.
 --AICargoDispatcherAPC = AI_CARGO_DISPATCHER_APC:New( SetAPC, SetCargoInfantry, nil, SetDeployZones, 0 )
 
