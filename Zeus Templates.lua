@@ -35,3 +35,9 @@
 "RedArty-2"--1 MLRS 9K57 Uragan
 "RedArty-3"--1 MLRS BM-21 Grad
 "RedArty-4"--1 SPH 2S1 Gvozdika
+
+--Static Objects
+"Red Big smoke"--Big Smoke
+"Red FARP"--FARP
+"Red Static Ammo depot"--Ammo depot
+"Red Static Tank-1"--Static Tank Silo
