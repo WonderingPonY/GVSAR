@@ -63,6 +63,6 @@ A2ADispatcher:SetSquadronFuelThreshold( "Sq 4", 0.25 )
 A2ADispatcher:SetSquadronCapInterval( "Sq 4", 1, 180, 300, 1 )
 A2ADispatcher:SetSquadronLanding( "Sq 4" , "Sayqal")
 
-A2ADispatcher:SetDefaultCapLimit(4)
+A2ADispatcher:SetDefaultCapLimit(2)
 A2ADispatcher:SetDefaultTakeoffInAir()
 A2ADispatcher:SetDefaultLandingNearAirbase()
