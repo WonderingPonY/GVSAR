@@ -1,19 +1,19 @@
 -- Set up SHORAD
 local redsamset = SET_GROUP:New():FilterCoalitions("red"):FilterPrefixes({"AAAMantis","SA11Mantis","SA6Mantis","SA2Mantis","SA3Mantis","SA8Mantis","SA9Mantis","SyriaEWR"}):FilterStart()
 local myredshorad = SHORAD:New("Syria Shorad","Red Shorad",redsamset,12000,600,"red",false) -- Functional.Shorad#SHORAD
-myredshorad:SetDefenseLimits(50,75)
+myredshorad:SetDefenseLimits(70,90)
 
 -- Short/Mid-Range SAM sites
 local myredmantis = MANTIS:New("SA6Mantis","SA11Mantis","SA8Mantis","AAAMantis","SA9Mantis","Red EWR",nil,"red",true,"Red AWACS",false)
 myredmantis:SetSAMRadius(25000)
-myredmantis:SetSAMRange(75)
+myredmantis:SetSAMRange(85)
 myredmantis:SetDetectInterval(20)
 myredmantis:Start()
 
 -- Long-range SAM site, also linked to SHORAD
-local myredsa10 = MANTIS:New("SA3Mantis","SA2Mantis","Red EWR","HQ_Red","red",true,"Red AWACS",false)
+local myredsa10 = MANTIS:New("SA3Mantis","SA2Mantis","SA5Mantis","Red EWR","HQ_Red","red",true,"Red AWACS",false)
 myredsa10:SetSAMRadius(UTILS.NMToMeters(40))
-myredsa10:SetSAMRange(75)
+myredsa10:SetSAMRange(50)
 myredsa10:SetDetectInterval(20)
 myredsa10:AddShorad(myredshorad,720)
 myredsa10:SetAdvancedMode(true,90)
