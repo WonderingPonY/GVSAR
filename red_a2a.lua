@@ -6,7 +6,7 @@ DetectionSetGroup:FilterStart()
 Detection = DETECTION_AREAS:New( DetectionSetGroup, 300000 )
 Detection:SetRefreshTimeInterval( 10 )
 --Filter Catagories
-DetectionSetGroup:FilterCategories( Unit.Category.AIRPLANE )
+DetectionSetGroup:FilterCategories( Unit.Category.HELICOPTER )
 
 -- Setup the A2A dispatcher, and initialize it.
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
