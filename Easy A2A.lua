@@ -24,31 +24,17 @@ local CommandCenter = COMMANDCENTER
   :New( HQ, "Lima" ) -- Create the CommandCenter.
 
   EasyA2ATask = MISSION
-    :New( CommandCenter, "Norhtern Border Strike", "Primary", "Sweep the boarder and eliminate enenmy forces!", coalition.side.blue )
+    :New( CommandCenter, "Easy A2A Intercept", "Primary", "Intercept and eliminate enenmy forces!", coalition.side.blue )
     :AddScoring( Scoring )
 
-function TASK_A2A_INTERCEPT:New( Mission, SetGroup, TaskName, TargetSetUnit, TaskBriefing )
-   local self = BASE:Inherit( self, TASK_A2A:New( Mission, SetGroup, TaskName, TargetSetUnit, "INTERCEPT", TaskBriefing ) ) -- #TASK_A2A_INTERCEPT
-   self:F()
+    AttackGroups = SET_GROUP:New():FilterCoalitions( "blue" ):FilterCategoryAirplane:FilterStart()
 
-   Mission:AddTask( self )
+    TargetSetUnit = SET_UNIT:New():FilterCoalitions("red"):FilterPrefixes( "easyfighter" ):FilterStart()
 
-   self:SetBriefing(
-     TaskBriefing or
-     "Intercept incoming intruders.\n"
-   )
-
-   return self
- end
-
- --- Set a score when a target in scope of the A2A attack, has been destroyed .
- -- @param #TASK_A2A_INTERCEPT self
- -- @param #string PlayerName The name of the player.
- -- @param #number Score The score in points to be granted when task process has been achieved.
- -- @param Wrapper.Unit#UNIT TaskUnit
- -- @return #TASK_A2A_INTERCEPT
- function TASK_A2A_INTERCEPT:SetScoreOnProgress( PlayerName, Score, TaskUnit )
-   self:F( { PlayerName, Score, TaskUnit } )
+TASK_A2A_INTERCEPT:New( EasyA2ATask, AttackGroups, "Easy Intercept", TargetSetUnit)
+TASK_A2A_INTERCEPT:AssignToGroup(AttackGroups)
+function TASK_A2A_INTERCEPT:SetScoreOnProgress( PlayerName, Score, TaskUnit )
+    self:F( { PlayerName, Score, TaskUnit } )
 
    local ProcessUnit = self:GetUnitProcess( TaskUnit )
 
@@ -57,12 +43,6 @@ function TASK_A2A_INTERCEPT:New( Mission, SetGroup, TaskName, TargetSetUnit, Tas
    return self
  end
 
- --- Set a score when all the targets in scope of the A2A attack, have been destroyed.
- -- @param #TASK_A2A_INTERCEPT self
- -- @param #string PlayerName The name of the player.
- -- @param #number Score The score in points.
- -- @param Wrapper.Unit#UNIT TaskUnit
- -- @return #TASK_A2A_INTERCEPT
  function TASK_A2A_INTERCEPT:SetScoreOnSuccess( PlayerName, Score, TaskUnit )
    self:F( { PlayerName, Score, TaskUnit } )
 
@@ -73,12 +53,6 @@ function TASK_A2A_INTERCEPT:New( Mission, SetGroup, TaskName, TargetSetUnit, Tas
    return self
  end
 
- --- Set a penalty when the A2A attack has failed.
- -- @param #TASK_A2A_INTERCEPT self
- -- @param #string PlayerName The name of the player.
- -- @param #number Penalty The penalty in points, must be a negative value!
- -- @param Wrapper.Unit#UNIT TaskUnit
- -- @return #TASK_A2A_INTERCEPT
  function TASK_A2A_INTERCEPT:SetScoreOnFail( PlayerName, Penalty, TaskUnit )
    self:F( { PlayerName, Penalty, TaskUnit } )
 
@@ -88,6 +62,3 @@ function TASK_A2A_INTERCEPT:New( Mission, SetGroup, TaskName, TargetSetUnit, Tas
 
    return self
  end
-
-
-end
