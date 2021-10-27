@@ -9,15 +9,15 @@ tanker:SetTACAN(1, "TEX")
 tanker:__Start(1)
 
 -- E-2D AWACS spawning on Stennis.
--- local awacs=RECOVERYTANKER:New("USS Stennis", "E-2D Wizard Group")
--- awacs:SetAWACS()
--- awacs:SetRadio(260)
--- awacs:SetAltitude(20000)
--- awacs:SetCallsign(CALLSIGN.AWACS.Wizard)
--- awacs:SetRacetrackDistances(30, 15)
--- awacs:SetModex(611)
--- awacs:SetTACAN(2, "WIZ")
--- awacs:__Start(1)
+local awacs=RECOVERYTANKER:New("CVN-75 Harry S. Truman", "E-2D Wizard Group")
+awacs:SetAWACS()
+awacs:SetRadio(260)
+awacs:SetAltitude(20000)
+awacs:SetCallsign(CALLSIGN.AWACS.Wizard)
+awacs:SetRacetrackDistances(30, 15)
+awacs:SetModex(611)
+awacs:SetTACAN(2, "WIZ")
+awacs:__Start(1)
 
 -- Rescue Helo with home base Lake Erie. Has to be a global object!
 -- rescuehelo=RESCUEHELO:New("USS Stennis", "Rescue Helo")
@@ -67,29 +67,29 @@ AirbossTruman:SetTrapSheet()
 AirbossTruman:Start()
 
 
---- Function called when recovery tanker is started.
--- function tanker:OnAfterStart(From,Event,To)
---
---   -- Set recovery tanker.
---   AirbossTruman:SetRecoveryTanker(tanker)
---
---   -- Use tanker as radio relay unit for LSO transmissions.
---   AirbossTruman:SetRadioRelayLSO(self:GetUnitName())
---
--- end
---
--- --- Function called when AWACS is started.
--- function awacs:OnAfterStart(From,Event,To)
---   -- Set AWACS.
---   AirbossTruman:SetAWACS(awacs)
--- end
---
---
--- --- Function called when rescue helo is started.
--- function rescuehelo:OnAfterStart(From,Event,To)
---   -- Use rescue helo as radio relay for Marshal.
---   AirbossTruman:SetRadioRelayMarshal(self:GetUnitName())
--- end
+--Function called when recovery tanker is started.
+function tanker:OnAfterStart(From,Event,To)
+
+  -- Set recovery tanker.
+  AirbossTruman:SetRecoveryTanker(tanker)
+
+  -- Use tanker as radio relay unit for LSO transmissions.
+  AirbossTruman:SetRadioRelayLSO(self:GetUnitName())
+
+end
+
+--- Function called when AWACS is started.
+function awacs:OnAfterStart(From,Event,To)
+  -- Set AWACS.
+  AirbossTruman:SetAWACS(awacs)
+end
+
+
+--- Function called when rescue helo is started.
+function rescuehelo:OnAfterStart(From,Event,To)
+  -- Use rescue helo as radio relay for Marshal.
+  AirbossTruman:SetRadioRelayMarshal(self:GetUnitName())
+end
 
 --- Function called when a player gets graded by the LSO.
 function AirbossTruman:OnAfterLSOGrade(From, Event, To, playerData, grade)
