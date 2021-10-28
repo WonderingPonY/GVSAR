@@ -27,12 +27,12 @@ local CommandCenter = COMMANDCENTER
     :New( CommandCenter, "Easy A2A Intercept", "Primary", "Intercept and eliminate enenmy forces!", coalition.side.blue )
     :AddScoring( Scoring )
 
-    AttackGroups = SET_GROUP:New():FilterCoalitions( "blue" ):FilterCategoryAirplane:FilterStart()
+    AttackGroups = SET_GROUP:New():FilterCoalitions( "blue" ):FilterCategoryAirplane():FilterStart()
 
     TargetSetUnit = SET_UNIT:New():FilterCoalitions("red"):FilterPrefixes( "easyfighter" ):FilterStart()
 
 TASK_A2A_INTERCEPT:New( EasyA2ATask, AttackGroups, "Easy Intercept", TargetSetUnit)
-TASK_A2A_INTERCEPT:AssignToGroup(AttackGroups)
+TASK_A2A_INTERCEPT:AddGroups("HAF-347S-Persues-Squadron","HAF-330-Thunder-Squadron")
 function TASK_A2A_INTERCEPT:SetScoreOnProgress( PlayerName, Score, TaskUnit )
     self:F( { PlayerName, Score, TaskUnit } )
 
