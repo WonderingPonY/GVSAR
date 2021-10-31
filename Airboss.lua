@@ -86,10 +86,10 @@ end
 
 
 --- Function called when rescue helo is started.
-function rescuehelo:OnAfterStart(From,Event,To)
-  -- Use rescue helo as radio relay for Marshal.
-  AirbossTruman:SetRadioRelayMarshal(self:GetUnitName())
-end
+-- function rescuehelo:OnAfterStart(From,Event,To)
+--   -- Use rescue helo as radio relay for Marshal.
+--   AirbossTruman:SetRadioRelayMarshal(self:GetUnitName())
+-- end
 
 --- Function called when a player gets graded by the LSO.
 function AirbossTruman:OnAfterLSOGrade(From, Event, To, playerData, grade)
