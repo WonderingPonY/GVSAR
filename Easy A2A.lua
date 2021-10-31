@@ -32,6 +32,18 @@ local CommandCenter = COMMANDCENTER
     TargetSetUnit = SET_UNIT:New():FilterCoalitions("red"):FilterPrefixes( "easyfighter" ):FilterStart()
 
 TASK_A2A_INTERCEPT:New( EasyA2ATask, AttackGroups, "Easy Intercept", TargetSetUnit)
+local self = BASE:Inherit( self, TASK_A2A:New( Mission, AttackGroups, TaskName, TargetSetUnit, "INTERCEPT", TaskBriefing ) ) -- #TASK_A2A_INTERCEPT
+    self:F()
+
+    Mission:AddTask( self )
+
+    self:SetBriefing(
+      TaskBriefing or
+      "Intercept incoming intruders.\n"
+    )
+
+    return self
+  end
 --TASK_A2A_INTERCEPT:AddGroups("HAF-347S-Persues-Squadron","HAF-330-Thunder-Squadron")
 function TASK_A2A_INTERCEPT:SetScoreOnProgress( PlayerName, Score, TaskUnit )
     self:F( { PlayerName, Score, TaskUnit } )
