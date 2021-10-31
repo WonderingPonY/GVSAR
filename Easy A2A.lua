@@ -32,7 +32,7 @@ local CommandCenter = COMMANDCENTER
     TargetSetUnit = SET_UNIT:New():FilterCoalitions("red"):FilterPrefixes( "easyfighter" ):FilterStart()
 
 TASK_A2A_INTERCEPT:New( EasyA2ATask, AttackGroups, "Easy Intercept", TargetSetUnit)
-local self = BASE:Inherit( self, TASK_A2A:New( Mission, AttackGroups, TaskName, TargetSetUnit, "INTERCEPT", TaskBriefing ) ) -- #TASK_A2A_INTERCEPT
+local self = BASE:Inherit( self, TASK_A2A_INTERCEPT:New( EasyA2ATask, AttackGroups, "Easy Intercept", TargetSetUnit) ) -- #TASK_A2A_INTERCEPT
     self:F()
 
     Mission:AddTask( self )
