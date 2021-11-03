@@ -7,7 +7,7 @@ GMFunc = {} -- Never delete this!!!
 --General options
 GMFunc.DebugMode = false --Toggles the display of status messages, only needed for debugging
 GMFunc.CmdSymbol = "-" --The symbol or string the script looks for to separate the marker text into the command and the different parameters. You can change this to any string or symbol. DO NOT remove the quotation marks!
-GMFunc.RestrToCoal = nil --restricts the usage of the commands to one coalition only, enter 0 to restrict to neutral, 1 to restrict to red, 2 to restrict to blue, nil allows players from all coalitions to use the commands
+GMFunc.RestrToCoal = 1 --restricts the usage of the commands to one coalition only, enter 0 to restrict to neutral, 1 to restrict to red, 2 to restrict to blue, nil allows players from all coalitions to use the commands
 GMFunc.PW = nil --Here you can specify a password that has to be entered into the marker before any commands in the following text are recognized. PW needs to be put in quotation marks. Set to nil to disable!
 
 --Spawn command options
