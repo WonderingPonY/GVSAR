@@ -6,7 +6,7 @@ DetectionSetGroup:FilterStart()
 Detection = DETECTION_AREAS:New( DetectionSetGroup, 300000 )
 Detection:SetRefreshTimeInterval( 10 )
 --Filter Catagories
-DetectionSetGroup:FilterCategories( Unit.Category.HELICOPTER )
+DetectionSetGroup:FilterCategories( Unit.Category.Airplane )
 
 -- Setup the A2A dispatcher, and initialize it.
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
@@ -14,7 +14,7 @@ A2ADispatcher:SetTacticalDisplay( false )
 A2ADispatcher:SetRefreshTimeInterval( 10 )
 
 
-A2ADispatcher:SetEngageRadius( 90000 )
+A2ADispatcher:SetEngageRadius( 120000 )
 --BorderZone
 BorderZone = ZONE_POLYGON:New( "syriaborder", GROUP:FindByName( "syriaborder" ) )
 A2ADispatcher:SetBorderZone( BorderZone )
