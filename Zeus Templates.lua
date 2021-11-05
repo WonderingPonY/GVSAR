@@ -5,9 +5,9 @@
 "SA3Mantis"--SA3 site
 "SA2Mantis"--SA2 site
 "SA6Mantis"--SA6 site
-"AAAMantis-1"--1 ZU-23 Mounted Ural 375
-"AAAMantis-2" --1 ZU-23 emplacement
-"AAAMantis-3"--1 Shilka
+"AAAMantis1"--1 ZU-23 Mounted Ural 375
+"AAAMantis2" --1 ZU-23 emplacement
+"AAAMantis3"--1 Shilka
 --Infantry
 "RedInf1"--5 Insurgents AK-74U, 1 RPG, 1 Mortor
 "RedInf2"--4 Insurgents AK-74U, 1 RPG, 1 MANPAD
@@ -30,6 +30,8 @@
 "RedTransport3"--1 Truck KrAZ-6322 (Supply Truck)
 "RedTransport4"--1 Truck Ural-375
 "RedTransport5"--1 ZIL-135 (Big Supply Truck)
+"CCCP Recce_1"--1 LUV Tigr JTAC to call in Red CAS
+"CCCP Recce_2"--1 Scout Cobra JTAC to call in Red CAS
 --Arty
 "RedArty1"--1 MLRS 9A52 Smerch HE
 "RedArty2"--1 MLRS 9K57 Uragan
