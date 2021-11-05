@@ -16,3 +16,8 @@ local Shell_SKC130 = SPAWN:New( "Tanker 135A10" )
 Shell_SKC130:InitLimit(1,100)
 Shell_SKC130:InitRepeatOnLanding()
 Shell_SKC130:SpawnScheduled(30,0)
+
+local Shell_E3A = SPAWN:New( "Big Daddy" )
+Shell_E3A:InitLimit(1,100)
+Shell_E3A:InitRepeatOnLanding()
+Shell_E3A:SpawnScheduled(30,0)
