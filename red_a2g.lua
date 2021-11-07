@@ -4,7 +4,7 @@ local DetectionSetGroup = SET_GROUP:New()
 DetectionSetGroup:FilterPrefixes( { "CCCP Recce" } )
 DetectionSetGroup:FilterStart()
 
-local Detection = DETECTION_AREAS:New( DetectionSetGroup, 1000 )
+local Detection = DETECTION_AREAS:New( DetectionSetGroup, 8000 )
 
 -- Setup the A2A dispatcher, and initialize it.
 A2GDispatcher = AI_A2G_DISPATCHER:New( Detection )
