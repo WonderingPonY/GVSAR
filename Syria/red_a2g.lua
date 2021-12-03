@@ -47,7 +47,7 @@ A2GDispatcher:SetSquadronOverhead( "Marj SEAD", 0.2 )
 A2GDispatcher:SetSquadronGrouping( "Marj SEAD", 2 )
 A2GDispatcher:SetSquadronFuelThreshold("Marj SEAD", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Marj SEAD", 1)
-A2GDispatcher:SetSquadronLanding("Marj SEAD", "Marj Ruhayyil")
+A2GDispatcher:SetSquadronLandingNearAirbase("Marj SEAD", "Marj Ruhayyil")
 
 -- CAS from Marj
 A2GDispatcher:SetSquadron( "Marj CAS", "Marj Ruhayyil", { "CCCP SGroundAttackSu24MGND" }, 10 )
@@ -58,7 +58,7 @@ A2GDispatcher:SetSquadronOverhead( "Marj CAS", 0.2 )
 A2GDispatcher:SetSquadronGrouping( "Marj CAS", 2 )
 A2GDispatcher:SetSquadronFuelThreshold("Marj CAS", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Marj CAS", 1)
-A2GDispatcher:SetSquadronLanding("Marj CAS", "Marj Ruhayyil")
+A2GDispatcher:SetSquadronLandingNearAirbase("Marj CAS", "Marj Ruhayyil")
 
 -- CAS from Khalkhalah
 A2GDispatcher:SetSquadron( "Khalkhalah CAS", "Khalkhalah", { "CCCP SCRotary" }, 10 )
@@ -68,7 +68,7 @@ A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Khalkhalah CAS" )
 A2GDispatcher:SetSquadronOverhead( "Khalkhalah CAS", 0.1 )
 A2GDispatcher:SetSquadronFuelThreshold("Khalkhalah CAS", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Khalkhalah CAS", 1)
-A2GDispatcher:SetSquadronLanding("Khalkhalah CAS", "Khalkhalah")
+A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah CAS", "Khalkhalah")
 
 -- BAI from Khalkhalah
 A2GDispatcher:SetSquadron( "Khalkhalah BAI", "Khalkhalah", { "CCCP SCRotary" }, 10 )
@@ -78,7 +78,7 @@ A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Khalkhalah BAI" )
 A2GDispatcher:SetSquadronOverhead( "Khalkhalah BAI", 0.1 )
 A2GDispatcher:SetSquadronFuelThreshold("Khalkhalah BAI", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Khalkhalah BAI", 1)
-A2GDispatcher:SetSquadronLanding("Khalkhalah BAI", "Khalkhalah")
+A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah BAI", "Khalkhalah")
 
 --Intercals for the Squadrons
 A2GDispatcher:SetSquadronTakeoffInterval( "Marj CAS", 10 )
@@ -86,5 +86,5 @@ A2GDispatcher:SetSquadronTakeoffInterval( "Marj SEAD", 10 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Khalkhalah CAS", 60 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Khalkhalah BAI", 60 )
 A2GDispatcher:SetDefaultDamageThreshold(0.50)
-A2GDispatcher:SetDefaultLanding( AI_A2G_DISPATCHER.Landing.NearAirbase )
+--A2GDispatcher:SetDefaultLanding( AI_A2G_DISPATCHER.Landing.NearAirbase )
 --A2GDispatcher:SetDefaultPatrolLimit(1)
