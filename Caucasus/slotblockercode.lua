@@ -1,3 +1,5 @@
+trigger.action.setUserFlag("SSB",100)
+
 --BlueKutaisi
 trigger.action.setUserFlag("2B Kutaisi F-15C A1",0)
 trigger.action.setUserFlag("2B Kutaisi F-15C A2",0)
