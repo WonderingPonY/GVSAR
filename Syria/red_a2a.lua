@@ -64,5 +64,5 @@ A2ADispatcher:SetSquadronCapInterval( "Sq 4", 1, 180, 300, 1 )
 --A2ADispatcher:SetSquadronLanding( "Sq 4" , "Sayqal")
 
 A2ADispatcher:SetDefaultCapLimit(2)
-A2ADispatcher:SetDefaultTakeOffFromParkingHot()
+--A2ADispatcher:SetDefaultTakeOffFromParkingHot()
 A2ADispatcher:SetDefaultLandingNearAirbase()
