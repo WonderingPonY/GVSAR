@@ -5,9 +5,11 @@
 "SA3Mantis"--SA3 site
 "SA2Mantis"--SA2 site
 "SA6Mantis"--SA6 site
+"SA9Mantis1"--SA9 site
 "AAAMantis1"--1 ZU-23 Mounted Ural 375
 "AAAMantis2" --1 ZU-23 emplacement
 "AAAMantis3"--1 Shilka
+"AAAMantis4"--1 ZU-57
 --Infantry
 "RedInf1"--5 Insurgents AK-74U, 1 RPG, 1 Mortor
 "RedInf2"--4 Insurgents AK-74U, 1 RPG, 1 MANPAD

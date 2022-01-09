@@ -61,24 +61,24 @@ A2GDispatcher:SetDefaultPatrolLimit("Marj CAS", 1)
 A2GDispatcher:SetSquadronLandingNearAirbase("Marj CAS", "Marj Ruhayyil")
 
 -- CAS from Khalkhalah
-A2GDispatcher:SetSquadron( "Khalkhalah CAS", "Khalkhalah", { "CCCP SCRotary" }, 10 )
+A2GDispatcher:SetSquadron( "Khalkhalah CAS", "Marj Ruhayyil", { "CCCP SCRotary" }, 10 )
 A2GDispatcher:SetSquadronCasPatrol2( "Khalkhalah CAS", PatrolZone, 50, 80, 600, 700, "BARO", 200, 230, 30, 30, "RADIO" ) -- New API
 A2GDispatcher:SetSquadronCasPatrolInterval( "Khalkhalah CAS", 1, 30, 60, 1 )
 --A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Khalkhalah CAS" )
 A2GDispatcher:SetSquadronOverhead( "Khalkhalah CAS", 0.1 )
 A2GDispatcher:SetSquadronFuelThreshold("Khalkhalah CAS", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Khalkhalah CAS", 1)
-A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah CAS", "Khalkhalah")
+A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah CAS", "Marj Ruhayyil")
 
 -- BAI from Khalkhalah
-A2GDispatcher:SetSquadron( "Khalkhalah BAI", "Khalkhalah", { "CCCP SCRotary" }, 10 )
+A2GDispatcher:SetSquadron( "Khalkhalah BAI", "Marj Ruhayyil", { "CCCP SCRotary" }, 10 )
 A2GDispatcher:SetSquadronBaiPatrol2( "Khalkhalah BAI", PatrolZone, 50, 80, 600, 700, "BARO", 200, 230, 800, 900, "RADIO" ) -- New API
 A2GDispatcher:SetSquadronBaiPatrolInterval( "Khalkhalah BAI", 1, 30, 60, 1 )
 --A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Khalkhalah BAI" )
 A2GDispatcher:SetSquadronOverhead( "Khalkhalah BAI", 0.1 )
 A2GDispatcher:SetSquadronFuelThreshold("Khalkhalah BAI", 0.25)
 A2GDispatcher:SetDefaultPatrolLimit("Khalkhalah BAI", 1)
-A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah BAI", "Khalkhalah")
+A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah BAI", "Marj Ruhayyil")
 
 --Intercals for the Squadrons
 A2GDispatcher:SetSquadronTakeoffFromParkingHot()
