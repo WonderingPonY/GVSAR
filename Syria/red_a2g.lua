@@ -81,7 +81,7 @@ A2GDispatcher:SetDefaultPatrolLimit("Khalkhalah BAI", 1)
 A2GDispatcher:SetSquadronLandingNearAirbase("Khalkhalah BAI", "Marj Ruhayyil")
 
 --Intercals for the Squadrons
-A2GDispatcher:SetSquadronTakeoffFromParkingHot()
+A2GDispatcher:SetDefaultTakeoffFromParkingHot()
 A2GDispatcher:SetSquadronTakeoffInterval( "Marj CAS", 10 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Marj SEAD", 10 )
 A2GDispatcher:SetSquadronTakeoffInterval( "Khalkhalah CAS", 60 )
