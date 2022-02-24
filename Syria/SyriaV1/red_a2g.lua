@@ -21,7 +21,7 @@ A2GDispatcher:SetDefenseRadius( 370400 )
 
 A2GDispatcher:SetCommandCenter( HQ_CC )
 
-A2GDispatcher:SetTacticalDisplay( false )
+A2GDispatcher:SetTacticalDisplay( true )
 DetectionSetGroup:Count()
 BASE:E("Group set count " .. DetectionSetGroup:Count())
 
@@ -46,13 +46,13 @@ A2GDispatcher:SetSquadronOverhead( "Palmyra BAI", 0.25 )
 
 A2GDispatcher:SetSquadron( "Assad BAI", AIRBASE.Syria.Bassel_Al_Assad, { "CCCP TartRotary" }, 10 )
 A2GDispatcher:SetSquadronBaiPatrol2( "Assad BAI", TartyPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
-A2GDispatcher:SetSquadronBaiPatrolInterval( "Assad BAI", 2, 30, 60, 1 )
+A2GDispatcher:SetSquadronBaiPatrolInterval( "Assad BAI", 5, 30, 60, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Assad BAI" )
 A2GDispatcher:SetSquadronOverhead( "Assad BAI", 0.25 )
 
-A2GDispatcher:SetSquadron( "Shayrat BAI", AIRBASE.Syria.Shayrat, { "CCCP RatRotary" }, 10 )
+A2GDispatcher:SetSquadron( "Shayrat BAI", AIRBASE.Syria.Bassel_Al_Assad, { "CCCP RatRotary" }, 10 )
 A2GDispatcher:SetSquadronBaiPatrol2( "Shayrat BAI", ShayratPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
-A2GDispatcher:SetSquadronBaiPatrolInterval( "Shayrat BAI", 2, 30, 60, 1 )
+A2GDispatcher:SetSquadronBaiPatrolInterval( "Shayrat BAI", 5, 30, 60, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Shayrat BAI" )
 A2GDispatcher:SetSquadronOverhead( "Shayrat BAI", 0.25 )
 

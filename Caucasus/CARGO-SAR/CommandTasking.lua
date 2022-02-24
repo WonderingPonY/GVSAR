@@ -6,7 +6,7 @@ CommandCenter = COMMANDCENTER
 Mission = MISSION
   :New( CommandCenter, "CSAR Missions", "Tactical", "Rescue downed pilots.", coalition.side.BLUE )
 
-AttackGroups = SET_GROUP:New():FilterCoalitions( "blue" ):FilterPrefixes( "Rescue" ):FilterStart()
+AttackGroups = SET_GROUP:New():FilterCoalitions( "blue" ):FilterPrefixes( "RescueAlpha","RescueAlpha" ):FilterStart()
 
 TaskDispatcher = TASK_CARGO_DISPATCHER:New( Mission, AttackGroups )
 
