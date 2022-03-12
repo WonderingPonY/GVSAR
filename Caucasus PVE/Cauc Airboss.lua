@@ -1,7 +1,7 @@
 _SETTINGS:SetPlayerMenuOff()
 
 -- S-3B Recovery Tanker spawning in air.
-local tanker=RECOVERYTANKER:New("CVN-73", "Texaco Group")
+local tanker=RECOVERYTANKER:New("CVN-75", "Texaco Group")
 tanker:SetRadio(250)
 tanker:SetAltitude(6000)
 tanker:SetModex(511)
@@ -9,12 +9,12 @@ tanker:SetTACAN(1, "TEX")
 tanker:__Start(1)
 
 -- E-2D AWACS spawning on Stennis.
-local awacs=RECOVERYTANKER:New("CVN-73", "E-2D Wizard Group")
+local awacs=RECOVERYTANKER:New("CVN-75", "E-2D Wizard Group")
 awacs:SetAWACS()
-awacs:SetRadio(260)
+awacs:SetRadio(272)
 awacs:SetAltitude(20000)
-awacs:SetCallsign(CALLSIGN.AWACS.Wizard)
-awacs:SetRacetrackDistances(30, 15)
+awacs:SetCallsign(CALLSIGN.AWACS.Overlord)
+awacs:SetRacetrackDistances(60, 15)
 awacs:SetModex(611)
 awacs:SetTACAN(2, "WIZ")
 awacs:__Start(1)
@@ -27,8 +27,8 @@ awacs:__Start(1)
 
 -- Create AIRBOSS object.
 local AirbossTruman=AIRBOSS:New("CVN-73")
-AirbossTruman:SetTACAN(73,X,"WAS")
-AirbossTruman:SetICLS(13)
+AirbossTruman:SetTACAN(75,X,"Har")
+AirbossTruman:SetICLS(15)
 AirbossTruman:SetLSORadio(264)
 AirbossTruman:SetMarshalRadio(305)
 AirbossTruman:SetRecoveryCase(1)
