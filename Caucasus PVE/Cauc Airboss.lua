@@ -26,7 +26,7 @@ awacs:__Start(1)
 -- rescuehelo:__Start(1)
 
 -- Create AIRBOSS object.
-local AirbossTruman=AIRBOSS:New("CVN-73")
+local AirbossTruman=AIRBOSS:New("CVN-75")
 AirbossTruman:SetTACAN(75,X,"Har")
 AirbossTruman:SetICLS(15)
 AirbossTruman:SetLSORadio(264)
