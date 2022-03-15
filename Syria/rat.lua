@@ -1,8 +1,0 @@
-local c130=RAT:New("RAT_c130")
-c130:SetDeparture(AIRBASE.Syria.Beirut_Rafic_Hariri)
-c130:SetDestination(AIRBASE.Syria.Mezzeh)
-c130:SetTakeoff("cold")
-c130:SetMaxDistance(100)
-c130:Commute(starshape)
-c130:ContinueJourney()
-c130:Spawn(4)
