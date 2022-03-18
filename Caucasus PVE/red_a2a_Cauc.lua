@@ -26,7 +26,7 @@ local WestRusPatrolZone = ZONE:New("CapZoneRusWest")
 
 --Here we will make the squadrons and set options for each squadron
 -- Squadron 1
-A2ADispatcher:SetSquadron( "Sq 1", AIRBASE.Caucasus.Vaziani, { "SFighterMiG29" }, 15 )
+A2ADispatcher:SetSquadron( "Sq 1", AIRBASE.Caucasus.Vaziani, { "SFighterMiG29" }, 100 )
 A2ADispatcher:SetSquadronCap( "Sq 1", TbilisiPatrolZone, 4000, 8000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "Sq 1", 1000, 1500 )
 A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 1" , "Vaziani")
@@ -36,7 +36,7 @@ A2ADispatcher:SetSquadronFuelThreshold( "Sq 1", 0.35 )
 A2ADispatcher:SetSquadronCapInterval( "Sq 1", 1, 600, 1200, 1 )
 --A2ADispatcher:SetSquadronLanding( "Sq 1" , "Palmyra")
 --Squadron 2
-A2ADispatcher:SetSquadron( "Sq 2", AIRBASE.Caucasus.Sochi_Adler, { "SPatrolMiG21" }, 40 )
+A2ADispatcher:SetSquadron( "Sq 2", AIRBASE.Caucasus.Sochi_Adler, { "SPatrolMiG21" }, 100 )
 A2ADispatcher:SetSquadronCap( "Sq 2", SenakiPatrolZone, 4000, 8000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "Sq 2", 500, 1500 )
 A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 2" , "Sochi-Adler")
@@ -46,7 +46,7 @@ A2ADispatcher:SetSquadronFuelThreshold( "Sq 2", 0.25 )
 A2ADispatcher:SetSquadronCapInterval( "Sq 2", 1, 600, 1200, 1 )
 --A2ADispatcher:SetSquadronLanding( "Sq 2" , "Palmyra")
 --Squadron 3
-A2ADispatcher:SetSquadron( "Sq 3", AIRBASE.Caucasus.Sochi_Adler, { "GPatrolMiG21" }, 40 )
+A2ADispatcher:SetSquadron( "Sq 3", AIRBASE.Caucasus.Sochi_Adler, { "GPatrolMiG21" }, 100)
 A2ADispatcher:SetSquadronCap( "Sq 3", GudPatrolZone, 4000, 8000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "SSq 3", 500, 1500 )
 A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 3" , "Sochi-Adler")
