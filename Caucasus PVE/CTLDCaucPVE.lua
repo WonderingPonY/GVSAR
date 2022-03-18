@@ -45,7 +45,7 @@ ctld.maximumDistanceLogistic = 500 -- max distance from vehicle to logistics to 
 ctld.maximumSearchDistance = 4000 -- max distance for troops to search for enemy
 ctld.maximumMoveDistance = 2000 -- max distance for troops to move from drop point if no enemy is nearby
 
-ctld.minimumDeployDistance = 1000 -- minimum distance from a friendly pickup zone where you can deploy a crate
+ctld.minimumDeployDistance = 500 -- minimum distance from a friendly pickup zone where you can deploy a crate
 
 ctld.numberOfTroops = 10 -- default number of troops to load on a transport heli or C-130
 							-- also works as maximum size of group that'll fit into a helicopter unless overridden
@@ -459,10 +459,10 @@ ctld.extractableGroups = {
 -- When a logistic unit is destroyed, you will no longer be able to spawn crates
 
 ctld.logisticUnits = {
-    "logistic1",
-    "logistic2",
-    "logistic3",
-    "logistic4",
+    "Static Workshop A-2",
+    "Static Workshop A-6",
+    "Static Workshop A-3",
+    "Static Workshop A-4",
     "logistic5",
     "logistic6",
     "logistic7",
@@ -572,6 +572,10 @@ ctld.spawnableCrates = {
         { weight = 252, desc = "Ural-375 Ammo Truck", unit = "Ural-375", side = 1, cratesRequired = 2 },
         { weight = 253, desc = "M-818 Ammo Truck", unit = "M 818", side = 2, cratesRequired = 2 },
 
+        { weight = 400, desc = "IFV Stryker", unit = "IFV M1126 Stryker ICV", side = 2, cratesRequired = 2 },
+
+        { weight = 400, desc = "Leopard", unit = "MBT Leopard 1A3", side = 2, cratesRequired = 3 },
+
         { weight = 800, desc = "FOB Crate - Small", unit = "FOB-SMALL" }, -- Builds a FOB! - requires 3 * ctld.cratesRequiredForFOB
     },
     ["AA Crates"] = {
@@ -602,7 +606,8 @@ ctld.spawnableCrates = {
         { weight = 595, desc = "Early Warning Radar", unit = "1L13 EWR", side = 1 }, -- cant be used by BLUE coalition
 
         { weight = 405, desc = "Strela-1 9P31", unit = "Strela-1 9P31", side = 1, cratesRequired = 3 },
-        { weight = 400, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 3 },
+        { weight = 400, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 2 },
+        { weight = 400, desc = "SPAA Vulcan", unit = "SPAA Vulcan M163", side = 2, cratesRequired = 2 },
 
     },
 }
