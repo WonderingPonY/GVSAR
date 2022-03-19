@@ -473,7 +473,7 @@ ctld.spawnableCrates = {
 
         { weight = 390, desc = "IFV Stryker", unit = "IFV M1126 Stryker ICV", side = 2, cratesRequired = 2 },
 
-        { weight = 400, desc = "Leopard", unit = "MBT Leopard 1A3", side = 2, cratesRequired = 3 },
+        { weight = 380, desc = "Leopard", unit = "MBT Leopard 1A3", side = 2, cratesRequired = 3 },
 
         { weight = 800, desc = "FOB Crate - Small", unit = "FOB-SMALL" }, -- Builds a FOB! - requires 3 * ctld.cratesRequiredForFOB
     },
