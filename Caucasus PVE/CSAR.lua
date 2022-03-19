@@ -319,7 +319,7 @@ function csar.pilotsOnboard(_heliName)
     return count
 end
 
-function csar.addCsar(_coalition , _country, _point, _typeName, _unitName, _playerName, _freq, noMessage, _description )
+function csar.addCsar(_unit, _coalition , _country, _point, _typeName, _unitName, _playerName, _freq, noMessage, _description )
 
   local _spawnedGroup = csar.spawnGroup( _coalition, _country, _point, _typeName )
   csar.addSpecialParametersToGroup(_spawnedGroup)
@@ -337,7 +337,7 @@ function csar.addCsar(_coalition , _country, _point, _typeName, _unitName, _play
   end
 
 
-  csar.handleEjectOrCrash(_playerName, false)
+  csar.handleEjectOrCrash(_unit, false)
 
 -- Generate DESCRIPTION text
   local _text = " "
@@ -383,7 +383,7 @@ function csar.spawnCsarAtZone( _zone, _coalition, _description, _randomPoint)
   else
     _country =  country.id.RUSSIA
   end
-  csar.addCsar(_coalition, _country, pos, nil, nil, nil, freq, true, _description)
+  csar.addCsar(nil, _coalition, _country, pos, nil, nil, nil, freq, true, _description)
 
 end
 -- Handles all world events
@@ -512,7 +512,7 @@ function csar.eventHandler:onEvent(_event)
 
 
             local _freq = csar.generateADFFrequency()
-             csar.addCsar(_coalition, _unit:getCountry(), _unit:getPoint()  , _unit:getTypeName(),  _unit:getName(), _unit:getPlayerName(), _freq, false, 0)
+             csar.addCsar(_unit, _coalition, _unit:getCountry(), _unit:getPoint()  , _unit:getTypeName(),  _unit:getName(), _unit:getPlayerName(), _freq, false, 0)
 
             return true
 
