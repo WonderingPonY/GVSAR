@@ -469,7 +469,7 @@ ctld.spawnableCrates = {
         { weight = 255, desc = "M-109", unit = "M-109", side = 2, cratesRequired = 3 },
 
         { weight = 252, desc = "Ural-375 Ammo Truck", unit = "Ural-375", side = 1, cratesRequired = 2 },
-        { weight = 253, desc = "M-818 Ammo Truck", unit = "M 818", side = 2, cratesRequired = 2 },
+        { weight = 253, desc = "M-818 Ammo Truck", unit = "M 818", side = 2, cratesRequired = 1 },
 
         { weight = 390, desc = "IFV Stryker", unit = "IFV M1126 Stryker ICV", side = 2, cratesRequired = 2 },
 
@@ -505,7 +505,7 @@ ctld.spawnableCrates = {
         { weight = 595, desc = "Early Warning Radar", unit = "1L13 EWR", side = 1 }, -- cant be used by BLUE coalition
 
         { weight = 405, desc = "Strela-1 9P31", unit = "Strela-1 9P31", side = 1, cratesRequired = 3 },
-        { weight = 400, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 2 },
+        { weight = 389, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 2 },
         { weight = 385, desc = "SPAA Vulcan", unit = "SPAA Vulcan M163", side = 2, cratesRequired = 2 },
 
     },
