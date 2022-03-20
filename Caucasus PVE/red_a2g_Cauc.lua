@@ -52,7 +52,7 @@ A2GDispatcher:SetSquadronBaiPatrolInterval( "Senaki BAI", 2, 300, 600, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Senaki BAI" )
 A2GDispatcher:SetSquadronOverhead( "Senaki BAI", 0.25 )
 
-A2GDispatcher:SetSquadron( "Kutaisi BAI", AIRBASE.Caucasus.Kutaisi, { "CCCP KutRotary" }, 100 )
+A2GDispatcher:SetSquadron( "Kutaisi BAI", AIRBASE.Caucasus.Sukhumi_Babushara, { "CCCP KutRotary" }, 100 )
 A2GDispatcher:SetSquadronBaiPatrol2( "Kutaisi BAI", SenakiPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
 A2GDispatcher:SetSquadronBaiPatrolInterval( "Kutaisi BAI", 2, 300, 600, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Kutaisi BAI" )
