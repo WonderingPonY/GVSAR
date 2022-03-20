@@ -446,6 +446,15 @@ ctld.loadableGroups = {
 --
 ctld.spawnableCrates = {
     -- name of the sub menu on F10 for spawning crates
+    ["Artillery"] = {
+        { weight = 2400, desc = "M270 MLRS", unit = "MLRS", side = 2, cratesRequired = 2 },
+        { weight = 100, desc = "2B11 Mortar", unit = "2B11 mortar" },
+        { weight = 250, desc = "SPH 2S19 Msta", unit = "SAU Msta", side = 1, cratesRequired = 3 },
+        { weight = 255, desc = "M-109 Howitzer", unit = "M-109", side = 2, cratesRequired = 2 },
+    },
+    ["Base Building"] = {
+        { weight = 800, desc = "FOB Crate - Small", unit = "FOB-SMALL" }, -- Builds a FOB! - requires 3 * ctld.cratesRequiredForFOB
+    },
     ["Ground Forces"] = {
         --crates you can spawn
         -- weight in KG
@@ -454,33 +463,22 @@ ctld.spawnableCrates = {
         -- cratesRequired - if set requires that many crates of the same type within 100m of each other in order build the unit
         -- side is optional but 2 is BLUE and 1 is RED
         -- dont use that option with the HAWK Crates
+        { weight = 1776, desc = "M2A2 Bradley", unit = "M2A2 Bradley", side = 2, cratesRequired = 2 },
+        { weight = 2006, desc = "M1A1 Abrams", unit = "M-1 Abrams", side = 2, cratesRequired = 4 },
+        { weight = 1867, desc = "AAV7", unit = "AAV-7", side = 2, cratesRequired = 2 },
         { weight = 500, desc = "HMMWV - TOW", unit = "M1045 HMMWV TOW", side = 2 },
         { weight = 505, desc = "HMMWV - MG", unit = "M1043 HMMWV Armament", side = 2 },
-
         { weight = 510, desc = "BTR-D", unit = "BTR_D", side = 1 },
         { weight = 515, desc = "BRDM-2", unit = "BRDM-2", side = 1 },
 
         { weight = 520, desc = "HMMWV - JTAC", unit = "Hummer", side = 2, }, -- used as jtac and unarmed, not on the crate list if JTAC is disabled
         { weight = 525, desc = "SKP-11 - JTAC", unit = "SKP-11", side = 1, }, -- used as jtac and unarmed, not on the crate list if JTAC is disabled
 
-        { weight = 100, desc = "2B11 Mortar", unit = "2B11 mortar" },
-
-        { weight = 250, desc = "SPH 2S19 Msta", unit = "SAU Msta", side = 1, cratesRequired = 3 },
-        { weight = 255, desc = "M-109", unit = "M-109", side = 2, cratesRequired = 3 },
-
-        { weight = 252, desc = "Ural-375 Ammo Truck", unit = "Ural-375", side = 1, cratesRequired = 2 },
-        { weight = 253, desc = "M-818 Ammo Truck", unit = "M 818", side = 2, cratesRequired = 1 },
-
-        { weight = 390, desc = "IFV Stryker", unit = "IFV M1126 Stryker ICV", side = 2, cratesRequired = 2 },
-
-        { weight = 380, desc = "Leopard", unit = "MBT Leopard 1A3", side = 2, cratesRequired = 3 },
-
-        { weight = 800, desc = "FOB Crate - Small", unit = "FOB-SMALL" }, -- Builds a FOB! - requires 3 * ctld.cratesRequiredForFOB
+        { weight = 252, desc = "Ural-375 Ammo Truck", unit = "Ural-375", side = 1 },
+        { weight = 253, desc = "M-818 Ammo Truck", unit = "M 818", side = 2 },
+        { weight = 700, desc = "M-978 Tanker", unit = "M978 HEMTT Tanker", side = 2 },
     },
     ["AA Crates"] = {
-        { weight = 50, desc = "Stinger", unit = "Soldier stinger", side = 2 },
-        { weight = 55, desc = "Igla", unit = "SA-18 Igla manpad", side = 1 },
-
         -- HAWK System
         { weight = 540, desc = "HAWK Launcher", unit = "Hawk ln", side = 2},
         { weight = 545, desc = "HAWK Search Radar", unit = "Hawk sr", side = 2 },
@@ -504,13 +502,15 @@ ctld.spawnableCrates = {
 
         { weight = 595, desc = "Early Warning Radar", unit = "1L13 EWR", side = 1 }, -- cant be used by BLUE coalition
 
-        { weight = 405, desc = "Strela-1 9P31", unit = "Strela-1 9P31", side = 1, cratesRequired = 3 },
-        { weight = 389, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 2 },
-        { weight = 385, desc = "SPAA Vulcan", unit = "SPAA Vulcan M163", side = 2, cratesRequired = 2 },
+        { weight = 1000, desc = "Gepard AAA", unit = "Gepard", side = 2, cratesRequired = 2 },
+        { weight = 1005, desc = "M163 Vulcan", unit = "Vulcan", side = 2, cratesRequired = 2 },
 
+        { weight = 405, desc = "Strela-1 9P31", unit = "Strela-1 9P31", side = 1, cratesRequired = 3 },
+        { weight = 400, desc = "M1097 Avenger", unit = "M1097 Avenger", side = 2, cratesRequired = 1 },
+        { weight = 410, desc = "M48 Chaparral", unit = "M48 Chaparral", side = 2, cratesRequired = 1 },
+        { weight = 415, desc = "Roland ADS",    unit = "Roland ADS",    side = 2, cratesRequired = 3 },
     },
 }
-
 -- if the unit is on this list, it will be made into a JTAC when deployed
 ctld.jtacUnitTypes = {
     "SKP", "Hummer" -- there are some wierd encoding issues so if you write SKP-11 it wont match as the - sign is encoded differently...
