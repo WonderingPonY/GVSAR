@@ -26,17 +26,30 @@ my_ctld.usesubcats = true -- use sub-category names for crates, adds an extra me
 my_ctld:__Start(5)
 
 -- generate generically loadable stuff
+
+--Troops
 my_ctld:AddTroopsCargo("Anti-Tank Small 3",{"ATS"},CTLD_CARGO.Enum.TROOPS,3,80,nil,"Troops")
 my_ctld:AddTroopsCargo("Anti-Air 4",{"AA"},CTLD_CARGO.Enum.TROOPS,4,80,nil,"Troops")
 my_ctld:AddTroopsCargo("Infrantry Section 8",{"InfantrySection"},CTLD_CARGO.Enum.TROOPS,8,80,nil,"Troops")
 my_ctld:AddTroopsCargo("Engineers 3",{"Engineers"},CTLD_CARGO.Enum.TROOPS,3,80,nil,"Troops")
-my_ctld:AddCratesCargo("Humvee 1",{"Humvee"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Soft Vehicles")
-my_ctld:AddCratesCargo("LEOPARD 4",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armoured")
+
+--Light Armor
+my_ctld:AddCratesCargo("Humvee 1",{"Humvee"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
+
+-- Armoured
+my_ctld:AddCratesCargo("LEOPARD 4",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armored")
+my_ctld:AddCratesCargo("Stryker Weapons PLT 4",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armored")
+my_ctld:AddCratesCargo("ReeceJTAC 1",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Armored")
+
+--Anti Air
+my_ctld:AddCratesCargo("Patriot Large 6",{"PatriotLarge"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Anti-Air")
+
+-- Base
+my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
+
+-- Artillery
 my_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 my_ctld:AddCratesCargo("Panzer 2000 4",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
-my_ctld:AddCratesCargo("Stryker Weapons PLT 4",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armoured")
-my_ctld:AddCratesCargo("ReeceJTAC 1",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Armoured")
-my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
 
 -- generate zone types
 my_ctld:AddCTLDZone("Loadzone",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
