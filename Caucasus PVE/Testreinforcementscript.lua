@@ -1,6 +1,6 @@
 Senakicounterzones = {
-  ZONE:New("SenakiCounterAttk-1"),
-  ZONE:New("SenakiCounterAttk-2")
+  ZONE_UNIT:New("Spawn1", Spawnunit1, 100),
+  ZONE_UNIT:New("Spawn1", Spawnunit1, 100)
 
 }
 
@@ -11,6 +11,6 @@ Senakicountrunits = {
 }
 EasyA2A = SPAWN:New( "SenakiCounterSpawn" )
 :InitRandomizeTemplate( Senakicountrunits )
-:InitLimit( 8, 64 )
+:InitLimit( 8, 0 )
 :InitRandomizeZones( Senakicounterzones )
-:SpawnScheduled( 3600, .5 )
+:SpawnScheduled(  14400, .5 )

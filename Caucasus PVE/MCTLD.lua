@@ -43,6 +43,9 @@ my_ctld:AddCratesCargo("ReeceJTAC 1",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400
 
 --Anti Air
 my_ctld:AddCratesCargo("Patriot Large 6",{"PatriotLarge"},CTLD_CARGO.Enum.VEHICLE,6,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("Rapier site 1",{"Rapier Site"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("Gepard PLT",{"Gepard PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("Avenger PLT",{"Avenger PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 
 -- Base
 my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
