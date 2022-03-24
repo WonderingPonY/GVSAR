@@ -1,6 +1,10 @@
 _SETTINGS:SetPlayerMenuOff()
 
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Helicargo"},"Ricks")
+local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha"},"Hububery")
+local my_ctld = CTLD:New(coalition.side.BLUE,{"Bravo"},"Debauchery")
+local my_ctld = CTLD:New(coalition.side.BLUE,{"Charlie"},"Shenanigans")
+
+
 --SETTINGS
 my_ctld.CrateDistance = 35 -- List and Load crates in this radius only.
 my_ctld.dropcratesanywhere = true -- Option to allow crates to be dropped anywhere.
@@ -55,7 +59,10 @@ my_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Arti
 my_ctld:AddCratesCargo("Panzer 2000 4",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 
 -- generate zone types
-my_ctld:AddCTLDZone("Loadzone",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
+my_ctld:AddCTLDZone("pickzone1",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
+my_ctld:AddCTLDZone("pickzone2",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
+my_ctld:AddCTLDZone("pickzone3",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
+my_ctld:AddCTLDZone("pickzone4",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
 
 -- update unit capabilities for testing
 my_ctld:UnitCapabilities("SA342Mistral", false, false, 0, 0)
