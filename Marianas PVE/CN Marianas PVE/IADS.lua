@@ -1,5 +1,7 @@
 redIADS = SkynetIADS:create('Russia')
 
+---test
+
 local iadsDebug = redIADS:getDebugSettings()
 iadsDebug.IADSStatus = true
 iadsDebug.contacts = true
