@@ -35,7 +35,8 @@ my_ctld:__Start(5)
 my_ctld:AddTroopsCargo("Anti-Tank Small 3",{"ATS"},CTLD_CARGO.Enum.TROOPS,3,80,nil,"Troops")
 my_ctld:AddTroopsCargo("Anti-Air 4",{"AA"},CTLD_CARGO.Enum.TROOPS,4,80,nil,"Troops")
 my_ctld:AddTroopsCargo("Infrantry Section 8",{"InfantrySection"},CTLD_CARGO.Enum.TROOPS,8,80,nil,"Troops")
-my_ctld:AddTroopsCargo("Engineers 3",{"Engineers"},CTLD_CARGO.Enum.TROOPS,3,80,nil,"Troops")
+my_ctld:AddTroopsCargo("Engineers 3",{"Engineers"},CTLD_CARGO.Enum.ENGINEERS,3,80,nil,"Troops")
+myctld.EngineerSearch = 2000
 
 --Light Armor
 my_ctld:AddCratesCargo("Humvee 1",{"Humvee"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
