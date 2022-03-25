@@ -1,8 +1,8 @@
 _SETTINGS:SetPlayerMenuOff()
 
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha"},"Hububery")
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Bravo"},"Debauchery")
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Charlie"},"Shenanigans")
+-- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
+-- initialize CTLD
+local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha","Bravo","Charlie"},"Habubery")
 
 
 --SETTINGS
