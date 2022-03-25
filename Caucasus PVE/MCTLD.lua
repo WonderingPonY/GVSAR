@@ -39,7 +39,9 @@ my_ctld:AddTroopsCargo("Engineers 3",{"Engineers"},CTLD_CARGO.Enum.ENGINEERS,3,8
 myctld.EngineerSearch = 2000
 
 --Light Armor
-my_ctld:AddCratesCargo("Humvee 1",{"Humvee"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
+my_ctld:AddCratesCargo("Ammo Truck",{"Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
+my_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1)
+   my_ctld.repairtime = 300
 
 -- Armoured
 my_ctld:AddCratesCargo("LEOPARD 4",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armored")
@@ -51,6 +53,7 @@ my_ctld:AddCratesCargo("Patriot Large 6",{"PatriotLarge"},CTLD_CARGO.Enum.VEHICL
 my_ctld:AddCratesCargo("Rapier site 1",{"Rapier Site"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("Gepard PLT",{"Gepard PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("Avenger PLT",{"Avenger PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("EWR",{"EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,nil,"Anti-Air")
 
 -- Base
 my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
