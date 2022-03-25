@@ -1,6 +1,6 @@
 _SETTINGS:SetPlayerMenuOff()
 
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Helicargo"},"Ricks")
+local my_ctld = CTLD:New(coalition.side.RED,{"Helicargo"},"Ricks")
 --SETTINGS
 my_ctld.CrateDistance = 35 -- List and Load crates in this radius only.
 my_ctld.dropcratesanywhere = true -- Option to allow crates to be dropped anywhere.
@@ -43,7 +43,7 @@ my_ctld:__Start(5)
 
 --Anti Air
 my_ctld:AddCratesCargo("KUB",{"SAM SA6"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Anti-Air")
-
+my_ctld:AddCratesCargo("PATRIOT",{"SAM Patriot"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Anti-Air")
 -- -- Base
 -- my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
 --
@@ -52,7 +52,7 @@ my_ctld:AddCratesCargo("KUB",{"SAM SA6"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Anti
 -- my_ctld:AddCratesCargo("Panzer 2000 4",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 
 -- generate zone types
-my_ctld:AddCTLDZone("Loadzone",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
+my_ctld:AddCTLDZone("Loadzone",CTLD.CargoZoneType.LOAD,SMOKECOLOR.red,true,true)
 
 -- update unit capabilities for testing
 my_ctld:UnitCapabilities("SA342Mistral", false, false, 0, 0)
