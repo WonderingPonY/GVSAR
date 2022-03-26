@@ -16,7 +16,10 @@ iadsDebug.samSiteStatusEnvOutput = true
 iadsDebug.earlyWarningRadarStatusEnvOutput = true
 iadsDebug.commandCenterStatusEnvOutput = true
 
+
+
 redIADS:addSAMSitesByPrefix('SAM')
+-- yourIADS:addSAMSite('SAM-GROUP-NAME')
 redIADS:addEarlyWarningRadarsByPrefix('EW')
 redIADS:addRadioMenu()
 redIADS:activate()
@@ -41,3 +44,17 @@ redIADS:getSAMSiteByGroupName('SAM-SA6'):setEngagementZone(SkynetIADSAbstractRad
 
 --local sa192 = redIADS:getSAMSiteByGroupName('SAM SA-19PD-2')
 --redIADS:getSAMSiteByGroupName('SAM SA-300PMU'):addPointDefence(sa192):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
+
+-------------------------------------------------------------
+-- EventHandler1 = EVENTHANDLER:New()
+--
+--
+-- EventHandler1:HandleEvent( EVENTS.Birth )
+--
+-- --- @param Core.Event#EVENT self
+-- -- @param Core.Event#EVENTDATA EventData
+-- function EventHandler1:OnBirthForTemplate( EventGroup, EventFunction, EventClass, EventTemplate )
+--   -- self:E("hello 1")
+--   -- self:E( EventGroup:GetName() )
+--   msg = MESSAGE:New("Working", EventGroup:GetName()):ToAll()
+-- end
