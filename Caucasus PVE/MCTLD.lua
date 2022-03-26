@@ -40,7 +40,7 @@ my_ctld.EngineerSearch = 2000
 
 --Light Armor
 my_ctld:AddCratesCargo("Ammo Truck",{"Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
-my_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1)
+my_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    my_ctld.repairtime = 300
 
 -- Armoured
