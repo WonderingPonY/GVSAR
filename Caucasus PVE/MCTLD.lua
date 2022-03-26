@@ -6,7 +6,7 @@ local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha","Bravo","Charlie"},"Habube
 
 
 --SETTINGS
-my_ctld.CrateDistance = 35 -- List and Load crates in this radius only.
+my_ctld.CrateDistance = 250-- List and Load crates in this radius only.
 my_ctld.dropcratesanywhere = true -- Option to allow crates to be dropped anywhere.
 my_ctld.maximumHoverHeight = 15 -- Hover max this high to load.
 my_ctld.minimumHoverHeight = 4 -- Hover min this low to load.
