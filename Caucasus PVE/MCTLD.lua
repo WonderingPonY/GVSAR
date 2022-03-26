@@ -49,8 +49,8 @@ my_ctld:AddCratesCargo("Stryker Weapons PLT 4",{"Stryker"},CTLD_CARGO.Enum.VEHIC
 my_ctld:AddCratesCargo("ReeceJTAC 1",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Armored")
 
 --Anti Air
-my_ctld:AddCratesCargo("Patriot Large 6",{"PatriotLarge"},CTLD_CARGO.Enum.VEHICLE,6,400,nil,"Anti-Air")
-my_ctld:AddCratesCargo("Rapier site 1",{"Rapier Site"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("Patriot Large 6",{"PatriotLarge"},CTLD_CARGO.Enum.FOB,6,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("Rapier site 1",{"Rapier Site"},CTLD_CARGO.Enum.FOB,4,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("Gepard PLT",{"Gepard PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("Avenger PLT",{"Avenger PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("EWR",{"EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,nil,"Anti-Air")
