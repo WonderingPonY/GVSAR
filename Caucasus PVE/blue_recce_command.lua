@@ -1,14 +1,14 @@
 RecceSetGroup = SET_GROUP:New():FilterPrefixes( "ReeceJTAC" ):FilterStart()
 
-HQ = GROUP:FindByName( "HQ" )
+HQ = GROUP:FindByName( "BlueHQ" )
 
-CC = COMMANDCENTER:New( HQ, "HQ" )
+CC = COMMANDCENTER:New( HQ, "BlueHQ" )
 
 -- Let the RecceSetGroup vehicles in the collection detect targets and group them in AREAS of 1000 meters.
 RecceDetection = DETECTION_AREAS:New( RecceSetGroup, 10000 )
 
 -- Create a Attack Set, which contains the human player client slots and CA vehicles.
-AttackSet = SET_GROUP:New():FilterPrefixes("Helicargo"):FilterStart()
+AttackSet = SET_GROUP:New():FilterPrefixes("Alpha","Bravo","Charlie"):FilterStart()
 
 RecceDesignation = DESIGNATE:New( CC, RecceDetection, AttackSet )
 
