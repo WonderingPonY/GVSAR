@@ -11,7 +11,7 @@ my_ctld.dropcratesanywhere = true -- Option to allow crates to be dropped anywhe
 my_ctld.maximumHoverHeight = 15 -- Hover max this high to load.
 my_ctld.minimumHoverHeight = 4 -- Hover min this low to load.
 my_ctld.forcehoverload = false -- Crates (not: troops) can **only** be loaded while hovering.
-my_ctld.hoverautoloading = true -- Crates in CrateDistance in a LOAD zone will be loaded automatically if space allows.
+my_ctld.hoverautoloading = false -- Crates in CrateDistance in a LOAD zone will be loaded automatically if space allows.
 my_ctld.smokedistance = 2000 -- Smoke or flares can be request for zones this far away (in meters).
 my_ctld.movetroopstowpzone = false -- Troops and vehicles will move to the nearest MOVE zone...
 my_ctld.movetroopsdistance = 5000 -- .. but only if this far away (in meters)
@@ -42,6 +42,7 @@ my_ctld.EngineerSearch = 2000
 my_ctld:AddCratesCargo("Ammo Truck",{"Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 my_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    my_ctld.repairtime = 300
+my_ctld:AddCratesCargo("LAV Mephisto 3",{"LAV Mephisto"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Light Armor")
 
 -- Armoured
 my_ctld:AddCratesCargo("LEOPARD 4",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Armored")
