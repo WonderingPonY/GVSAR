@@ -2,7 +2,7 @@ _SETTINGS:SetPlayerMenuOff()
 
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
-local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha","Bravo","Charlie"},"Habubery")
+local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha","Bravo","Charlie","Delta"},"Habubery")
 
 
 --SETTINGS
@@ -56,6 +56,7 @@ my_ctld:AddCratesCargo("Linebacker PLT",{"Linebacker"},CTLD_CARGO.Enum.VEHICLE,3
 my_ctld:AddCratesCargo("Gepard PLT",{"Gepard PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("Avenger PLT",{"Avenger PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 my_ctld:AddCratesCargo("EWR",{"EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,nil,"Anti-Air")
+my_ctld:AddCratesCargo("SA-8 PLT",{"Gecko"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 
 -- Base
 my_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
