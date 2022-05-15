@@ -37,7 +37,7 @@ A2ADispatcher:SetSquadronCapInterval( "Sq 1", 1, 600, 1200, 1 )
 --A2ADispatcher:SetSquadronLanding( "Sq 1" , "Palmyra")
 --Squadron 2
 A2ADispatcher:SetSquadron( "Sq 2", AIRBASE.Caucasus.Nalchik, { "SPatrolMiG21" }, 100 )
-A2ADispatcher:SetSquadronCap( "Sq 2", SenakiPatrolZone, 8000, 23000, 600, 800, 800, 1200, "BARO" )
+A2ADispatcher:SetSquadronCap( "Sq 2", TbilisiPatrolZone, 8000, 23000, 600, 800, 800, 1200, "BARO" )
 A2ADispatcher:SetSquadronGci( "Sq 2", 500, 1500 )
 A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 2" , "Sochi-Adler")
 A2ADispatcher:SetSquadronGrouping( "Sq 2", 2 )

@@ -34,14 +34,14 @@ local WestRusPatrolZone = ZONE:New("CapZoneRusWest")
 
 -- Setup the squadrons.
 
-A2GDispatcher:SetSquadron( "Sochi SEAD", AIRBASE.Caucasus.Sochi_Adler, { "CCCP SGroundAttackSu24MRDR" }, 100 )
-A2GDispatcher:SetSquadronSeadPatrol2( "Sochi SEAD", SenakiPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
+A2GDispatcher:SetSquadron( "Sochi SEAD", AIRBASE.Caucasus.Vaziani, { "CCCP SGroundAttackSu24MRDR" }, 100 )
+A2GDispatcher:SetSquadronSeadPatrol2( "Sochi SEAD", TbilisiPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
 A2GDispatcher:SetSquadronSeadPatrolInterval( "Sochi SEAD", 2, 300, 600, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Sochi SEAD" )
 A2GDispatcher:SetSquadronOverhead( "Sochi SEAD", 0.2 )
 
-A2GDispatcher:SetSquadron( "Sochi BAI", AIRBASE.Caucasus.Sochi_Adler, { "CCCP SGroundAttackSu24MGND" }, 100 )
-A2GDispatcher:SetSquadronBaiPatrol2( "Sochi BAI", GudPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
+A2GDispatcher:SetSquadron( "Sochi BAI", AIRBASE.Caucasus.Vaziani, { "CCCP SGroundAttackSu24MGND" }, 100 )
+A2GDispatcher:SetSquadronBaiPatrol2( "Sochi BAI", TbilisiPatrolZone, 500, 550, 2000, 2000, "BARO", 750, 800, 30, 30, "RADIO" )
 A2GDispatcher:SetSquadronBaiPatrolInterval( "Sochi BAI", 2, 300, 600, 1 )
 A2GDispatcher:SetSquadronTakeoffFromParkingHot( "Sochi BAI" )
 A2GDispatcher:SetSquadronOverhead( "Sochi BAI", 0.25 )
