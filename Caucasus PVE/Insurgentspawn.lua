@@ -1,6 +1,11 @@
 Senakicounterzones = {
-  ZONE_UNIT:New("Spawn1", Spawnunit1, 100),
-  ZONE_UNIT:New("Spawn1", Spawnunit1, 100)
+  ZONE:New("Insurgentspawn-1"),
+  ZONE:New("Insurgentspawn-2"),
+  ZONE:New("Insurgentspawn-3"),
+  ZONE:New("Insurgentspawn-4"),
+  ZONE:New("Insurgentspawn-5"),
+  ZONE:New("Insurgentspawn-6"),
+  ZONE:New("Insurgentspawn-7")
 
 }
 
