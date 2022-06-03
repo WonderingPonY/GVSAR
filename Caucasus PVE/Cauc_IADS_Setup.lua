@@ -58,6 +58,26 @@ redIADS:getSAMSiteByGroupName('RED SAM-SA2-1'):addPointDefence(sa15):setHARMDete
 
 redIADS:setupSAMSitesAndThenActivate()
 
+blueIADS = SkynetIADS:create('Blue Coalition')
+
+bluecommandCenter1 = StaticObject.getByName('blue-Command-Center-1')
+blueIADS:addCommandCenter(bluecommandCenter1)
+
+--bluecommandCenter2 = StaticObject.getByName('blue-Command-Center-2')
+--blueIADS:addCommandCenter(bluecommandCenter2)
+
+blueIADS:addSAMSitesByPrefix('BLUE SAM')
+
+blueIADS:addEarlyWarningRadarsByPrefix('BLUE EWR')
+
+blueIADS:getSAMSitesByNatoName('Patriot'):setHARMDetectionChance(100)
+
+blueIADS:getSAMSitesByNatoName('SA-10'):setGoLiveRangeInPercent(80)
+blueIADS:getSAMSitesByNatoName('SA-11'):setGoLiveRangeInPercent(95)
+blueIADS:getSAMSitesByNatoName('Patriot'):setGoLiveRangeInPercent(80)
+blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(80)
+
+blueIADS:setupSAMSitesAndThenActivate()
 -------------------------------------------------------------
 -- EventHandler1 = EVENTHANDLER:New()
 --
