@@ -5,18 +5,18 @@ redIADS = SkynetIADS:create('Russia')
 ---test
 
 local iadsDebug = redIADS:getDebugSettings()
-iadsDebug.IADSStatus = true
-iadsDebug.contacts = true
+iadsDebug.IADSStatus = false
+iadsDebug.contacts = false
 iadsDebug.jammerProbability = true
 iadsDebug.addedEWRadar = true
 iadsDebug.addedSAMSite = true
 iadsDebug.warnings = true
 iadsDebug.radarWentLive = true
-iadsDebug.radarWentDark = true
+iadsDebug.radarWentDark = false
 iadsDebug.harmDefence = true
-iadsDebug.samSiteStatusEnvOutput = true
-iadsDebug.earlyWarningRadarStatusEnvOutput = true
-iadsDebug.commandCenterStatusEnvOutput = true
+iadsDebug.samSiteStatusEnvOutput = false
+iadsDebug.earlyWarningRadarStatusEnvOutput = false
+iadsDebug.commandCenterStatusEnvOutput = false
 
 
 
@@ -45,8 +45,8 @@ redIADS:getSAMSitesByNatoName('SA-15'):setEngagementZone(SkynetIADSAbstractRadar
 redIADS:getSAMSitesByNatoName('SA-19'):setEngagementZone(SkynetIADSAbstractRadarElement.GO_LIVE_WHEN_IN_SEARCH_RANGE)
 
 --Point Point Defences
-local sa15 = redIADS:getSAMSiteByGroupName('RED SAM SA-15-1')
-redIADS:getSAMSiteByGroupName('RED SAM-SA2-1'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
+--local sa15 = redIADS:getSAMSiteByGroupName('RED SAM SA-15-1')
+--redIADS:getSAMSiteByGroupName('RED SAM-SA2-1'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
 
 
 -- local connectionNode = Unit.getByName('SAM-S300V-Command-Post')
@@ -71,13 +71,27 @@ blueIADS:addSAMSitesByPrefix('BLUE SAM')
 blueIADS:addEarlyWarningRadarsByPrefix('BLUE EWR')
 
 blueIADS:getSAMSitesByNatoName('Patriot'):setHARMDetectionChance(100)
-
-blueIADS:getSAMSitesByNatoName('SA-10'):setGoLiveRangeInPercent(80)
-blueIADS:getSAMSitesByNatoName('SA-11'):setGoLiveRangeInPercent(95)
 blueIADS:getSAMSitesByNatoName('Patriot'):setGoLiveRangeInPercent(80)
-blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(80)
+blueIADS:getSAMSitesByNatoName('Rapier'):setGoLiveRangeInPercent(95)
+blueIADS:getSAMSitesByNatoName('Roland ADS'):setGoLiveRangeInPercent(95)
+blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(95)
+
 
 blueIADS:setupSAMSitesAndThenActivate()
+
+local iadsDebug = blueIADS:getDebugSettings()
+iadsDebug.IADSStatus = true
+iadsDebug.contacts = true
+iadsDebug.jammerProbability = true
+iadsDebug.addedEWRadar = true
+iadsDebug.addedSAMSite = true
+iadsDebug.warnings = true
+iadsDebug.radarWentLive = true
+iadsDebug.radarWentDark = true
+iadsDebug.harmDefence = true
+iadsDebug.samSiteStatusEnvOutput = true
+iadsDebug.earlyWarningRadarStatusEnvOutput = true
+iadsDebug.commandCenterStatusEnvOutput = true
 -------------------------------------------------------------
 -- EventHandler1 = EVENTHANDLER:New()
 --
