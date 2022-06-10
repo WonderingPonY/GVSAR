@@ -7,13 +7,13 @@ redIADS = SkynetIADS:create('Russia')
 local iadsDebug = redIADS:getDebugSettings()
 iadsDebug.IADSStatus = false
 iadsDebug.contacts = false
-iadsDebug.jammerProbability = true
-iadsDebug.addedEWRadar = true
-iadsDebug.addedSAMSite = true
-iadsDebug.warnings = true
-iadsDebug.radarWentLive = true
+iadsDebug.jammerProbability = false
+iadsDebug.addedEWRadar = false
+iadsDebug.addedSAMSite = false
+iadsDebug.warnings = false
+iadsDebug.radarWentLive = false
 iadsDebug.radarWentDark = false
-iadsDebug.harmDefence = true
+iadsDebug.harmDefence = false
 iadsDebug.samSiteStatusEnvOutput = false
 iadsDebug.earlyWarningRadarStatusEnvOutput = false
 iadsDebug.commandCenterStatusEnvOutput = false
@@ -22,8 +22,8 @@ iadsDebug.commandCenterStatusEnvOutput = false
 
 redIADS:addSAMSitesByPrefix('RED SAM')
 -- yourIADS:addSAMSite('SAM-GROUP-NAME')
-redIADS:addEarlyWarningRadarsByPrefix('RED EW')
-redIADS:addRadioMenu()
+redIADS:addEarlyWarningRadarsByPrefix('RED EWR')
+--redIADS:addRadioMenu()
 redIADS:activate()
 
 local commandCenter = StaticObject.getByName("Command_Center-1")
@@ -31,7 +31,7 @@ redIADS:addCommandCenter(commandCenter)
 
 -- local powerSource = StaticObject.getByName('Power-Source-EW-Anderson')
 -- local connectionNodeEW = StaticObject.getByName('Connection-Node-Anderson')
-redIADS:getEarlyWarningRadarByUnitName('RED EW-Senaki')--:addPowerSource(powerSource):addConnectionNode(connectionNodeEW)
+redIADS:getEarlyWarningRadarByUnitName('RED EWR-Senaki')--:addPowerSource(powerSource):addConnectionNode(connectionNodeEW)
 
 -- local connectionNode = Unit.getByName('SAM-S300V-Command-Post')
 redIADS:getSAMSitesByNatoName('SA-2'):setGoLiveRangeInPercent(85)
@@ -80,18 +80,18 @@ blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(95)
 blueIADS:setupSAMSitesAndThenActivate()
 
 local iadsDebug = blueIADS:getDebugSettings()
-iadsDebug.IADSStatus = true
-iadsDebug.contacts = true
-iadsDebug.jammerProbability = true
-iadsDebug.addedEWRadar = true
-iadsDebug.addedSAMSite = true
-iadsDebug.warnings = true
-iadsDebug.radarWentLive = true
-iadsDebug.radarWentDark = true
-iadsDebug.harmDefence = true
-iadsDebug.samSiteStatusEnvOutput = true
-iadsDebug.earlyWarningRadarStatusEnvOutput = true
-iadsDebug.commandCenterStatusEnvOutput = true
+iadsDebug.IADSStatus = false
+iadsDebug.contacts = false
+iadsDebug.jammerProbability = false
+iadsDebug.addedEWRadar = false
+iadsDebug.addedSAMSite = false
+iadsDebug.warnings = false
+iadsDebug.radarWentLive = false
+iadsDebug.radarWentDark = false
+iadsDebug.harmDefence = false
+iadsDebug.samSiteStatusEnvOutput = false
+iadsDebug.earlyWarningRadarStatusEnvOutput = false
+iadsDebug.commandCenterStatusEnvOutput = false
 -------------------------------------------------------------
 -- EventHandler1 = EVENTHANDLER:New()
 --

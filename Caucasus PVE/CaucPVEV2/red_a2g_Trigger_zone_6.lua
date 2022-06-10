@@ -1,7 +1,8 @@
 -- Define a SET_GROUP object that builds a collection of groups that define the recce network.
 -- Here we build the network with all the groups that have a name starting with CCCP Recce.
 local DetectionSetGroup = SET_GROUP:New():FilterStart()
-DetectionSetGroup:FilterPrefixes( { "CCCP", "4th", "41st", "8th", "6th", "11th" } )
+DetectionSetGroup:FilterPrefixes( "CCCP" )
+
 
 local Detection = DETECTION_AREAS:New( DetectionSetGroup, 5000 )
 
@@ -21,7 +22,7 @@ A2GDispatcher:SetDefenseRadius( 370400 )
 
 A2GDispatcher:SetCommandCenter( HQ_CC )
 
-A2GDispatcher:SetTacticalDisplay( true )
+A2GDispatcher:SetTacticalDisplay( false )
 DetectionSetGroup:Count()
 BASE:E("Group set count " .. DetectionSetGroup:Count())
 

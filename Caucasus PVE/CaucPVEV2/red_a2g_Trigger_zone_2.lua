@@ -1,7 +1,7 @@
 -- Define a SET_GROUP object that builds a collection of groups that define the recce network.
 -- Here we build the network with all the groups that have a name starting with CCCP Recce.
 local DetectionSetGroup = SET_GROUP:New():FilterStart()
-DetectionSetGroup:FilterPrefixes( { "CCCP", "4th", "41st", "8th", "6th", "11th" } )
+DetectionSetGroup:FilterPrefixes( "41st" )
 
 local Detection = DETECTION_AREAS:New( DetectionSetGroup, 5000 )
 
@@ -13,6 +13,8 @@ local HQ_CC = COMMANDCENTER:New( HQ_Group, "4ths Guard-5" )
 
 -- Add defense coordinates.
 A2GDispatcher:AddDefenseCoordinate( "4ths Guard-5", GROUP:FindByName( "4ths Guard-5" ):GetCoordinate() )
+A2GDispatcher:AddDefenseCoordinate( "41st Combined Army-9", GROUP:FindByName( "41st Combined Army-9" ):GetCoordinate() )
+A2GDispatcher:AddDefenseCoordinate( "41st Combined Army-64", GROUP:FindByName( "41st Combined Army-64" ):GetCoordinate() )
 -- A2GDispatcher:AddDefenseCoordinate( "DomComm", GROUP:FindByName( "DomComm" ):GetCoordinate() )
 
 A2GDispatcher:SetDefenseReactivityHigh()
@@ -21,7 +23,7 @@ A2GDispatcher:SetDefenseRadius( 370400 )
 
 A2GDispatcher:SetCommandCenter( HQ_CC )
 
-A2GDispatcher:SetTacticalDisplay( true )
+A2GDispatcher:SetTacticalDisplay( false )
 DetectionSetGroup:Count()
 BASE:E("Group set count " .. DetectionSetGroup:Count())
 
