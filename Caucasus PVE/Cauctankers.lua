@@ -15,7 +15,7 @@ Shell_KC130MPRS:SpawnScheduled(30,0)
 local Shell_SKC130 = SPAWN:New( "Tanker 135A10" )
 Shell_SKC130:InitLimit(1,100)
 Shell_SKC130:InitRepeatOnLanding()
-shell_SKC130:SpawnScheduled(30,0)
+Shell_SKC130:SpawnScheduled(30,0)
 
 local AWACS_E3A = SPAWN:New( "Big Daddy" )
 AWACS_E3A:InitLimit(1,100)
