@@ -12,7 +12,7 @@ function SEF_ONDEADEVENTHANDLER:onEvent(Event)
 					local DeadUnitCoalition 	 = Event.initiator:getCoalition()
 					local DeadUnitName			 = Event.initiator:getName()
 
-					if ( DeadUnitCoalition == 1 ) then													-- RED ONLY AT THIS STAGE
+					if ( DeadUnitCoalition == 1 or DeadUnitCoalition == 2 ) then													-- RED ONLY AT THIS STAGE
 						if ( DeadUnitObjectCategory == 1 ) then 										-- UNIT
 							if ( DeadUnitCategory == 2 or DeadUnitCategory == 3 ) then 					-- GROUND_UNIT or SHIP
 								-- if ( string.find(DeadUnitName, "Chinese LUV Tigr") ) then
