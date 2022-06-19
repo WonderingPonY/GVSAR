@@ -45,10 +45,14 @@ redIADS:getSAMSitesByNatoName('SA-15'):setEngagementZone(SkynetIADSAbstractRadar
 redIADS:getSAMSitesByNatoName('SA-19'):setEngagementZone(SkynetIADSAbstractRadarElement.GO_LIVE_WHEN_IN_SEARCH_RANGE)
 
 --Point Point Defences
---local sa15 = redIADS:getSAMSiteByGroupName('RED SAM SA-15-1')
---redIADS:getSAMSiteByGroupName('RED SAM-SA2-1'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
+local sa15 = redIADS:getSAMSiteByGroupName('RED SAM SA-15-1')
+redIADS:getSAMSiteByGroupName('RED SAM-SA11-2'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
 
+local sa15 = redIADS:getSAMSiteByGroupName('RED SAM 41st Combined Army-3')
+redIADS:getSAMSiteByGroupName('RED SAM 41st Combined Army-10'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
 
+local sa15 = redIADS:getSAMSiteByGroupName('RED SAM 4ths Guard-1')
+redIADS:getSAMSiteByGroupName('RED SAM 4ths Guard-7'):addPointDefence(sa15):setHARMDetectionChance(100):setIgnoreHARMSWhilePointDefencesHaveAmmo(true)
 -- local connectionNode = Unit.getByName('SAM-S300V-Command-Post')
 --redIADS:getSAMSiteByGroupName('SAM SA-300PMU'):setAutonomousBehaviour(SkynetIADSAbstractRadarElement.AUTONOMOUS_STATE_DARK)
 --redIADS:getSAMSiteByGroupName('SAM SA-300PMU'):setEngagementZone(SkynetIADSAbstractRadarElement.GO_LIVE_WHEN_IN_SEARCH_RANGE):setGoLiveRangeInPercent(70)
@@ -71,10 +75,10 @@ blueIADS:addSAMSitesByPrefix('BLUE SAM')
 blueIADS:addEarlyWarningRadarsByPrefix('BLUE EWR')
 
 blueIADS:getSAMSitesByNatoName('Patriot'):setHARMDetectionChance(100)
-blueIADS:getSAMSitesByNatoName('Patriot'):setGoLiveRangeInPercent(80)
-blueIADS:getSAMSitesByNatoName('Rapier'):setGoLiveRangeInPercent(95)
+blueIADS:getSAMSitesByNatoName('Patriot'):setGoLiveRangeInPercent(75)
+blueIADS:getSAMSitesByNatoName('Rapier'):setGoLiveRangeInPercent(85)
 blueIADS:getSAMSitesByNatoName('Roland ADS'):setGoLiveRangeInPercent(95)
-blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(95)
+blueIADS:getSAMSitesByNatoName('Hawk'):setGoLiveRangeInPercent(85)
 
 
 blueIADS:setupSAMSitesAndThenActivate()
