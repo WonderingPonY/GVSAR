@@ -1,22 +1,22 @@
-DetectionSetGroup = SET_GROUP:New()
+local DetectionSetGroup = SET_GROUP:New()
 DetectionSetGroup:FilterPrefixes( { "BLUE" } )
 DetectionSetGroup:FilterStart()
 
 -- Setup the detection and group targets to a 30km range!
-Detection = DETECTION_AREAS:New( DetectionSetGroup, 300000 )
+local Detection = DETECTION_AREAS:New( DetectionSetGroup, 300000 )
 Detection:SetRefreshTimeInterval( 10 )
 --Filter Catagories
 DetectionSetGroup:FilterCategories( Unit.Category.Airplane )
 
 -- Setup the A2A dispatcher, and initialize it.
-A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
+local A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
 A2ADispatcher:SetTacticalDisplay( false )
 A2ADispatcher:SetRefreshTimeInterval( 10 )
 
 
 A2ADispatcher:SetEngageRadius( 100000 )
 --BorderZone
-BorderZone = ZONE_POLYGON:New( "Cuacborder", GROUP:FindByName( "Cuacborder" ) )
+local BorderZone = ZONE_POLYGON:New( "Cuacborder", GROUP:FindByName( "Cuacborder" ) )
 A2ADispatcher:SetBorderZone( BorderZone )
 --local GudPatrolZone = ZONE:New("CapZoneGud")
 --local SenakiPatrolZone = ZONE:New("CapZoneSenaki")
@@ -26,14 +26,15 @@ local TbilisiPatrolZone = ZONE:New("Spawn Trigger Zone-6")
 
 --Here we will make the squadrons and set options for each squadron
 -- Squadron 1
-A2ADispatcher:SetSquadron( "Sq 13", AIRBASE.Caucasus.Vaziani, { "Panthers" }, 100 )
-A2ADispatcher:SetSquadronCap( "Sq 13", TbilisiPatrolZone, 4000, 8000, 600, 800, 800, 1200, "BARO" )
-A2ADispatcher:SetSquadronGci( "Sq 13", 1000, 1500 )
-A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 13" , "Vaziani")
-A2ADispatcher:SetSquadronGrouping( "Sq 13", 2 )
-A2ADispatcher:SetSquadronOverhead( "Sq 13", 0.1)
-A2ADispatcher:SetSquadronFuelThreshold( "Sq 13", 0.35 )
-A2ADispatcher:SetSquadronCapInterval( "Sq 13", 1, 600, 1200, 1 )
+A2ADispatcher:SetSquadron( "Sq 37", AIRBASE.Caucasus.Vaziani, { "Bulls" }, 100 )
+A2ADispatcher:SetSquadronCap( "Sq 37", TbilisiPatrolZone, 4000, 8000, 600, 800, 800, 1200, "BARO" )
+A2ADispatcher:SetSquadronGci( "Sq 37", 1000, 1500 )
+A2ADispatcher:SetSquadronLandingNearAirbase( "Sq 37" , "Vaziani")
+A2ADispatcher:SetSquadronGrouping( "Sq 37", 2 )
+A2ADispatcher:SetSquadronOverhead( "Sq 37", 0.1)
+A2ADispatcher:SetSquadronFuelThreshold( "Sq 37", 0.35 )
+A2ADispatcher:SetSquadronCapInterval( "Sq 37", 1, 600, 1200, 1 )
+A2ADispatcher:SetSquadronTakeoffFromParkingHot("Sq 37")
 --A2ADispatcher:SetSquadronLanding( "Sq 1" , "Palmyra")
 --Squadron 2
 -- A2ADispatcher:SetSquadron( "Sq 2", AIRBASE.Caucasus.Nalchik, { "SPatrolMiG21" }, 100 )
