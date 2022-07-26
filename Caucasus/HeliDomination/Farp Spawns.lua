@@ -196,4 +196,62 @@ function()
                         else
                           return nil
                         end
+
+                        local LM26zone = ZONE:FindByName("LM26")
+                        local FarpLM26zone = ZONE:FindByName("Blue LM26 FARP")
+                        local BlueLM26FARPDef = ZONE:FindByName("Blue Farp Defense-9")
+
+                                if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone)  then
+                                SPAWN:New("BLUE Supply LM26zone")
+                                :InitLimit( 4, 400 )
+                                :SpawnScheduled( 5, .5 )
+                              else
+                                return nil
+                                end
+                                if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and  not Group.getByName('Static FARP Fuel Depot-9') then
+                                mist.respawnGroup('Static FARP Fuel Depot-9', true)
+                                end
+                              if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('Static FARP Ammo Storage-9') then
+                              mist.respawnGroup('Static FARP Ammo Storage-9', true)
+                              end
+                               if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('BLUE Supply LM26') then
+                                       mist.respawnGroup('BLUE Supply LM26', true)
+                               end
+                                  if redfor:NoneInZone(LM26zone) and bluAA:NoneInZone(BlueLM26FARPDef)then
+                                    SPAWN:New("BLUE Farp AA-9")
+                                    :InitRandomizeTemplate(BlueFarpDefence)
+                                    :InitLimit( 4, 400 )
+                                    :SpawnScheduled( 5, .5 )
+                                  else
+                                    return nil
+                                  end
+
+                                  local LM08zone = ZONE:FindByName("LM08")
+                                  local FarpLM08zone = ZONE:FindByName("Blue LM26 FARP")
+                                  local BlueLM08FARPDef = ZONE:FindByName("Blue Farp Defense-9")
+
+                                          if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone)  then
+                                          SPAWN:New("BLUE Supply LM08")
+                                          :InitLimit( 4, 400 )
+                                          :SpawnScheduled( 5, .5 )
+                                        else
+                                          return nil
+                                          end
+                                          if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and  not Group.getByName('Static FARP Fuel Depot-10') then
+                                          mist.respawnGroup('Static FARP Fuel Depot-10', true)
+                                          end
+                                        if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('Static FARP Ammo Storage-10') then
+                                        mist.respawnGroup('Static FARP Ammo Storage-10', true)
+                                        end
+                                         if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('BLUE Supply LM08') then
+                                                 mist.respawnGroup('BLUE Supply LM08', true)
+                                         end
+                                            if redfor:NoneInZone(LM08zone) and bluAA:NoneInZone(BlueLM08FARPDef)then
+                                              SPAWN:New("BLUE Farp AA-10")
+                                              :InitRandomizeTemplate(BlueFarpDefence)
+                                              :InitLimit( 4, 400 )
+                                              :SpawnScheduled( 5, .5 )
+                                            else
+                                              return nil
+                                            end
 end, {}, 4, 60 )
