@@ -282,7 +282,7 @@ function()
          if blufor:NoneInZone(KM76zone) and redfor:AnyInZone(KM76zone) and not Group.getByName('RED Supply KM76') then
                  mist.respawnGroup('RED Supply KM76', true)
          end
-            if blufor:NoneInZone(KM76zone) and redAA:NoneInZone(RedKM76FARPDef)then
+            if blufor:NoneInZone(KM76zone) then --and redAA:NoneInZone(RedKM76FARPDef)then
               SPAWN:New("RED Farp AA-1")
               :InitRandomizeTemplate(RedFarpDefence)
               :InitLimit( 4, 400 )
@@ -296,7 +296,7 @@ local FarpKM88zone = ZONE:FindByName("Red KM88 FARP")
 local RedKM88FARPDef = ZONE:FindByName("Red Farp Defense-2")
 
         if blufor:NoneInZone(KM88zone) and redfor:AnyInZone(KM88zone)  then
-        SPAWN:New("RED Supply KM76")
+        SPAWN:New("RED Supply KM88")
         :InitLimit( 4, 400 )
         :SpawnScheduled( 5, .5 )
       else
