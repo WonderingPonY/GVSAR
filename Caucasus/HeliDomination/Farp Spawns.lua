@@ -257,7 +257,7 @@ function()
                                             else
                                               return nil
                                             end
-end, {}, 4, 60 )
+end, {}, 5, 60 )
 
 RedFarptrigger = SCHEDULER:New(nil,
 function()
@@ -282,7 +282,7 @@ function()
          if blufor:NoneInZone(KM76zone) and redfor:AnyInZone(KM76zone) and not Group.getByName('RED Supply KM76') then
                  mist.respawnGroup('RED Supply KM76', true)
          end
-            if blufor:NoneInZone(KM76zone) then --and redAA:NoneInZone(RedKM76FARPDef)then
+            if blufor:NoneInZone(KM76zone) and redfor:NoneInZone(RedKM76FARPDef) then --and redfor:NoneInZone(RedKM76FARPDef)then
               SPAWN:New("RED Farp AA-1")
               :InitRandomizeTemplate(RedFarpDefence)
               :InitLimit( 4, 400 )
@@ -311,7 +311,7 @@ local RedKM88FARPDef = ZONE:FindByName("Red Farp Defense-2")
        if blufor:NoneInZone(KM88zone) and redfor:AnyInZone(KM88zone) and not Group.getByName('RED Supply KM88') then
                mist.respawnGroup('RED Supply KM88', true)
        end
-          if blufor:NoneInZone(KM88zone) and redAA:NoneInZone(RedKM88FARPDef)then
+          if blufor:NoneInZone(KM88zone) and redfor:NoneInZone(RedKM88FARPDef)then
             SPAWN:New("RED Farp AA-2")
             :InitRandomizeTemplate(RedFarpDefence)
             :InitLimit( 4, 400 )
@@ -325,7 +325,7 @@ local FarpLM26zone = ZONE:FindByName("Red LM26 FARP")
 local RedLM26FARPDef = ZONE:FindByName("Red Farp Defense-3")
 
       if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone)  then
-      SPAWN:New("RED Supply LM16")
+      SPAWN:New("RED Supply LM26")
       :InitLimit( 4, 400 )
       :SpawnScheduled( 5, .5 )
     else
@@ -340,7 +340,7 @@ local RedLM26FARPDef = ZONE:FindByName("Red Farp Defense-3")
      if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and not Group.getByName('RED Supply LM26') then
              mist.respawnGroup('RED Supply LM26', true)
      end
-        if blufor:NoneInZone(LM26zone) and redAA:NoneInZone(RedLM26FARPDef)then
+        if blufor:NoneInZone(LM26zone) and redfor:NoneInZone(RedLM26FARPDef)then
           SPAWN:New("RED Farp AA-3")
           :InitRandomizeTemplate(RedFarpDefence)
           :InitLimit( 4, 400 )
@@ -369,7 +369,7 @@ local RedLM38FARPDef = ZONE:FindByName("Red Farp Defense-4")
        if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and not Group.getByName('RED Supply LM38') then
                mist.respawnGroup('RED Supply LM38', true)
        end
-          if blufor:NoneInZone(LM38zone) and redAA:NoneInZone(RedLM38FARPDef)then
+          if blufor:NoneInZone(LM38zone) and redfor:NoneInZone(RedLM38FARPDef)then
             SPAWN:New("RED Farp AA-4")
             :InitRandomizeTemplate(RedFarpDefence)
             :InitLimit( 4, 400 )
@@ -398,7 +398,7 @@ local RedLM64FARPDef = ZONE:FindByName("Red Farp Defense-5")
      if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and not Group.getByName('RED Supply LM64') then
              mist.respawnGroup('RED Supply LM64', true)
      end
-        if blufor:NoneInZone(LM64zone) and redAA:NoneInZone(RedLM64FARPDef)then
+        if blufor:NoneInZone(LM64zone) and redfor:NoneInZone(RedLM64FARPDef)then
           SPAWN:New("RED Farp AA-6")
           :InitRandomizeTemplate(RedFarpDefence)
           :InitLimit( 4, 400 )
@@ -427,7 +427,7 @@ local RedLM67FARPDef = ZONE:FindByName("Red Farp Defense-6")
        if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and not Group.getByName('RED Supply LM67') then
                mist.respawnGroup('RED Supply LM67', true)
        end
-          if blufor:NoneInZone(LM67zone) and redAA:NoneInZone(RedLM67FARPDef)then
+          if blufor:NoneInZone(LM67zone) and redfor:NoneInZone(RedLM67FARPDef)then
             SPAWN:New("RED Farp AA-7")
             :InitRandomizeTemplate(RedFarpDefence)
             :InitLimit( 4, 400 )
@@ -456,7 +456,7 @@ end
  if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and not Group.getByName('RED Supply MM05') then
          mist.respawnGroup('RED Supply MM05', true)
  end
-    if blufor:NoneInZone(MM05zone) and redAA:NoneInZone(RedMM05FARPDef)then
+    if blufor:NoneInZone(MM05zone) and redfor:NoneInZone(RedMM05FARPDef)then
       SPAWN:New("RED Farp AA-8")
       :InitRandomizeTemplate(RedFarpDefence)
       :InitLimit( 4, 400 )
@@ -485,7 +485,7 @@ end
            if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and not Group.getByName('RED Supply MM17') then
                    mist.respawnGroup('RED Supply MM17', true)
            end
-              if blufor:NoneInZone(MM17zone) and redAA:NoneInZone(RedMM05FARPDef)then
+              if blufor:NoneInZone(MM17zone) and redfor:NoneInZone(RedMM05FARPDef)then
                 SPAWN:New("RED Farp AA-9")
                 :InitRandomizeTemplate(RedFarpDefence)
                 :InitLimit( 4, 400 )
@@ -514,7 +514,7 @@ end
                      if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and not Group.getByName('RED Supply MM45') then
                              mist.respawnGroup('RED Supply MM45', true)
                      end
-                        if blufor:NoneInZone(MM45zone) and redAA:NoneInZone(RedMM45FARPDef)then
+                        if blufor:NoneInZone(MM45zone) and redfor:NoneInZone(RedMM45FARPDef)then
                           SPAWN:New("RED Farp AA-10")
                           :InitRandomizeTemplate(RedFarpDefence)
                           :InitLimit( 4, 400 )
@@ -543,7 +543,7 @@ local RedMM43FARPDef = ZONE:FindByName("Red Farp Defense-10")
        if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and not Group.getByName('RED Supply MM43') then
                mist.respawnGroup('RED Supply MM43', true)
        end
-          if blufor:NoneInZone(MM43zone) and redAA:NoneInZone(RedMM43FARPDef)then
+          if blufor:NoneInZone(MM43zone) and redfor:NoneInZone(RedMM43FARPDef)then
             SPAWN:New("RED Farp AA-10")
             :InitRandomizeTemplate(RedFarpDefence)
             :InitLimit( 4, 400 )
