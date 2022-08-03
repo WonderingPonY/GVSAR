@@ -258,40 +258,44 @@ local BlueLM26FARPDef = ZONE:FindByName("Blue Farp Defense-9")
                       return nil
                     end
 
+  end, {}, 4, 3600 )
+
+  RedFarptrigger = SCHEDULER:New(nil,
+  function()
+
+
+
                     local KM76zone = ZONE:FindByName("KM76")
                     local FarpKM76zone = ZONE:FindByName("Red KM76 FARP")
                     local RedKM76FARPDef = ZONE:FindByName("Red Farp Defense-1")
 
-                            if blufor:NoneInZone(KM76zone) and redfor:AnyInZone(KM76zone)  then
-                            SPAWN:New("RED Supply KM76")
-                            :InitLimit( 4, 400 )
-                            :SpawnScheduled( 5, .5 )
-                          else
-                            return nil
+                        if blufor:NoneInZone(KM76zone) and redfor:NoneInZone(FarpKM76zone) then --and redfor:AnyInZone(KM76zone)  then
+                        SPAWN:New("RED Supply KM76")
+                        :InitLimit( 4, 400 )
+                        :SpawnScheduled( 5, .5 )
+                        end
+                            if blufor:NoneInZone(KM76zone) and redAA:NoneInZone(RedKM76FARPDef) then --and redfor:NoneInZone(RedKM76FARPDef)then
+                              SPAWN:New("RED Farp AA-1")
+                              :InitRandomizeTemplate(RedFarpDefence)
+                              :InitLimit( 4, 400 )
+                              :SpawnScheduled( 5, .5 )
                             end
-                            if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Fuel Depot-11') then
-                            mist.respawnGroup('Static FARP Fuel Depot-11', true)
-                            end
+                                if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Fuel Depot-11') then
+                                mist.respawnGroup('Static FARP Fuel Depot-11', true)
+                                end
                           if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Ammo Storage-11') then
                           mist.respawnGroup('Static FARP Ammo Storage-11', true)
                           end
                            if blufor:NoneInZone(KM76zone) and not Group.getByName('RED Supply KM76') then
                                    mist.respawnGroup('RED Supply KM76', true)
                            end
-                              if blufor:NoneInZone(KM76zone) and redAA:NoneInZone(RedKM76FARPDef) then --and redfor:NoneInZone(RedKM76FARPDef)then
-                                SPAWN:New("RED Farp AA-1")
-                                :InitRandomizeTemplate(RedFarpDefence)
-                                :InitLimit( 4, 400 )
-                                :SpawnScheduled( 5, .5 )
-                              else
-                                return nil
-                              end
+
 
                     local KM88zone = ZONE:FindByName("KM88")
                     local FarpKM88zone = ZONE:FindByName("Red KM88 FARP")
                     local RedKM88FARPDef = ZONE:FindByName("Red Farp Defense-2")
 
-                          if blufor:NoneInZone(KM88zone) and redfor:AnyInZone(KM88zone)  then
+                          if blufor:NoneInZone(KM88zone) and redfor:NoneInZone(FarpKM88zone) then
                           SPAWN:New("RED Supply KM88")
                           :InitLimit( 4, 400 )
                           :SpawnScheduled( 5, .5 )
@@ -320,7 +324,7 @@ local BlueLM26FARPDef = ZONE:FindByName("Blue Farp Defense-9")
                     local FarpLM26zone = ZONE:FindByName("Red LM26 FARP")
                     local RedLM26FARPDef = ZONE:FindByName("Red Farp Defense-3")
 
-                        if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone)  then
+                        if blufor:NoneInZone(LM26zone) and redfor:NoneInZone(FarpLM26zone) then
                         SPAWN:New("RED Supply LM26")
                         :InitLimit( 4, 400 )
                         :SpawnScheduled( 5, .5 )
