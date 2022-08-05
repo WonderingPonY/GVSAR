@@ -1,11 +1,14 @@
+BlueLRZones = {ZONE:New( "Blue LR SAM Zone-1" ), ZONE:New( "Blue LR SAM Zone-2" ) }
+BlueMRZones = {ZONE:New( "Blue MR SAM Zone-1" ), ZONE:New( "Blue MR SAM Zone-2" ), ZONE:New( "Blue MR SAM Zone-3" ), ZONE:New( "Blue MR SAM Zone-4" ) }
 RedLRZones = {ZONE:New( "Red LR SAM Zone-1" ), ZONE:New( "Red LR SAM Zone-2" ), ZONE:New( "Red LR SAM Zone-3" ), ZONE:New( "Red LR SAM Zone-4" ) }
 RedMRZones = {ZONE:New( "Red MR SAM Zone-1" ), ZONE:New( "Red MR SAM Zone-2" ), ZONE:New( "Red MR SAM Zone-3" ), ZONE:New( "Red MR SAM Zone-4" ) }
 RedForSAMSpawn = {"RED SAM MR-1", "RED SAM MR-2", "RED SAM MR-3"}
+BluForSAMSpawn = {"BLUE SAM MR-1", "BLUE SAM MR-2" }
 blufor = SET_GROUP:New():FilterCoalitions('blue'):FilterCategoryGround():FilterStart()
 redfor = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterStart()
 
 
-BlueFarptrigger = SCHEDULER:New(nil,
+RedSAMtrigger = SCHEDULER:New(nil,
 function()
 
   local KM96zone = ZONE:FindByName("KM96")
@@ -43,3 +46,37 @@ function()
 
 
 end, {}, 10 )
+
+blueSAMtrigger = SCHEDULER:New(nil,
+function()
+  MM73zone = ZONE:FindByName("MM73")
+  MM74zone = ZONE:FindByName("MM74")
+  RedLRZones1 = ZONE:FindByName("Blue LR SAM Zone-1")
+  RedLRZones2 = ZONE:FindByName("Blue LR SAM Zone-2")
+
+  if redfor:NoneInZone(MM73zone) or redfor:NoneInZone(MM74zone) and blufor:NoneInZone(BlueLRZones) then
+    SPAWN:New("BLUE SAM LR-1")
+    :InitRandomizeZones(BlueLRZones)
+    --:InitRandomizeTemplate(RedForSpawn)
+    :InitLimit( 20, 0 )
+    :SpawnScheduled( 5, .5 )
+  end
+
+  local MM44zone = ZONE:FindByName("MM44")
+  MM35zone = ZONE:FindByName("MM35")
+  MM26zone = ZONE:FindByName("MM26")
+  MM14zone = ZONE:FindByName("MM14")
+  BlueMRZones1 = ZONE:FindByName("Blue MR SAM Zone-1")
+  BlueMRZones2 = ZONE:FindByName("Blue MR SAM Zone-2")
+  BlueMRZones3 = ZONE:FindByName("Blue MR SAM Zone-3")
+  BlueMRZones4 = ZONE:FindByName("Blue MR SAM Zone-4")
+
+  if redfor:NoneInZone(MM44zone) or redfor:NoneInZone(MM35zone) or redfor:NoneInZone(MM26zone) or redfor:NoneInZone(MM14zone) and blufor:NoneInZone(BlueMRZones) then
+    SPAWN:New("BLUE SAM Medium")
+    :InitRandomizeZones(BlueMRZones)
+    :InitRandomizeTemplate(BluForSAMSpawn)
+    :InitLimit( 14, 0 )
+    :SpawnScheduled( 5, .5 )
+  end
+
+end, {}, 15 )
