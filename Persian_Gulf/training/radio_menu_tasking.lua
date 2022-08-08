@@ -95,7 +95,7 @@ rotaryslinghelp = missionCommands.addCommandForGroup(
   "Help",
   rotarytrans,
   function(slinghelp)
-    trigger.action.outText("Easy Sling is a 50x50 area marked with BlackTires with Red Flags----  Medium Sling is a 35x35 area marked with White Flags----  Hard Sling is a 10x10 area marked with Red Flags----  All Cargos must be safely placed in the respective box to complete the task.  One helicopter at a time as the cargo will respawn if the task is selected again.",30)
+    trigger.action.outText("Easy Sling is a 50x50FT area marked with BlackTires with Red Flags----  Medium Sling is a 35x35FT area marked with White Flags----  Hard Sling is a 10x10FT area marked with Red Flags----  All Cargos must be safely placed in the respective box to complete the task.  One helicopter at a time as the cargo will respawn if the task is selected again.",30)
   end,
   slinghelp
 )
