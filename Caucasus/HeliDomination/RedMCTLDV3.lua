@@ -1,5 +1,5 @@
 _SETTINGS:SetPlayerMenuOff()
-
+red_ctld:__Load(10)
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
 red_ctld = CTLD:New(coalition.side.RED,{"KM76","KM88","LM26","LM38","LM67","LM64","MM17","MM05","MM45","MM43"},"Debachery")
@@ -26,7 +26,12 @@ red_ctld.SmokeColor = SMOKECOLOR.red -- default color to use when dropping smoke
 red_ctld.FlareColor = FLARECOLOR.red -- color to use when flaring from heli
 red_ctld.basetype = "barrels_cargo" -- default shape of the cargo container
 red_ctld.droppedbeacontimeout = 1200 -- dropped beacon lasts 10 minutes
-red_ctld.usesubcats = true -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
+red_ctld.usesubcats = true
+red_ctld.enableLoadSave(true) --Allows auto saving of the files
+red_ctld.saveinterval = 600 -- How often this save function saves
+red_ctld.filename = "domination-red.csv" -- Filename for the save
+red_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
+red_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions) -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
 red_ctld:__Start(5)
 
 -- generate generically loadable stuff
@@ -53,11 +58,11 @@ red_ctld:AddCratesCargo("T-72 PLT (4 crates) ",{"T-72 PLT"},CTLD_CARGO.Enum.VEHI
 
 --Anti Air
 --red_ctld:AddCratesCargo("Patriot Large 6",{"BLUE SAM PatriotLarge"},CTLD_CARGO.Enum.FOB,6,400,nil,"Anti-Air")
-red_ctld:AddCratesCargo("Tunguska (4 crates)",{"SA-19"},CTLD_CARGO.Enum.FOB,4,400,nil,"Anti-Air")
+red_ctld:AddCratesCargo("Tunguska (4 crates)",{"SA-19"},CTLD_CARGO.Enum.FOB,4,400,5,"Anti-Air")
 --red_ctld:AddCratesCargo("Linebacker PLT",{"Linebacker"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
-red_ctld:AddCratesCargo("Shilka PLT (3 crates)",{"Shilka"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
-red_ctld:AddCratesCargo("Strela PLT (3 crates)",{"Strela"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
-red_ctld:AddCratesCargo("EWR (2 crates)",{"RED EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,nil,"Anti-Air")
+red_ctld:AddCratesCargo("Shilka PLT (3 crates)",{"Shilka"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
+red_ctld:AddCratesCargo("Strela PLT (3 crates)",{"Strela"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
+red_ctld:AddCratesCargo("EWR (2 crates)",{"RED EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,3,"Anti-Air")
 --red_ctld:AddCratesCargo("SA-8 PLT",{"Gecko"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 
 -- Base
@@ -65,7 +70,7 @@ red_ctld:AddCratesCargo("EWR (2 crates)",{"RED EWR"},CTLD_CARGO.Enum.VEHICLE,2,4
 
 -- Artillery
 --red_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
-red_ctld:AddCratesCargo("2S19 Msta (4 crates)",{"Msta"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
+red_ctld:AddCratesCargo("2S19 Msta (4 crates)",{"Msta"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
 
 -- generate zone types
 red_ctld:AddCTLDZone("Red KM76 FARP",CTLD.CargoZoneType.LOAD,SMOKECOLOR.red,true,true)
