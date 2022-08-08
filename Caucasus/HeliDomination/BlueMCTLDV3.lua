@@ -1,5 +1,5 @@
 _SETTINGS:SetPlayerMenuOff()
-
+blue_ctld:__Load(10) -- Initial Loading of the saved units
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
 blue_ctld = CTLD:New(coalition.side.BLUE,{"LM08","LM26","LM68","LM54","LM95","LM97","MM26","MM34","MM74","MM82"},"Habubery")
@@ -27,6 +27,11 @@ blue_ctld.FlareColor = FLARECOLOR.blue -- color to use when flaring from heli
 blue_ctld.basetype = "barrels_cargo" -- default shape of the cargo container
 blue_ctld.droppedbeacontimeout = 1200 -- dropped beacon lasts 10 minutes
 blue_ctld.usesubcats = true -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
+blue_ctld.enableLoadSave(true) --Allows auto saving of the files
+blue_ctld.saveinterval = 600 -- How often this save function saves
+blue_ctld.filename = "domination-blue.csv" -- Filename for the save
+blue_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
+blue_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions)
 blue_ctld:__Start(5)
 
 -- generate generically loadable stuff
