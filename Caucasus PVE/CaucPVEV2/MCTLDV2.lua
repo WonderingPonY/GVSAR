@@ -1,5 +1,5 @@
 _SETTINGS:SetPlayerMenuOff()
-
+my_ctld:__Load(10)--Initial Load at start of mission for the saved units
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
 local my_ctld = CTLD:New(coalition.side.BLUE,{"Alpha","Bravo","Charlie","Delta"},"Habubery")
@@ -27,6 +27,11 @@ my_ctld.FlareColor = FLARECOLOR.Red -- color to use when flaring from heli
 my_ctld.basetype = "barrels_cargo" -- default shape of the cargo container
 my_ctld.droppedbeacontimeout = 1200 -- dropped beacon lasts 10 minutes
 my_ctld.usesubcats = true -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
+my_ctld.enableLoadSave(true) --Allows auto saving of the files
+my_ctld.saveinterval = 600 -- How often this save function saves
+my_cltd.filename = "CaucPVEv2.csv" -- Filename for the save
+my_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.openbeta_server\\Missions" -- Path the save file will be saved to
+my_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions)
 my_ctld:__Start(5)
 
 -- generate generically loadable stuff
