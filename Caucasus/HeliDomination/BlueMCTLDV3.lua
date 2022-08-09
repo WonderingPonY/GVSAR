@@ -1,5 +1,5 @@
 _SETTINGS:SetPlayerMenuOff()
-blue_ctld:__Load(10) -- Initial Loading of the saved units
+--blue_ctld:__Load(10) -- Initial Loading of the saved units
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
 blue_ctld = CTLD:New(coalition.side.BLUE,{"LM08","LM26","LM68","LM54","LM95","LM97","MM26","MM34","MM74","MM82"},"Habubery")
