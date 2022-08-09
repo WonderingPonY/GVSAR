@@ -27,7 +27,7 @@ red_ctld.FlareColor = FLARECOLOR.red -- color to use when flaring from heli
 red_ctld.basetype = "barrels_cargo" -- default shape of the cargo container
 red_ctld.droppedbeacontimeout = 1200 -- dropped beacon lasts 10 minutes
 red_ctld.usesubcats = true
-red_ctld.enableLoadSave(true) --Allows auto saving of the files
+red_ctld.enableLoadSave = true  --Allows auto saving of the files
 red_ctld.saveinterval = 600 -- How often this save function saves
 red_ctld.filename = "domination-red.csv" -- Filename for the save
 red_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to

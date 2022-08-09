@@ -27,7 +27,7 @@ blue_ctld.FlareColor = FLARECOLOR.blue -- color to use when flaring from heli
 blue_ctld.basetype = "barrels_cargo" -- default shape of the cargo container
 blue_ctld.droppedbeacontimeout = 1200 -- dropped beacon lasts 10 minutes
 blue_ctld.usesubcats = true -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
-blue_ctld.enableLoadSave(true) --Allows auto saving of the files
+blue_ctld.enableLoadSave = true --Allows auto saving of the files
 blue_ctld.saveinterval = 600 -- How often this save function saves
 blue_ctld.filename = "domination-blue.csv" -- Filename for the save
 blue_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
