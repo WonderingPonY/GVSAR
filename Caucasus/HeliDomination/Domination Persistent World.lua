@@ -204,7 +204,7 @@ if file_exists("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Pe
 
 	for i = 1, UnitIntermentTableLength do
 		--trigger.action.outText("Unit Interment Element "..i.." Is "..SeaSlugUnitInterment[i], 15)
-
+    env.info("Unit Interment Element "..i.." Is "..SeaSlugUnitInterment[i])
 		if ( Unit.getByName(SeaSlugUnitInterment[i]) ~= nil ) then
 			Unit.getByName(SeaSlugUnitInterment[i]):destroy()
 			SEFDeletedUnitCount = SEFDeletedUnitCount + 1
