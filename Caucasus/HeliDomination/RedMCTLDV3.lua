@@ -47,13 +47,13 @@ red_ctld:AddTroopsCargo("Infrantry Section 8",{"redInfantrySection"},CTLD_CARGO.
 red_ctld:AddCratesCargo("Ammo Truck (1 crate)",{"Red Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 red_ctld:AddCratesRepair("Humvee Repair (1 crate)","RedHumvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    red_ctld.repairtime = 300
-red_ctld:AddCratesCargo("IFV BMD PLT (3 crates)",{"BMD"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Light Armor")
-red_ctld:AddCratesCargo("BTR-80 PLT (3 crates)",{"BTR-80"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Light Armor")
---red_ctld:AddCratesCargo("ReeceJTAC 1",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
+red_ctld:AddCratesCargo("IFV BMD PLT (3 crates)",{"BMD"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
+red_ctld:AddCratesCargo("BTR-80 PLT (3 crates)",{"BTR-80"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+red_ctld:AddCratesCargo("ReeceJTAC 1",{"Reece Red JTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 
 
 -- Armoured
-red_ctld:AddCratesCargo("T-72 PLT (4 crates) ",{"T-72 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,5,"Armored")
+red_ctld:AddCratesCargo("T-90 PLT (4 crates) ",{"T-72 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
 
 
 --Anti Air

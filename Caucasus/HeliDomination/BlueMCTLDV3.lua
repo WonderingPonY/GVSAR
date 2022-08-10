@@ -47,13 +47,13 @@ blue_ctld:AddTroopsCargo("Infrantry Section 8",{"InfantrySection"},CTLD_CARGO.En
 blue_ctld:AddCratesCargo("Ammo Truck",{"Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 blue_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    blue_ctld.repairtime = 300
-blue_ctld:AddCratesCargo("LAV Mephisto 3 (3 crates)",{"LAV Mephisto"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Light Armor")
-blue_ctld:AddCratesCargo("MG Stryker (4 crates)",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Light Armor")
-blue_ctld:AddCratesCargo("ReeceJTAC (1 crate)",{"ReeceJTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
+blue_ctld:AddCratesCargo("LAV Mephisto 3 (3 crates)",{"LAV Mephisto"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("MG Stryker (4 crates)",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("ReeceJTAC (1 crate)",{"Reece Blue JTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 
 
 -- Armoured
-blue_ctld:AddCratesCargo("LEOPARD (4 crates)",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,5,"Armored")
+blue_ctld:AddCratesCargo("LEOPARD (4 crates)",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
 
 
 --Anti Air
