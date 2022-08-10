@@ -1,9 +1,9 @@
 _SETTINGS:SetPlayerMenuOff()
-red_ctld:__Load(10)
+
 -- initialize and start a CTLD for the blue side, using helicopter groups named "Helicargo" and alias "Habubbery"
 -- initialize CTLD
 red_ctld = CTLD:New(coalition.side.RED,{"KM76","KM88","LM26","LM38","LM67","LM64","MM17","MM05","MM45","MM43"},"Debachery")
-
+red_ctld:__Load(10)
 
 --SETTINGS
 red_ctld.CrateDistance = 250-- List and Load crates in this radius only.
