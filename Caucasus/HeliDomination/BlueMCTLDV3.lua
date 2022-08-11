@@ -47,18 +47,23 @@ blue_ctld:AddTroopsCargo("Infrantry Section 8",{"InfantrySection"},CTLD_CARGO.En
 blue_ctld:AddCratesCargo("Ammo Truck",{"Supply Truck"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 blue_ctld:AddCratesRepair("Humvee Repair","Humvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    blue_ctld.repairtime = 300
-blue_ctld:AddCratesCargo("LAV Mephisto 3 (3 crates)",{"LAV Mephisto"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
-blue_ctld:AddCratesCargo("MG Stryker (4 crates)",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("LAV Mephisto 3 (4 crates)",{"LAV Mephisto"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("MG Stryker (3 crates)",{"Stryker"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("IFV Warrior (4 crates)",{"Warrior"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+blue_ctld:AddCratesCargo("IFV Lav-25 (3 crates)",{"Lav-25"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
 blue_ctld:AddCratesCargo("ReeceJTAC (1 crate)",{"Reece Blue JTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 
 
 -- Armoured
 blue_ctld:AddCratesCargo("LEOPARD (4 crates)",{"LEOPARD"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
-
+blue_ctld:AddCratesCargo("Chieftain Mk3 (4 crates)",{"Chieftain Mk3"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
 
 --Anti Air
 --blue_ctld:AddCratesCargo("Patriot Large 6",{"BLUE SAM PatriotLarge"},CTLD_CARGO.Enum.FOB,6,400,nil,"Anti-Air")
 blue_ctld:AddCratesCargo("Rapier site (4 crates)",{"BLUE SAM Rapier Site"},CTLD_CARGO.Enum.FOB,4,400,5,"Anti-Air")
+blue_ctld:AddCratesCargo("SAM Linebackers (4 crates)",{"SAM Linebackers"},CTLD_CARGO.Enum.FOB,4,400,5,"Anti-Air")
+blue_ctld:AddCratesCargo("2 LC ZU-23 (2 crates)",{"LC ZU-23"},CTLD_CARGO.Enum.FOB,2,400,nil,"Anti-Air")
+blue_ctld:AddCratesCargo("2 40mm Bofors (3 crates)",{"40mm Bofors"},CTLD_CARGO.Enum.FOB,3,400,nil,"Anti-Air")
 --blue_ctld:AddCratesCargo("Linebacker PLT",{"Linebacker"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 blue_ctld:AddCratesCargo("Gepard PLT(3 crates)",{"Gepard PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
 blue_ctld:AddCratesCargo("Avenger PLT(3 crates)",{"Avenger PLT"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
@@ -71,6 +76,7 @@ blue_ctld:AddCratesCargo("EWR (2 crates)",{"BLUE EWR"},CTLD_CARGO.Enum.VEHICLE,2
 -- Artillery
 --blue_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 blue_ctld:AddCratesCargo("Panzer 2000 (4 crates)",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
+blue_ctld:AddCratesCargo("Dana (4 crates)",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
 
 -- generate zone types
 blue_ctld:AddCTLDZone("Blue MM82 FARP",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)

@@ -48,20 +48,25 @@ red_ctld:AddCratesCargo("Ammo Truck (1 crate)",{"Red Supply Truck"},CTLD_CARGO.E
 red_ctld:AddCratesRepair("Humvee Repair (1 crate)","RedHumvee",CTLD_CARGO.Enum.REPAIR,1,400,nil,"Light Armor")
    red_ctld.repairtime = 300
 red_ctld:AddCratesCargo("IFV BMD PLT (3 crates)",{"BMD"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
-red_ctld:AddCratesCargo("BTR-80 PLT (3 crates)",{"BTR-80"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+red_ctld:AddCratesCargo("BTR-80 PLT (3 crates)",{"BTR-80"},CTLD_CARGO.Enum.VEHICLE,3,400,20,"Light Armor")
+red_ctld:AddCratesCargo("BTR-82 PLT (4 crates)",{"BTR-82 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
+red_ctld:AddCratesCargo("BMP-2 PLT (4 crates)",{"BMP-2 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,20,"Light Armor")
 red_ctld:AddCratesCargo("ReeceJTAC 1",{"Reece Red JTAC"},CTLD_CARGO.Enum.VEHICLE,1,400,nil,"Light Armor")
 
 
 -- Armoured
-red_ctld:AddCratesCargo("T-90 PLT (4 crates) ",{"T-72 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
+red_ctld:AddCratesCargo("T-90 PLT (4 crates) ",{"T-90 PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
+red_ctld:AddCratesCargo("ZTZ-96B PLT (4 crates) ",{"ZTZ-96B PLT"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Armored")
 
 
 --Anti Air
 --red_ctld:AddCratesCargo("Patriot Large 6",{"BLUE SAM PatriotLarge"},CTLD_CARGO.Enum.FOB,6,400,nil,"Anti-Air")
 red_ctld:AddCratesCargo("Tunguska (4 crates)",{"SA-19"},CTLD_CARGO.Enum.FOB,4,400,5,"Anti-Air")
---red_ctld:AddCratesCargo("Linebacker PLT",{"Linebacker"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
+red_ctld:AddCratesCargo("HQ-7 (4 crates)",{"HQ-7"},CTLD_CARGO.Enum.FOB,4,400,5,"Anti-Air")
+red_ctld:AddCratesCargo("ZSU-57 (3 crates)",{"ZSU-57"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
 red_ctld:AddCratesCargo("Shilka PLT (3 crates)",{"Shilka"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
 red_ctld:AddCratesCargo("Strela PLT (3 crates)",{"Strela"},CTLD_CARGO.Enum.VEHICLE,3,400,10,"Anti-Air")
+red_ctld:AddCratesCargo("2 40mm Bofors (3 crates)",{"40mm red Bofors"},CTLD_CARGO.Enum.FOB,3,400,nil,"Anti-Air")
 red_ctld:AddCratesCargo("EWR (2 crates)",{"RED EWR"},CTLD_CARGO.Enum.VEHICLE,2,400,3,"Anti-Air")
 --red_ctld:AddCratesCargo("SA-8 PLT",{"Gecko"},CTLD_CARGO.Enum.VEHICLE,3,400,nil,"Anti-Air")
 
@@ -71,6 +76,9 @@ red_ctld:AddCratesCargo("EWR (2 crates)",{"RED EWR"},CTLD_CARGO.Enum.VEHICLE,2,4
 -- Artillery
 --red_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 red_ctld:AddCratesCargo("2S19 Msta (4 crates)",{"Msta"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
+red_ctld:AddCratesCargo("PLZ-05 (4 crates)",{"PLZ-05"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
+red_ctld:AddCratesCargo("Smerch (4 crates)",{"Smerch"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
+red_ctld:AddCratesCargo("Uragan (4 crates)",{"Uragan"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
 
 -- generate zone types
 red_ctld:AddCTLDZone("Red KM76 FARP",CTLD.CargoZoneType.LOAD,SMOKECOLOR.red,true,true)
