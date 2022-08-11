@@ -63,8 +63,7 @@ redfor = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterSt
 MasterZone = ZONE:FindByName("MonkeyFucker")
 
 
-
-RedForzonetrigger = SCHEDULER:New(nil, function()
+function redspawn()
 
 local LM58zone = ZONE:FindByName("LM58")
 LM58SpawnZone1 = ZONE:FindByName("LM58 Spawn Zone-1")
@@ -77,25 +76,21 @@ LM58SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():F
 
 if blufor:NoneInZone(LM58zone) and LM58SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("LM58Redfor-1")
-  :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-1 Spawned")
 
   SPAWN:New("LM58Redfor-2")
-  :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-2 Spawned")
 
   SPAWN:New("LM58Redfor-3")
-  :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-3 Spawned")
 
   SPAWN:New("LM58Redfor-4")
-  :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-4 Spawned")
@@ -571,14 +566,9 @@ end
             return nil
           end
         end
+  end
 
-
-
-  end, {}, 1 )
-
-
-  BlueForzonetrigger = SCHEDULER:New(nil,
-     function()
+  function bluespawn()
 
   local LM88zone = ZONE:FindByName("LM88")
   LM88SpawnZone1 = ZONE:FindByName("LM88 Spawn Zone-1")
@@ -1021,7 +1011,4 @@ end
         return nil
       end
     end
-
-
-
-end, {}, 2 )   --zonetrigger Scheduler
+end  
