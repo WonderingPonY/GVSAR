@@ -17,7 +17,7 @@ function LM95FARPblueSpawn()
   if redfor:NoneInZone(LM95zone) and blufor:NoneInZone(BlueLM95FARPDef)then
         SPAWN:New("BLUE Farp AA-1")
         :InitRandomizeTemplate(BlueFarpDefence)
-        :InitLimit( 4, 400 )
+        :InitLimit( 1,0 )
         :SpawnScheduled( 5, .5 )
       else
         return nil
@@ -36,504 +36,504 @@ end
   timer.scheduleFunction(LM95FARPblueSpawn, 53, timer.getTime{}+8)
   env.info("----------------------------LM95FARPblueSpawn TIMER STARTED--------------------------")
 
-  local LM97zone = ZONE:FindByName("LM97")
-  local FarpLM97zone = ZONE:FindByName("Blue LM97 FARP")
-  local BlueLM97FARPDef = ZONE:FindByName("Blue Farp Defense-2")
-
-      if redfor:NoneInZone(LM97zone) and not Group.getByName('Static FARP Fuel Depot-2') then
-      mist.respawnGroup('Static FARP Fuel Depot-2', true)
-      end
-      if redfor:NoneInZone(LM97zone) and not Group.getByName('Static FARP Ammo Storage-2') then
-      mist.respawnGroup('Static FARP Ammo Storage-2', true)
-      end
-
-       if redfor:NoneInZone(LM97zone) and not Group.getByName('BLUE Supply LM97') then
-               mist.respawnGroup('BLUE Supply LM97', true)
-       end
-          if redfor:NoneInZone(LM97zone) and blufor:NoneInZone(BlueLM97FARPDef)then
-            SPAWN:New("BLUE Farp AA-2")
-            :InitRandomizeTemplate(BlueFarpDefence)
-            :InitLimit( 4, 400 )
-            :SpawnScheduled( 5, .5 )
-          else
-            return nil
-          end
-
-    local MM34zone = ZONE:FindByName("MM34")
-    local FarpMM34zone = ZONE:FindByName("Blue MM34 FARP")
-    local BlueMM34FARPDef = ZONE:FindByName("Blue Farp Defense-3")
-
-          if redfor:NoneInZone(MM34zone) and not Group.getByName('Static FARP Fuel Depot-3') then
-          mist.respawnGroup('Static FARP Fuel Depot-3', true)
-          end
-          if redfor:NoneInZone(MM34zone) and not Group.getByName('Static FARP Ammo Storage-3') then
-          mist.respawnGroup('Static FARP Ammo Storage-3', true)
-          end
-
-           if redfor:NoneInZone(MM34zone) and not Group.getByName('BLUE Supply MM34') then
-                   mist.respawnGroup('BLUE Supply MM34', true)
-           end
-              if redfor:NoneInZone(MM34zone) and blufor:NoneInZone(BlueMM34FARPDef)then
-                SPAWN:New("BLUE Farp AA-3")
-                :InitRandomizeTemplate(BlueFarpDefence)
-                :InitLimit( 4, 400 )
-                :SpawnScheduled( 5, .5 )
-              else
-                return nil
-              end
-
-              local MM26zone = ZONE:FindByName("MM26")
-              local FarpMM26zone = ZONE:FindByName("Blue MM26 FARP")
-              local BlueMM26FARPDef = ZONE:FindByName("Blue Farp Defense-4")
-
-                    if redfor:NoneInZone(MM26zone) and not Group.getByName('Static FARP Fuel Depot-4') then
-                    mist.respawnGroup('Static FARP Fuel Depot-4', true)
-                    end
-                    if redfor:NoneInZone(MM26zone) and not Group.getByName('Static FARP Ammo Storage-4') then
-                    mist.respawnGroup('Static FARP Ammo Storage-4', true)
-                    end
-
-                     if redfor:NoneInZone(MM26zone) and not Group.getByName('BLUE Supply MM26') then
-                             mist.respawnGroup('BLUE Supply MM26', true)
-                     end
-                        if redfor:NoneInZone(MM26zone) and blufor:NoneInZone(BlueMM26FARPDef)then
-                          SPAWN:New("BLUE Farp AA-4")
-                          :InitRandomizeTemplate(BlueFarpDefence)
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                        else
-                          return nil
-                        end
-
-                        local MM74zone = ZONE:FindByName("MM74")
-                        local FarpMM74zone = ZONE:FindByName("Blue MM74 FARP")
-                        local BlueMM74FARPDef = ZONE:FindByName("Blue Farp Defense-5")
-
-                              if redfor:NoneInZone(MM74zone) and not Group.getByName('Static FARP Fuel Depot-5') then
-                              mist.respawnGroup('Static FARP Fuel Depot-5', true)
-                              end
-                              if redfor:NoneInZone(MM74zone) and not Group.getByName('Static FARP Ammo Storage-5') then
-                              mist.respawnGroup('Static FARP Ammo Storage-5', true)
-                              end
-
-                               if redfor:NoneInZone(MM74zone) and not Group.getByName('BLUE Supply MM74') then
-                                       mist.respawnGroup('BLUE Supply MM74', true)
-                               end
-                                  if redfor:NoneInZone(MM74zone) and blufor:NoneInZone(BlueMM74FARPDef)then
-                                    SPAWN:New("BLUE Farp AA-5")
-                                    :InitRandomizeTemplate(BlueFarpDefence)
-                                    :InitLimit( 4, 400 )
-                                    :SpawnScheduled( 5, .5 )
-                                  else
-                                    return nil
-                                  end
-
-                                  local MM82zone = ZONE:FindByName("MM82")
-                                  local FarpMM82zone = ZONE:FindByName("Blue MM82 FARP")
-                                  local BlueMM82FARPDef = ZONE:FindByName("Blue Farp Defense-6")
-
-                                        if redfor:NoneInZone(MM82zone) and not Group.getByName('Static FARP Fuel Depot-6') then
-                                        mist.respawnGroup('Static FARP Fuel Depot-6', true)
-                                        end
-                                        if redfor:NoneInZone(MM82zone) and not Group.getByName('Static FARP Ammo Storage-6') then
-                                        mist.respawnGroup('Static FARP Ammo Storage-6', true)
-                                        end
-
-                                         if redfor:NoneInZone(MM82zone) and not Group.getByName('BLUE Supply MM82') then
-                                                 mist.respawnGroup('BLUE Supply MM82', true)
-                                         end
-                                            if redfor:NoneInZone(MM82zone) and blufor:NoneInZone(BlueMM82FARPDef)then
-                                              SPAWN:New("BLUE Farp AA-6")
-                                              :InitRandomizeTemplate(BlueFarpDefence)
-                                              :InitLimit( 4, 400 )
-                                              :SpawnScheduled( 5, .5 )
-                                            else
-                                              return nil
-                                            end
-    local LM54zone = ZONE:FindByName("LM54")
-    local FarpLM54zone = ZONE:FindByName("Blue LM54 FARP")
-    local BlueLM54FARPDef = ZONE:FindByName("Blue Farp Defense-7")
-
-            if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone)  then
-            SPAWN:New("BLUE Supply LM54")
-            :InitLimit( 4, 400 )
-            :SpawnScheduled( 5, .5 )
-          else
-            return nil
-            end
-            if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and  not Group.getByName('Static FARP Fuel Depot-7') then
-            mist.respawnGroup('Static FARP Fuel Depot-7', true)
-            end
-          if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and not Group.getByName('Static FARP Ammo Storage-7') then
-          mist.respawnGroup('Static FARP Ammo Storage-7', true)
-          end
-           if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and not Group.getByName('BLUE Supply LM54') then
-                   mist.respawnGroup('BLUE Supply LM54', true)
-           end
-              if redfor:NoneInZone(LM54zone) and bluAA:NoneInZone(BlueLM54FARPDef)then
-                SPAWN:New("BLUE Farp AA-7")
-                :InitRandomizeTemplate(BlueFarpDefence)
-                :InitLimit( 4, 400 )
-                :SpawnScheduled( 5, .5 )
-              else
-                return nil
-              end
-              local LM68zone = ZONE:FindByName("LM68")
-              local FarpLM68zone = ZONE:FindByName("Blue LM68 FARP")
-              local BlueLM68FARPDef = ZONE:FindByName("Blue Farp Defense-8")
-
-                      if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone)  then
-                      SPAWN:New("BLUE Supply LM68")
-                      :InitLimit( 4, 400 )
-                      :SpawnScheduled( 5, .5 )
-                    else
-                      return nil
-                      end
-                      if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and  not Group.getByName('Static FARP Fuel Depot-8') then
-                      mist.respawnGroup('Static FARP Fuel Depot-8', true)
-                      end
-                    if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and not Group.getByName('Static FARP Ammo Storage-8') then
-                    mist.respawnGroup('Static FARP Ammo Storage-8', true)
-                    end
-                     if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and not Group.getByName('BLUE Supply LM68') then
-                             mist.respawnGroup('BLUE Supply LM68', true)
-                     end
-                        if redfor:NoneInZone(LM68zone) and bluAA:NoneInZone(BlueLM68FARPDef)then
-                          SPAWN:New("BLUE Farp AA-8")
-                          :InitRandomizeTemplate(BlueFarpDefence)
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                        else
-                          return nil
-                        end
-
-local LM26zone = ZONE:FindByName("LM26")
-local FarpLM26zone = ZONE:FindByName("Blue LM26 FARP")
-local BlueLM26FARPDef = ZONE:FindByName("Blue Farp Defense-9")
-
-        if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone)  then
-        SPAWN:New("BLUE Supply LM26zone")
-        :InitLimit( 4, 400 )
-        :SpawnScheduled( 5, .5 )
-      else
-        return nil
-        end
-        if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and  not Group.getByName('Static FARP Fuel Depot-9') then
-        mist.respawnGroup('Static FARP Fuel Depot-9', true)
-        end
-      if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('Static FARP Ammo Storage-9') then
-      mist.respawnGroup('Static FARP Ammo Storage-9', true)
-      end
-       if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('BLUE Supply LM26') then
-               mist.respawnGroup('BLUE Supply LM26', true)
-       end
-          if redfor:NoneInZone(LM26zone) and bluAA:NoneInZone(BlueLM26FARPDef)then
-            SPAWN:New("BLUE Farp AA-9")
-            :InitRandomizeTemplate(BlueFarpDefence)
-            :InitLimit( 4, 400 )
-            :SpawnScheduled( 5, .5 )
-          else
-            return nil
-          end
-
-          local LM08zone = ZONE:FindByName("LM08")
-          local FarpLM08zone = ZONE:FindByName("Blue LM26 FARP")
-          local BlueLM08FARPDef = ZONE:FindByName("Blue Farp Defense-10")
-
-                  if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone)  then
-                  SPAWN:New("BLUE Supply LM08")
-                  :InitLimit( 4, 400 )
-                  :SpawnScheduled( 5, .5 )
-                else
-                  return nil
-                  end
-                  if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and  not Group.getByName('Static FARP Fuel Depot-10') then
-                  mist.respawnGroup('Static FARP Fuel Depot-10', true)
-                  end
-                if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('Static FARP Ammo Storage-10') then
-                mist.respawnGroup('Static FARP Ammo Storage-10', true)
-                end
-                 if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('BLUE Supply LM08') then
-                         mist.respawnGroup('BLUE Supply LM08', true)
-                 end
-                    if redfor:NoneInZone(LM08zone) and bluAA:NoneInZone(BlueLM08FARPDef)then
-                      SPAWN:New("BLUE Farp AA-10")
-                      :InitRandomizeTemplate(BlueFarpDefence)
-                      :InitLimit( 4, 400 )
-                      :SpawnScheduled( 5, .5 )
-                    else
-                      return nil
-                    end
-
-
-
-  RedFarptrigger = SCHEDULER:New(nil,
-  function()
-
-
-
-                    local KM76zone = ZONE:FindByName("KM76")
-                    local FarpKM76zone = ZONE:FindByName("Red KM76 FARP")
-                    local RedKM76FARPDef = ZONE:FindByName("Red Farp Defense-1")
-
-                        if blufor:NoneInZone(KM76zone) and redsupply:NoneInZone(FarpKM76zone) then --and redfor:AnyInZone(KM76zone)  then
-                        SPAWN:New("RED Supply KM76")
-                        :InitLimit( 4, 400 )
-                        :SpawnScheduled( 5, .5 )
-                        end
-                            if blufor:NoneInZone(KM76zone) and redAA:NoneInZone(RedKM76FARPDef) then --and redfor:NoneInZone(RedKM76FARPDef)then
-                              SPAWN:New("RED Farp AA-1")
-                              :InitRandomizeTemplate(RedFarpDefence)
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            end
-                                if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Fuel Depot-11') then
-                                mist.respawnGroup('Static FARP Fuel Depot-11', true)
-                                end
-                          if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Ammo Storage-11') then
-                          mist.respawnGroup('Static FARP Ammo Storage-11', true)
-                          end
-                           if blufor:NoneInZone(KM76zone) and not Group.getByName('RED Supply KM76') then
-                                   mist.respawnGroup('RED Supply KM76', true)
-                           end
-
-
-                    local KM88zone = ZONE:FindByName("KM88")
-                    local FarpKM88zone = ZONE:FindByName("Red KM88 FARP")
-                    local RedKM88FARPDef = ZONE:FindByName("Red Farp Defense-2")
-
-                          if blufor:NoneInZone(KM88zone) and redsupply:NoneInZone(FarpKM88zone) then
-                          SPAWN:New("RED Supply KM88")
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                          end
-                          if blufor:NoneInZone(KM88zone) and not Group.getByName('Static FARP Fuel Depot-12') then
-                          mist.respawnGroup('Static FARP Fuel Depot-12', true)
-                          end
-                        if blufor:NoneInZone(KM88zone) and not Group.getByName('Static FARP Ammo Storage-12') then
-                        mist.respawnGroup('Static FARP Ammo Storage-12', true)
-                        end
-                         if blufor:NoneInZone(KM88zone) and not Group.getByName('RED Supply KM88') then
-                                 mist.respawnGroup('RED Supply KM88', true)
-                         end
-                            if blufor:NoneInZone(KM88zone) and redAA:NoneInZone(RedKM88FARPDef)then
-                              SPAWN:New("RED Farp AA-2")
-                              :InitRandomizeTemplate(RedFarpDefence)
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            end
-
-                    local LM26zone = ZONE:FindByName("LM26")
-                    local FarpLM26zone = ZONE:FindByName("Red LM26 FARP")
-                    local RedLM26FARPDef = ZONE:FindByName("Red Farp Defense-3")
-
-                        if blufor:NoneInZone(LM26zone) and redsupply:NoneInZone(FarpLM26zone) then
-                        SPAWN:New("RED Supply LM26")
-                        :InitLimit( 4, 400 )
-                        :SpawnScheduled( 5, .5 )
-                        end
-                        if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and  not Group.getByName('Static FARP Fuel Depot-13') then
-                        mist.respawnGroup('Static FARP Fuel Depot-13', true)
-                        end
-                      if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and not Group.getByName('Static FARP Ammo Storage-13') then
-                      mist.respawnGroup('Static FARP Ammo Storage-13', true)
-                      end
-                       if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and not Group.getByName('RED Supply LM26') then
-                               mist.respawnGroup('RED Supply LM26', true)
-                       end
-                          if blufor:NoneInZone(LM26zone) and redAA:NoneInZone(RedLM26FARPDef)then
-                            SPAWN:New("RED Farp AA-3")
-                            :InitRandomizeTemplate(RedFarpDefence)
-                            :InitLimit( 4, 400 )
-                            :SpawnScheduled( 5, .5 )
-                          end
-
-                    local LM38zone = ZONE:FindByName("LM38")
-                    local FarpLM38zone = ZONE:FindByName("Red LM38 FARP")
-                    local RedLM38FARPDef = ZONE:FindByName("Red Farp Defense-4")
-
-                          if blufor:NoneInZone(LM38zone) and redsupply:NoneInZone(FarpLM38zone)  then
-                          SPAWN:New("RED Supply LM38")
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                          end
-                          if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and  not Group.getByName('Static FARP Fuel Depot-14') then
-                          mist.respawnGroup('Static FARP Fuel Depot-14', true)
-                          end
-                        if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and not Group.getByName('Static FARP Ammo Storage-14') then
-                        mist.respawnGroup('Static FARP Ammo Storage-14', true)
-                        end
-                         if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and not Group.getByName('RED Supply LM38') then
-                                 mist.respawnGroup('RED Supply LM38', true)
-                         end
-                            if blufor:NoneInZone(LM38zone) and redAA:NoneInZone(RedLM38FARPDef)then
-                              SPAWN:New("RED Farp AA-4")
-                              :InitRandomizeTemplate(RedFarpDefence)
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            end
-
-                    local LM64zone = ZONE:FindByName("LM64")
-                    local FarpLM64zone = ZONE:FindByName("Red LM64 FARP")
-                    local RedLM64FARPDef = ZONE:FindByName("Red Farp Defense-5")
-
-                        if blufor:NoneInZone(LM64zone) and redsupply:NoneInZone(LM64zone) then
-                        SPAWN:New("RED Supply LM64")
-                        :InitLimit( 4, 400 )
-                        :SpawnScheduled( 5, .5 )
-                      else
-                        return nil
-                        end
-                        if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and  not Group.getByName('Static FARP Fuel Depot-16') then
-                        mist.respawnGroup('Static FARP Fuel Depot-16', true)
-                        end
-                      if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and not Group.getByName('Static FARP Ammo Storage-16') then
-                      mist.respawnGroup('Static FARP Ammo Storage-16', true)
-                      end
-                       if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and not Group.getByName('RED Supply LM64') then
-                               mist.respawnGroup('RED Supply LM64', true)
-                       end
-                          if blufor:NoneInZone(LM64zone) and redAA:NoneInZone(RedLM64FARPDef)then
-                            SPAWN:New("RED Farp AA-6")
-                            :InitRandomizeTemplate(RedFarpDefence)
-                            :InitLimit( 4, 400 )
-                            :SpawnScheduled( 5, .5 )
-                          else
-                            return nil
-                          end
-
-                    local LM67zone = ZONE:FindByName("LM67")
-                    local FarpLM67zone = ZONE:FindByName("Red LM67 FARP")
-                    local RedLM67FARPDef = ZONE:FindByName("Red Farp Defense-6")
-
-                          if blufor:NoneInZone(LM67zone) and redsupply:NoneInZone(LM67zone)  then
-                          SPAWN:New("RED Supply LM67")
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                        else
-                          return nil
-                          end
-                          if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and  not Group.getByName('Static FARP Fuel Depot-17') then
-                          mist.respawnGroup('Static FARP Fuel Depot-17', true)
-                          end
-                        if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and not Group.getByName('Static FARP Ammo Storage-17') then
-                        mist.respawnGroup('Static FARP Ammo Storage-17', true)
-                        end
-                         if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and not Group.getByName('RED Supply LM67') then
-                                 mist.respawnGroup('RED Supply LM67', true)
-                         end
-                            if blufor:NoneInZone(LM67zone) and redAA:NoneInZone(RedLM67FARPDef)then
-                              SPAWN:New("RED Farp AA-7")
-                              :InitRandomizeTemplate(RedFarpDefence)
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            else
-                              return nil
-                            end
-
-                    local MM05zone = ZONE:FindByName("MM05")
-                    local FarpMM05zone = ZONE:FindByName("Red MM05 FARP")
-                    local RedMM05FARPDef = ZONE:FindByName("Red Farp Defense-7")
-
-                    if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and redsupply:NoneInZone(FarpMM05zone)  then
-                    SPAWN:New("RED Supply MM05")
-                    :InitLimit( 4, 400 )
-                    :SpawnScheduled( 5, .5 )
-                    end
-                    if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and  not Group.getByName('Static FARP Fuel Depot-18') then
-                    mist.respawnGroup('Static FARP Fuel Depot-18', true)
-                    end
-                    if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and not Group.getByName('Static FARP Ammo Storage-18') then
-                    mist.respawnGroup('Static FARP Ammo Storage-18', true)
-                    end
-                    if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and not Group.getByName('RED Supply MM05') then
-                           mist.respawnGroup('RED Supply MM05', true)
-                    end
-                      if blufor:NoneInZone(MM05zone) and redAA:NoneInZone(RedMM05FARPDef)then
-                        SPAWN:New("RED Farp AA-8")
-                        :InitRandomizeTemplate(RedFarpDefence)
-                        :InitLimit( 4, 400 )
-                        :SpawnScheduled( 5, .5 )
-                      end
-
-                      local MM17zone = ZONE:FindByName("MM17")
-                      local FarpMM17zone = ZONE:FindByName("Red MM17 FARP")
-                      local RedMM17FARPDef = ZONE:FindByName("Red Farp Defense-8")
-
-                              if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and redsupply:NoneInZone(FarpMM17zone)  then
-                              SPAWN:New("RED Supply MM17")
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            else
-                              return nil
-                              end
-                              if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and  not Group.getByName('Static FARP Fuel Depot-19') then
-                              mist.respawnGroup('Static FARP Fuel Depot-19', true)
-                              end
-                            if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and not Group.getByName('Static FARP Ammo Storage-19') then
-                            mist.respawnGroup('Static FARP Ammo Storage-19', true)
-                            end
-                             if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and not Group.getByName('RED Supply MM17') then
-                                     mist.respawnGroup('RED Supply MM17', true)
-                             end
-                                if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and redAA:NoneInZone(RedMM05FARPDef)then
-                                  SPAWN:New("RED Farp AA-9")
-                                  :InitRandomizeTemplate(RedFarpDefence)
-                                  :InitLimit( 4, 400 )
-                                  :SpawnScheduled( 5, .5 )
-                                else
-                                  return nil
-                                end
-
-                                local MM45zone = ZONE:FindByName("MM45")
-                                local FarpMM45zone = ZONE:FindByName("Red MM45 FARP")
-                                local RedMM45FARPDef = ZONE:FindByName("Red Farp Defense-9")
-
-                                        if redfor:AnyInZone(MM45zone) and redsupply:NoneInZone(FarpMM45zone)  then
-                                        SPAWN:New("RED Supply MM45")
-                                        :InitLimit( 4, 8 )
-                                        --:SpawnScheduled( 5, .5 )
-                                        end
-                                        if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and  not Group.getByName('Static FARP Fuel Depot-20') then
-                                        mist.respawnGroup('Static FARP Fuel Depot-20', true)
-                                        end
-                                      if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and not Group.getByName('Static FARP Ammo Storage-20') then
-                                      mist.respawnGroup('Static FARP Ammo Storage-20', true)
-                                      end
-                                       if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and not Group.getByName('RED Supply MM45') then
-                                               mist.respawnGroup('RED Supply MM45', true)
-                                       end
-                                          if redfor:AnyInZone(MM45zone) and redAA:NoneInZone(RedMM45FARPDef)then
-                                            SPAWN:New("RED Farp AA-10")
-                                            :InitRandomizeTemplate(RedFarpDefence)
-                                            :InitLimit( 4, 400 )
-                                            --:SpawnScheduled( 5, .5 )
-                                          end
-
-                    local MM43zone = ZONE:FindByName("MM43")
-                    local FarpMM43zone = ZONE:FindByName("Red MM43 FARP")
-                    local RedMM43FARPDef = ZONE:FindByName("Red Farp Defense-10")
-
-                          if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and redsupply:NoneInZone(FarpMM43zone)  then
-                          SPAWN:New("RED Supply MM43")
-                          :InitLimit( 4, 400 )
-                          :SpawnScheduled( 5, .5 )
-                          end
-                          if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and  not Group.getByName('Static FARP Fuel Depot-21') then
-                          mist.respawnGroup('Static FARP Fuel Depot-21', true)
-                          end
-                        if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and not Group.getByName('Static FARP Ammo Storage-21') then
-                        mist.respawnGroup('Static FARP Ammo Storage-21', true)
-                        end
-                         if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and not Group.getByName('RED Supply MM43') then
-                                 mist.respawnGroup('RED Supply MM43', true)
-                         end
-                            if blufor:NoneInZone(MM43zone) and redAA:NoneInZone(RedMM43FARPDef)then
-                              SPAWN:New("RED Farp AA-10")
-                              :InitRandomizeTemplate(RedFarpDefence)
-                              :InitLimit( 4, 400 )
-                              :SpawnScheduled( 5, .5 )
-                            end
-
-
-end, {}, 6, 3600 )
+--   local LM97zone = ZONE:FindByName("LM97")
+--   local FarpLM97zone = ZONE:FindByName("Blue LM97 FARP")
+--   local BlueLM97FARPDef = ZONE:FindByName("Blue Farp Defense-2")
+--
+--       if redfor:NoneInZone(LM97zone) and not Group.getByName('Static FARP Fuel Depot-2') then
+--       mist.respawnGroup('Static FARP Fuel Depot-2', true)
+--       end
+--       if redfor:NoneInZone(LM97zone) and not Group.getByName('Static FARP Ammo Storage-2') then
+--       mist.respawnGroup('Static FARP Ammo Storage-2', true)
+--       end
+--
+--        if redfor:NoneInZone(LM97zone) and not Group.getByName('BLUE Supply LM97') then
+--                mist.respawnGroup('BLUE Supply LM97', true)
+--        end
+--           if redfor:NoneInZone(LM97zone) and blufor:NoneInZone(BlueLM97FARPDef)then
+--             SPAWN:New("BLUE Farp AA-2")
+--             :InitRandomizeTemplate(BlueFarpDefence)
+--             :InitLimit( 4, 400 )
+--             :SpawnScheduled( 5, .5 )
+--           else
+--             return nil
+--           end
+--
+--     local MM34zone = ZONE:FindByName("MM34")
+--     local FarpMM34zone = ZONE:FindByName("Blue MM34 FARP")
+--     local BlueMM34FARPDef = ZONE:FindByName("Blue Farp Defense-3")
+--
+--           if redfor:NoneInZone(MM34zone) and not Group.getByName('Static FARP Fuel Depot-3') then
+--           mist.respawnGroup('Static FARP Fuel Depot-3', true)
+--           end
+--           if redfor:NoneInZone(MM34zone) and not Group.getByName('Static FARP Ammo Storage-3') then
+--           mist.respawnGroup('Static FARP Ammo Storage-3', true)
+--           end
+--
+--            if redfor:NoneInZone(MM34zone) and not Group.getByName('BLUE Supply MM34') then
+--                    mist.respawnGroup('BLUE Supply MM34', true)
+--            end
+--               if redfor:NoneInZone(MM34zone) and blufor:NoneInZone(BlueMM34FARPDef)then
+--                 SPAWN:New("BLUE Farp AA-3")
+--                 :InitRandomizeTemplate(BlueFarpDefence)
+--                 :InitLimit( 4, 400 )
+--                 :SpawnScheduled( 5, .5 )
+--               else
+--                 return nil
+--               end
+--
+--               local MM26zone = ZONE:FindByName("MM26")
+--               local FarpMM26zone = ZONE:FindByName("Blue MM26 FARP")
+--               local BlueMM26FARPDef = ZONE:FindByName("Blue Farp Defense-4")
+--
+--                     if redfor:NoneInZone(MM26zone) and not Group.getByName('Static FARP Fuel Depot-4') then
+--                     mist.respawnGroup('Static FARP Fuel Depot-4', true)
+--                     end
+--                     if redfor:NoneInZone(MM26zone) and not Group.getByName('Static FARP Ammo Storage-4') then
+--                     mist.respawnGroup('Static FARP Ammo Storage-4', true)
+--                     end
+--
+--                      if redfor:NoneInZone(MM26zone) and not Group.getByName('BLUE Supply MM26') then
+--                              mist.respawnGroup('BLUE Supply MM26', true)
+--                      end
+--                         if redfor:NoneInZone(MM26zone) and blufor:NoneInZone(BlueMM26FARPDef)then
+--                           SPAWN:New("BLUE Farp AA-4")
+--                           :InitRandomizeTemplate(BlueFarpDefence)
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                         else
+--                           return nil
+--                         end
+--
+--                         local MM74zone = ZONE:FindByName("MM74")
+--                         local FarpMM74zone = ZONE:FindByName("Blue MM74 FARP")
+--                         local BlueMM74FARPDef = ZONE:FindByName("Blue Farp Defense-5")
+--
+--                               if redfor:NoneInZone(MM74zone) and not Group.getByName('Static FARP Fuel Depot-5') then
+--                               mist.respawnGroup('Static FARP Fuel Depot-5', true)
+--                               end
+--                               if redfor:NoneInZone(MM74zone) and not Group.getByName('Static FARP Ammo Storage-5') then
+--                               mist.respawnGroup('Static FARP Ammo Storage-5', true)
+--                               end
+--
+--                                if redfor:NoneInZone(MM74zone) and not Group.getByName('BLUE Supply MM74') then
+--                                        mist.respawnGroup('BLUE Supply MM74', true)
+--                                end
+--                                   if redfor:NoneInZone(MM74zone) and blufor:NoneInZone(BlueMM74FARPDef)then
+--                                     SPAWN:New("BLUE Farp AA-5")
+--                                     :InitRandomizeTemplate(BlueFarpDefence)
+--                                     :InitLimit( 4, 400 )
+--                                     :SpawnScheduled( 5, .5 )
+--                                   else
+--                                     return nil
+--                                   end
+--
+--                                   local MM82zone = ZONE:FindByName("MM82")
+--                                   local FarpMM82zone = ZONE:FindByName("Blue MM82 FARP")
+--                                   local BlueMM82FARPDef = ZONE:FindByName("Blue Farp Defense-6")
+--
+--                                         if redfor:NoneInZone(MM82zone) and not Group.getByName('Static FARP Fuel Depot-6') then
+--                                         mist.respawnGroup('Static FARP Fuel Depot-6', true)
+--                                         end
+--                                         if redfor:NoneInZone(MM82zone) and not Group.getByName('Static FARP Ammo Storage-6') then
+--                                         mist.respawnGroup('Static FARP Ammo Storage-6', true)
+--                                         end
+--
+--                                          if redfor:NoneInZone(MM82zone) and not Group.getByName('BLUE Supply MM82') then
+--                                                  mist.respawnGroup('BLUE Supply MM82', true)
+--                                          end
+--                                             if redfor:NoneInZone(MM82zone) and blufor:NoneInZone(BlueMM82FARPDef)then
+--                                               SPAWN:New("BLUE Farp AA-6")
+--                                               :InitRandomizeTemplate(BlueFarpDefence)
+--                                               :InitLimit( 4, 400 )
+--                                               :SpawnScheduled( 5, .5 )
+--                                             else
+--                                               return nil
+--                                             end
+--     local LM54zone = ZONE:FindByName("LM54")
+--     local FarpLM54zone = ZONE:FindByName("Blue LM54 FARP")
+--     local BlueLM54FARPDef = ZONE:FindByName("Blue Farp Defense-7")
+--
+--             if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone)  then
+--             SPAWN:New("BLUE Supply LM54")
+--             :InitLimit( 4, 400 )
+--             :SpawnScheduled( 5, .5 )
+--           else
+--             return nil
+--             end
+--             if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and  not Group.getByName('Static FARP Fuel Depot-7') then
+--             mist.respawnGroup('Static FARP Fuel Depot-7', true)
+--             end
+--           if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and not Group.getByName('Static FARP Ammo Storage-7') then
+--           mist.respawnGroup('Static FARP Ammo Storage-7', true)
+--           end
+--            if redfor:NoneInZone(LM54zone) and blufor:AnyInZone(LM54zone) and not Group.getByName('BLUE Supply LM54') then
+--                    mist.respawnGroup('BLUE Supply LM54', true)
+--            end
+--               if redfor:NoneInZone(LM54zone) and bluAA:NoneInZone(BlueLM54FARPDef)then
+--                 SPAWN:New("BLUE Farp AA-7")
+--                 :InitRandomizeTemplate(BlueFarpDefence)
+--                 :InitLimit( 4, 400 )
+--                 :SpawnScheduled( 5, .5 )
+--               else
+--                 return nil
+--               end
+--               local LM68zone = ZONE:FindByName("LM68")
+--               local FarpLM68zone = ZONE:FindByName("Blue LM68 FARP")
+--               local BlueLM68FARPDef = ZONE:FindByName("Blue Farp Defense-8")
+--
+--                       if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone)  then
+--                       SPAWN:New("BLUE Supply LM68")
+--                       :InitLimit( 4, 400 )
+--                       :SpawnScheduled( 5, .5 )
+--                     else
+--                       return nil
+--                       end
+--                       if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and  not Group.getByName('Static FARP Fuel Depot-8') then
+--                       mist.respawnGroup('Static FARP Fuel Depot-8', true)
+--                       end
+--                     if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and not Group.getByName('Static FARP Ammo Storage-8') then
+--                     mist.respawnGroup('Static FARP Ammo Storage-8', true)
+--                     end
+--                      if redfor:NoneInZone(LM68zone) and blufor:AnyInZone(LM68zone) and not Group.getByName('BLUE Supply LM68') then
+--                              mist.respawnGroup('BLUE Supply LM68', true)
+--                      end
+--                         if redfor:NoneInZone(LM68zone) and bluAA:NoneInZone(BlueLM68FARPDef)then
+--                           SPAWN:New("BLUE Farp AA-8")
+--                           :InitRandomizeTemplate(BlueFarpDefence)
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                         else
+--                           return nil
+--                         end
+--
+-- local LM26zone = ZONE:FindByName("LM26")
+-- local FarpLM26zone = ZONE:FindByName("Blue LM26 FARP")
+-- local BlueLM26FARPDef = ZONE:FindByName("Blue Farp Defense-9")
+--
+--         if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone)  then
+--         SPAWN:New("BLUE Supply LM26zone")
+--         :InitLimit( 4, 400 )
+--         :SpawnScheduled( 5, .5 )
+--       else
+--         return nil
+--         end
+--         if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and  not Group.getByName('Static FARP Fuel Depot-9') then
+--         mist.respawnGroup('Static FARP Fuel Depot-9', true)
+--         end
+--       if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('Static FARP Ammo Storage-9') then
+--       mist.respawnGroup('Static FARP Ammo Storage-9', true)
+--       end
+--        if redfor:NoneInZone(LM26zone) and blufor:AnyInZone(LM26zone) and not Group.getByName('BLUE Supply LM26') then
+--                mist.respawnGroup('BLUE Supply LM26', true)
+--        end
+--           if redfor:NoneInZone(LM26zone) and bluAA:NoneInZone(BlueLM26FARPDef)then
+--             SPAWN:New("BLUE Farp AA-9")
+--             :InitRandomizeTemplate(BlueFarpDefence)
+--             :InitLimit( 4, 400 )
+--             :SpawnScheduled( 5, .5 )
+--           else
+--             return nil
+--           end
+--
+--           local LM08zone = ZONE:FindByName("LM08")
+--           local FarpLM08zone = ZONE:FindByName("Blue LM26 FARP")
+--           local BlueLM08FARPDef = ZONE:FindByName("Blue Farp Defense-10")
+--
+--                   if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone)  then
+--                   SPAWN:New("BLUE Supply LM08")
+--                   :InitLimit( 4, 400 )
+--                   :SpawnScheduled( 5, .5 )
+--                 else
+--                   return nil
+--                   end
+--                   if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and  not Group.getByName('Static FARP Fuel Depot-10') then
+--                   mist.respawnGroup('Static FARP Fuel Depot-10', true)
+--                   end
+--                 if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('Static FARP Ammo Storage-10') then
+--                 mist.respawnGroup('Static FARP Ammo Storage-10', true)
+--                 end
+--                  if redfor:NoneInZone(LM08zone) and blufor:AnyInZone(LM08zone) and not Group.getByName('BLUE Supply LM08') then
+--                          mist.respawnGroup('BLUE Supply LM08', true)
+--                  end
+--                     if redfor:NoneInZone(LM08zone) and bluAA:NoneInZone(BlueLM08FARPDef)then
+--                       SPAWN:New("BLUE Farp AA-10")
+--                       :InitRandomizeTemplate(BlueFarpDefence)
+--                       :InitLimit( 4, 400 )
+--                       :SpawnScheduled( 5, .5 )
+--                     else
+--                       return nil
+--                     end
+--
+--
+--
+--   RedFarptrigger = SCHEDULER:New(nil,
+--   function()
+--
+--
+--
+--                     local KM76zone = ZONE:FindByName("KM76")
+--                     local FarpKM76zone = ZONE:FindByName("Red KM76 FARP")
+--                     local RedKM76FARPDef = ZONE:FindByName("Red Farp Defense-1")
+--
+--                         if blufor:NoneInZone(KM76zone) and redsupply:NoneInZone(FarpKM76zone) then --and redfor:AnyInZone(KM76zone)  then
+--                         SPAWN:New("RED Supply KM76")
+--                         :InitLimit( 4, 400 )
+--                         :SpawnScheduled( 5, .5 )
+--                         end
+--                             if blufor:NoneInZone(KM76zone) and redAA:NoneInZone(RedKM76FARPDef) then --and redfor:NoneInZone(RedKM76FARPDef)then
+--                               SPAWN:New("RED Farp AA-1")
+--                               :InitRandomizeTemplate(RedFarpDefence)
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             end
+--                                 if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Fuel Depot-11') then
+--                                 mist.respawnGroup('Static FARP Fuel Depot-11', true)
+--                                 end
+--                           if blufor:NoneInZone(KM76zone) and not Group.getByName('Static FARP Ammo Storage-11') then
+--                           mist.respawnGroup('Static FARP Ammo Storage-11', true)
+--                           end
+--                            if blufor:NoneInZone(KM76zone) and not Group.getByName('RED Supply KM76') then
+--                                    mist.respawnGroup('RED Supply KM76', true)
+--                            end
+--
+--
+--                     local KM88zone = ZONE:FindByName("KM88")
+--                     local FarpKM88zone = ZONE:FindByName("Red KM88 FARP")
+--                     local RedKM88FARPDef = ZONE:FindByName("Red Farp Defense-2")
+--
+--                           if blufor:NoneInZone(KM88zone) and redsupply:NoneInZone(FarpKM88zone) then
+--                           SPAWN:New("RED Supply KM88")
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                           end
+--                           if blufor:NoneInZone(KM88zone) and not Group.getByName('Static FARP Fuel Depot-12') then
+--                           mist.respawnGroup('Static FARP Fuel Depot-12', true)
+--                           end
+--                         if blufor:NoneInZone(KM88zone) and not Group.getByName('Static FARP Ammo Storage-12') then
+--                         mist.respawnGroup('Static FARP Ammo Storage-12', true)
+--                         end
+--                          if blufor:NoneInZone(KM88zone) and not Group.getByName('RED Supply KM88') then
+--                                  mist.respawnGroup('RED Supply KM88', true)
+--                          end
+--                             if blufor:NoneInZone(KM88zone) and redAA:NoneInZone(RedKM88FARPDef)then
+--                               SPAWN:New("RED Farp AA-2")
+--                               :InitRandomizeTemplate(RedFarpDefence)
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             end
+--
+--                     local LM26zone = ZONE:FindByName("LM26")
+--                     local FarpLM26zone = ZONE:FindByName("Red LM26 FARP")
+--                     local RedLM26FARPDef = ZONE:FindByName("Red Farp Defense-3")
+--
+--                         if blufor:NoneInZone(LM26zone) and redsupply:NoneInZone(FarpLM26zone) then
+--                         SPAWN:New("RED Supply LM26")
+--                         :InitLimit( 4, 400 )
+--                         :SpawnScheduled( 5, .5 )
+--                         end
+--                         if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and  not Group.getByName('Static FARP Fuel Depot-13') then
+--                         mist.respawnGroup('Static FARP Fuel Depot-13', true)
+--                         end
+--                       if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and not Group.getByName('Static FARP Ammo Storage-13') then
+--                       mist.respawnGroup('Static FARP Ammo Storage-13', true)
+--                       end
+--                        if blufor:NoneInZone(LM26zone) and redfor:AnyInZone(LM26zone) and not Group.getByName('RED Supply LM26') then
+--                                mist.respawnGroup('RED Supply LM26', true)
+--                        end
+--                           if blufor:NoneInZone(LM26zone) and redAA:NoneInZone(RedLM26FARPDef)then
+--                             SPAWN:New("RED Farp AA-3")
+--                             :InitRandomizeTemplate(RedFarpDefence)
+--                             :InitLimit( 4, 400 )
+--                             :SpawnScheduled( 5, .5 )
+--                           end
+--
+--                     local LM38zone = ZONE:FindByName("LM38")
+--                     local FarpLM38zone = ZONE:FindByName("Red LM38 FARP")
+--                     local RedLM38FARPDef = ZONE:FindByName("Red Farp Defense-4")
+--
+--                           if blufor:NoneInZone(LM38zone) and redsupply:NoneInZone(FarpLM38zone)  then
+--                           SPAWN:New("RED Supply LM38")
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                           end
+--                           if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and  not Group.getByName('Static FARP Fuel Depot-14') then
+--                           mist.respawnGroup('Static FARP Fuel Depot-14', true)
+--                           end
+--                         if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and not Group.getByName('Static FARP Ammo Storage-14') then
+--                         mist.respawnGroup('Static FARP Ammo Storage-14', true)
+--                         end
+--                          if blufor:NoneInZone(LM38zone) and redfor:AnyInZone(LM38zone) and not Group.getByName('RED Supply LM38') then
+--                                  mist.respawnGroup('RED Supply LM38', true)
+--                          end
+--                             if blufor:NoneInZone(LM38zone) and redAA:NoneInZone(RedLM38FARPDef)then
+--                               SPAWN:New("RED Farp AA-4")
+--                               :InitRandomizeTemplate(RedFarpDefence)
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             end
+--
+--                     local LM64zone = ZONE:FindByName("LM64")
+--                     local FarpLM64zone = ZONE:FindByName("Red LM64 FARP")
+--                     local RedLM64FARPDef = ZONE:FindByName("Red Farp Defense-5")
+--
+--                         if blufor:NoneInZone(LM64zone) and redsupply:NoneInZone(LM64zone) then
+--                         SPAWN:New("RED Supply LM64")
+--                         :InitLimit( 4, 400 )
+--                         :SpawnScheduled( 5, .5 )
+--                       else
+--                         return nil
+--                         end
+--                         if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and  not Group.getByName('Static FARP Fuel Depot-16') then
+--                         mist.respawnGroup('Static FARP Fuel Depot-16', true)
+--                         end
+--                       if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and not Group.getByName('Static FARP Ammo Storage-16') then
+--                       mist.respawnGroup('Static FARP Ammo Storage-16', true)
+--                       end
+--                        if blufor:NoneInZone(LM64zone) and redfor:AnyInZone(LM64zone) and not Group.getByName('RED Supply LM64') then
+--                                mist.respawnGroup('RED Supply LM64', true)
+--                        end
+--                           if blufor:NoneInZone(LM64zone) and redAA:NoneInZone(RedLM64FARPDef)then
+--                             SPAWN:New("RED Farp AA-6")
+--                             :InitRandomizeTemplate(RedFarpDefence)
+--                             :InitLimit( 4, 400 )
+--                             :SpawnScheduled( 5, .5 )
+--                           else
+--                             return nil
+--                           end
+--
+--                     local LM67zone = ZONE:FindByName("LM67")
+--                     local FarpLM67zone = ZONE:FindByName("Red LM67 FARP")
+--                     local RedLM67FARPDef = ZONE:FindByName("Red Farp Defense-6")
+--
+--                           if blufor:NoneInZone(LM67zone) and redsupply:NoneInZone(LM67zone)  then
+--                           SPAWN:New("RED Supply LM67")
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                         else
+--                           return nil
+--                           end
+--                           if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and  not Group.getByName('Static FARP Fuel Depot-17') then
+--                           mist.respawnGroup('Static FARP Fuel Depot-17', true)
+--                           end
+--                         if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and not Group.getByName('Static FARP Ammo Storage-17') then
+--                         mist.respawnGroup('Static FARP Ammo Storage-17', true)
+--                         end
+--                          if blufor:NoneInZone(LM67zone) and redfor:AnyInZone(LM67zone) and not Group.getByName('RED Supply LM67') then
+--                                  mist.respawnGroup('RED Supply LM67', true)
+--                          end
+--                             if blufor:NoneInZone(LM67zone) and redAA:NoneInZone(RedLM67FARPDef)then
+--                               SPAWN:New("RED Farp AA-7")
+--                               :InitRandomizeTemplate(RedFarpDefence)
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             else
+--                               return nil
+--                             end
+--
+--                     local MM05zone = ZONE:FindByName("MM05")
+--                     local FarpMM05zone = ZONE:FindByName("Red MM05 FARP")
+--                     local RedMM05FARPDef = ZONE:FindByName("Red Farp Defense-7")
+--
+--                     if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and redsupply:NoneInZone(FarpMM05zone)  then
+--                     SPAWN:New("RED Supply MM05")
+--                     :InitLimit( 4, 400 )
+--                     :SpawnScheduled( 5, .5 )
+--                     end
+--                     if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and  not Group.getByName('Static FARP Fuel Depot-18') then
+--                     mist.respawnGroup('Static FARP Fuel Depot-18', true)
+--                     end
+--                     if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and not Group.getByName('Static FARP Ammo Storage-18') then
+--                     mist.respawnGroup('Static FARP Ammo Storage-18', true)
+--                     end
+--                     if blufor:NoneInZone(MM05zone) and redfor:AnyInZone(MM05zone) and not Group.getByName('RED Supply MM05') then
+--                            mist.respawnGroup('RED Supply MM05', true)
+--                     end
+--                       if blufor:NoneInZone(MM05zone) and redAA:NoneInZone(RedMM05FARPDef)then
+--                         SPAWN:New("RED Farp AA-8")
+--                         :InitRandomizeTemplate(RedFarpDefence)
+--                         :InitLimit( 4, 400 )
+--                         :SpawnScheduled( 5, .5 )
+--                       end
+--
+--                       local MM17zone = ZONE:FindByName("MM17")
+--                       local FarpMM17zone = ZONE:FindByName("Red MM17 FARP")
+--                       local RedMM17FARPDef = ZONE:FindByName("Red Farp Defense-8")
+--
+--                               if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and redsupply:NoneInZone(FarpMM17zone)  then
+--                               SPAWN:New("RED Supply MM17")
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             else
+--                               return nil
+--                               end
+--                               if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and  not Group.getByName('Static FARP Fuel Depot-19') then
+--                               mist.respawnGroup('Static FARP Fuel Depot-19', true)
+--                               end
+--                             if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and not Group.getByName('Static FARP Ammo Storage-19') then
+--                             mist.respawnGroup('Static FARP Ammo Storage-19', true)
+--                             end
+--                              if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and not Group.getByName('RED Supply MM17') then
+--                                      mist.respawnGroup('RED Supply MM17', true)
+--                              end
+--                                 if blufor:NoneInZone(MM17zone) and redfor:AnyInZone(MM17zone) and redAA:NoneInZone(RedMM05FARPDef)then
+--                                   SPAWN:New("RED Farp AA-9")
+--                                   :InitRandomizeTemplate(RedFarpDefence)
+--                                   :InitLimit( 4, 400 )
+--                                   :SpawnScheduled( 5, .5 )
+--                                 else
+--                                   return nil
+--                                 end
+--
+--                                 local MM45zone = ZONE:FindByName("MM45")
+--                                 local FarpMM45zone = ZONE:FindByName("Red MM45 FARP")
+--                                 local RedMM45FARPDef = ZONE:FindByName("Red Farp Defense-9")
+--
+--                                         if redfor:AnyInZone(MM45zone) and redsupply:NoneInZone(FarpMM45zone)  then
+--                                         SPAWN:New("RED Supply MM45")
+--                                         :InitLimit( 4, 8 )
+--                                         --:SpawnScheduled( 5, .5 )
+--                                         end
+--                                         if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and  not Group.getByName('Static FARP Fuel Depot-20') then
+--                                         mist.respawnGroup('Static FARP Fuel Depot-20', true)
+--                                         end
+--                                       if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and not Group.getByName('Static FARP Ammo Storage-20') then
+--                                       mist.respawnGroup('Static FARP Ammo Storage-20', true)
+--                                       end
+--                                        if blufor:NoneInZone(MM45zone) and redfor:AnyInZone(MM45zone) and not Group.getByName('RED Supply MM45') then
+--                                                mist.respawnGroup('RED Supply MM45', true)
+--                                        end
+--                                           if redfor:AnyInZone(MM45zone) and redAA:NoneInZone(RedMM45FARPDef)then
+--                                             SPAWN:New("RED Farp AA-10")
+--                                             :InitRandomizeTemplate(RedFarpDefence)
+--                                             :InitLimit( 4, 400 )
+--                                             --:SpawnScheduled( 5, .5 )
+--                                           end
+--
+--                     local MM43zone = ZONE:FindByName("MM43")
+--                     local FarpMM43zone = ZONE:FindByName("Red MM43 FARP")
+--                     local RedMM43FARPDef = ZONE:FindByName("Red Farp Defense-10")
+--
+--                           if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and redsupply:NoneInZone(FarpMM43zone)  then
+--                           SPAWN:New("RED Supply MM43")
+--                           :InitLimit( 4, 400 )
+--                           :SpawnScheduled( 5, .5 )
+--                           end
+--                           if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and  not Group.getByName('Static FARP Fuel Depot-21') then
+--                           mist.respawnGroup('Static FARP Fuel Depot-21', true)
+--                           end
+--                         if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and not Group.getByName('Static FARP Ammo Storage-21') then
+--                         mist.respawnGroup('Static FARP Ammo Storage-21', true)
+--                         end
+--                          if blufor:NoneInZone(MM43zone) and redfor:AnyInZone(MM43zone) and not Group.getByName('RED Supply MM43') then
+--                                  mist.respawnGroup('RED Supply MM43', true)
+--                          end
+--                             if blufor:NoneInZone(MM43zone) and redAA:NoneInZone(RedMM43FARPDef)then
+--                               SPAWN:New("RED Farp AA-10")
+--                               :InitRandomizeTemplate(RedFarpDefence)
+--                               :InitLimit( 4, 400 )
+--                               :SpawnScheduled( 5, .5 )
+--                             end
+--
+--
+-- end, {}, 6, 3600 )
