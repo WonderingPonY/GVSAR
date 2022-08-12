@@ -23,7 +23,7 @@ function()
     SPAWN:New("RED SAM LR-1")
     :InitRandomizeZones(RedLRZones)
     --:InitRandomizeTemplate(RedForSpawn)
-    :InitLimit( 18, 0 )
+    :InitLimit( 1, 0 )
     :SpawnScheduled( 5, .5 )
   end
 
@@ -40,7 +40,7 @@ function()
     SPAWN:New("RED SAM Medium")
     :InitRandomizeZones(RedMRZones)
     :InitRandomizeTemplate(RedForSAMSpawn)
-    :InitLimit( 18, 0 )
+    :InitLimit( 1, 0 )
     :SpawnScheduled( 5, .5 )
   end
 
@@ -58,7 +58,7 @@ function()
     SPAWN:New("BLUE SAM LR-1")
     :InitRandomizeZones(BlueLRZones)
     --:InitRandomizeTemplate(RedForSpawn)
-    :InitLimit( 20, 0 )
+    :InitLimit( 1, 0 )
     :SpawnScheduled( 5, .5 )
   end
 
@@ -75,7 +75,7 @@ function()
     SPAWN:New("BLUE SAM Medium")
     :InitRandomizeZones(BlueMRZones)
     :InitRandomizeTemplate(BluForSAMSpawn)
-    :InitLimit( 14, 0 )
+    :InitLimit( 1, 0 )
     :SpawnScheduled( 5, .5 )
   end
 

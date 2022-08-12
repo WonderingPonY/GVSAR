@@ -77,24 +77,28 @@ LM58SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():F
 
 if blufor:NoneInZone(LM58zone) and LM58SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("LM58Redfor-1")
+  :InitLimit(1,0)
   :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-1 Spawned")
 
   SPAWN:New("LM58Redfor-2")
+  :InitLimit(1,0)
   :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-2 Spawned")
 
   SPAWN:New("LM58Redfor-3")
+  :InitLimit(1,0)
   :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM58Redfor-3 Spawned")
 
   SPAWN:New("LM58Redfor-4")
+  :InitLimit(1,0)
   :InitLimit(0,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
@@ -115,21 +119,25 @@ end
 
     if blufor:NoneInZone(LM57zone) and LM57SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM57Redfor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM57Redfor-1 Spawned")
 
       SPAWN:New("LM57Redfor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM57Redfor-2 Spawned")
 
       SPAWN:New("LM57Redfor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM57Redfor-3 Spawned")
 
       SPAWN:New("LM57Redfor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM57Redfor-4 Spawned")
@@ -149,21 +157,25 @@ end
 
         if blufor:NoneInZone(LM56zone) and LM56SpawnUnit:NoneInZone(MasterZone) then
           SPAWN:New("LM56Redfor-1")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM56Redfor-1 Spawned")
 
           SPAWN:New("LM56Redfor-2")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM56Redfor-2 Spawned")
 
           SPAWN:New("LM56Redfor-3")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM56Redfor-3 Spawned")
 
           SPAWN:New("LM56Redfor-4")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM56Redfor-4 Spawned")
@@ -183,21 +195,25 @@ end
 
             if blufor:NoneInZone(LM55zone) and LM55SpawnUnit:NoneInZone(MasterZone) then
               SPAWN:New("LM55Redfor-1")
+              :InitLimit(1,0)
               :InitRandomizeTemplate(RedForSpawn)
               :SpawnScheduled( 5, .5 )
               env.info("LM55Redfor-1 Spawned")
 
               SPAWN:New("LM55Redfor-2")
+              :InitLimit(1,0)
               :InitRandomizeTemplate(RedForSpawn)
               :SpawnScheduled( 5, .5 )
               env.info("LM55Redfor-2 Spawned")
 
               SPAWN:New("LM55Redfor-3")
+              :InitLimit(1,0)
               :InitRandomizeTemplate(RedForSpawn)
               :SpawnScheduled( 5, .5 )
               env.info("LM55Redfor-3 Spawned")
 
               SPAWN:New("LM55Redfor-4")
+              :InitLimit(1,0)
               :InitRandomizeTemplate(RedForSpawn)
               :SpawnScheduled( 5, .5 )
               env.info("LM55Redfor-4 Spawned")
@@ -217,21 +233,25 @@ end
 
                 if blufor:NoneInZone(LM54zone) and LM54SpawnUnit:NoneInZone(MasterZone) then
                   SPAWN:New("LM54Redfor-1")
+                  :InitLimit(1,0)
                   :InitRandomizeTemplate(RedForSpawn)
                   :SpawnScheduled( 5, .5 )
                   env.info("LM54Redfor-1 Spawned")
 
                   SPAWN:New("LM54Redfor-2")
+                  :InitLimit(1,0)
                   :InitRandomizeTemplate(RedForSpawn)
                   :SpawnScheduled( 5, .5 )
                   env.info("LM54Redfor-2 Spawned")
 
                   SPAWN:New("LM54Redfor-3")
+                  :InitLimit(1,0)
                   :InitRandomizeTemplate(RedForSpawn)
                   :SpawnScheduled( 5, .5 )
                   env.info("LM54Redfor-3 Spawned")
 
                   SPAWN:New("LM54Redfor-4")
+                  :InitLimit(1,0)
                   :InitRandomizeTemplate(RedForSpawn)
                   :SpawnScheduled( 5, .5 )
                   env.info("LM54Redfor-4 Spawned")
@@ -251,21 +271,25 @@ end
 
   if blufor:NoneInZone(LM68zone) and LM68SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM68Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-1 Spawned")
 
     SPAWN:New("LM68Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-2 Spawned")
 
     SPAWN:New("LM68Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-3 Spawned")
 
     SPAWN:New("LM68Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-4 Spawned")
@@ -285,21 +309,25 @@ end
 
     if blufor:NoneInZone(LM67zone) and LM67SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM67Redfor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM67Redfor-1 Spawned")
 
       SPAWN:New("LM67Redfor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM67Redfor-2 Spawned")
 
       SPAWN:New("LM67Redfor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM67Redfor-3 Spawned")
 
       SPAWN:New("LM67Redfor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM67Redfor-4 Spawned")
@@ -319,21 +347,25 @@ end
 
       if blufor:NoneInZone(LM66zone) and LM66SpawnUnit:NoneInZone(MasterZone) then
         SPAWN:New("LM66Redfor-1")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM66Redfor-1 Spawned")
 
         SPAWN:New("LM66Redfor-2")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM66Redfor-2 Spawned")
 
         SPAWN:New("LM66Redfor-3")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM66Redfor-3 Spawned")
 
         SPAWN:New("LM66Redfor-4")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM66Redfor-4 Spawned")
@@ -351,11 +383,13 @@ end
 
         if blufor:NoneInZone(LM65zone) and LM65SpawnUnit:NoneInZone(MasterZone) then
           SPAWN:New("LM65Redfor-1")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM65Redfor-1 Spawned")
 
           SPAWN:New("LM65Redfor-2")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM65Redfor-2 Spawned")
@@ -376,21 +410,25 @@ end
 
           if blufor:NoneInZone(LM64zone) and LM64SpawnUnit:NoneInZone(MasterZone) then
             SPAWN:New("LM64Redfor-1")
+            :InitLimit(1,0)
             :InitRandomizeTemplate(RedForSpawn)
             :SpawnScheduled( 5, .5 )
             env.info("LM64Redfor-1 Spawned")
 
             SPAWN:New("LM64Redfor-2")
+            :InitLimit(1,0)
             :InitRandomizeTemplate(RedForSpawn)
             :SpawnScheduled( 5, .5 )
             env.info("LM64Redfor-2 Spawned")
 
             SPAWN:New("LM64Redfor-3")
+            :InitLimit(1,0)
             :InitRandomizeTemplate(RedForSpawn)
             :SpawnScheduled( 5, .5 )
             env.info("LM64Redfor-3 Spawned")
 
             SPAWN:New("LM64Redfor-4")
+            :InitLimit(1,0)
             :InitRandomizeTemplate(RedForSpawn)
             :SpawnScheduled( 5, .5 )
             env.info("LM64Redfor-4 Spawned")
@@ -410,21 +448,25 @@ LM78SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():F
 
 if blufor:NoneInZone(LM78zone) and LM78SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("LM78Redfor-1")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM78Redfor-1 Spawned")
 
   SPAWN:New("LM78Redfor-2")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM78Redfor-2 Spawned")
 
   SPAWN:New("LM78Redfor-3")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM78Redfor-3 Spawned")
 
   SPAWN:New("LM78Redfor-4")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(RedForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM78Redfor-4 Spawned")
@@ -444,21 +486,25 @@ end
 
   if blufor:NoneInZone(LM77zone) and LM77SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM77Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-1 Spawned")
 
     SPAWN:New("LM77Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-2 Spawned")
 
     SPAWN:New("LM77Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-3 Spawned")
 
     SPAWN:New("LM77Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-4 Spawned")
@@ -478,21 +524,25 @@ end
 
     if blufor:NoneInZone(LM76zone) and LM76SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM76Redfor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-1 Spawned")
 
       SPAWN:New("LM76Redfor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-2 Spawned")
 
       SPAWN:New("LM76Redfor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-3 Spawned")
 
       SPAWN:New("LM76Redfor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-4 Spawned")
@@ -513,21 +563,25 @@ end
 
       if blufor:NoneInZone(LM75zone) and LM75SpawnUnit:NoneInZone(MasterZone) then
         SPAWN:New("LM75Redfor-1")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-1 Spawned")
 
         SPAWN:New("LM75Redfor-2")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-2 Spawned")
 
         SPAWN:New("LM75Redfor-3")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-3 Spawned")
 
         SPAWN:New("LM75Redfor-4")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-4 Spawned")
@@ -547,21 +601,25 @@ end
 
         if blufor:NoneInZone(LM74zone) and LM74SpawnUnit:NoneInZone(MasterZone) then
           SPAWN:New("LM74Redfor-1")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-1 Spawned")
 
           SPAWN:New("LM74Redfor-2")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-2 Spawned")
 
           SPAWN:New("LM74Redfor-3")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-3 Spawned")
 
           SPAWN:New("LM74Redfor-4")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-4 Spawned")
@@ -589,21 +647,25 @@ end
 
   if redfor:NoneInZone(LM88zone) and LM88SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("LM88BlueFor-1")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM88BlueFor-1 Spawned")
 
   SPAWN:New("LM88BlueFor-2")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM88BlueFor-2 Spawned")
 
   SPAWN:New("LM88BlueFor-3")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM88BlueFor-3 Spawned")
 
   SPAWN:New("LM88BlueFor-4")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM88BlueFor-4 Spawned")
@@ -623,21 +685,25 @@ end
 
     if redfor:NoneInZone(LM87zone) and LM87SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM87BlueFor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM87BlueFor-1 Spawned")
 
     SPAWN:New("LM87BlueFor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM87BlueFor-2 Spawned")
 
     SPAWN:New("LM87BlueFor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM87BlueFor-3 Spawned")
 
     SPAWN:New("LM87BlueFor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM87BlueFor-4 Spawned")
@@ -657,21 +723,25 @@ end
 
       if redfor:NoneInZone(LM86zone) and LM86SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM86BlueFor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM86BlueFor-1 Spawned")
 
       SPAWN:New("LM86BlueFor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM86BlueFor-2 Spawned")
 
       SPAWN:New("LM86BlueFor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM86BlueFor-3 Spawned")
 
       SPAWN:New("LM86BlueFor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM86BlueFor-4 Spawned")
@@ -691,21 +761,25 @@ end
 
         if redfor:NoneInZone(LM85zone) and LM85SpawnUnit:NoneInZone(MasterZone) then
         SPAWN:New("LM85BlueFor-1")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(BlueForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM85BlueFor-1 Spawned")
 
         SPAWN:New("LM85BlueFor-2")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(BlueForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM85BlueFor-2 Spawned")
 
         SPAWN:New("LM85BlueFor-3")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(BlueForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM85BlueFor-3 Spawned")
 
         SPAWN:New("LM85BlueFor-4")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(BlueForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM85BlueFor-4 Spawned")
@@ -725,21 +799,25 @@ end
 
           if redfor:NoneInZone(LM84zone) and LM84SpawnUnit:NoneInZone(MasterZone) then
           SPAWN:New("LM84BlueFor-1")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(BlueForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM84BlueFor-1 Spawned")
 
           SPAWN:New("LM84BlueFor-2")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(BlueForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM84BlueFor-2 Spawned")
 
           SPAWN:New("LM84BlueFor-3")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(BlueForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM84BlueFor-3 Spawned")
 
           SPAWN:New("LM84BlueFor-4")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(BlueForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM84BlueFor-4 Spawned")
@@ -759,21 +837,25 @@ LM98SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():F
 
 if redfor:NoneInZone(LM98zone) and LM98SpawnUnit:NoneInZone(MasterZone) then
 SPAWN:New("LM98BlueFor-1")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("LM98BlueFor-1 Spawned")
 
 SPAWN:New("LM98BlueFor-2")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("LM98BlueFor-2 Spawned")
 
 SPAWN:New("LM98BlueFor-3")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("LM98BlueFor-3 Spawned")
 
 SPAWN:New("LM98BlueFor-4")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("LM98BlueFor-4 Spawned")
@@ -793,21 +875,25 @@ end
 
   if redfor:NoneInZone(LM97zone) and LM97SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("LM97BlueFor-1")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM97BlueFor-1 Spawned")
 
   SPAWN:New("LM97BlueFor-2")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM97BlueFor-2 Spawned")
 
   SPAWN:New("LM97BlueFor-3")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM97BlueFor-3 Spawned")
 
   SPAWN:New("LM97BlueFor-4")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("LM97BlueFor-4 Spawned")
@@ -827,21 +913,25 @@ end
 
     if redfor:NoneInZone(LM96zone) and LM96SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM96BlueFor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM96BlueFor-1 Spawned")
 
     SPAWN:New("LM96BlueFor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM96BlueFor-2 Spawned")
 
     SPAWN:New("LM96BlueFor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM96BlueFor-3 Spawned")
 
     SPAWN:New("LM96BlueFor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM96BlueFor-4 Spawned")
@@ -861,21 +951,25 @@ end
 
       if redfor:NoneInZone(LM95zone) and LM95SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM95BlueFor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM95BlueFor-1 Spawned")
 
       SPAWN:New("LM95BlueFor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM95BlueFor-2 Spawned")
 
       SPAWN:New("LM95BlueFor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM95BlueFor-3 Spawned")
 
       SPAWN:New("LM95BlueFor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM95BlueFor-4 Spawned")
@@ -895,21 +989,25 @@ MM07SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():F
 
 if redfor:NoneInZone(MM07zone) and MM07SpawnUnit:NoneInZone(MasterZone) then
 SPAWN:New("MM07BlueFor-1")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("MM07BlueFor-1 Spawned")
 
 SPAWN:New("MM07BlueFor-2")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("MM07BlueFor-2 Spawned")
 
 SPAWN:New("MM07BlueFor-3")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("MM07BlueFor-3 Spawned")
 
 SPAWN:New("MM07BlueFor-4")
+:InitLimit(1,0)
 :InitRandomizeTemplate(BlueForSpawn)
 :SpawnScheduled( 5, .5 )
 env.info("MM07BlueFor-4 Spawned")
@@ -929,21 +1027,25 @@ end
 
   if redfor:NoneInZone(MM06zone) and MM06SpawnUnit:NoneInZone(MasterZone) then
   SPAWN:New("MM06BlueFor-1")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("MM06BlueFor-1 Spawned")
 
   SPAWN:New("MM06BlueFor-2")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("MM06BlueFor-2 Spawned")
 
   SPAWN:New("MM06BlueFor-3")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("MM06BlueFor-3 Spawned")
 
   SPAWN:New("MM06BlueFor-4")
+  :InitLimit(1,0)
   :InitRandomizeTemplate(BlueForSpawn)
   :SpawnScheduled( 5, .5 )
   env.info("MM06BlueFor-4 Spawned")
@@ -963,21 +1065,25 @@ end
 
     if redfor:NoneInZone(MM05zone) and MM05SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("MM05BlueFor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("MM05BlueFor-1 Spawned")
 
     SPAWN:New("MM05BlueFor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("MM05BlueFor-2 Spawned")
 
     SPAWN:New("MM05BlueFor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("MM05BlueFor-3 Spawned")
 
     SPAWN:New("MM05BlueFor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(BlueForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("MM05BlueFor-4 Spawned")
@@ -997,21 +1103,25 @@ end
 
       if redfor:NoneInZone(MM04zone) and MM04SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("MM04BlueFor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("MM04BlueFor-1 Spawned")
 
       SPAWN:New("MM04BlueFor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("MM04BlueFor-2 Spawned")
 
       SPAWN:New("MM04BlueFor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("MM04BlueFor-3 Spawned")
 
       SPAWN:New("MM04BlueFor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(BlueForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("MM04BlueFor-4 Spawned")

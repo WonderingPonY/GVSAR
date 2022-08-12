@@ -61,10 +61,9 @@ ZONE:New( "MM82 Spawn Zone-1" ), ZONE:New( "MM82 Spawn Zone-2" ), ZONE:New( "MM8
 blufor = SET_GROUP:New():FilterCoalitions('blue'):FilterCategoryGround():FilterStart()
 redfor = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterStart()
 MasterZone = ZONE:FindByName("MonkeyFucker")
-MasterObject = SCHEDULER:New()
 
-RedUnitSpawn = MasterObject:Schedule( nil,
-function()
+env.info("----------------------------GOT TO REDSPAWN FUNCTION--------------------------")
+function RedSpawn()
   env.info("REDSPAWN FUNCTION STARTED")
 
   local LM58zone = ZONE:FindByName("LM58")
@@ -74,34 +73,37 @@ function()
   LM58SpawnZone4 = ZONE:FindByName("LM58 Spawn Zone-4")
   LM58SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM58Redfor") :FilterStart()
 
-
-
   if blufor:NoneInZone(LM58zone) and LM58SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM58Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM58Redfor-1 Spawned")
 
     SPAWN:New("LM58Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM58Redfor-2 Spawned")
 
     SPAWN:New("LM58Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM58Redfor-3 Spawned")
 
     SPAWN:New("LM58Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM58Redfor-4 Spawned")
-      else
-    if blufor:AnyInZone(LM58zone) or LM58SpawnUnit:AnyInZone(MasterZone) or LM58SpawnUnit:IsAlive() == nil then
+  else
+    if blufor:AnyInZone(LM58zone) or LM58SpawnUnit:AnyInZone(MasterZone) or LM58SpawnUnit:IsAlive() == true then
       env.info("BlueFor in Zone or Units in Master Zone or Units are Alive")
       return nil
     end
   end
+
 
   local LM57zone = ZONE:FindByName("LM57")
   LM57SpawnZone1 = ZONE:FindByName("LM57 Spawn Zone-1")
@@ -112,21 +114,25 @@ function()
 
   if blufor:NoneInZone(LM57zone) and LM57SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM57Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM57Redfor-1 Spawned")
 
     SPAWN:New("LM57Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM57Redfor-2 Spawned")
 
     SPAWN:New("LM57Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM57Redfor-3 Spawned")
 
     SPAWN:New("LM57Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM57Redfor-4 Spawned")
@@ -146,21 +152,25 @@ function()
 
   if blufor:NoneInZone(LM56zone) and LM56SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM56Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM56Redfor-1 Spawned")
 
     SPAWN:New("LM56Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM56Redfor-2 Spawned")
 
     SPAWN:New("LM56Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM56Redfor-3 Spawned")
 
     SPAWN:New("LM56Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM56Redfor-4 Spawned")
@@ -180,21 +190,25 @@ function()
 
   if blufor:NoneInZone(LM55zone) and LM55SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM55Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM55Redfor-1 Spawned")
 
     SPAWN:New("LM55Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM55Redfor-2 Spawned")
 
     SPAWN:New("LM55Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM55Redfor-3 Spawned")
 
     SPAWN:New("LM55Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM55Redfor-4 Spawned")
@@ -214,21 +228,25 @@ function()
 
   if blufor:NoneInZone(LM54zone) and LM54SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM54Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM54Redfor-1 Spawned")
 
     SPAWN:New("LM54Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM54Redfor-2 Spawned")
 
     SPAWN:New("LM54Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM54Redfor-3 Spawned")
 
     SPAWN:New("LM54Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM54Redfor-4 Spawned")
@@ -248,21 +266,25 @@ function()
 
   if blufor:NoneInZone(LM68zone) and LM68SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM68Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-1 Spawned")
 
     SPAWN:New("LM68Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-2 Spawned")
 
     SPAWN:New("LM68Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-3 Spawned")
 
     SPAWN:New("LM68Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM68Redfor-4 Spawned")
@@ -282,21 +304,25 @@ function()
 
   if blufor:NoneInZone(LM67zone) and LM67SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM67Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM67Redfor-1 Spawned")
 
     SPAWN:New("LM67Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM67Redfor-2 Spawned")
 
     SPAWN:New("LM67Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM67Redfor-3 Spawned")
 
     SPAWN:New("LM67Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM67Redfor-4 Spawned")
@@ -316,21 +342,25 @@ function()
 
   if blufor:NoneInZone(LM66zone) and LM66SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM66Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM66Redfor-1 Spawned")
 
     SPAWN:New("LM66Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM66Redfor-2 Spawned")
 
     SPAWN:New("LM66Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM66Redfor-3 Spawned")
 
     SPAWN:New("LM66Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM66Redfor-4 Spawned")
@@ -348,11 +378,13 @@ function()
 
   if blufor:NoneInZone(LM65zone) and LM65SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM65Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM65Redfor-1 Spawned")
 
     SPAWN:New("LM65Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM65Redfor-2 Spawned")
@@ -373,21 +405,25 @@ function()
 
   if blufor:NoneInZone(LM64zone) and LM64SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM64Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM64Redfor-1 Spawned")
 
     SPAWN:New("LM64Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM64Redfor-2 Spawned")
 
     SPAWN:New("LM64Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM64Redfor-3 Spawned")
 
     SPAWN:New("LM64Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM64Redfor-4 Spawned")
@@ -407,21 +443,25 @@ function()
 
   if blufor:NoneInZone(LM78zone) and LM78SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM78Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM78Redfor-1 Spawned")
 
     SPAWN:New("LM78Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM78Redfor-2 Spawned")
 
     SPAWN:New("LM78Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM78Redfor-3 Spawned")
 
     SPAWN:New("LM78Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM78Redfor-4 Spawned")
@@ -441,21 +481,25 @@ function()
 
   if blufor:NoneInZone(LM77zone) and LM77SpawnUnit:NoneInZone(MasterZone) then
     SPAWN:New("LM77Redfor-1")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-1 Spawned")
 
     SPAWN:New("LM77Redfor-2")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-2 Spawned")
 
     SPAWN:New("LM77Redfor-3")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-3 Spawned")
 
     SPAWN:New("LM77Redfor-4")
+    :InitLimit(1,0)
     :InitRandomizeTemplate(RedForSpawn)
     :SpawnScheduled( 5, .5 )
     env.info("LM77Redfor-4 Spawned")
@@ -475,21 +519,25 @@ function()
 
     if blufor:NoneInZone(LM76zone) and LM76SpawnUnit:NoneInZone(MasterZone) then
       SPAWN:New("LM76Redfor-1")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-1 Spawned")
 
       SPAWN:New("LM76Redfor-2")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-2 Spawned")
 
       SPAWN:New("LM76Redfor-3")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-3 Spawned")
 
       SPAWN:New("LM76Redfor-4")
+      :InitLimit(1,0)
       :InitRandomizeTemplate(RedForSpawn)
       :SpawnScheduled( 5, .5 )
       env.info("LM76Redfor-4 Spawned")
@@ -510,21 +558,25 @@ function()
 
       if blufor:NoneInZone(LM75zone) and LM75SpawnUnit:NoneInZone(MasterZone) then
         SPAWN:New("LM75Redfor-1")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-1 Spawned")
 
         SPAWN:New("LM75Redfor-2")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-2 Spawned")
 
         SPAWN:New("LM75Redfor-3")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-3 Spawned")
 
         SPAWN:New("LM75Redfor-4")
+        :InitLimit(1,0)
         :InitRandomizeTemplate(RedForSpawn)
         :SpawnScheduled( 5, .5 )
         env.info("LM75Redfor-4 Spawned")
@@ -544,21 +596,25 @@ function()
 
         if blufor:NoneInZone(LM74zone) and LM74SpawnUnit:NoneInZone(MasterZone) then
           SPAWN:New("LM74Redfor-1")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-1 Spawned")
 
           SPAWN:New("LM74Redfor-2")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-2 Spawned")
 
           SPAWN:New("LM74Redfor-3")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-3 Spawned")
 
           SPAWN:New("LM74Redfor-4")
+          :InitLimit(1,0)
           :InitRandomizeTemplate(RedForSpawn)
           :SpawnScheduled( 5, .5 )
           env.info("LM74Redfor-4 Spawned")
@@ -568,450 +624,510 @@ function()
             return nil
           end
         end
-  end , {}, 10,10,0,10 )
+      end
+      timer.scheduleFunction(RedSpawn, 53, timer.getTime{}+10)
+      env.info("----------------------------RedSpawn TIMER STARTED--------------------------")
 
--- --
--- --   function bluespawn()
--- --
--- --   local LM88zone = ZONE:FindByName("LM88")
--- --   LM88SpawnZone1 = ZONE:FindByName("LM88 Spawn Zone-1")
--- --   LM88SpawnZone2 = ZONE:FindByName("LM88 Spawn Zone-2")
--- --   LM88SpawnZone3 = ZONE:FindByName("LM88 Spawn Zone-3")
--- --   LM88SpawnZone4 = ZONE:FindByName("LM88 Spawn Zone-4")
--- --   LM88SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM88BlueFor") :FilterStart()
--- --
--- --   if redfor:NoneInZone(LM88zone) and LM88SpawnUnit:NoneInZone(MasterZone) then
--- --   SPAWN:New("LM88BlueFor-1")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM88BlueFor-1 Spawned")
--- --
--- --   SPAWN:New("LM88BlueFor-2")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM88BlueFor-2 Spawned")
--- --
--- --   SPAWN:New("LM88BlueFor-3")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM88BlueFor-3 Spawned")
--- --
--- --   SPAWN:New("LM88BlueFor-4")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM88BlueFor-4 Spawned")
--- --   else
--- --   if blufor:AnyInZone(LM88zone) or LM88SpawnUnit:AnyInZone(MasterZone) or LM88SpawnUnit:IsAlive() == nil then
--- --     env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --     return nil
--- --   end
--- -- end
--- --
--- --     local LM87zone = ZONE:FindByName("LM87")
--- --     LM87SpawnZone1 = ZONE:FindByName("LM87 Spawn Zone-1")
--- --     LM87SpawnZone2 = ZONE:FindByName("LM87 Spawn Zone-2")
--- --     LM87SpawnZone3 = ZONE:FindByName("LM87 Spawn Zone-3")
--- --     LM87SpawnZone4 = ZONE:FindByName("LM87 Spawn Zone-4")
--- --     LM87SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM87BlueFor") :FilterStart()
--- --
--- --     if redfor:NoneInZone(LM87zone) and LM87SpawnUnit:NoneInZone(MasterZone) then
--- --     SPAWN:New("LM87BlueFor-1")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM87BlueFor-1 Spawned")
--- --
--- --     SPAWN:New("LM87BlueFor-2")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM87BlueFor-2 Spawned")
--- --
--- --     SPAWN:New("LM87BlueFor-3")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM87BlueFor-3 Spawned")
--- --
--- --     SPAWN:New("LM87BlueFor-4")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM87BlueFor-4 Spawned")
--- --     else
--- --     if blufor:AnyInZone(LM87zone) or LM87SpawnUnit:AnyInZone(MasterZone) or LM87SpawnUnit:IsAlive() == nil then
--- --       env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --       return nil
--- --     end
--- --   end
--- --
--- --       local LM86zone = ZONE:FindByName("LM86")
--- --       LM86SpawnZone1 = ZONE:FindByName("LM86 Spawn Zone-1")
--- --       LM86SpawnZone2 = ZONE:FindByName("LM86 Spawn Zone-2")
--- --       LM86SpawnZone3 = ZONE:FindByName("LM86 Spawn Zone-3")
--- --       LM86SpawnZone4 = ZONE:FindByName("LM86 Spawn Zone-4")
--- --       LM86SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM86BlueFor") :FilterStart()
--- --
--- --       if redfor:NoneInZone(LM86zone) and LM86SpawnUnit:NoneInZone(MasterZone) then
--- --       SPAWN:New("LM86BlueFor-1")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM86BlueFor-1 Spawned")
--- --
--- --       SPAWN:New("LM86BlueFor-2")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM86BlueFor-2 Spawned")
--- --
--- --       SPAWN:New("LM86BlueFor-3")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM86BlueFor-3 Spawned")
--- --
--- --       SPAWN:New("LM86BlueFor-4")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM86BlueFor-4 Spawned")
--- --       else
--- --       if blufor:AnyInZone(LM86zone) or LM86SpawnUnit:AnyInZone(MasterZone) or LM86SpawnUnit:IsAlive() == nil then
--- --         env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --         return nil
--- --       end
--- --     end
--- --
--- --         local LM85zone = ZONE:FindByName("LM85")
--- --         LM85SpawnZone1 = ZONE:FindByName("LM85 Spawn Zone-1")
--- --         LM85SpawnZone2 = ZONE:FindByName("LM85 Spawn Zone-2")
--- --         LM85SpawnZone3 = ZONE:FindByName("LM85 Spawn Zone-3")
--- --         LM85SpawnZone4 = ZONE:FindByName("LM85 Spawn Zone-4")
--- --         LM85SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM85BlueFor") :FilterStart()
--- --
--- --         if redfor:NoneInZone(LM85zone) and LM85SpawnUnit:NoneInZone(MasterZone) then
--- --         SPAWN:New("LM85BlueFor-1")
--- --         :InitRandomizeTemplate(BlueForSpawn)
--- --         :SpawnScheduled( 5, .5 )
--- --         env.info("LM85BlueFor-1 Spawned")
--- --
--- --         SPAWN:New("LM85BlueFor-2")
--- --         :InitRandomizeTemplate(BlueForSpawn)
--- --         :SpawnScheduled( 5, .5 )
--- --         env.info("LM85BlueFor-2 Spawned")
--- --
--- --         SPAWN:New("LM85BlueFor-3")
--- --         :InitRandomizeTemplate(BlueForSpawn)
--- --         :SpawnScheduled( 5, .5 )
--- --         env.info("LM85BlueFor-3 Spawned")
--- --
--- --         SPAWN:New("LM85BlueFor-4")
--- --         :InitRandomizeTemplate(BlueForSpawn)
--- --         :SpawnScheduled( 5, .5 )
--- --         env.info("LM85BlueFor-4 Spawned")
--- --         else
--- --         if blufor:AnyInZone(LM85zone) or LM85SpawnUnit:AnyInZone(MasterZone) or LM85SpawnUnit:IsAlive() == nil then
--- --           env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --           return nil
--- --         end
--- --       end
--- --
--- --           local LM84zone = ZONE:FindByName("LM84")
--- --           LM84SpawnZone1 = ZONE:FindByName("LM84 Spawn Zone-1")
--- --           LM84SpawnZone2 = ZONE:FindByName("LM84 Spawn Zone-2")
--- --           LM84SpawnZone3 = ZONE:FindByName("LM84 Spawn Zone-3")
--- --           LM84SpawnZone4 = ZONE:FindByName("LM84 Spawn Zone-4")
--- --           LM84SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM84BlueFor") :FilterStart()
--- --
--- --           if redfor:NoneInZone(LM84zone) and LM84SpawnUnit:NoneInZone(MasterZone) then
--- --           SPAWN:New("LM84BlueFor-1")
--- --           :InitRandomizeTemplate(BlueForSpawn)
--- --           :SpawnScheduled( 5, .5 )
--- --           env.info("LM84BlueFor-1 Spawned")
--- --
--- --           SPAWN:New("LM84BlueFor-2")
--- --           :InitRandomizeTemplate(BlueForSpawn)
--- --           :SpawnScheduled( 5, .5 )
--- --           env.info("LM84BlueFor-2 Spawned")
--- --
--- --           SPAWN:New("LM84BlueFor-3")
--- --           :InitRandomizeTemplate(BlueForSpawn)
--- --           :SpawnScheduled( 5, .5 )
--- --           env.info("LM84BlueFor-3 Spawned")
--- --
--- --           SPAWN:New("LM84BlueFor-4")
--- --           :InitRandomizeTemplate(BlueForSpawn)
--- --           :SpawnScheduled( 5, .5 )
--- --           env.info("LM84BlueFor-4 Spawned")
--- --           else
--- --           if blufor:AnyInZone(LM84zone) or LM84SpawnUnit:AnyInZone(MasterZone) or LM84SpawnUnit:IsAlive() == nil then
--- --             env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --             return nil
--- --           end
--- --         end
--- --
--- -- local LM98zone = ZONE:FindByName("LM98")
--- -- LM98SpawnZone1 = ZONE:FindByName("LM98 Spawn Zone-1")
--- -- LM98SpawnZone2 = ZONE:FindByName("LM98 Spawn Zone-2")
--- -- LM98SpawnZone3 = ZONE:FindByName("LM98 Spawn Zone-3")
--- -- LM98SpawnZone4 = ZONE:FindByName("LM98 Spawn Zone-4")
--- -- LM98SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM98BlueFor") :FilterStart()
--- --
--- -- if redfor:NoneInZone(LM98zone) and LM98SpawnUnit:NoneInZone(MasterZone) then
--- -- SPAWN:New("LM98BlueFor-1")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("LM98BlueFor-1 Spawned")
--- --
--- -- SPAWN:New("LM98BlueFor-2")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("LM98BlueFor-2 Spawned")
--- --
--- -- SPAWN:New("LM98BlueFor-3")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("LM98BlueFor-3 Spawned")
--- --
--- -- SPAWN:New("LM98BlueFor-4")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("LM98BlueFor-4 Spawned")
--- -- else
--- -- if blufor:AnyInZone(LM98zone) or LM98SpawnUnit:AnyInZone(MasterZone) or LM98SpawnUnit:IsAlive() == nil then
--- --   env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --   return nil
--- -- end
--- -- end
--- --
--- --   local LM97zone = ZONE:FindByName("LM97")
--- --   LM97SpawnZone1 = ZONE:FindByName("LM97 Spawn Zone-1")
--- --   LM97SpawnZone2 = ZONE:FindByName("LM97 Spawn Zone-2")
--- --   LM97SpawnZone3 = ZONE:FindByName("LM97 Spawn Zone-3")
--- --   LM97SpawnZone4 = ZONE:FindByName("LM97 Spawn Zone-4")
--- --   LM97SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM97BlueFor") :FilterStart()
--- --
--- --   if redfor:NoneInZone(LM97zone) and LM97SpawnUnit:NoneInZone(MasterZone) then
--- --   SPAWN:New("LM97BlueFor-1")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM97BlueFor-1 Spawned")
--- --
--- --   SPAWN:New("LM97BlueFor-2")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM97BlueFor-2 Spawned")
--- --
--- --   SPAWN:New("LM97BlueFor-3")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM97BlueFor-3 Spawned")
--- --
--- --   SPAWN:New("LM97BlueFor-4")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("LM97BlueFor-4 Spawned")
--- --   else
--- --   if blufor:AnyInZone(LM97zone) or LM97SpawnUnit:AnyInZone(MasterZone) or LM97SpawnUnit:IsAlive() == nil then
--- --     env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --     return nil
--- --   end
--- -- end
--- --
--- --     local LM96zone = ZONE:FindByName("LM96")
--- --     LM96SpawnZone1 = ZONE:FindByName("LM96 Spawn Zone-1")
--- --     LM96SpawnZone2 = ZONE:FindByName("LM96 Spawn Zone-2")
--- --     LM96SpawnZone3 = ZONE:FindByName("LM96 Spawn Zone-3")
--- --     LM96SpawnZone4 = ZONE:FindByName("LM96 Spawn Zone-4")
--- --     LM96SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM96BlueFor") :FilterStart()
--- --
--- --     if redfor:NoneInZone(LM96zone) and LM96SpawnUnit:NoneInZone(MasterZone) then
--- --     SPAWN:New("LM96BlueFor-1")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM96BlueFor-1 Spawned")
--- --
--- --     SPAWN:New("LM96BlueFor-2")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM96BlueFor-2 Spawned")
--- --
--- --     SPAWN:New("LM96BlueFor-3")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM96BlueFor-3 Spawned")
--- --
--- --     SPAWN:New("LM96BlueFor-4")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("LM96BlueFor-4 Spawned")
--- --     else
--- --     if blufor:AnyInZone(LM96zone) or LM96SpawnUnit:AnyInZone(MasterZone) or LM96SpawnUnit:IsAlive() == nil then
--- --       env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --       return nil
--- --     end
--- --   end
--- --
--- --       local LM95zone = ZONE:FindByName("LM95")
--- --       LM95SpawnZone1 = ZONE:FindByName("LM95 Spawn Zone-1")
--- --       LM95SpawnZone2 = ZONE:FindByName("LM95 Spawn Zone-2")
--- --       LM95SpawnZone3 = ZONE:FindByName("LM95 Spawn Zone-3")
--- --       LM95SpawnZone4 = ZONE:FindByName("LM95 Spawn Zone-4")
--- --       LM95SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM95BlueFor") :FilterStart()
--- --
--- --       if redfor:NoneInZone(LM95zone) and LM95SpawnUnit:NoneInZone(MasterZone) then
--- --       SPAWN:New("LM95BlueFor-1")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM95BlueFor-1 Spawned")
--- --
--- --       SPAWN:New("LM95BlueFor-2")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM95BlueFor-2 Spawned")
--- --
--- --       SPAWN:New("LM95BlueFor-3")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM95BlueFor-3 Spawned")
--- --
--- --       SPAWN:New("LM95BlueFor-4")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("LM95BlueFor-4 Spawned")
--- --       else
--- --       if blufor:AnyInZone(LM95zone) or LM95SpawnUnit:AnyInZone(MasterZone) or LM95SpawnUnit:IsAlive() == nil then
--- --         env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --         return nil
--- --       end
--- --     end
--- --
--- -- local MM07zone = ZONE:FindByName("MM07")
--- -- MM07SpawnZone1 = ZONE:FindByName("MM07 Spawn Zone-1")
--- -- MM07SpawnZone2 = ZONE:FindByName("MM07 Spawn Zone-2")
--- -- MM07SpawnZone3 = ZONE:FindByName("MM07 Spawn Zone-3")
--- -- MM07SpawnZone4 = ZONE:FindByName("MM07 Spawn Zone-4")
--- -- MM07SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM07BlueFor") :FilterStart()
--- --
--- -- if redfor:NoneInZone(MM07zone) and MM07SpawnUnit:NoneInZone(MasterZone) then
--- -- SPAWN:New("MM07BlueFor-1")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("MM07BlueFor-1 Spawned")
--- --
--- -- SPAWN:New("MM07BlueFor-2")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("MM07BlueFor-2 Spawned")
--- --
--- -- SPAWN:New("MM07BlueFor-3")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("MM07BlueFor-3 Spawned")
--- --
--- -- SPAWN:New("MM07BlueFor-4")
--- -- :InitRandomizeTemplate(BlueForSpawn)
--- -- :SpawnScheduled( 5, .5 )
--- -- env.info("MM07BlueFor-4 Spawned")
--- -- else
--- -- if blufor:AnyInZone(MM07zone) or MM07SpawnUnit:AnyInZone(MasterZone) or MM07SpawnUnit:IsAlive() == nil then
--- --   env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --   return nil
--- -- end
--- -- end
--- --
--- --   local MM06zone = ZONE:FindByName("MM06")
--- --   MM06SpawnZone1 = ZONE:FindByName("MM06 Spawn Zone-1")
--- --   MM06SpawnZone2 = ZONE:FindByName("MM06 Spawn Zone-2")
--- --   MM06SpawnZone3 = ZONE:FindByName("MM06 Spawn Zone-3")
--- --   MM06SpawnZone4 = ZONE:FindByName("MM06 Spawn Zone-4")
--- --   MM06SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM06BlueFor") :FilterStart()
--- --
--- --   if redfor:NoneInZone(MM06zone) and MM06SpawnUnit:NoneInZone(MasterZone) then
--- --   SPAWN:New("MM06BlueFor-1")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("MM06BlueFor-1 Spawned")
--- --
--- --   SPAWN:New("MM06BlueFor-2")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("MM06BlueFor-2 Spawned")
--- --
--- --   SPAWN:New("MM06BlueFor-3")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("MM06BlueFor-3 Spawned")
--- --
--- --   SPAWN:New("MM06BlueFor-4")
--- --   :InitRandomizeTemplate(BlueForSpawn)
--- --   :SpawnScheduled( 5, .5 )
--- --   env.info("MM06BlueFor-4 Spawned")
--- --   else
--- --   if blufor:AnyInZone(MM06zone) or MM06SpawnUnit:AnyInZone(MasterZone) or MM06SpawnUnit:IsAlive() == nil then
--- --     env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --     return nil
--- --   end
--- -- end
--- --
--- --     local MM05zone = ZONE:FindByName("MM05")
--- --     MM05SpawnZone1 = ZONE:FindByName("MM05 Spawn Zone-1")
--- --     MM05SpawnZone2 = ZONE:FindByName("MM05 Spawn Zone-2")
--- --     MM05SpawnZone3 = ZONE:FindByName("MM05 Spawn Zone-3")
--- --     MM05SpawnZone4 = ZONE:FindByName("MM05 Spawn Zone-4")
--- --     MM05SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM05BlueFor") :FilterStart()
--- --
--- --     if redfor:NoneInZone(MM05zone) and MM05SpawnUnit:NoneInZone(MasterZone) then
--- --     SPAWN:New("MM05BlueFor-1")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("MM05BlueFor-1 Spawned")
--- --
--- --     SPAWN:New("MM05BlueFor-2")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("MM05BlueFor-2 Spawned")
--- --
--- --     SPAWN:New("MM05BlueFor-3")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("MM05BlueFor-3 Spawned")
--- --
--- --     SPAWN:New("MM05BlueFor-4")
--- --     :InitRandomizeTemplate(BlueForSpawn)
--- --     :SpawnScheduled( 5, .5 )
--- --     env.info("MM05BlueFor-4 Spawned")
--- --     else
--- --     if blufor:AnyInZone(MM05zone) or MM05SpawnUnit:AnyInZone(MasterZone) or MM05SpawnUnit:IsAlive() == nil then
--- --       env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --       return nil
--- --     end
--- --   end
--- --
--- --       local MM04zone = ZONE:FindByName("MM04")
--- --       MM04SpawnZone1 = ZONE:FindByName("MM04 Spawn Zone-1")
--- --       MM04SpawnZone2 = ZONE:FindByName("MM04 Spawn Zone-2")
--- --       MM04SpawnZone3 = ZONE:FindByName("MM04 Spawn Zone-3")
--- --       MM04SpawnZone4 = ZONE:FindByName("MM04 Spawn Zone-4")
--- --       MM04SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM04BlueFor") :FilterStart()
--- --
--- --       if redfor:NoneInZone(MM04zone) and MM04SpawnUnit:NoneInZone(MasterZone) then
--- --       SPAWN:New("MM04BlueFor-1")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("MM04BlueFor-1 Spawned")
--- --
--- --       SPAWN:New("MM04BlueFor-2")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("MM04BlueFor-2 Spawned")
--- --
--- --       SPAWN:New("MM04BlueFor-3")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("MM04BlueFor-3 Spawned")
--- --
--- --       SPAWN:New("MM04BlueFor-4")
--- --       :InitRandomizeTemplate(BlueForSpawn)
--- --       :SpawnScheduled( 5, .5 )
--- --       env.info("MM04BlueFor-4 Spawned")
--- --       else
--- --       if blufor:AnyInZone(MM04zone) or MM04SpawnUnit:AnyInZone(MasterZone) or MM04SpawnUnit:IsAlive() == nil then
--- --         env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
--- --         return nil
--- --       end
--- --     end
--- -- end
+
+env.info("----------------------------GOT TO BLUESPAWN FUNCTION--------------------------")
+function bluespawn()
+  env.info("BLUESPAWN FUNCTION STARTED")
+
+  local LM88zone = ZONE:FindByName("LM88")
+  LM88SpawnZone1 = ZONE:FindByName("LM88 Spawn Zone-1")
+  LM88SpawnZone2 = ZONE:FindByName("LM88 Spawn Zone-2")
+  LM88SpawnZone3 = ZONE:FindByName("LM88 Spawn Zone-3")
+  LM88SpawnZone4 = ZONE:FindByName("LM88 Spawn Zone-4")
+  LM88SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM88BlueFor") :FilterStart()
+
+  if redfor:NoneInZone(LM88zone) and LM88SpawnUnit:NoneInZone(MasterZone) then
+  SPAWN:New("LM88BlueFor-1")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM88BlueFor-1 Spawned")
+
+  SPAWN:New("LM88BlueFor-2")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM88BlueFor-2 Spawned")
+
+  SPAWN:New("LM88BlueFor-3")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM88BlueFor-3 Spawned")
+
+  SPAWN:New("LM88BlueFor-4")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM88BlueFor-4 Spawned")
+  else
+  if blufor:AnyInZone(LM88zone) or LM88SpawnUnit:AnyInZone(MasterZone) or LM88SpawnUnit:IsAlive() == nil then
+    env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+    return nil
+  end
+end
+
+
+    local LM87zone = ZONE:FindByName("LM87")
+    LM87SpawnZone1 = ZONE:FindByName("LM87 Spawn Zone-1")
+    LM87SpawnZone2 = ZONE:FindByName("LM87 Spawn Zone-2")
+    LM87SpawnZone3 = ZONE:FindByName("LM87 Spawn Zone-3")
+    LM87SpawnZone4 = ZONE:FindByName("LM87 Spawn Zone-4")
+    LM87SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM87BlueFor") :FilterStart()
+
+    if redfor:NoneInZone(LM87zone) and LM87SpawnUnit:NoneInZone(MasterZone) then
+    SPAWN:New("LM87BlueFor-1")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM87BlueFor-1 Spawned")
+
+    SPAWN:New("LM87BlueFor-2")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM87BlueFor-2 Spawned")
+
+    SPAWN:New("LM87BlueFor-3")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM87BlueFor-3 Spawned")
+
+    SPAWN:New("LM87BlueFor-4")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM87BlueFor-4 Spawned")
+    else
+    if blufor:AnyInZone(LM87zone) or LM87SpawnUnit:AnyInZone(MasterZone) or LM87SpawnUnit:IsAlive() == nil then
+      env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+      return nil
+    end
+  end
+
+      local LM86zone = ZONE:FindByName("LM86")
+      LM86SpawnZone1 = ZONE:FindByName("LM86 Spawn Zone-1")
+      LM86SpawnZone2 = ZONE:FindByName("LM86 Spawn Zone-2")
+      LM86SpawnZone3 = ZONE:FindByName("LM86 Spawn Zone-3")
+      LM86SpawnZone4 = ZONE:FindByName("LM86 Spawn Zone-4")
+      LM86SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM86BlueFor") :FilterStart()
+
+      if redfor:NoneInZone(LM86zone) and LM86SpawnUnit:NoneInZone(MasterZone) then
+      SPAWN:New("LM86BlueFor-1")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM86BlueFor-1 Spawned")
+
+      SPAWN:New("LM86BlueFor-2")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM86BlueFor-2 Spawned")
+
+      SPAWN:New("LM86BlueFor-3")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM86BlueFor-3 Spawned")
+
+      SPAWN:New("LM86BlueFor-4")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM86BlueFor-4 Spawned")
+      else
+      if blufor:AnyInZone(LM86zone) or LM86SpawnUnit:AnyInZone(MasterZone) or LM86SpawnUnit:IsAlive() == nil then
+        env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+        return nil
+      end
+    end
+
+        local LM85zone = ZONE:FindByName("LM85")
+        LM85SpawnZone1 = ZONE:FindByName("LM85 Spawn Zone-1")
+        LM85SpawnZone2 = ZONE:FindByName("LM85 Spawn Zone-2")
+        LM85SpawnZone3 = ZONE:FindByName("LM85 Spawn Zone-3")
+        LM85SpawnZone4 = ZONE:FindByName("LM85 Spawn Zone-4")
+        LM85SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM85BlueFor") :FilterStart()
+
+        if redfor:NoneInZone(LM85zone) and LM85SpawnUnit:NoneInZone(MasterZone) then
+        SPAWN:New("LM85BlueFor-1")
+        :InitLimit(1,0)
+        :InitRandomizeTemplate(BlueForSpawn)
+        :SpawnScheduled( 5, .5 )
+        env.info("LM85BlueFor-1 Spawned")
+
+        SPAWN:New("LM85BlueFor-2")
+        :InitLimit(1,0)
+        :InitRandomizeTemplate(BlueForSpawn)
+        :SpawnScheduled( 5, .5 )
+        env.info("LM85BlueFor-2 Spawned")
+
+        SPAWN:New("LM85BlueFor-3")
+        :InitLimit(1,0)
+        :InitRandomizeTemplate(BlueForSpawn)
+        :SpawnScheduled( 5, .5 )
+        env.info("LM85BlueFor-3 Spawned")
+
+        SPAWN:New("LM85BlueFor-4")
+        :InitLimit(1,0)
+        :InitRandomizeTemplate(BlueForSpawn)
+        :SpawnScheduled( 5, .5 )
+        env.info("LM85BlueFor-4 Spawned")
+        else
+        if blufor:AnyInZone(LM85zone) or LM85SpawnUnit:AnyInZone(MasterZone) or LM85SpawnUnit:IsAlive() == nil then
+          env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+          return nil
+        end
+      end
+
+          local LM84zone = ZONE:FindByName("LM84")
+          LM84SpawnZone1 = ZONE:FindByName("LM84 Spawn Zone-1")
+          LM84SpawnZone2 = ZONE:FindByName("LM84 Spawn Zone-2")
+          LM84SpawnZone3 = ZONE:FindByName("LM84 Spawn Zone-3")
+          LM84SpawnZone4 = ZONE:FindByName("LM84 Spawn Zone-4")
+          LM84SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM84BlueFor") :FilterStart()
+
+          if redfor:NoneInZone(LM84zone) and LM84SpawnUnit:NoneInZone(MasterZone) then
+          SPAWN:New("LM84BlueFor-1")
+          :InitLimit(1,0)
+          :InitRandomizeTemplate(BlueForSpawn)
+          :SpawnScheduled( 5, .5 )
+          env.info("LM84BlueFor-1 Spawned")
+
+          SPAWN:New("LM84BlueFor-2")
+          :InitLimit(1,0)
+          :InitRandomizeTemplate(BlueForSpawn)
+          :SpawnScheduled( 5, .5 )
+          env.info("LM84BlueFor-2 Spawned")
+
+          SPAWN:New("LM84BlueFor-3")
+          :InitLimit(1,0)
+          :InitRandomizeTemplate(BlueForSpawn)
+          :SpawnScheduled( 5, .5 )
+          env.info("LM84BlueFor-3 Spawned")
+
+          SPAWN:New("LM84BlueFor-4")
+          :InitLimit(1,0)
+          :InitRandomizeTemplate(BlueForSpawn)
+          :SpawnScheduled( 5, .5 )
+          env.info("LM84BlueFor-4 Spawned")
+          else
+          if blufor:AnyInZone(LM84zone) or LM84SpawnUnit:AnyInZone(MasterZone) or LM84SpawnUnit:IsAlive() == nil then
+            env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+            return nil
+          end
+        end
+
+local LM98zone = ZONE:FindByName("LM98")
+LM98SpawnZone1 = ZONE:FindByName("LM98 Spawn Zone-1")
+LM98SpawnZone2 = ZONE:FindByName("LM98 Spawn Zone-2")
+LM98SpawnZone3 = ZONE:FindByName("LM98 Spawn Zone-3")
+LM98SpawnZone4 = ZONE:FindByName("LM98 Spawn Zone-4")
+LM98SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM98BlueFor") :FilterStart()
+
+if redfor:NoneInZone(LM98zone) and LM98SpawnUnit:NoneInZone(MasterZone) then
+SPAWN:New("LM98BlueFor-1")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("LM98BlueFor-1 Spawned")
+
+SPAWN:New("LM98BlueFor-2")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("LM98BlueFor-2 Spawned")
+
+SPAWN:New("LM98BlueFor-3")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("LM98BlueFor-3 Spawned")
+
+SPAWN:New("LM98BlueFor-4")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("LM98BlueFor-4 Spawned")
+else
+if blufor:AnyInZone(LM98zone) or LM98SpawnUnit:AnyInZone(MasterZone) or LM98SpawnUnit:IsAlive() == nil then
+  env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+  return nil
+end
+end
+
+  local LM97zone = ZONE:FindByName("LM97")
+  LM97SpawnZone1 = ZONE:FindByName("LM97 Spawn Zone-1")
+  LM97SpawnZone2 = ZONE:FindByName("LM97 Spawn Zone-2")
+  LM97SpawnZone3 = ZONE:FindByName("LM97 Spawn Zone-3")
+  LM97SpawnZone4 = ZONE:FindByName("LM97 Spawn Zone-4")
+  LM97SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM97BlueFor") :FilterStart()
+
+  if redfor:NoneInZone(LM97zone) and LM97SpawnUnit:NoneInZone(MasterZone) then
+  SPAWN:New("LM97BlueFor-1")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM97BlueFor-1 Spawned")
+
+  SPAWN:New("LM97BlueFor-2")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM97BlueFor-2 Spawned")
+
+  SPAWN:New("LM97BlueFor-3")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM97BlueFor-3 Spawned")
+
+  SPAWN:New("LM97BlueFor-4")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("LM97BlueFor-4 Spawned")
+  else
+  if blufor:AnyInZone(LM97zone) or LM97SpawnUnit:AnyInZone(MasterZone) or LM97SpawnUnit:IsAlive() == nil then
+    env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+    return nil
+  end
+end
+
+    local LM96zone = ZONE:FindByName("LM96")
+    LM96SpawnZone1 = ZONE:FindByName("LM96 Spawn Zone-1")
+    LM96SpawnZone2 = ZONE:FindByName("LM96 Spawn Zone-2")
+    LM96SpawnZone3 = ZONE:FindByName("LM96 Spawn Zone-3")
+    LM96SpawnZone4 = ZONE:FindByName("LM96 Spawn Zone-4")
+    LM96SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM96BlueFor") :FilterStart()
+
+    if redfor:NoneInZone(LM96zone) and LM96SpawnUnit:NoneInZone(MasterZone) then
+    SPAWN:New("LM96BlueFor-1")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM96BlueFor-1 Spawned")
+
+    SPAWN:New("LM96BlueFor-2")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM96BlueFor-2 Spawned")
+
+    SPAWN:New("LM96BlueFor-3")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM96BlueFor-3 Spawned")
+
+    SPAWN:New("LM96BlueFor-4")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("LM96BlueFor-4 Spawned")
+    else
+    if blufor:AnyInZone(LM96zone) or LM96SpawnUnit:AnyInZone(MasterZone) or LM96SpawnUnit:IsAlive() == nil then
+      env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+      return nil
+    end
+  end
+
+      local LM95zone = ZONE:FindByName("LM95")
+      LM95SpawnZone1 = ZONE:FindByName("LM95 Spawn Zone-1")
+      LM95SpawnZone2 = ZONE:FindByName("LM95 Spawn Zone-2")
+      LM95SpawnZone3 = ZONE:FindByName("LM95 Spawn Zone-3")
+      LM95SpawnZone4 = ZONE:FindByName("LM95 Spawn Zone-4")
+      LM95SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("LM95BlueFor") :FilterStart()
+
+      if redfor:NoneInZone(LM95zone) and LM95SpawnUnit:NoneInZone(MasterZone) then
+      SPAWN:New("LM95BlueFor-1")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM95BlueFor-1 Spawned")
+
+      SPAWN:New("LM95BlueFor-2")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM95BlueFor-2 Spawned")
+
+      SPAWN:New("LM95BlueFor-3")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM95BlueFor-3 Spawned")
+
+      SPAWN:New("LM95BlueFor-4")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("LM95BlueFor-4 Spawned")
+      else
+      if blufor:AnyInZone(LM95zone) or LM95SpawnUnit:AnyInZone(MasterZone) or LM95SpawnUnit:IsAlive() == nil then
+        env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+        return nil
+      end
+    end
+
+local MM07zone = ZONE:FindByName("MM07")
+MM07SpawnZone1 = ZONE:FindByName("MM07 Spawn Zone-1")
+MM07SpawnZone2 = ZONE:FindByName("MM07 Spawn Zone-2")
+MM07SpawnZone3 = ZONE:FindByName("MM07 Spawn Zone-3")
+MM07SpawnZone4 = ZONE:FindByName("MM07 Spawn Zone-4")
+MM07SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM07BlueFor") :FilterStart()
+
+if redfor:NoneInZone(MM07zone) and MM07SpawnUnit:NoneInZone(MasterZone) then
+SPAWN:New("MM07BlueFor-1")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("MM07BlueFor-1 Spawned")
+
+SPAWN:New("MM07BlueFor-2")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("MM07BlueFor-2 Spawned")
+
+SPAWN:New("MM07BlueFor-3")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("MM07BlueFor-3 Spawned")
+
+SPAWN:New("MM07BlueFor-4")
+:InitLimit(1,0)
+:InitRandomizeTemplate(BlueForSpawn)
+:SpawnScheduled( 5, .5 )
+env.info("MM07BlueFor-4 Spawned")
+else
+if blufor:AnyInZone(MM07zone) or MM07SpawnUnit:AnyInZone(MasterZone) or MM07SpawnUnit:IsAlive() == nil then
+  env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+  return nil
+end
+end
+
+  local MM06zone = ZONE:FindByName("MM06")
+  MM06SpawnZone1 = ZONE:FindByName("MM06 Spawn Zone-1")
+  MM06SpawnZone2 = ZONE:FindByName("MM06 Spawn Zone-2")
+  MM06SpawnZone3 = ZONE:FindByName("MM06 Spawn Zone-3")
+  MM06SpawnZone4 = ZONE:FindByName("MM06 Spawn Zone-4")
+  MM06SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM06BlueFor") :FilterStart()
+
+  if redfor:NoneInZone(MM06zone) and MM06SpawnUnit:NoneInZone(MasterZone) then
+  SPAWN:New("MM06BlueFor-1")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("MM06BlueFor-1 Spawned")
+
+  SPAWN:New("MM06BlueFor-2")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("MM06BlueFor-2 Spawned")
+
+  SPAWN:New("MM06BlueFor-3")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("MM06BlueFor-3 Spawned")
+
+  SPAWN:New("MM06BlueFor-4")
+  :InitLimit(1,0)
+  :InitRandomizeTemplate(BlueForSpawn)
+  :SpawnScheduled( 5, .5 )
+  env.info("MM06BlueFor-4 Spawned")
+  else
+  if blufor:AnyInZone(MM06zone) or MM06SpawnUnit:AnyInZone(MasterZone) or MM06SpawnUnit:IsAlive() == nil then
+    env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+    return nil
+  end
+end
+
+    local MM05zone = ZONE:FindByName("MM05")
+    MM05SpawnZone1 = ZONE:FindByName("MM05 Spawn Zone-1")
+    MM05SpawnZone2 = ZONE:FindByName("MM05 Spawn Zone-2")
+    MM05SpawnZone3 = ZONE:FindByName("MM05 Spawn Zone-3")
+    MM05SpawnZone4 = ZONE:FindByName("MM05 Spawn Zone-4")
+    MM05SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM05BlueFor") :FilterStart()
+
+    if redfor:NoneInZone(MM05zone) and MM05SpawnUnit:NoneInZone(MasterZone) then
+    SPAWN:New("MM05BlueFor-1")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("MM05BlueFor-1 Spawned")
+
+    SPAWN:New("MM05BlueFor-2")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("MM05BlueFor-2 Spawned")
+
+    SPAWN:New("MM05BlueFor-3")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("MM05BlueFor-3 Spawned")
+
+    SPAWN:New("MM05BlueFor-4")
+    :InitLimit(1,0)
+    :InitRandomizeTemplate(BlueForSpawn)
+    :SpawnScheduled( 5, .5 )
+    env.info("MM05BlueFor-4 Spawned")
+    else
+    if blufor:AnyInZone(MM05zone) or MM05SpawnUnit:AnyInZone(MasterZone) or MM05SpawnUnit:IsAlive() == nil then
+      env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+      return nil
+    end
+  end
+
+      local MM04zone = ZONE:FindByName("MM04")
+      MM04SpawnZone1 = ZONE:FindByName("MM04 Spawn Zone-1")
+      MM04SpawnZone2 = ZONE:FindByName("MM04 Spawn Zone-2")
+      MM04SpawnZone3 = ZONE:FindByName("MM04 Spawn Zone-3")
+      MM04SpawnZone4 = ZONE:FindByName("MM04 Spawn Zone-4")
+      MM04SpawnUnit = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterPrefixes("MM04BlueFor") :FilterStart()
+
+      if redfor:NoneInZone(MM04zone) and MM04SpawnUnit:NoneInZone(MasterZone) then
+      SPAWN:New("MM04BlueFor-1")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("MM04BlueFor-1 Spawned")
+
+      SPAWN:New("MM04BlueFor-2")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("MM04BlueFor-2 Spawned")
+
+      SPAWN:New("MM04BlueFor-3")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("MM04BlueFor-3 Spawned")
+
+      SPAWN:New("MM04BlueFor-4")
+      :InitLimit(1,0)
+      :InitRandomizeTemplate(BlueForSpawn)
+      :SpawnScheduled( 5, .5 )
+      env.info("MM04BlueFor-4 Spawned")
+      else
+      if blufor:AnyInZone(MM04zone) or MM04SpawnUnit:AnyInZone(MasterZone) or MM04SpawnUnit:IsAlive() == nil then
+        env.info("RedFor in Zone or Units in Master Zone or Units are Alive")
+        return nil
+      end
+    end
+    
+end
+timer.scheduleFunction(bluespawn, 53, timer.getTime{}+15)
+env.info("----------------------------bluespawn TIMER STARTED--------------------------")
