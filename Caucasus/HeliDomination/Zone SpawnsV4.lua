@@ -742,7 +742,7 @@ function LM88bluespawn()
     end
   end
 end
-  timer.scheduleFunction(LM88bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(LM88bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------LM88bluespawn TIMER STARTED--------------------------")
 
 function LM87bluespawn()
@@ -785,7 +785,7 @@ function LM87bluespawn()
     end
   end
 end
-  timer.scheduleFunction(LM87bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(LM87bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------LM87bluespawn TIMER STARTED--------------------------")
 
   function LM86bluespawn()
@@ -828,7 +828,7 @@ end
       end
     end
   end
-    timer.scheduleFunction(LM86bluespawn, 53, timer.getTime{}+12)
+    timer.scheduleFunction(LM86bluespawn, 53, timer.getTime{}+10)
     env.info("----------------------------LM86bluespawn TIMER STARTED--------------------------")
 
     function LM85bluespawn()
@@ -871,7 +871,7 @@ end
         end
       end
     end
-      timer.scheduleFunction(LM85bluespawn, 53, timer.getTime{}+12)
+      timer.scheduleFunction(LM85bluespawn, 53, timer.getTime{}+10)
       env.info("----------------------------LM85bluespawn TIMER STARTED--------------------------")
 
       function LM84bluespawn()
@@ -914,7 +914,7 @@ end
           end
         end
       end
-        timer.scheduleFunction(LM84bluespawn, 53, timer.getTime{}+12)
+        timer.scheduleFunction(LM84bluespawn, 53, timer.getTime{}+10)
         env.info("----------------------------LM84bluespawn TIMER STARTED--------------------------")
 
 function LM98bluespawn()
@@ -957,7 +957,7 @@ function LM98bluespawn()
     end
   end
 end
-  timer.scheduleFunction(LM98bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(LM98bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------LM98bluespawn TIMER STARTED--------------------------")
 
 function LM97bluespawn()
@@ -1000,7 +1000,7 @@ function LM97bluespawn()
     end
   end
 end
-  timer.scheduleFunction(LM97bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(LM97bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------LM97bluespawn TIMER STARTED--------------------------")
 
 function LM96bluespawn()
@@ -1043,7 +1043,7 @@ function LM96bluespawn()
     end
   end
 end
-  timer.scheduleFunction(LM96bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(LM96bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------LM96bluespawn TIMER STARTED--------------------------")
 
   function LM95bluespawn()
@@ -1086,7 +1086,7 @@ end
       end
     end
   end
-    timer.scheduleFunction(LM95bluespawn, 53, timer.getTime{}+12)
+    timer.scheduleFunction(LM95bluespawn, 53, timer.getTime{}+10)
     env.info("----------------------------LM95bluespawn TIMER STARTED--------------------------")
 
 function MM07bluespawn()
@@ -1129,7 +1129,7 @@ function MM07bluespawn()
     end
   end
 end
-  timer.scheduleFunction(MM07bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(MM07bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------MM07bluespawn TIMER STARTED--------------------------")
 
 function MM06bluespawn()
@@ -1172,7 +1172,7 @@ function MM06bluespawn()
     end
   end
 end
-  timer.scheduleFunction(MM06bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(MM06bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------MM06bluespawn TIMER STARTED--------------------------")
 
 function MM05bluespawn()
@@ -1215,7 +1215,7 @@ function MM05bluespawn()
     end
   end
 end
-  timer.scheduleFunction(MM05bluespawn, 53, timer.getTime{}+12)
+  timer.scheduleFunction(MM05bluespawn, 53, timer.getTime{}+10)
   env.info("----------------------------MM05bluespawn TIMER STARTED--------------------------")
 
   function MM04bluespawn()
@@ -1258,5 +1258,5 @@ end
       end
     end
   end
-    timer.scheduleFunction(MM04bluespawn, 53, timer.getTime{}+12)
-    env.info("----------------------------MM04bluespawn TIMER STARTED--------------------------")  
+    timer.scheduleFunction(MM04bluespawn, 53, timer.getTime{}+10)
+    env.info("----------------------------MM04bluespawn TIMER STARTED--------------------------")
