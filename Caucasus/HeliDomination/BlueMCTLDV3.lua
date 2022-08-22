@@ -75,8 +75,8 @@ blue_ctld:AddCratesCargo("EWR (2 crates)",{"BLUE EWR"},CTLD_CARGO.Enum.VEHICLE,2
 
 -- Artillery
 --blue_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
-blue_ctld:AddCratesCargo("Panzer 2000 (4 crates)",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
-blue_ctld:AddCratesCargo("Dana (4 crates)",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,10,"Artillery")
+blue_ctld:AddCratesCargo("Panzer 2000 (4 crates)",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,40,"Artillery")
+blue_ctld:AddCratesCargo("Dana (4 crates)",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,40,"Artillery")
 
 -- generate zone types
 blue_ctld:AddCTLDZone("Blue MM82 FARP",CTLD.CargoZoneType.LOAD,SMOKECOLOR.Blue,true,true)
