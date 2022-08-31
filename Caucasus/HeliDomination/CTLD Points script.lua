@@ -1,15 +1,15 @@
 
 
 function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable)
-     local points = 3
-     if Unit then
+     -- local points = 3
+     -- if Unit then
        local PlayerName = Unit:GetPlayerName()
        --local PlayerID = Group.getID()
       -- my_scoring:_AddPlayerFromUnit( Unit )
       -- my_scoring:AddGoalScore(Unit, "CTLD", string.format("Pilot %s has been awarded %d points for transporting cargo crates!", PlayerName, points), points)
        dcsbot.addUserPoints( PlayerName, 3)
-       env.info("----------------------------Crate Dropped function--------------------------")
-     end
+       env.info("----------------------------Crate Dropped award points--------------------------")
+     
  end
 
  function red_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable)
@@ -19,6 +19,7 @@ function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable
       --  my_scoring:_AddPlayerFromUnit( Unit )
       --my_scoring:AddGoalScore(Unit, "CTLD", string.format("Pilot %s has been awarded %d points for transporting cargo crates!", PlayerName, points), points)
         dcsbot.addUserPoints( PlayerName, 3)
+        env.info("----------------------------Crate Dropped award points--------------------------")
       end
   end
 
