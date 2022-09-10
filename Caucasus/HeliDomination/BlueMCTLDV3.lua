@@ -74,7 +74,7 @@ blue_ctld:AddCratesCargo("EWR (2 crates)",{"BLUE EWR"},CTLD_CARGO.Enum.VEHICLE,2
 --blue_ctld:AddCratesCargo("Forward Ops Base",{"FOB"},CTLD_CARGO.Enum.FOB,4,400,nil,"Base")
 
 -- Artillery
---blue_ctld:AddCratesCargo("Dana 4",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
+blue_ctld:AddCratesCargo("MLRS M270 (4 crates)",{"M270"},CTLD_CARGO.Enum.VEHICLE,4,400,nil,"Artillery")
 blue_ctld:AddCratesCargo("Panzer 2000 (4 crates)",{"Panzer2000"},CTLD_CARGO.Enum.VEHICLE,4,400,40,"Artillery")
 blue_ctld:AddCratesCargo("Dana (4 crates)",{"Dana"},CTLD_CARGO.Enum.VEHICLE,4,400,40,"Artillery")
 

@@ -35,7 +35,6 @@ BlueReconDesignation = DESIGNATE:New( BlueCommandCenter, BlueRecceDetection, BLU
   :SetLaseDuration(900)
   :AddMenuLaserCode(1688, "Lase with %d for A-10")
   :AddMenuLaserCode(1777, "Lase with %d for Apache")
-  :MenuSmoke( Index, "red" )
   :Detect()
 --  :__Detect(-1)
 
@@ -49,6 +48,5 @@ RedReconDesignation = DESIGNATE:New( RedCommandCenter, RedRecceDetection, RED_CA
   :SetDesignateName("JTAC")
   :SetLaseDuration(900)
   :AddMenuLaserCode(1113, "Lase with %d for Su-25T")
-  :MenuSmoke( Index, "blue" )
   :Detect()
 --  :__Detect(-1)

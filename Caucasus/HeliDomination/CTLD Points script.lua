@@ -2,18 +2,18 @@
 
 function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable)
      -- local points = 3
-     -- if Unit then
+     if Unit then
        local PlayerName = Unit:GetPlayerName()
        --local PlayerID = Group.getID()
       -- my_scoring:_AddPlayerFromUnit( Unit )
       -- my_scoring:AddGoalScore(Unit, "CTLD", string.format("Pilot %s has been awarded %d points for transporting cargo crates!", PlayerName, points), points)
        dcsbot.addUserPoints( PlayerName, 3)
        env.info("----------------------------Crate Dropped award points--------------------------")
-     
+     end
  end
 
  function red_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable)
-      local points = 3
+      --local points = 3
       if Unit then
         local PlayerName = Unit:GetPlayerName()
       --  my_scoring:_AddPlayerFromUnit( Unit )
@@ -24,7 +24,7 @@ function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable
   end
 
   function blue_ctld:OnAfterCratesBuild(From, Event, To, Group, Unit, Cargotable)
-       local points = 3
+       --local points = 3
        if Unit then
          local PlayerName = Unit:GetPlayerName()
          -- my_scoring:_AddPlayerFromUnit( Unit )
@@ -34,7 +34,7 @@ function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable
    end
 
    function red_ctld:OnAfterCratesBuild(From, Event, To, Group, Unit, Cargotable)
-        local points = 3
+        --local points = 3
         if Unit then
           local PlayerName = Unit:GetPlayerName()
           -- my_scoring:_AddPlayerFromUnit( Unit )
@@ -44,7 +44,7 @@ function blue_ctld:OnAfterCratesDropped(From, Event, To, Group, Unit, Cargotable
     end
 
 function blue_ctld:OnAfterTroopsDeployed(From, Event, To, Group, Unit, Troops)
-   local points = 3
+   --local points = 3
    if Unit then
    local PlayerName = Unit:GetPlayerName()
    -- my_scoring:_AddPlayerFromUnit( Unit )
@@ -54,7 +54,7 @@ function blue_ctld:OnAfterTroopsDeployed(From, Event, To, Group, Unit, Troops)
   end
 
   function red_ctld:OnAfterTroopsDeployed(From, Event, To, Group, Unit, Troops)
-     local points = 3
+     --local points = 3
      if Unit then
      local PlayerName = Unit:GetPlayerName()
      -- my_scoring:_AddPlayerFromUnit( Unit )
