@@ -1,23 +1,23 @@
-blufor = SET_GROUP:New():FilterCoalitions('blue'):FilterPrefixes("1v1 Area 1"):FilterStart()
+Mig = SET_GROUP:New():FilterCoalitions('red'):FilterPrefixes("Mig"):FilterStart()
 redfor = SET_GROUP:New():FilterCoalitions('red'):FilterCategoryGround():FilterStart()
 
+AIZone1 = ZONE:FindByName("AI-1")
 
+env.info("----------------------------Mig BFM Area 1 Spawns--------------------------")
+function AIMigBFM()
+  env.info("AIMigBFM FUNCTION STARTED")
 
-env.info("----------------------------Area1BFMGUNS3 Spawns--------------------------")
-function Area1BFMGUNS3()
-  env.info("Area1BFMGUNS3 FUNCTION STARTED")
-      Testzone1 = ZONE:FindByName("Test zone 1")
-      TestUnit = UNIT:FindByName("Aerial-4-3")
-   if UNIT:FindByName("Aerial-4-3"):IsNotInZone(Testzone1) and UNIT:FindByName("Aerial-4-3"):IsAlive() then
-     TestUnitVec3 = TestUnit:GetVec3()
-     trigger.action.explosion(UNIT:FindByName("Aerial-4-3"):GetVec3() , 500 )
-     env.info("UNIT DIES")
-   else
-     return nil
-   end
+      if Mig:IsNotInZone(AIZone1) then
+       trigger.action.deactivateGroup( Mig )
+       env.info("UNIT DIES")
+      else
+        return nil
+      end
 end
-     timer.scheduleFunction(Area1BFMGUNS3, 53, timer.getTime{}+2)
-     env.info("----------------------------Area1BFMGUNS3 TIMER STARTED--------------------------")
+
+
+AIMigBFM()
+
      -- KM76Hind2 = GROUP:New("KM76 Hind-2")
      -- KM76Hind3 = GROUP:New("KM76 Hind-3")
      -- KM76Hind4 = GROUP:New("KM76 Hind-4")
