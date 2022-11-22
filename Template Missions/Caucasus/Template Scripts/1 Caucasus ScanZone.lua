@@ -23,6 +23,31 @@ ___________________________GRACEY'S VILLAGE__________________________________
 _________________________ALWAYS BE A UNICORN_________________________________
 ________________________DISCORD.GG/wubkxQHstC________________________________
 --]]
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         if type(v) ~= 'table' then
+           s = s .. '['..k..'] = "' .. dump(v) .. '",'
+         else
+           s = s .. '['..k..'] = ' .. dump(v) .. ','
+         end
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
+function table.removekey(table, key)
+   local element = table[key]
+   table[key] = nil
+   return element
+end
+
+
 function ScanZone(category, coalition, zoneName)
 
     local foundUnits = {}
@@ -67,6 +92,7 @@ function ScanGridZone(category, coalition, zoneName, verticies)
     local foundUnits = {}
 
     if trigger.misc.getZone(zoneName) ~= nil then
+    env.info(zoneName.." Zone Found*******************************************************************************************")
 
         local searchZone = trigger.misc.getZone(zoneName)
         -- new sphere searchVolume from searchZone
@@ -77,6 +103,7 @@ function ScanGridZone(category, coalition, zoneName, verticies)
                 ["max"] = {x = verticies[3]["x"], y = 50000, z = verticies[3]["y"]}, --Top Right
             }
         }
+        env.info(dump(searchVolume).." --------------------------")
         -- search the volume for an object category
         world.searchObjects(category, searchVolume, function(obj)
 
@@ -86,7 +113,7 @@ function ScanGridZone(category, coalition, zoneName, verticies)
             end
         end)
     else 
-      env.info("Zone Not Found*******************************************************************************************")
+      env.info(zoneName.." Zone Not Found*******************************************************************************************")
     end
 
     if #foundUnits > 0 then

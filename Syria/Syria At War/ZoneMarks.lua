@@ -80,7 +80,7 @@ function ZONESCANNER(timeloop, time) -- Funtion to search for contested Zones in
       BLUEFORCE = ScanGridZone(Object.Category.UNIT, coalition.side.BLUE, zn, gzone["verticies"]) -- Scans the Zones for BLUE ground Units
       REDFORCE = ScanGridZone(Object.Category.UNIT, coalition.side.RED, zn, gzone["verticies"]) -- Scans the Zones for RED ground units
       --env.info("")
-      gid = gzone["zoneId"]*69 -- Gets the listed airbase ID
+      gid = gzone["zoneId"]+30000 -- Gets the listed airbase ID
       --env.info(zn)
       --env.info(dump(BLUEZONE))
       --env.info(dump(REDZONE))
