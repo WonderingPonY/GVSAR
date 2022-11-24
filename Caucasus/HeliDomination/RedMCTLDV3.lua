@@ -30,7 +30,7 @@ red_ctld.usesubcats = true
 red_ctld.enableLoadSave = true  --Allows auto saving of the files
 red_ctld.saveinterval = 600 -- How often this save function saves
 red_ctld.filename = "domination-red.csv" -- Filename for the save
-red_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
+red_ctld.filepath = "S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
 red_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions) -- use sub-category names for crates, adds an extra menu layer in "Get Crates", useful if you have > 10 crate types.
 red_ctld:__Start(5)
 

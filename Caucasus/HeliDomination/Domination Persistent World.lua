@@ -63,7 +63,11 @@ function file_exists(name) --check if the file already exists for writing
 end
 
 function writemission(data, file)--Function for saving to file (commonly found)
+<<<<<<< HEAD
 	File = io.open(("S:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
+=======
+	File = io.open(("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
+>>>>>>> ca00e894dd6f7c6a0156cdf920b0770e6d2b2cc3
 	File:write(data)
 	File:close()
 end
@@ -195,9 +199,9 @@ SEFDeletedUnitCount = 0
 SEFDeletedStaticCount = 0
 
 --////LOAD UNITS
-if file_exists("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua") then
+if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua") then
 
-	dofile("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua")
+	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua")
 
 	UnitIntermentTableLength = SEF_GetTableLength(SeaSlugUnitInterment)
 	--trigger.action.outText("Unit Table Length Is "..UnitIntermentTableLength, 15)
@@ -217,9 +221,9 @@ else
 	UnitIntermentTableLength = 0
 end
 --////Static units
-if file_exists("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
+if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
 
-	dofile("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
+	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
 
 	UnitIntermentTableLength = SEF_GetTableLength(SeaSlugStaticInterment)
 	--trigger.action.outText("Unit Table Length Is "..UnitIntermentTableLength, 15)
@@ -240,9 +244,9 @@ else
 end
 
 --////LOAD STATICS
-if file_exists("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
+if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
 
-	dofile("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
+	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
 
 	StaticIntermentTableLength = SEF_GetTableLength(SeaSlugStaticInterment)
 	--trigger.action.outText("Static Table Length Is "..StaticIntermentTableLength, 15)
@@ -265,9 +269,9 @@ end
 --trigger.action.outText("Persistent World Functions Have Removed "..SEFDeletedUnitCount.." Units and "..SEFDeletedStaticCount.." Static Objects", 15)
 
 --////LOAD AIRBASES
--- if file_exists("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugAirbases.lua") then
+-- if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugAirbases.lua") then
 --
--- 	dofile("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugAirbases.lua")
+-- 	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugAirbases.lua")
 --
 -- 	AirbaseTableLength = SEF_GetTableLength(SeaSlugAirbases)
 --

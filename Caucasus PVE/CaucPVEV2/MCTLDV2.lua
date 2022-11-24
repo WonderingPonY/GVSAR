@@ -30,7 +30,7 @@ my_ctld.usesubcats = true -- use sub-category names for crates, adds an extra me
 my_ctld.enableLoadSave(true) --Allows auto saving of the files
 my_ctld.saveinterval = 600 -- How often this save function saves
 my_cltd.filename = "CaucPVEv2.csv" -- Filename for the save
-my_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.openbeta_server\\Missions" -- Path the save file will be saved to
+my_ctld.filepath = "S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.openbeta_server\\Missions" -- Path the save file will be saved to
 my_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions)
 my_ctld:__Start(5)
 

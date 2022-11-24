@@ -30,7 +30,7 @@ blue_ctld.usesubcats = true -- use sub-category names for crates, adds an extra 
 -- blue_ctld.enableLoadSave = true --Allows auto saving of the files
 -- blue_ctld.saveinterval = 600 -- How often this save function saves
 -- blue_ctld.filename = "domination-blue.csv" -- Filename for the save
--- blue_ctld.filepath = "C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
+-- blue_ctld.filepath = "S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Missions" -- Path the save file will be saved to
 -- blue_ctld.eventoninject = true -- fire OnAfterCratesBuild and OnAfterTroopsDeployed events when loading (uses Inject functions)
 blue_ctld:__Start(5)
 
