@@ -63,7 +63,7 @@ function file_exists(name) --check if the file already exists for writing
 end
 
 function writemission(data, file)--Function for saving to file (commonly found)
-	File = io.open(("C:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
+	File = io.open(("S:\\Users\\Gracey's Village DCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
 	File:write(data)
 	File:close()
 end
