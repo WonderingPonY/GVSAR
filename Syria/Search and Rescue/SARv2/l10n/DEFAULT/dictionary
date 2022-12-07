@@ -1,0 +1,27 @@
+dictionary = 
+{
+    ["DictKey_GroupName_6"] = "Static UH-1H-1",
+    ["DictKey_GroupName_9"] = "Ground-1",
+    ["DictKey_descriptionText_1"] = "Search & Rescue Version 2\
+\
+This mission is incomplete and in testing!\
+Check our Discord discord.gg/wubkxQHstC for more information!\
+\
+You are a Medivac Pilot working for the Non-Profit \"Equi Medical\".\
+Flying out of Adana Shakirpasa International Airport.\
+You can select between 3 difficulties in two categories. \
+Help is available through our Discord OR the F10 Menu options\
+Good luck!\
+\
+\
+\
+================THIS MISSION IS IN TESTING IF YOU WOULD LIKE TO TRY THIS MISSION JOIN OUR DISCORD================",
+    ["DictKey_descriptionBlueTask_3"] = "",
+    ["DictKey_UnitName_7"] = "",
+    ["DictKey_descriptionNeutralsTask_4"] = "",
+    ["DictKey_sortie_5"] = "Medivac Pilot",
+    ["DictKey_WptName_8"] = "",
+    ["DictKey_WptName_11"] = "",
+    ["DictKey_UnitName_10"] = "Ground-1-1",
+    ["DictKey_descriptionRedTask_2"] = "",
+} -- end of dictionary
