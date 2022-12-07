@@ -5,8 +5,8 @@ mission =
     }, -- end of ["requiredModules"]
     ["date"] = 
     {
-        ["Day"] = 21,
         ["Year"] = 2012,
+        ["Day"] = 21,
         ["Month"] = 6,
     }, -- end of ["date"]
     ["result"] = 
@@ -112,24 +112,24 @@ mission =
                     ["Blue"] = false,
                     ["Red"] = false,
                 }, -- end of ["ForwardObserver"]
-                ["Pilot"] = 
-                {
-                    ["Neutral"] = false,
-                    ["Blue"] = false,
-                    ["Red"] = false,
-                }, -- end of ["Pilot"]
-                ["Spectrator"] = 
-                {
-                    ["Neutral"] = false,
-                    ["Blue"] = false,
-                    ["Red"] = false,
-                }, -- end of ["Spectrator"]
                 ["ArtilleryCommander"] = 
                 {
                     ["Neutral"] = false,
                     ["Blue"] = false,
                     ["Red"] = false,
                 }, -- end of ["ArtilleryCommander"]
+                ["Spectrator"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Spectrator"]
+                ["Pilot"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Pilot"]
             }, -- end of ["hiddenOnF10Map"]
         }, -- end of ["options"]
         ["layers"] = 
@@ -170,15 +170,15 @@ mission =
                         ["borderThickness"] = 4,
                         ["mapY"] = -41522.322331021,
                         ["layerName"] = "Common",
-                        ["mapX"] = 222656.02117726,
-                        ["colorString"] = "0x000000ff",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
-                        ["name"] = "Adana Clinic",
-                        ["angle"] = 0,
-                        ["text"] = "Adana Clinic",
-                        ["fillColorString"] = "0xff000080",
-                        ["primitiveType"] = "TextBox",
                         ["fontSize"] = 12,
+                        ["primitiveType"] = "TextBox",
+                        ["colorString"] = "0x000000ff",
+                        ["name"] = "Adana Clinic",
+                        ["fillColorString"] = "0xff000080",
+                        ["text"] = "Adana Clinic",
+                        ["angle"] = 0,
+                        ["mapX"] = 222656.02117726,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [1]
                     [2] = 
                     {
@@ -186,15 +186,15 @@ mission =
                         ["borderThickness"] = 4,
                         ["mapY"] = -46861.394796275,
                         ["layerName"] = "Common",
-                        ["mapX"] = 220071.26467363,
-                        ["colorString"] = "0x000000ff",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
-                        ["name"] = "Adana International",
-                        ["angle"] = 0,
-                        ["text"] = "Adana International",
-                        ["fillColorString"] = "0xff000080",
-                        ["primitiveType"] = "TextBox",
                         ["fontSize"] = 12,
+                        ["primitiveType"] = "TextBox",
+                        ["colorString"] = "0x000000ff",
+                        ["name"] = "Adana International",
+                        ["fillColorString"] = "0xff000080",
+                        ["text"] = "Adana International",
+                        ["angle"] = 0,
+                        ["mapX"] = 220071.26467363,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [2]
                     [3] = 
                     {
@@ -202,15 +202,15 @@ mission =
                         ["borderThickness"] = 4,
                         ["mapY"] = -42073.549408931,
                         ["layerName"] = "Common",
-                        ["mapX"] = 224430.52684075,
-                        ["colorString"] = "0x000000ff",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
-                        ["name"] = "Adana Main",
-                        ["angle"] = 0,
-                        ["text"] = "Adana Main Hospital",
-                        ["fillColorString"] = "0xff000080",
-                        ["primitiveType"] = "TextBox",
                         ["fontSize"] = 12,
+                        ["primitiveType"] = "TextBox",
+                        ["colorString"] = "0x000000ff",
+                        ["name"] = "Adana Main",
+                        ["fillColorString"] = "0xff000080",
+                        ["text"] = "Adana Main Hospital",
+                        ["angle"] = 0,
+                        ["mapX"] = 224430.52684075,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [3]
                 }, -- end of ["objects"]
             }, -- end of [4]
@@ -282,16 +282,16 @@ mission =
                 ["speed"] = 9.2772,
                 ["dir"] = 308,
             }, -- end of ["at8000"]
-            ["at2000"] = 
-            {
-                ["speed"] = 5.154,
-                ["dir"] = 90,
-            }, -- end of ["at2000"]
             ["atGround"] = 
             {
                 ["speed"] = 2.0616,
                 ["dir"] = 50,
             }, -- end of ["atGround"]
+            ["at2000"] = 
+            {
+                ["speed"] = 5.154,
+                ["dir"] = 90,
+            }, -- end of ["at2000"]
         }, -- end of ["wind"]
         ["enable_fog"] = false,
         ["groundTurbulence"] = 0,
@@ -299,7 +299,10 @@ mission =
         {
             ["preset"] = "auto",
         }, -- end of ["halo"]
-        ["enable_dust"] = false,
+        ["visibility"] = 
+        {
+            ["distance"] = 80000,
+        }, -- end of ["visibility"]
         ["season"] = 
         {
             ["temperature"] = 20,
@@ -324,12 +327,9 @@ mission =
             ["thickness"] = 0,
             ["visibility"] = 0,
         }, -- end of ["fog"]
-        ["qnh"] = 760,
         ["dust_density"] = 0,
-        ["visibility"] = 
-        {
-            ["distance"] = 80000,
-        }, -- end of ["visibility"]
+        ["qnh"] = 760,
+        ["enable_dust"] = false,
         ["clouds"] = 
         {
             ["density"] = 0,
@@ -889,7 +889,7 @@ mission =
                 ["hidden"] = false,
                 ["y"] = 1.2837635768374,
                 ["x"] = -0.012073607416824,
-                ["name"] = "hardmission1",
+                ["name"] = "HardMission1",
                 ["heading"] = 5.7563588524002,
                 ["linkUnit"] = 42,
                 ["type"] = 0,
@@ -938,50 +938,60 @@ mission =
                     }, -- end of [4]
                 }, -- end of ["verticies"]
             }, -- end of [14]
+            [15] = 
+            {
+                ["radius"] = 36.576,
+                ["zoneId"] = 1755,
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of ["color"]
+                ["properties"] = 
+                {
+                }, -- end of ["properties"]
+                ["hidden"] = false,
+                ["y"] = -67537.278067276,
+                ["x"] = 218805.07906644,
+                ["name"] = "EasyMission7",
+                ["type"] = 2,
+                ["heading"] = 0,
+                ["verticies"] = 
+                {
+                    [1] = 
+                    {
+                        ["y"] = -67573.854067276,
+                        ["x"] = 218768.50306644,
+                    }, -- end of [1]
+                    [2] = 
+                    {
+                        ["y"] = -67500.702067276,
+                        ["x"] = 218768.50306644,
+                    }, -- end of [2]
+                    [3] = 
+                    {
+                        ["y"] = -67500.702067276,
+                        ["x"] = 218841.65506644,
+                    }, -- end of [3]
+                    [4] = 
+                    {
+                        ["y"] = -67573.854067276,
+                        ["x"] = 218841.65506644,
+                    }, -- end of [4]
+                }, -- end of ["verticies"]
+            }, -- end of [15]
         }, -- end of ["zones"]
     }, -- end of ["triggers"]
     ["map"] = 
     {
-        ["centerY"] = -97692.671259408,
-        ["zoom"] = 519.70075463902,
-        ["centerX"] = 190233.28053481,
+        ["centerY"] = -67529.92161815,
+        ["zoom"] = 324.00320828611,
+        ["centerX"] = 218802.39919478,
     }, -- end of ["map"]
     ["coalitions"] = 
     {
-        ["blue"] = 
-        {
-            [1] = 21,
-            [2] = 65,
-            [3] = 11,
-            [4] = 8,
-            [5] = 80,
-            [6] = 28,
-            [7] = 26,
-            [8] = 13,
-            [9] = 29,
-            [10] = 30,
-            [11] = 5,
-            [12] = 16,
-            [13] = 6,
-            [14] = 31,
-            [15] = 15,
-            [16] = 20,
-            [17] = 71,
-            [18] = 12,
-            [19] = 73,
-            [20] = 40,
-            [21] = 72,
-            [22] = 42,
-            [23] = 45,
-            [24] = 9,
-            [25] = 46,
-            [26] = 10,
-            [27] = 3,
-            [28] = 4,
-            [29] = 1,
-            [30] = 74,
-            [31] = 2,
-        }, -- end of ["blue"]
         ["neutrals"] = 
         {
             [1] = 70,
@@ -1030,6 +1040,40 @@ mission =
             [44] = 48,
             [45] = 67,
         }, -- end of ["neutrals"]
+        ["blue"] = 
+        {
+            [1] = 21,
+            [2] = 65,
+            [3] = 11,
+            [4] = 8,
+            [5] = 80,
+            [6] = 28,
+            [7] = 26,
+            [8] = 13,
+            [9] = 29,
+            [10] = 30,
+            [11] = 5,
+            [12] = 16,
+            [13] = 6,
+            [14] = 31,
+            [15] = 15,
+            [16] = 20,
+            [17] = 71,
+            [18] = 12,
+            [19] = 73,
+            [20] = 40,
+            [21] = 72,
+            [22] = 42,
+            [23] = 45,
+            [24] = 9,
+            [25] = 46,
+            [26] = 10,
+            [27] = 3,
+            [28] = 4,
+            [29] = 1,
+            [30] = 74,
+            [31] = 2,
+        }, -- end of ["blue"]
         ["red"] = 
         {
             [1] = 18,
@@ -1062,6 +1106,21 @@ mission =
     }, -- end of ["pictureFileNameB"]
     ["coalition"] = 
     {
+        ["neutrals"] = 
+        {
+            ["bullseye"] = 
+            {
+                ["y"] = 0,
+                ["x"] = 0,
+            }, -- end of ["bullseye"]
+            ["nav_points"] = 
+            {
+            }, -- end of ["nav_points"]
+            ["name"] = "neutrals",
+            ["country"] = 
+            {
+            }, -- end of ["country"]
+        }, -- end of ["neutrals"]
         ["blue"] = 
         {
             ["bullseye"] = 
@@ -3700,8 +3759,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -3799,7 +3858,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -3818,7 +3877,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47552.474397656,
@@ -3877,8 +3936,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -3976,7 +4035,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -3995,7 +4054,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47538.934415533,
@@ -4054,8 +4113,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -4153,7 +4212,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -4172,7 +4231,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47523.448567715,
@@ -4231,8 +4290,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -4330,7 +4389,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -4349,7 +4408,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47510.313974278,
@@ -4408,8 +4467,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -4507,7 +4566,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -4526,7 +4585,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47495.152437409,
@@ -4585,8 +4644,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -4684,7 +4743,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -4703,7 +4762,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47464.748285934,
@@ -4762,8 +4821,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -4861,7 +4920,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -4880,7 +4939,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47480.315211489,
@@ -4939,8 +4998,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 269,
                                                     [7] = 270,
                                                     [14] = 260,
-                                                    [15] = 263,
                                                     [19] = 253,
+                                                    [15] = 263,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                         }, -- end of ["Radio"]
@@ -5038,7 +5097,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -5057,7 +5116,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47539.928925988,
@@ -5084,10 +5143,10 @@ NDB 386 kHz RMD 357 / 50km\
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -5119,8 +5178,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -5153,7 +5212,7 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -5237,7 +5296,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -5256,7 +5315,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47515.028660252,
@@ -5283,10 +5342,10 @@ NDB 386 kHz RMD 357 / 50km\
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -5318,8 +5377,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -5352,7 +5411,7 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -5436,7 +5495,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -5455,7 +5514,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47488.297492623,
@@ -5482,10 +5541,10 @@ NDB 386 kHz RMD 357 / 50km\
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -5517,8 +5576,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -5551,7 +5610,7 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -5635,7 +5694,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -5643,7 +5702,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                 {
                                                 }, -- end of ["addopt"]
                                             }, -- end of ["properties"]
-                                            ["speed"] = 46.25,
+                                            ["speed"] = 55.555555555556,
                                             ["task"] = 
                                             {
                                                 ["id"] = "ComboTask",
@@ -5654,11 +5713,11 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
-                                            ["y"] = -47318.382054144,
-                                            ["x"] = 220619.71122604,
+                                            ["y"] = -47317.281823383,
+                                            ["x"] = 220616.05357244,
                                             ["formation_template"] = "",
                                             ["speed_locked"] = true,
                                         }, -- end of [1]
@@ -5676,15 +5735,15 @@ NDB 386 kHz RMD 357 / 50km\
                                         ["livery_id"] = "Hellenic Airforce SAR",
                                         ["skill"] = "Client",
                                         ["ropeLength"] = 5,
-                                        ["speed"] = 46.25,
+                                        ["speed"] = 55.555555555556,
                                         ["AddPropAircraft"] = 
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -5716,8 +5775,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -5742,15 +5801,15 @@ NDB 386 kHz RMD 357 / 50km\
                                         }, -- end of ["Radio"]
                                         ["unitId"] = 12,
                                         ["psi"] = -4.1189770347066,
-                                        ["y"] = -47318.382054144,
-                                        ["x"] = 220619.71122604,
+                                        ["y"] = -47317.281823383,
+                                        ["x"] = 220616.05357244,
                                         ["name"] = "Medevac-11-1",
                                         ["payload"] = 
                                         {
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -5810,8 +5869,8 @@ NDB 386 kHz RMD 357 / 50km\
                                         ["onboard_num"] = "021",
                                     }, -- end of [1]
                                 }, -- end of ["units"]
-                                ["y"] = -47318.382054144,
-                                ["x"] = 220619.71122604,
+                                ["y"] = -47317.281823383,
+                                ["x"] = 220616.05357244,
                                 ["name"] = "Medevac-11",
                                 ["communication"] = true,
                                 ["start_time"] = 0,
@@ -5834,7 +5893,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -5853,7 +5912,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47298.161573048,
@@ -5880,10 +5939,10 @@ NDB 386 kHz RMD 357 / 50km\
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -5915,8 +5974,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -5949,7 +6008,7 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -6033,7 +6092,7 @@ NDB 386 kHz RMD 357 / 50km\
                                         [1] = 
                                         {
                                             ["alt"] = 500,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["action"] = "From Ground Area",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -6052,7 +6111,7 @@ NDB 386 kHz RMD 357 / 50km\
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffGround",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
                                             ["y"] = -47276.991136465,
@@ -6079,10 +6138,10 @@ NDB 386 kHz RMD 357 / 50km\
                                         {
                                             ["LeftEngineResource"] = 90,
                                             ["RightEngineResource"] = 90,
-                                            ["GunnersAISkill"] = 90,
+                                            ["NetCrewControlPriority"] = 1,
                                             ["ExhaustScreen"] = false,
                                             ["CargoHalfdoor"] = true,
-                                            ["NetCrewControlPriority"] = 1,
+                                            ["GunnersAISkill"] = 90,
                                             ["AdditionalArmor"] = false,
                                             ["NS430allow"] = true,
                                         }, -- end of ["AddPropAircraft"]
@@ -6114,8 +6173,8 @@ NDB 386 kHz RMD 357 / 50km\
                                                     [13] = 123,
                                                     [7] = 141,
                                                     [14] = 131,
-                                                    [19] = 124,
                                                     [15] = 134,
+                                                    [19] = 124,
                                                 }, -- end of ["channels"]
                                             }, -- end of [1]
                                             [2] = 
@@ -6148,7 +6207,7 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["pylons"] = 
                                             {
                                             }, -- end of ["pylons"]
-                                            ["fuel"] = "1929",
+                                            ["fuel"] = 965,
                                             ["flare"] = 128,
                                             ["chaff"] = 0,
                                             ["gun"] = 0,
@@ -6255,10 +6314,10 @@ NDB 386 kHz RMD 357 / 50km\
                                                     {
                                                         [1] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 1,
                                                             ["auto"] = false,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 1,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -6326,274 +6385,6 @@ NDB 386 kHz RMD 357 / 50km\
                                 ["name"] = "hardmission1-Scenery",
                                 ["start_time"] = 0,
                             }, -- end of [1]
-                            [2] = 
-                            {
-                                ["visible"] = false,
-                                ["tasks"] = 
-                                {
-                                }, -- end of ["tasks"]
-                                ["uncontrollable"] = false,
-                                ["route"] = 
-                                {
-                                    ["points"] = 
-                                    {
-                                        [1] = 
-                                        {
-                                            ["alt"] = 0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 0,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -97626.196402061,
-                                            ["x"] = 190220.43848201,
-                                            ["ETA_locked"] = true,
-                                            ["speed"] = 0,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                        [1] = 
-                                                        {
-                                                            ["number"] = 1,
-                                                            ["auto"] = false,
-                                                            ["id"] = "WrappedAction",
-                                                            ["enabled"] = true,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "LoadingShip",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["cargo"] = 69,
-                                                                        ["unitId"] = 43,
-                                                                    }, -- end of ["params"]
-                                                                }, -- end of ["action"]
-                                                            }, -- end of ["params"]
-                                                        }, -- end of [1]
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [1]
-                                    }, -- end of ["points"]
-                                }, -- end of ["route"]
-                                ["groupId"] = 43,
-                                ["hidden"] = false,
-                                ["units"] = 
-                                {
-                                    [1] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["livery_id"] = "baltic_cove",
-                                        ["skill"] = "Average",
-                                        ["type"] = "HandyWind",
-                                        ["unitId"] = 43,
-                                        ["y"] = -97626.196402061,
-                                        ["x"] = 190220.43848201,
-                                        ["name"] = "mediummission1-scenery1",
-                                        ["heading"] = 0,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [1]
-                                    [2] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["livery_id"] = "handy_wind",
-                                        ["skill"] = "Average",
-                                        ["type"] = "HandyWind",
-                                        ["unitId"] = 44,
-                                        ["y"] = -101381.58066876,
-                                        ["x"] = 194497.40389686,
-                                        ["name"] = "mediummission3-Scenery-1",
-                                        ["heading"] = 0.50614548307836,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [2]
-                                    [3] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["livery_id"] = "baltic_wind",
-                                        ["skill"] = "Average",
-                                        ["type"] = "HandyWind",
-                                        ["unitId"] = 45,
-                                        ["y"] = -95192.151044016,
-                                        ["x"] = 193367.31140919,
-                                        ["name"] = "mediummission3-Scenery-2",
-                                        ["heading"] = 4.5727626402251,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [3]
-                                    [4] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["livery_id"] = "noname",
-                                        ["skill"] = "Average",
-                                        ["type"] = "HandyWind",
-                                        ["unitId"] = 46,
-                                        ["y"] = -99729.907032943,
-                                        ["x"] = 189751.01544867,
-                                        ["name"] = "mediummission3-Scenery-3",
-                                        ["heading"] = 2.4085543677522,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [4]
-                                }, -- end of ["units"]
-                                ["y"] = -97626.196402061,
-                                ["x"] = 190220.43848201,
-                                ["name"] = "mediummission3-Scenery",
-                                ["start_time"] = 0,
-                            }, -- end of [2]
-                            [3] = 
-                            {
-                                ["visible"] = false,
-                                ["tasks"] = 
-                                {
-                                }, -- end of ["tasks"]
-                                ["uncontrollable"] = false,
-                                ["route"] = 
-                                {
-                                    ["points"] = 
-                                    {
-                                        [1] = 
-                                        {
-                                            ["alt"] = 0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 0,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -108453.414727,
-                                            ["x"] = 192945.36855003,
-                                            ["ETA_locked"] = true,
-                                            ["speed"] = 0,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                        [1] = 
-                                                        {
-                                                            ["number"] = 1,
-                                                            ["auto"] = false,
-                                                            ["id"] = "WrappedAction",
-                                                            ["enabled"] = true,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "LoadingShip",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["cargo"] = 100,
-                                                                        ["unitId"] = 47,
-                                                                    }, -- end of ["params"]
-                                                                }, -- end of ["action"]
-                                                            }, -- end of ["params"]
-                                                        }, -- end of [1]
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [1]
-                                        [2] = 
-                                        {
-                                            ["alt"] = 0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 712.65287193118,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -102772.58809501,
-                                            ["x"] = 193037.73971478,
-                                            ["ETA_locked"] = false,
-                                            ["speed"] = 8.5,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [2]
-                                        [3] = 
-                                        {
-                                            ["alt"] = 0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 1640.9421623852,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -94813.272732583,
-                                            ["x"] = 190805.43656671,
-                                            ["ETA_locked"] = false,
-                                            ["speed"] = 8.5,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [3]
-                                        [4] = 
-                                        {
-                                            ["alt"] = 0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 2628.6853140355,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -90856.707842555,
-                                            ["x"] = 183400.34819277,
-                                            ["ETA_locked"] = false,
-                                            ["speed"] = 8.5,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [4]
-                                    }, -- end of ["points"]
-                                }, -- end of ["route"]
-                                ["groupId"] = 44,
-                                ["hidden"] = false,
-                                ["units"] = 
-                                {
-                                    [1] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["skill"] = "Average",
-                                        ["type"] = "Seawise_Giant",
-                                        ["unitId"] = 47,
-                                        ["y"] = -108453.414727,
-                                        ["x"] = 192945.36855003,
-                                        ["name"] = "mediummission3-Scenery-1-1",
-                                        ["heading"] = 1.5545375969894,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [1]
-                                }, -- end of ["units"]
-                                ["y"] = -108453.414727,
-                                ["x"] = 192945.36855003,
-                                ["name"] = "mediummission3group2-Scenery",
-                                ["start_time"] = 0,
-                            }, -- end of [3]
                         }, -- end of ["group"]
                     }, -- end of ["ship"]
                     ["id"] = 2,
@@ -7053,9 +6844,144 @@ NDB 386 kHz RMD 357 / 50km\
                             }, -- end of [11]
                         }, -- end of ["group"]
                     }, -- end of ["static"]
+                    ["plane"] = 
+                    {
+                        ["group"] = 
+                        {
+                            [1] = 
+                            {
+                                ["modulation"] = 0,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["radioSet"] = false,
+                                ["task"] = "AFAC",
+                                ["uncontrolled"] = false,
+                                ["route"] = 
+                                {
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 2000,
+                                            ["action"] = "From Ground Area",
+                                            ["alt_type"] = "BARO",
+                                            ["properties"] = 
+                                            {
+                                                ["addopt"] = 
+                                                {
+                                                }, -- end of ["addopt"]
+                                            }, -- end of ["properties"]
+                                            ["speed"] = 51.388888888889,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                        [1] = 
+                                                        {
+                                                            ["number"] = 1,
+                                                            ["auto"] = true,
+                                                            ["id"] = "FAC",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [1]
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["type"] = "TakeOffGround",
+                                            ["ETA"] = 0,
+                                            ["ETA_locked"] = true,
+                                            ["y"] = -47425.743366574,
+                                            ["x"] = 220508.98243242,
+                                            ["formation_template"] = "",
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 43,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["alt"] = 2000,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "the yakovlevs",
+                                        ["skill"] = "Client",
+                                        ["speed"] = 51.388888888889,
+                                        ["AddPropAircraft"] = 
+                                        {
+                                            ["SoloFlight"] = false,
+                                            ["PropellorType"] = 1,
+                                            ["NetCrewControlPriority"] = 0,
+                                        }, -- end of ["AddPropAircraft"]
+                                        ["type"] = "Yak-52",
+                                        ["Radio"] = 
+                                        {
+                                            [1] = 
+                                            {
+                                                ["modulations"] = 
+                                                {
+                                                }, -- end of ["modulations"]
+                                                ["channels"] = 
+                                                {
+                                                    [6] = 0.803,
+                                                    [2] = 0.303,
+                                                    [8] = 0.215,
+                                                    [3] = 0.289,
+                                                    [1] = 0.625,
+                                                    [4] = 0.591,
+                                                    [5] = 0.408,
+                                                    [7] = 0.443,
+                                                }, -- end of ["channels"]
+                                            }, -- end of [1]
+                                        }, -- end of ["Radio"]
+                                        ["unitId"] = 43,
+                                        ["psi"] = -0,
+                                        ["y"] = -47425.743366574,
+                                        ["x"] = 220508.98243242,
+                                        ["name"] = "Aerial-1-1",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = 44,
+                                            ["flare"] = 0,
+                                            ["chaff"] = 0,
+                                            ["gun"] = 0,
+                                        }, -- end of ["payload"]
+                                        ["civil_plane"] = true,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 7,
+                                            [2] = 2,
+                                            [3] = 1,
+                                            ["name"] = "Chevy21",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "024",
+                                    }, -- end of [1]
+                                }, -- end of ["units"]
+                                ["y"] = -47425.743366574,
+                                ["x"] = 220508.98243242,
+                                ["name"] = "Spotter",
+                                ["communication"] = true,
+                                ["start_time"] = 0,
+                                ["uncontrollable"] = false,
+                                ["frequency"] = 132,
+                            }, -- end of [1]
+                        }, -- end of ["group"]
+                    }, -- end of ["plane"]
                 }, -- end of [1]
                 [2] = 
                 {
+                    ["name"] = "CJTF Blue",
                     ["id"] = 80,
                     ["static"] = 
                     {
@@ -7678,25 +7604,178 @@ NDB 386 kHz RMD 357 / 50km\
                             }, -- end of [15]
                         }, -- end of ["group"]
                     }, -- end of ["static"]
-                    ["name"] = "CJTF Blue",
+                    ["vehicle"] = 
+                    {
+                        ["group"] = 
+                        {
+                            [1] = 
+                            {
+                                ["visible"] = false,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["uncontrollable"] = false,
+                                ["task"] = "Ground Nothing",
+                                ["route"] = 
+                                {
+                                    ["spans"] = 
+                                    {
+                                    }, -- end of ["spans"]
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 14,
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 0,
+                                            ["alt_type"] = "BARO",
+                                            ["formation_template"] = "",
+                                            ["y"] = -67531.39472792,
+                                            ["x"] = 218826.02094901,
+                                            ["ETA_locked"] = true,
+                                            ["speed"] = 0,
+                                            ["action"] = "Off Road",
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 44,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "AA8",
+                                        ["unitId"] = 46,
+                                        ["y"] = -67531.39472792,
+                                        ["x"] = 218826.02094901,
+                                        ["name"] = "EasyMission7-Scenery-2",
+                                        ["heading"] = 5.0090949532237,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [1]
+                                    [2] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "ZIL-4331",
+                                        ["unitId"] = 45,
+                                        ["y"] = -67551.271084772,
+                                        ["x"] = 218819.55324559,
+                                        ["name"] = "EasyMission7-Scenery-1",
+                                        ["heading"] = 0,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [2]
+                                    [3] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "VAZ Car",
+                                        ["unitId"] = 44,
+                                        ["y"] = -67557.581039327,
+                                        ["x"] = 218814.8996541,
+                                        ["name"] = "EasyMission7-Scenery",
+                                        ["heading"] = 3.9444441095072,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [3]
+                                    [4] = 
+                                    {
+                                        ["livery_id"] = "autumn",
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "AA8",
+                                        ["unitId"] = 47,
+                                        ["y"] = -67550.737267537,
+                                        ["x"] = 218798.8111975,
+                                        ["name"] = "EasyMission7-Scenery-3",
+                                        ["heading"] = 2.2340214425527,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [4]
+                                }, -- end of ["units"]
+                                ["y"] = -67531.39472792,
+                                ["x"] = 218826.02094901,
+                                ["name"] = "EasyMission7-Scenery",
+                                ["start_time"] = 0,
+                            }, -- end of [1]
+                            [2] = 
+                            {
+                                ["visible"] = false,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["uncontrollable"] = false,
+                                ["task"] = "Ground Nothing",
+                                ["route"] = 
+                                {
+                                    ["spans"] = 
+                                    {
+                                    }, -- end of ["spans"]
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 14,
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 0,
+                                            ["alt_type"] = "BARO",
+                                            ["formation_template"] = "",
+                                            ["y"] = -67533.019165249,
+                                            ["x"] = 218823.25383505,
+                                            ["ETA_locked"] = true,
+                                            ["speed"] = 0,
+                                            ["action"] = "Off Road",
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 45,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "Infantry AK ver3",
+                                        ["unitId"] = 48,
+                                        ["y"] = -67533.019165249,
+                                        ["x"] = 218823.25383505,
+                                        ["name"] = "EasyMission7-Patient",
+                                        ["heading"] = 2.2340214425527,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [1]
+                                }, -- end of ["units"]
+                                ["y"] = -67533.019165249,
+                                ["x"] = 218823.25383505,
+                                ["name"] = "EasyMission7-Patient",
+                                ["start_time"] = 0,
+                            }, -- end of [2]
+                        }, -- end of ["group"]
+                    }, -- end of ["vehicle"]
                 }, -- end of [2]
             }, -- end of ["country"]
         }, -- end of ["blue"]
-        ["neutrals"] = 
-        {
-            ["bullseye"] = 
-            {
-                ["y"] = 0,
-                ["x"] = 0,
-            }, -- end of ["bullseye"]
-            ["nav_points"] = 
-            {
-            }, -- end of ["nav_points"]
-            ["name"] = "neutrals",
-            ["country"] = 
-            {
-            }, -- end of ["country"]
-        }, -- end of ["neutrals"]
         ["red"] = 
         {
             ["bullseye"] = 
@@ -7938,7 +8017,9 @@ NDB ...",
             ["rules"] = 
             {
             }, -- end of ["rules"]
+            ["comment"] = "Trigger 1669235811",
             ["eventlist"] = "",
+            ["predicate"] = "triggerOnce",
             ["actions"] = 
             {
                 [1] = 
@@ -7952,15 +8033,12 @@ NDB ...",
                     ["file"] = "ResKey_Action_16",
                 }, -- end of [2]
             }, -- end of ["actions"]
-            ["predicate"] = "triggerOnce",
-            ["comment"] = "Trigger 1669235811",
         }, -- end of [1]
         [2] = 
         {
             ["rules"] = 
             {
             }, -- end of ["rules"]
-            ["comment"] = "Trigger 1669235811",
             ["eventlist"] = "",
             ["predicate"] = "triggerOnce",
             ["actions"] = 
@@ -7971,9 +8049,10 @@ NDB ...",
                     ["file"] = "ResKey_Action_12",
                 }, -- end of [1]
             }, -- end of ["actions"]
+            ["comment"] = "Trigger 1669235811",
         }, -- end of [2]
     }, -- end of ["trigrules"]
-    ["currentKey"] = 16388,
+    ["currentKey"] = 21017,
     ["failures"] = 
     {
         ["hydro"] = 
