@@ -90,7 +90,7 @@ end
 --Mission Functions
 function easyZonePicker(groupName)
   env.info(groupName.." has asked for a EASY mission")
-  ezn = {"EasyMission9"} --"EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7","EasyMission8"
+  ezn = {"EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7","EasyMission8","EasyMission9"} --
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
