@@ -90,7 +90,7 @@ end
 --Mission Functions
 function easyZonePicker(groupName)
   env.info(groupName.." has asked for a EASY mission")
-  ezn = {"EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7"} --
+  ezn = {"EasyMission9"} --"EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7","EasyMission8"
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
@@ -218,6 +218,28 @@ function easyMissions(zonename,groupName)
     params = {groupId,missioninfo}
     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
     trigger.action.markToGroup((groupId*51515151),"Easy Mission 7",zone["point"],groupId,true)
+  elseif (zonename == "EasyMission8") then
+    coalition.addGroup(80,2,EasyMission8)
+    coalition.addGroup(80,2,EasyMission8Scenery)
+    -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
+    trigger.action.outText("Easy Mission #8 Spawned!",15)
+    missioninfo = "Two men have been injured in a 4x4 accident. They needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
+    groupId = group:getID()
+    trigger.action.outTextForGroup(groupId,missioninfo,15)
+    params = {groupId,missioninfo}
+    missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+    trigger.action.markToGroup((groupId*51515151),"Easy Mission 8",zone["point"],groupId,true)
+  elseif (zonename == "EasyMission9") then
+    coalition.addGroup(80,2,EasyMission9)
+    coalition.addGroup(80,2,EasyMission9Scenery)
+    trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission9")
+    trigger.action.outText("Easy Mission #9 Spawned!",15)
+    missioninfo = "A boating accident has occered causing severe injury to two individuals. They needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
+    groupId = group:getID()
+    trigger.action.outTextForGroup(groupId,missioninfo,15)
+    params = {groupId,missioninfo}
+    missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+    trigger.action.markToGroup((groupId*51515151),"Easy Mission 9",zone["point"],groupId,true)
   end
 end
 
