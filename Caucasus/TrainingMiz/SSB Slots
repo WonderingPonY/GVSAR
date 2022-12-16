@@ -157,6 +157,11 @@ trigger.action.setUserFlag("WP2 Gazelle-13",0)
 trigger.action.setUserFlag("WP2 Gazelle-14",0)
 trigger.action.setUserFlag("WP2 Gazelle-15",0)
 trigger.action.setUserFlag("WP2 Gazelle-16",0)
+trigger.action.setUserFlag("WP2 Shark3-1",0)
+trigger.action.setUserFlag("WP2 Shark3-2",0)
+trigger.action.setUserFlag("WP2 Shark3-3",0)
+trigger.action.setUserFlag("WP2 Shark3-4",0)
+trigger.action.setUserFlag("WP2 Shark3-5",0)
 
 
 inactive WP2
@@ -195,6 +200,11 @@ trigger.action.setUserFlag("WP2 Gazelle-13",100)
 trigger.action.setUserFlag("WP2 Gazelle-14",100)
 trigger.action.setUserFlag("WP2 Gazelle-15",100)
 trigger.action.setUserFlag("WP2 Gazelle-16",100)
+trigger.action.setUserFlag("WP2 Shark3-1",100)
+trigger.action.setUserFlag("WP2 Shark3-2",100)
+trigger.action.setUserFlag("WP2 Shark3-3",100)
+trigger.action.setUserFlag("WP2 Shark3-4",100)
+trigger.action.setUserFlag("WP2 Shark3-5",100)
 
 Active WP3
 trigger.action.setUserFlag("WP3 Apache-1",0)
@@ -232,6 +242,11 @@ trigger.action.setUserFlag("WP3 Gazelle-13",0)
 trigger.action.setUserFlag("WP3 Gazelle-14",0)
 trigger.action.setUserFlag("WP3 Gazelle-15",0)
 trigger.action.setUserFlag("WP3 Gazelle-16",0)
+trigger.action.setUserFlag("WP3 Shark3-1",0)
+trigger.action.setUserFlag("WP3 Shark3-2",0)
+trigger.action.setUserFlag("WP3 Shark3-3",0)
+trigger.action.setUserFlag("WP3 Shark3-4",0)
+trigger.action.setUserFlag("WP3 Shark3-5",0)
 
 
 inactive WP3
@@ -270,6 +285,11 @@ trigger.action.setUserFlag("WP3 Gazelle-13",100)
 trigger.action.setUserFlag("WP3 Gazelle-14",100)
 trigger.action.setUserFlag("WP3 Gazelle-15",100)
 trigger.action.setUserFlag("WP3 Gazelle-16",100)
+trigger.action.setUserFlag("WP3 Shark3-1",100)
+trigger.action.setUserFlag("WP3 Shark3-2",100)
+trigger.action.setUserFlag("WP3 Shark3-3",100)
+trigger.action.setUserFlag("WP3 Shark3-4",100)
+trigger.action.setUserFlag("WP3 Shark3-5",100)
 
 
 Active WP4
@@ -308,6 +328,11 @@ trigger.action.setUserFlag("WP4 Gazelle-13",0)
 trigger.action.setUserFlag("WP4 Gazelle-14",0)
 trigger.action.setUserFlag("WP4 Gazelle-15",0)
 trigger.action.setUserFlag("WP4 Gazelle-16",0)
+trigger.action.setUserFlag("WP4 Shark3-1",0)
+trigger.action.setUserFlag("WP4 Shark3-2",0)
+trigger.action.setUserFlag("WP4 Shark3-3",0)
+trigger.action.setUserFlag("WP4 Shark3-4",0)
+trigger.action.setUserFlag("WP4 Shark3-5",0)
 
 
 inactive WP4
@@ -346,3 +371,8 @@ trigger.action.setUserFlag("WP4 Gazelle-13",100)
 trigger.action.setUserFlag("WP4 Gazelle-14",100)
 trigger.action.setUserFlag("WP4 Gazelle-15",100)
 trigger.action.setUserFlag("WP4 Gazelle-16",100)
+trigger.action.setUserFlag("WP4 Shark3-1",100)
+trigger.action.setUserFlag("WP4 Shark3-2",100)
+trigger.action.setUserFlag("WP4 Shark3-3",100)
+trigger.action.setUserFlag("WP4 Shark3-4",100)
+trigger.action.setUserFlag("WP4 Shark3-5",100)
