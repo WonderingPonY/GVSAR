@@ -243,6 +243,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 100,
                     }, -- end of ["SA342L"]
+                    ["SA342Mistral"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 6,
+                            [4] = 291,
+                            [5] = "Attack helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 100,
+                    }, -- end of ["SA342Mistral"]
                     ["AH-1W"] = 
                     {
                         ["wsType"] = 
@@ -311,40 +328,6 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 100,
                     }, -- end of ["AH-64A"]
-                    ["SA342Mistral"] = 
-                    {
-                        ["wsType"] = 
-                        {
-                            [1] = 1,
-                            [2] = 2,
-                            [3] = 6,
-                            [4] = 291,
-                            [5] = "Attack helicopters",
-                            [6] = "All",
-                            [7] = "NonAndLightArmoredUnits",
-                            [8] = "NonArmoredUnits",
-                            [9] = "Air",
-                            [10] = "Helicopters",
-                        }, -- end of ["wsType"]
-                        ["initialAmount"] = 100,
-                    }, -- end of ["SA342Mistral"]
-                    ["Mi-26"] = 
-                    {
-                        ["wsType"] = 
-                        {
-                            [1] = 1,
-                            [2] = 2,
-                            [3] = 25,
-                            [4] = 153,
-                            [5] = "Transport helicopters",
-                            [6] = "All",
-                            [7] = "NonAndLightArmoredUnits",
-                            [8] = "NonArmoredUnits",
-                            [9] = "Air",
-                            [10] = "Helicopters",
-                        }, -- end of ["wsType"]
-                        ["initialAmount"] = 100,
-                    }, -- end of ["Mi-26"]
                     ["Ka-27"] = 
                     {
                         ["wsType"] = 
@@ -362,6 +345,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 100,
                     }, -- end of ["Ka-27"]
+                    ["Mi-26"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 25,
+                            [4] = 153,
+                            [5] = "Transport helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 100,
+                    }, -- end of ["Mi-26"]
                     ["OH-58D"] = 
                     {
                         ["wsType"] = 
@@ -379,6 +379,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 100,
                     }, -- end of ["OH-58D"]
+                    ["Ka-50_3"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 6,
+                            [4] = 326,
+                            [5] = "Attack helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 100,
+                    }, -- end of ["Ka-50_3"]
                     ["SH-60B"] = 
                     {
                         ["wsType"] = 
@@ -12777,6 +12794,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 0,
                     }, -- end of ["SA342L"]
+                    ["SA342Mistral"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 6,
+                            [4] = 291,
+                            [5] = "Attack helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 0,
+                    }, -- end of ["SA342Mistral"]
                     ["AH-1W"] = 
                     {
                         ["wsType"] = 
@@ -12845,40 +12879,6 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 0,
                     }, -- end of ["AH-64A"]
-                    ["SA342Mistral"] = 
-                    {
-                        ["wsType"] = 
-                        {
-                            [1] = 1,
-                            [2] = 2,
-                            [3] = 6,
-                            [4] = 291,
-                            [5] = "Attack helicopters",
-                            [6] = "All",
-                            [7] = "NonAndLightArmoredUnits",
-                            [8] = "NonArmoredUnits",
-                            [9] = "Air",
-                            [10] = "Helicopters",
-                        }, -- end of ["wsType"]
-                        ["initialAmount"] = 0,
-                    }, -- end of ["SA342Mistral"]
-                    ["Mi-26"] = 
-                    {
-                        ["wsType"] = 
-                        {
-                            [1] = 1,
-                            [2] = 2,
-                            [3] = 25,
-                            [4] = 153,
-                            [5] = "Transport helicopters",
-                            [6] = "All",
-                            [7] = "NonAndLightArmoredUnits",
-                            [8] = "NonArmoredUnits",
-                            [9] = "Air",
-                            [10] = "Helicopters",
-                        }, -- end of ["wsType"]
-                        ["initialAmount"] = 0,
-                    }, -- end of ["Mi-26"]
                     ["Ka-27"] = 
                     {
                         ["wsType"] = 
@@ -12896,6 +12896,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 0,
                     }, -- end of ["Ka-27"]
+                    ["Mi-26"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 25,
+                            [4] = 153,
+                            [5] = "Transport helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 0,
+                    }, -- end of ["Mi-26"]
                     ["OH-58D"] = 
                     {
                         ["wsType"] = 
@@ -12913,6 +12930,23 @@ warehouses =
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 0,
                     }, -- end of ["OH-58D"]
+                    ["Ka-50_3"] = 
+                    {
+                        ["wsType"] = 
+                        {
+                            [1] = 1,
+                            [2] = 2,
+                            [3] = 6,
+                            [4] = 326,
+                            [5] = "Attack helicopters",
+                            [6] = "All",
+                            [7] = "NonAndLightArmoredUnits",
+                            [8] = "NonArmoredUnits",
+                            [9] = "Air",
+                            [10] = "Helicopters",
+                        }, -- end of ["wsType"]
+                        ["initialAmount"] = 100,
+                    }, -- end of ["Ka-50_3"]
                     ["SH-60B"] = 
                     {
                         ["wsType"] = 

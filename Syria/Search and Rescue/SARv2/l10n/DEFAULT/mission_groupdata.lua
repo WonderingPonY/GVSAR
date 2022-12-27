@@ -1097,6 +1097,353 @@ EasyMission8 =
     ["name"] = "EasyMission8-Patient",
     ["start_time"] = 0,
 }
+
+EasyMission9Scenery =
+{
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["route"] =
+    {
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = -0,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -45268.477358645,
+                ["x"] = 243678.23542049,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Turning Point",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 44,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["modulation"] = 0,
+            ["skill"] = "Average",
+            ["type"] = "speedboat",
+            ["unitId"] = 44,
+            ["y"] = -45268.477358645,
+            ["x"] = 243678.23542049,
+            ["name"] = "EasyMission9-Scenery-1",
+            ["heading"] = 1.4137166941154,
+            ["frequency"] = 127500000,
+        }, -- end of [1]
+        [2] =
+        {
+            ["modulation"] = 0,
+            ["skill"] = "Average",
+            ["type"] = "speedboat",
+            ["unitId"] = 45,
+            ["y"] = -45251.743143118,
+            ["x"] = 243677.56666431,
+            ["name"] = "EasyMission9-Scenery-2",
+            ["heading"] = 2.9146998508305,
+            ["frequency"] = 127500000,
+        }, -- end of [2]
+        [3] =
+        {
+            ["modulation"] = 0,
+            ["skill"] = "Average",
+            ["type"] = "speedboat",
+            ["unitId"] = 46,
+            ["y"] = -45246.756124299,
+            ["x"] = 243728.21642402,
+            ["name"] = "EasyMission9-Scenery-3",
+            ["heading"] = 4.1887902047864,
+            ["frequency"] = 127500000,
+        }, -- end of [3]
+    }, -- end of ["units"]
+    ["y"] = -45268.477358645,
+    ["x"] = 243678.23542049,
+    ["name"] = "EasyMission9-Scenery",
+    ["start_time"] = 0,
+}
+
+EasyMission9 =
+{
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 112,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -45252.851368631,
+                ["x"] = 243671.69688567,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 45,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4 GRG",
+            ["unitId"] = 48,
+            ["y"] = -45252.851368631,
+            ["x"] = 243671.69688567,
+            ["name"] = "EasyMission9-Patient-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4 GRG",
+            ["unitId"] = 47,
+            ["y"] = -45249.969980401,
+            ["x"] = 243669.70207843,
+            ["name"] = "EasyMission9-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+    }, -- end of ["units"]
+    ["y"] = -45252.851368631,
+    ["x"] = 243671.69688567,
+    ["name"] = "EasyMission9-Patient",
+    ["start_time"] = 0,
+}
+
+EasyMission10Scenery = {
+      ["visible"] = false,
+      ["tasks"] =
+      {
+      }, -- end of ["tasks"]
+      ["uncontrollable"] = false,
+      ["task"] = "Ground Nothing",
+      ["taskSelected"] = true,
+      ["route"] =
+      {
+          ["spans"] =
+          {
+          }, -- end of ["spans"]
+          ["points"] =
+          {
+              [1] =
+              {
+                  ["alt"] = 30,
+                  ["type"] = "Turning Point",
+                  ["ETA"] = 0,
+                  ["alt_type"] = "BARO",
+                  ["formation_template"] = "",
+                  ["y"] = -148.8394540543,
+                  ["x"] = 221869.93713788,
+                  ["ETA_locked"] = true,
+                  ["speed"] = 0,
+                  ["action"] = "Off Road",
+                  ["task"] =
+                  {
+                      ["id"] = "ComboTask",
+                      ["params"] =
+                      {
+                          ["tasks"] =
+                          {
+                          }, -- end of ["tasks"]
+                      }, -- end of ["params"]
+                  }, -- end of ["task"]
+                  ["speed_locked"] = true,
+              }, -- end of [1]
+          }, -- end of ["points"]
+      }, -- end of ["route"]
+      ["groupId"] = 45,
+      ["hidden"] = false,
+      ["units"] =
+      {
+          [1] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "Ural ATsP-6",
+              ["unitId"] = 45,
+              ["y"] = -148.8394540543,
+              ["x"] = 221869.93713788,
+              ["name"] = "Ground-1-1",
+              ["heading"] = 2.4783675378319,
+              ["playerCanDrive"] = false,
+          }, -- end of [1]
+          [2] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "Ural ATsP-6",
+              ["unitId"] = 46,
+              ["y"] = -162.48388231742,
+              ["x"] = 221861.74610231,
+              ["name"] = "Ground-1-2",
+              ["heading"] = 1.4486232791553,
+              ["playerCanDrive"] = false,
+          }, -- end of [2]
+          [3] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "GAZ-3307",
+              ["unitId"] = 47,
+              ["y"] = -131.62152443034,
+              ["x"] = 221885.76653115,
+              ["name"] = "Ground-1-3",
+              ["heading"] = 1.4486232791553,
+              ["playerCanDrive"] = false,
+          }, -- end of [3]
+          [4] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "GAZ-3307",
+              ["unitId"] = 48,
+              ["y"] = -131.08963198057,
+              ["x"] = 221881.6181015,
+              ["name"] = "Ground-1-4",
+              ["heading"] = 6.1261056745001,
+              ["playerCanDrive"] = false,
+          }, -- end of [4]
+      }, -- end of ["units"]
+      ["y"] = -148.8394540543,
+      ["x"] = 221869.93713788,
+      ["name"] = "EasyMission10-Scenery",
+      ["start_time"] = 0,
+  }
+
+EasyMission10 = {
+      ["visible"] = false,
+      ["tasks"] =
+      {
+      }, -- end of ["tasks"]
+      ["uncontrollable"] = false,
+      ["task"] = "Ground Nothing",
+      ["route"] =
+      {
+          ["spans"] =
+          {
+          }, -- end of ["spans"]
+          ["points"] =
+          {
+              [1] =
+              {
+                  ["alt"] = 30,
+                  ["type"] = "Turning Point",
+                  ["ETA"] = 0,
+                  ["alt_type"] = "BARO",
+                  ["formation_template"] = "",
+                  ["y"] = -122.56604239983,
+                  ["x"] = 221888.62594614,
+                  ["ETA_locked"] = true,
+                  ["speed"] = 0,
+                  ["action"] = "Off Road",
+                  ["task"] =
+                  {
+                      ["id"] = "ComboTask",
+                      ["params"] =
+                      {
+                          ["tasks"] =
+                          {
+                          }, -- end of ["tasks"]
+                      }, -- end of ["params"]
+                  }, -- end of ["task"]
+                  ["speed_locked"] = true,
+              }, -- end of [1]
+          }, -- end of ["points"]
+      }, -- end of ["route"]
+      ["groupId"] = 46,
+      ["hidden"] = false,
+      ["units"] =
+      {
+          [1] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "Soldier M4 GRG",
+              ["unitId"] = 51,
+              ["y"] = -122.56604239983,
+              ["x"] = 221888.62594614,
+              ["name"] = "EasyMission10-Patient-2",
+              ["heading"] = 6.1261056745001,
+              ["playerCanDrive"] = false,
+          }, -- end of [1]
+          [2] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "Soldier M4 GRG",
+              ["unitId"] = 50,
+              ["y"] = -125.1297199717,
+              ["x"] = 221884.35315019,
+              ["name"] = "EasyMission10-Patient-1",
+              ["heading"] = 6.1261056745001,
+              ["playerCanDrive"] = false,
+          }, -- end of [2]
+          [3] =
+          {
+              ["skill"] = "Average",
+              ["coldAtStart"] = false,
+              ["type"] = "Soldier M4 GRG",
+              ["unitId"] = 49,
+              ["y"] = -119.63612517484,
+              ["x"] = 221883.74275077,
+              ["name"] = "EasyMission10-Patient",
+              ["heading"] = 6.1261056745001,
+              ["playerCanDrive"] = false,
+          }, -- end of [3]
+      }, -- end of ["units"]
+      ["y"] = -122.56604239983,
+      ["x"] = 221888.62594614,
+      ["name"] = "EasyMission10-Patient",
+      ["start_time"] = 0,
+  }
 -- _________________________________________MEDIUM MISSION GROUP DATA____________________________________________________________
 MediumMission1Scenery = {
     ["visible"] = false,
@@ -1721,6 +2068,145 @@ MediumMission3Group2Scenery = {
     ["y"] = -108453.414727,
     ["x"] = 192945.36855003,
     ["name"] = "MediumMission3Group2-Scenery",
+    ["start_time"] = 0,
+}
+
+MediumMission4Scenery =
+{
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 9,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = 29153.419455059,
+                ["x"] = 204011.47066823,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 44,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Ural ATsP-6",
+            ["unitId"] = 44,
+            ["y"] = 29153.419455059,
+            ["x"] = 204011.47066823,
+            ["name"] = "MediumMission4-Scenery-1",
+            ["heading"] = 6.1261056745001,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Ural ATsP-6",
+            ["unitId"] = 45,
+            ["y"] = 29164.615168999,
+            ["x"] = 204006.24914902,
+            ["name"] = "MediumMission4-Scenery-2",
+            ["heading"] = 4.8694686130642,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+    }, -- end of ["units"]
+    ["y"] = 29153.419455059,
+    ["x"] = 204011.47066823,
+    ["name"] = "MediumMission4-Scenery",
+    ["start_time"] = 0,
+}
+
+MediumMission4 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 9,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = 29146.975235892,
+                ["x"] = 204010.39186059,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 45,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4 GRG",
+            ["unitId"] = 46,
+            ["y"] = 29146.975235892,
+            ["x"] = 204010.39186059,
+            ["name"] = "MediumMission4-Patient",
+            ["heading"] = 4.8694686130642,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = 29146.975235892,
+    ["x"] = 204010.39186059,
+    ["name"] = "MediumMission4-Patient",
     ["start_time"] = 0,
 }
 -- _________________________________________HARD MISSION GROUP DATA____________________________________________________________

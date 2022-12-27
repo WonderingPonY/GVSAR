@@ -220,8 +220,8 @@ options =
             ["AH64HmdEye"] = 1,
             ["CPLocalList"] = "default",
             ["AH64BalaclavaCPG"] = true,
-            ["AH64CyclicTrimmingMethod"] = 0,
-            ["AH64PedalsTrimmingMethod"] = 0,
+            ["AH64CyclicTrimmingMethod"] = 1,
+            ["AH64PedalsTrimmingMethod"] = 2,
             ["AH64TriggerGuardEnable"] = false,
             ["AH64CockpitShake"] = 50,
             ["AH64LockoutDetent"] = 1,
@@ -292,14 +292,18 @@ options =
             ["shoulderJointY_Right"] = -23,
             ["yawOffsetGlove_Right"] = 0,
         }, -- end of ["CaptoGlove"]
-        ["Ka-50"] = 
+        ["FC3"] = 
         {
-            ["Ka50TrimmingMethod"] = 0,
-            ["Ka50RudderTrimmer"] = false,
-            ["hmdEye"] = 1,
-            ["CPLocalList"] = "english",
-            ["helmetCircleDisplacement"] = 11,
-        }, -- end of ["Ka-50"]
+            ["CPLocalList_Su-25"] = "default",
+            ["CPLocalList_Su-27"] = "default",
+            ["CPLocalList_A-10A"] = "default",
+            ["CPLocalList_Su-33"] = "default",
+            ["CPLocalList_MiG-29S"] = "default",
+            ["CPLocalList_MiG-29A"] = "default",
+            ["CPLocalList_J-11A"] = "default",
+            ["CPLocalList_MiG-29G"] = "default",
+            ["CPLocalList_F-15C"] = "default",
+        }, -- end of ["FC3"]
         ["P-51D"] = 
         {
             ["assistance"] = 100,
@@ -368,24 +372,15 @@ options =
             ["USE_REAL_TDC"] = false,
             ["MPCD_EXPORT"] = false,
         }, -- end of ["AV8BNA"]
-        ["Mi-24P"] = 
+        ["LeapMotion"] = 
         {
-            ["Mi24StickTrimMethod"] = 0,
-            ["Mi24CockpitShake"] = 50,
-            ["Mi24PedalsTrimButton"] = 1,
-            ["weapTooltipsMi24"] = true,
-            ["CPLocalList"] = "default",
-            ["Mi24AIColorScheme"] = 0,
-            ["Mi24PedalsMicroswitchLogic"] = 1,
-            ["Aiming_mark"] = false,
-            ["Mi24AIVoiceLanguage"] = 0,
-            ["collectiveDisengage"] = 1,
-            ["collectiveBrake"] = 0,
-            ["Mi24PedalsTrimMode"] = 0,
-            ["controlHelperMi24"] = false,
-            ["Mi24AutoHandover"] = true,
-            ["Mi24PedalsInputSensitivity"] = 24,
-        }, -- end of ["Mi-24P"]
+            ["handUseThrottle"] = false,
+            ["handsHorizontalShift"] = 0,
+            ["enable"] = false,
+            ["set_debug"] = false,
+            ["mouseClickSrc"] = 0,
+            ["handUseStick"] = false,
+        }, -- end of ["LeapMotion"]
         ["FW-190D9"] = 
         {
             ["assistance"] = 100,
@@ -417,64 +412,37 @@ options =
             ["RADAR_MAPOBJECTS"] = true,
             ["PCN_DIGIT_MSG"] = true,
         }, -- end of ["M-2000C"]
-        ["A-10C_2"] = 
-        {
-            ["hmdEye"] = 1,
-            ["CPLocalList"] = "aged",
-            ["defaultGunMode"] = 0,
-        }, -- end of ["A-10C_2"]
-        ["FC3"] = 
-        {
-            ["CPLocalList_Su-25"] = "default",
-            ["CPLocalList_Su-27"] = "default",
-            ["CPLocalList_A-10A"] = "default",
-            ["CPLocalList_Su-33"] = "default",
-            ["CPLocalList_MiG-29S"] = "default",
-            ["CPLocalList_MiG-29A"] = "default",
-            ["CPLocalList_J-11A"] = "default",
-            ["CPLocalList_MiG-29G"] = "default",
-            ["CPLocalList_F-15C"] = "default",
-        }, -- end of ["FC3"]
         ["A-10C"] = 
         {
             ["CPLocalList"] = "default",
         }, -- end of ["A-10C"]
-        ["TF-51D"] = 
+        ["F-16C"] = 
         {
-            ["assistance"] = 100,
+            ["abDetent"] = 0,
+            ["canopyReflections"] = 0,
+            ["hmdEye"] = 1,
             ["CPLocalList"] = "default",
-            ["autoRudder"] = false,
-        }, -- end of ["TF-51D"]
-        ["A-4E-C"] = 
+            ["canopyTint"] = 1,
+            ["mfdReflections"] = 0,
+        }, -- end of ["F-16C"]
+        ["Mi-24P"] = 
         {
-            ["cssActivate"] = 15,
-            ["trimSpeed"] = 0,
-            ["cockpitShake"] = 100,
-        }, -- end of ["A-4E-C"]
-        ["UH-60L"] = 
-        {
-            ["UNSPRUNG_CYCLIC"] = false,
-        }, -- end of ["UH-60L"]
-        ["CA"] = 
-        {
-            ["kompass_options"] = 1,
-            ["ground_aim_helper"] = true,
-            ["ground_platform_shake"] = true,
-            ["ground_target_info"] = true,
-            ["ground_isometric"] = true,
-            ["ground_engine_autostart"] = true,
-            ["ground_automatic"] = true,
-            ["automatic_clutch"] = true,
-        }, -- end of ["CA"]
-        ["LeapMotion"] = 
-        {
-            ["handUseThrottle"] = false,
-            ["handsHorizontalShift"] = 0,
-            ["enable"] = false,
-            ["set_debug"] = false,
-            ["mouseClickSrc"] = 0,
-            ["handUseStick"] = false,
-        }, -- end of ["LeapMotion"]
+            ["Mi24StickTrimMethod"] = 0,
+            ["Mi24CockpitShake"] = 50,
+            ["Mi24PedalsTrimButton"] = 1,
+            ["weapTooltipsMi24"] = true,
+            ["CPLocalList"] = "default",
+            ["Mi24AIColorScheme"] = 0,
+            ["Mi24PedalsMicroswitchLogic"] = 1,
+            ["Aiming_mark"] = false,
+            ["Mi24AIVoiceLanguage"] = 0,
+            ["collectiveDisengage"] = 1,
+            ["collectiveBrake"] = 0,
+            ["Mi24PedalsTrimMode"] = 0,
+            ["controlHelperMi24"] = false,
+            ["Mi24AutoHandover"] = true,
+            ["Mi24PedalsInputSensitivity"] = 24,
+        }, -- end of ["Mi-24P"]
         ["NS430"] = 
         {
             ["bf109k4_enabled"] = true,
@@ -520,6 +488,49 @@ options =
             ["miraj_enabled"] = true,
             ["sa342_enabled"] = true,
         }, -- end of ["NS430"]
+        ["TF-51D"] = 
+        {
+            ["assistance"] = 100,
+            ["CPLocalList"] = "default",
+            ["autoRudder"] = false,
+        }, -- end of ["TF-51D"]
+        ["A-4E-C"] = 
+        {
+            ["cssActivate"] = 15,
+            ["trimSpeed"] = 0,
+            ["cockpitShake"] = 100,
+        }, -- end of ["A-4E-C"]
+        ["Ka-50"] = 
+        {
+            ["Ka50TrimmingMethod"] = 0,
+            ["Ka50RudderTrimmer"] = false,
+            ["hmdEye"] = 1,
+            ["CPLocalList"] = "english",
+            ["helmetCircleDisplacement"] = 11,
+        }, -- end of ["Ka-50"]
+        ["CA"] = 
+        {
+            ["kompass_options"] = 1,
+            ["ground_aim_helper"] = true,
+            ["ground_platform_shake"] = true,
+            ["ground_target_info"] = true,
+            ["ground_isometric"] = true,
+            ["ground_engine_autostart"] = true,
+            ["ground_automatic"] = true,
+            ["automatic_clutch"] = true,
+        }, -- end of ["CA"]
+        ["Ka-50_3"] = 
+        {
+            ["Ka50TrimmingMethod"] = 1,
+            ["Ka50RudderTrimmer"] = false,
+            ["CPLocalList"] = "english",
+            ["Ka50PedalsYawReqReset"] = true,
+            ["helmetCircleDisplacement"] = 11,
+        }, -- end of ["Ka-50_3"]
+        ["UH-60L"] = 
+        {
+            ["UNSPRUNG_CYCLIC"] = false,
+        }, -- end of ["UH-60L"]
         ["AJS37"] = 
         {
             ["CPLocalList"] = "default",
@@ -546,15 +557,12 @@ options =
             ["weapTooltips"] = true,
             ["UHTrimmingMethod"] = 0,
         }, -- end of ["UH-1H"]
-        ["F-16C"] = 
+        ["A-10C_2"] = 
         {
-            ["abDetent"] = 0,
-            ["canopyReflections"] = 0,
             ["hmdEye"] = 1,
-            ["CPLocalList"] = "default",
-            ["canopyTint"] = 1,
-            ["mfdReflections"] = 0,
-        }, -- end of ["F-16C"]
+            ["CPLocalList"] = "aged",
+            ["defaultGunMode"] = 0,
+        }, -- end of ["A-10C_2"]
     }, -- end of ["plugins"]
     ["format"] = 1,
     ["sound"] = 

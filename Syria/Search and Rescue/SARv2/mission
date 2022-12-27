@@ -172,13 +172,13 @@ mission =
                         ["layerName"] = "Common",
                         ["fontSize"] = 12,
                         ["primitiveType"] = "TextBox",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
+                        ["colorString"] = "0x000000ff",
                         ["name"] = "Adana Clinic",
                         ["fillColorString"] = "0xff000080",
                         ["text"] = "Adana Clinic",
                         ["angle"] = 0,
-                        ["colorString"] = "0x000000ff",
                         ["mapX"] = 222656.02117726,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [1]
                     [2] = 
                     {
@@ -188,13 +188,13 @@ mission =
                         ["layerName"] = "Common",
                         ["fontSize"] = 12,
                         ["primitiveType"] = "TextBox",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
+                        ["colorString"] = "0x000000ff",
                         ["name"] = "Adana International",
                         ["fillColorString"] = "0xff000080",
                         ["text"] = "Adana International",
                         ["angle"] = 0,
-                        ["colorString"] = "0x000000ff",
                         ["mapX"] = 220071.26467363,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [2]
                     [3] = 
                     {
@@ -204,13 +204,13 @@ mission =
                         ["layerName"] = "Common",
                         ["fontSize"] = 12,
                         ["primitiveType"] = "TextBox",
-                        ["font"] = "DejaVuLGCSansCondensed.ttf",
+                        ["colorString"] = "0x000000ff",
                         ["name"] = "Adana Main",
                         ["fillColorString"] = "0xff000080",
                         ["text"] = "Adana Main Hospital",
                         ["angle"] = 0,
-                        ["colorString"] = "0x000000ff",
                         ["mapX"] = 224430.52684075,
+                        ["font"] = "DejaVuLGCSansCondensed.ttf",
                     }, -- end of [3]
                 }, -- end of ["objects"]
             }, -- end of [4]
@@ -1070,13 +1070,101 @@ mission =
                     }, -- end of [4]
                 }, -- end of ["verticies"]
             }, -- end of [17]
+            [18] = 
+            {
+                ["radius"] = 152.4,
+                ["zoneId"] = 2010,
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of ["color"]
+                ["properties"] = 
+                {
+                }, -- end of ["properties"]
+                ["hidden"] = false,
+                ["y"] = -131.19135664611,
+                ["x"] = 221842.31402889,
+                ["name"] = "EasyMission10",
+                ["type"] = 2,
+                ["heading"] = 0,
+                ["verticies"] = 
+                {
+                    [1] = 
+                    {
+                        ["y"] = -283.59135664611,
+                        ["x"] = 221689.91402889,
+                    }, -- end of [1]
+                    [2] = 
+                    {
+                        ["y"] = 21.208643353892,
+                        ["x"] = 221689.91402889,
+                    }, -- end of [2]
+                    [3] = 
+                    {
+                        ["y"] = 21.208643353892,
+                        ["x"] = 221994.71402889,
+                    }, -- end of [3]
+                    [4] = 
+                    {
+                        ["y"] = -283.59135664611,
+                        ["x"] = 221994.71402889,
+                    }, -- end of [4]
+                }, -- end of ["verticies"]
+            }, -- end of [18]
+            [19] = 
+            {
+                ["radius"] = 152.4,
+                ["zoneId"] = 2095,
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of ["color"]
+                ["properties"] = 
+                {
+                }, -- end of ["properties"]
+                ["hidden"] = false,
+                ["y"] = 29150.13360981,
+                ["x"] = 203980.74597321,
+                ["name"] = "MediumMission4",
+                ["type"] = 2,
+                ["heading"] = 0,
+                ["verticies"] = 
+                {
+                    [1] = 
+                    {
+                        ["y"] = 28997.73360981,
+                        ["x"] = 203828.34597321,
+                    }, -- end of [1]
+                    [2] = 
+                    {
+                        ["y"] = 29302.53360981,
+                        ["x"] = 203828.34597321,
+                    }, -- end of [2]
+                    [3] = 
+                    {
+                        ["y"] = 29302.53360981,
+                        ["x"] = 204133.14597321,
+                    }, -- end of [3]
+                    [4] = 
+                    {
+                        ["y"] = 28997.73360981,
+                        ["x"] = 204133.14597321,
+                    }, -- end of [4]
+                }, -- end of ["verticies"]
+            }, -- end of [19]
         }, -- end of ["zones"]
     }, -- end of ["triggers"]
     ["map"] = 
     {
-        ["centerY"] = -45085.117224881,
-        ["zoom"] = 3331.848777222,
-        ["centerX"] = 243612.28231806,
+        ["centerY"] = 29250.117399108,
+        ["zoom"] = 529.21144628142,
+        ["centerX"] = 204011.44734789,
     }, -- end of ["map"]
     ["coalitions"] = 
     {
@@ -3791,8 +3879,8 @@ NDB 386 kHz RMD 357 / 50km\
                                             ["type"] = "TakeOffGroundHot",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
-                                            ["y"] = -45001.70835642,
-                                            ["x"] = 243364.13600039,
+                                            ["y"] = 29319.794452202,
+                                            ["x"] = 204191.76296211,
                                             ["formation_template"] = "",
                                             ["speed_locked"] = true,
                                         }, -- end of [1]
@@ -3854,8 +3942,8 @@ NDB 386 kHz RMD 357 / 50km\
                                         }, -- end of ["Radio"]
                                         ["unitId"] = 1,
                                         ["psi"] = -5.7072266540215,
-                                        ["y"] = -45001.70835642,
-                                        ["x"] = 243364.13600039,
+                                        ["y"] = 29319.794452202,
+                                        ["x"] = 204191.76296211,
                                         ["name"] = "Medevac",
                                         ["payload"] = 
                                         {
@@ -3922,8 +4010,8 @@ NDB 386 kHz RMD 357 / 50km\
                                         ["onboard_num"] = "010",
                                     }, -- end of [1]
                                 }, -- end of ["units"]
-                                ["y"] = -45001.70835642,
-                                ["x"] = 243364.13600039,
+                                ["y"] = 29319.794452202,
+                                ["x"] = 204191.76296211,
                                 ["name"] = "Medevac",
                                 ["communication"] = true,
                                 ["start_time"] = 0,
@@ -7070,177 +7158,7 @@ NDB 386 kHz RMD 357 / 50km\
                 [2] = 
                 {
                     ["name"] = "CJTF Blue",
-                    ["ship"] = 
-                    {
-                        ["group"] = 
-                        {
-                            [1] = 
-                            {
-                                ["visible"] = false,
-                                ["tasks"] = 
-                                {
-                                }, -- end of ["tasks"]
-                                ["uncontrollable"] = false,
-                                ["route"] = 
-                                {
-                                    ["points"] = 
-                                    {
-                                        [1] = 
-                                        {
-                                            ["alt"] = -0,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 0,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -45268.477358645,
-                                            ["x"] = 243678.23542049,
-                                            ["ETA_locked"] = true,
-                                            ["speed"] = 0,
-                                            ["action"] = "Turning Point",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [1]
-                                    }, -- end of ["points"]
-                                }, -- end of ["route"]
-                                ["groupId"] = 44,
-                                ["hidden"] = false,
-                                ["units"] = 
-                                {
-                                    [1] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["skill"] = "Average",
-                                        ["type"] = "speedboat",
-                                        ["unitId"] = 44,
-                                        ["y"] = -45268.477358645,
-                                        ["x"] = 243678.23542049,
-                                        ["name"] = "EasyMission9-Scenery-1",
-                                        ["heading"] = 1.4137166941154,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [1]
-                                    [2] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["skill"] = "Average",
-                                        ["type"] = "speedboat",
-                                        ["unitId"] = 45,
-                                        ["y"] = -45251.743143118,
-                                        ["x"] = 243677.56666431,
-                                        ["name"] = "EasyMission9-Scenery-2",
-                                        ["heading"] = 2.9146998508305,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [2]
-                                    [3] = 
-                                    {
-                                        ["modulation"] = 0,
-                                        ["skill"] = "Average",
-                                        ["type"] = "speedboat",
-                                        ["unitId"] = 46,
-                                        ["y"] = -45246.756124299,
-                                        ["x"] = 243728.21642402,
-                                        ["name"] = "EasyMission9-Scenery-3",
-                                        ["heading"] = 4.1887902047864,
-                                        ["frequency"] = 127500000,
-                                    }, -- end of [3]
-                                }, -- end of ["units"]
-                                ["y"] = -45268.477358645,
-                                ["x"] = 243678.23542049,
-                                ["name"] = "EasyMission9-Scenery",
-                                ["start_time"] = 0,
-                            }, -- end of [1]
-                        }, -- end of ["group"]
-                    }, -- end of ["ship"]
                     ["id"] = 80,
-                    ["vehicle"] = 
-                    {
-                        ["group"] = 
-                        {
-                            [1] = 
-                            {
-                                ["visible"] = false,
-                                ["tasks"] = 
-                                {
-                                }, -- end of ["tasks"]
-                                ["uncontrollable"] = false,
-                                ["task"] = "Ground Nothing",
-                                ["route"] = 
-                                {
-                                    ["spans"] = 
-                                    {
-                                    }, -- end of ["spans"]
-                                    ["points"] = 
-                                    {
-                                        [1] = 
-                                        {
-                                            ["alt"] = 112,
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 0,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["y"] = -45252.851368631,
-                                            ["x"] = 243671.69688567,
-                                            ["ETA_locked"] = true,
-                                            ["speed"] = 0,
-                                            ["action"] = "Off Road",
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["speed_locked"] = true,
-                                        }, -- end of [1]
-                                    }, -- end of ["points"]
-                                }, -- end of ["route"]
-                                ["groupId"] = 45,
-                                ["hidden"] = false,
-                                ["units"] = 
-                                {
-                                    [1] = 
-                                    {
-                                        ["skill"] = "Average",
-                                        ["coldAtStart"] = false,
-                                        ["type"] = "Soldier M4 GRG",
-                                        ["unitId"] = 48,
-                                        ["y"] = -45252.851368631,
-                                        ["x"] = 243671.69688567,
-                                        ["name"] = "EasyMission9-Patient-1",
-                                        ["heading"] = 0,
-                                        ["playerCanDrive"] = false,
-                                    }, -- end of [1]
-                                    [2] = 
-                                    {
-                                        ["skill"] = "Average",
-                                        ["coldAtStart"] = false,
-                                        ["type"] = "Soldier M4 GRG",
-                                        ["unitId"] = 47,
-                                        ["y"] = -45249.969980401,
-                                        ["x"] = 243669.70207843,
-                                        ["name"] = "EasyMission9-Patient",
-                                        ["heading"] = 0,
-                                        ["playerCanDrive"] = false,
-                                    }, -- end of [2]
-                                }, -- end of ["units"]
-                                ["y"] = -45252.851368631,
-                                ["x"] = 243671.69688567,
-                                ["name"] = "EasyMission9-Patient",
-                                ["start_time"] = 0,
-                            }, -- end of [1]
-                        }, -- end of ["group"]
-                    }, -- end of ["vehicle"]
                     ["static"] = 
                     {
                         ["group"] = 
@@ -7862,6 +7780,163 @@ NDB 386 kHz RMD 357 / 50km\
                             }, -- end of [15]
                         }, -- end of ["group"]
                     }, -- end of ["static"]
+                    ["vehicle"] = 
+                    {
+                        ["group"] = 
+                        {
+                            [1] = 
+                            {
+                                ["visible"] = false,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["uncontrollable"] = false,
+                                ["task"] = "Ground Nothing",
+                                ["route"] = 
+                                {
+                                    ["spans"] = 
+                                    {
+                                    }, -- end of ["spans"]
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 9,
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 0,
+                                            ["alt_type"] = "BARO",
+                                            ["formation_template"] = "",
+                                            ["y"] = 29184.604405603,
+                                            ["x"] = 203970.01676159,
+                                            ["ETA_locked"] = true,
+                                            ["speed"] = 0,
+                                            ["action"] = "Off Road",
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 44,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "Ural ATsP-6",
+                                        ["unitId"] = 44,
+                                        ["y"] = 29184.604405603,
+                                        ["x"] = 203970.01676159,
+                                        ["name"] = "MediumMission4-Scenery-1-1",
+                                        ["heading"] = 4.8694686130642,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [1]
+                                    [2] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "Ural ATsP-6",
+                                        ["unitId"] = 45,
+                                        ["y"] = 29194.848418102,
+                                        ["x"] = 203978.52726406,
+                                        ["name"] = "MediumMission4-Scenery-1-2",
+                                        ["heading"] = 4.8694686130642,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [2]
+                                }, -- end of ["units"]
+                                ["y"] = 29184.604405603,
+                                ["x"] = 203970.01676159,
+                                ["name"] = "MediumMission4-Scenery-1",
+                                ["start_time"] = 0,
+                            }, -- end of [1]
+                            [2] = 
+                            {
+                                ["visible"] = false,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["uncontrollable"] = false,
+                                ["task"] = "Ground Nothing",
+                                ["route"] = 
+                                {
+                                    ["spans"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            [1] = 
+                                            {
+                                                ["y"] = 29181.168707821,
+                                                ["x"] = 203982.94553143,
+                                            }, -- end of [1]
+                                            [2] = 
+                                            {
+                                                ["y"] = 29218.818322142,
+                                                ["x"] = 203999.27548463,
+                                            }, -- end of [2]
+                                        }, -- end of [1]
+                                    }, -- end of ["spans"]
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 9,
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 0,
+                                            ["alt_type"] = "BARO",
+                                            ["formation_template"] = "",
+                                            ["y"] = 29181.168707821,
+                                            ["x"] = 203982.94553143,
+                                            ["ETA_locked"] = true,
+                                            ["speed"] = 0,
+                                            ["action"] = "Off Road",
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 45,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["skill"] = "Average",
+                                        ["coldAtStart"] = false,
+                                        ["type"] = "Soldier M4 GRG",
+                                        ["unitId"] = 46,
+                                        ["y"] = 29181.168707821,
+                                        ["x"] = 203982.94553143,
+                                        ["name"] = "MediumMission4-Patient",
+                                        ["heading"] = 1.1615504315958,
+                                        ["playerCanDrive"] = false,
+                                    }, -- end of [1]
+                                }, -- end of ["units"]
+                                ["y"] = 29181.168707821,
+                                ["x"] = 203982.94553143,
+                                ["name"] = "MediumMission4-Patient",
+                                ["start_time"] = 0,
+                            }, -- end of [2]
+                        }, -- end of ["group"]
+                    }, -- end of ["vehicle"]
                 }, -- end of [2]
             }, -- end of ["country"]
         }, -- end of ["blue"]
@@ -8108,7 +8183,6 @@ NDB ...",
             }, -- end of ["rules"]
             ["comment"] = "Trigger 1669235811",
             ["eventlist"] = "",
-            ["predicate"] = "triggerOnce",
             ["actions"] = 
             {
                 [1] = 
@@ -8122,6 +8196,7 @@ NDB ...",
                     ["file"] = "ResKey_Action_16",
                 }, -- end of [2]
             }, -- end of ["actions"]
+            ["predicate"] = "triggerOnce",
         }, -- end of [1]
         [2] = 
         {
@@ -8129,7 +8204,6 @@ NDB ...",
             {
             }, -- end of ["rules"]
             ["eventlist"] = "",
-            ["predicate"] = "triggerOnce",
             ["actions"] = 
             {
                 [1] = 
@@ -8138,10 +8212,11 @@ NDB ...",
                     ["file"] = "ResKey_Action_12",
                 }, -- end of [1]
             }, -- end of ["actions"]
+            ["predicate"] = "triggerOnce",
             ["comment"] = "Trigger 1669235811",
         }, -- end of [2]
     }, -- end of ["trigrules"]
-    ["currentKey"] = 22810,
+    ["currentKey"] = 27572,
     ["failures"] = 
     {
         ["hydro"] = 
