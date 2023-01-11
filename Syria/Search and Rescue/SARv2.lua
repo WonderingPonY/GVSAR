@@ -486,11 +486,13 @@ function MEDEVACEVENTHANDLER:onEvent(Event)
           for mission, group in pairs(groupsOnMissions) do
             if group == unitGroup then
               for i, hospitalZone in pairs(hospitalsHeliPads) do
+                env.info("Scanning Hospital Zone")
                 result = ScanSquareZone(hospitalZone, group)
                 if result then
                   match = false
                   for i, foundgroup in pairs(result) do
                     if foundGroup == group then
+                      env.info("Someone has landed in hospital zone")
                       match = true
                     end
                   end
@@ -499,9 +501,11 @@ function MEDEVACEVENTHANDLER:onEvent(Event)
                     if patientGroup then
                       trigger.action.outText("You need to pickup your Patient(s) before you can drop them off!!", 15)
                     else
+                      env.info("Adding Dropoff Command")
+                      loadMenu = missionCommands.addSubMenuForGroup(unit:getGroup():getID(), "Patient Menu")
                       unitname = unit:getName()
                       commandparams = {unitname, mission}
-                      missionCommands.addCommandForGroup(unit:getGroup():getID(), "Unload Patient(s)", {[1] = "Patient Menu"}, unloadPatient, commandparams)
+                      missionCommands.addCommandForGroup(unit:getGroup():getID(), "Unload Patient(s)", loadMenu, unloadPatient, commandparams)
                       trigger.action.outText("Landed in Hospital Zone", 15)
                     end
                   end
