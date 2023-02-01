@@ -48720,7 +48720,7 @@ name=string.format("%s=%s;",key,value)
 end
 assetstring=assetstring..name
 end
-self:I(string.format("Loaded asset: %s",assetstring))
+-- self:I(string.format("Loaded asset: %s",assetstring))
 end
 warehouseassets=warehouseassets..assetstring.."\n"
 end

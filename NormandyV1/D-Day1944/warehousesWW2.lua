@@ -72,4 +72,4 @@ function saveMyHouse()
 end
 
 warehouseSaveTimer = TIMER:New(saveMyHouse)
-warehouseSaveTimer:Start(30,60)
+warehouseSaveTimer:Start(30,300)
