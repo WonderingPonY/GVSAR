@@ -77,20 +77,3 @@ warehouseCourseulles:SetMarker(false)
 ---------------------SPAWN ZONES-------------
 fordunitspawnzone = ZONE:FindByName("FordAFHarborZone")
 warehouseFordAF:SetSpawnZone(fordunitspawnzone)
-
-function saveMyHouse()
-    warehouseFordAF:Save("Q:\\MOOSE\\")
-    warehouseBrucheville:Save("Q:\\MOOSE\\")
-    warehouseLessay:Save("Q:\\MOOSE\\")
-    warehouseCarpiquet:Save("Q:\\MOOSE\\")
-    warehouseLeMeleSur:Save("Q:\\MOOSE\\")
-    warehouseEvreux:Save("Q:\\MOOSE\\")
-    warehouseMaupertus:Save("Q:\\MOOSE\\")
-    warehouseBezenville:Save("Q:\\MOOSE\\")
-    warehouseLongues:Save("Q:\\MOOSE\\")
-    warehouseSainteLaurent:Save("Q:\\MOOSE\\")
-    warehouseCourseulles:Save("Q:\\MOOSE\\")
-end
-
-warehouseSaveTimer = TIMER:New(saveMyHouse)
-warehouseSaveTimer:Start(30,300)

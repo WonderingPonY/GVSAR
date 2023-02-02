@@ -21,12 +21,9 @@ function table.removekey(table, key)
    return element
 end
 
-TimerLoopTime = 60 -- 1 minute timer
+-- {"XV66","XV65"} 
 
-function ZONESCANNER(timeloop, time) -- Funtion to search for contested Zones in a timeloop
-  env.info("-------------------RUNNING ZONE SCANNER") -- Tells if the function is running in the DCS log
-
-    MapZones = { -- This is the list of all the Zones at the airfields
+MapZones = {
     "WA70",
     "WA60",
     "WA50",
@@ -466,29 +463,44 @@ function ZONESCANNER(timeloop, time) -- Funtion to search for contested Zones in
     "CP46",
     "CP56"
   }
+-- FindZones = ZONE.FindByName(MapZones)
+DetectionSetZones = SET_ZONE:New():FilterPrefixes(MapZones):FilterOnce()
 
-  for i, mpz in pairs(MapZones) do
-    RedAirbaseContested = ScanZone(Object.Category.UNIT, coalition.side.BLUE, mpz) -- Scans the Zones for BLUE ground Units
-    BlueAirbaseContested = ScanZone(Object.Category.UNIT, coalition.side.RED, mpz) -- Scans the Zones for RED ground units
-    env.info(mpz)
-    zn = trigger.misc.getZone(mpz) -- Gets the Airbase name
-    env.info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    zid = (zn.getID(zn) + 1000) -- Gets the listed airbase ID
-    if RedAirbaseContested and BlueAirbaseContested ~= nil then -- RED and BLUE forces are seen in the Zone
-      env.info("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
-      trigger.action.setMarkupColor(zid , {192,192,0,1} ) -- Changes the colour of the marker
-      trigger.action.outText(mpz.."is being contested", 15) -- Tells the players if the Zone is contested
-    end
-    if BlueAirbaseContested and RedAirbaseContested ~= nil then
-      trigger.action.setMarkupColor(zid , {192,192,0,1} )
-      trigger.action.outText(mpz.."is being contested", 15)
-    end
-    if BlueAirbaseContested == nil and RedAirbaseContested == nil then
-      trigger.action.setMarkupColor(zid , {192,192,192,1} )
-      trigger.action.outText(mpz.."is being contested", 15)
-    end
-  end
-  return time + TimerLoopTime -- Returns to the start of the loop
-end
+DetectionZones = DETECTION_ZONES:New( DetectionSetZones, coalition.side.BLUE )
 
-timer.scheduleFunction(ZONESCANNER, 53, timer.getTime() + TimerLoopTime) -- Schedule timer for the Contested Function
+DetectionZones:Start(5)
+
+
+
+-- TimerLoopTime = 60 -- 1 minute timer
+
+-- function ZONESCANNER(timeloop, time) -- Funtion to search for contested Zones in a timeloop
+--   env.info("-------------------RUNNING ZONE SCANNER") -- Tells if the function is running in the DCS log
+
+--     
+
+--   for i, mpz in pairs(MapZones) do
+--     RedAirbaseContested = ScanZone(Object.Category.UNIT, coalition.side.BLUE, mpz) -- Scans the Zones for BLUE ground Units
+--     BlueAirbaseContested = ScanZone(Object.Category.UNIT, coalition.side.RED, mpz) -- Scans the Zones for RED ground units
+--     env.info(mpz)
+--     zn = trigger.misc.getZone(mpz) -- Gets the Airbase name
+--     env.info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+--     zid = (zn.getID(zn) + 1000) -- Gets the listed airbase ID
+--     if RedAirbaseContested and BlueAirbaseContested ~= nil then -- RED and BLUE forces are seen in the Zone
+--       env.info("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+--       trigger.action.setMarkupColor(zid , {192,192,0,1} ) -- Changes the colour of the marker
+--       trigger.action.outText(mpz.."is being contested", 15) -- Tells the players if the Zone is contested
+--     end
+--     if BlueAirbaseContested and RedAirbaseContested ~= nil then
+--       trigger.action.setMarkupColor(zid , {192,192,0,1} )
+--       trigger.action.outText(mpz.."is being contested", 15)
+--     end
+--     if BlueAirbaseContested == nil and RedAirbaseContested == nil then
+--       trigger.action.setMarkupColor(zid , {192,192,192,1} )
+--       trigger.action.outText(mpz.."is being contested", 15)
+--     end
+--   end
+--   return time + TimerLoopTime -- Returns to the start of the loop
+-- end
+
+-- timer.scheduleFunction(ZONESCANNER, 53, timer.getTime() + TimerLoopTime) -- Schedule timer for the Contested Function

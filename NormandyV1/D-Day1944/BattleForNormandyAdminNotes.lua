@@ -133,7 +133,7 @@ warehouseCherbourg.GetNumberOfAssets(WAREHOUSE.Descriptor.GROUPNAME, "Sherman3")
 
 --This will load a file outside of the ME Triggers
 dofile([[C:\\Users\\grace\\Saved Games\\DCS.openbeta\\Missions\\saveMeNormandy.lua]])
-
+dofile([[C:\\Users\\grace\\Saved Games\\DCS.openbeta\\Missions\\GVSAR\\NormandyV1\\D-Day1944\\saveMeNormandy.lua]])
 
 --Couple issues noticed
 ---Sometimes arecraft that transfer troops do no despawn-or return to base

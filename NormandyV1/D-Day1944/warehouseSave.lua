@@ -1,0 +1,16 @@
+function saveMyHouse()
+    warehouseFordAF:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseBrucheville:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseLessay:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseCarpiquet:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseLeMeleSur:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseEvreux:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseMaupertus:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseBezenville:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseLongues:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseSainteLaurent:SaveOnMissionEnd("Q:\\MOOSE\\")
+    warehouseCourseulles:SaveOnMissionEnd("Q:\\MOOSE\\")
+end
+
+warehouseSaveTimer = TIMER:New(saveMyHouse)
+warehouseSaveTimer:Start(30,300)
