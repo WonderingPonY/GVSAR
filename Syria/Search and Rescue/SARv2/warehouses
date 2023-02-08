@@ -531,7 +531,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 333,
+                            [4] = 334,
                             [5] = "Tankers",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -622,7 +622,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 331,
+                            [4] = 332,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -1111,7 +1111,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 334,
+                            [4] = 335,
                             [5] = "Aux",
                             [6] = "Datalink",
                             [7] = "Link16",
@@ -1362,6 +1362,8 @@ warehouses =
                             [9] = "NonArmoredUnits",
                             [10] = "Air",
                             [11] = "Planes",
+                            [12] = "Air",
+                            [13] = "Planes",
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 100,
                     }, -- end of ["KC135MPRS"]
@@ -1372,7 +1374,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 332,
+                            [4] = 333,
                             [5] = "Tankers",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -1464,7 +1466,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 2,
-                            [4] = 329,
+                            [4] = 330,
                             [5] = "Strategic bombers",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -1800,7 +1802,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 328,
+                            [4] = 329,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -2787,7 +2789,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 330,
+                            [4] = 331,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -2826,7 +2828,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 335,
+                            [4] = 336,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -10418,6 +10420,61 @@ warehouses =
                     }, -- end of ["wsType"]
                     ["initialAmount"] = 100,
                 }, -- end of [672]
+                [673] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 10,
+                        [4] = 255,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [673]
+                [674] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 10,
+                        [4] = 406,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [674]
+                [675] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 319,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [675]
+                [676] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 347,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [676]
+                [677] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 398,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [677]
             }, -- end of ["weapons"]
             ["OperatingLevel_Fuel"] = 10,
             ["unlimitedAircrafts"] = false,
@@ -10558,7 +10615,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -10748,7 +10805,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -10900,7 +10957,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -10938,7 +10995,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -11888,7 +11945,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -11964,7 +12021,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12002,7 +12059,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12040,7 +12097,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12078,7 +12135,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12116,7 +12173,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12154,7 +12211,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12192,7 +12249,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12230,7 +12287,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -12458,7 +12515,7 @@ warehouses =
             ["suppliers"] = 
             {
             }, -- end of ["suppliers"]
-            ["coalition"] = "NEUTRAL",
+            ["coalition"] = "BLUE",
             ["jet_fuel"] = 
             {
                 ["InitFuel"] = 100,
@@ -13082,7 +13139,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 333,
+                            [4] = 334,
                             [5] = "Tankers",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -13173,7 +13230,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 331,
+                            [4] = 332,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -13662,7 +13719,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 334,
+                            [4] = 335,
                             [5] = "Aux",
                             [6] = "Datalink",
                             [7] = "Link16",
@@ -13913,6 +13970,8 @@ warehouses =
                             [9] = "NonArmoredUnits",
                             [10] = "Air",
                             [11] = "Planes",
+                            [12] = "Air",
+                            [13] = "Planes",
                         }, -- end of ["wsType"]
                         ["initialAmount"] = 0,
                     }, -- end of ["KC135MPRS"]
@@ -13923,7 +13982,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 332,
+                            [4] = 333,
                             [5] = "Tankers",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -14015,7 +14074,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 2,
-                            [4] = 329,
+                            [4] = 330,
                             [5] = "Strategic bombers",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -14351,7 +14410,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 328,
+                            [4] = 329,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "All",
@@ -15338,7 +15397,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 330,
+                            [4] = 331,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -15377,7 +15436,7 @@ warehouses =
                             [1] = 1,
                             [2] = 1,
                             [3] = 5,
-                            [4] = 335,
+                            [4] = 336,
                             [5] = "Transports",
                             [6] = "Refuelable",
                             [7] = "Datalink",
@@ -22969,6 +23028,61 @@ warehouses =
                     }, -- end of ["wsType"]
                     ["initialAmount"] = 100,
                 }, -- end of [672]
+                [673] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 10,
+                        [4] = 255,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [673]
+                [674] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 10,
+                        [4] = 406,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [674]
+                [675] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 319,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [675]
+                [676] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 347,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [676]
+                [677] = 
+                {
+                    ["wsType"] = 
+                    {
+                        [1] = 4,
+                        [2] = 8,
+                        [3] = 11,
+                        [4] = 398,
+                    }, -- end of ["wsType"]
+                    ["initialAmount"] = 100,
+                }, -- end of [677]
             }, -- end of ["weapons"]
             ["OperatingLevel_Fuel"] = 0,
             ["unlimitedAircrafts"] = false,

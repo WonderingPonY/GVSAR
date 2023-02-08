@@ -25,7 +25,6 @@ options =
     ["difficulty"] = 
     {
         ["fuel"] = false,
-        ["easyRadar"] = false,
         ["miniHUD"] = false,
         ["optionsView"] = "optview_all",
         ["setGlobal"] = true,
@@ -40,23 +39,23 @@ options =
         ["birds"] = 0,
         ["permitCrash"] = true,
         ["immortal"] = false,
-        ["easyCommunication"] = true,
+        ["cockpitStatusBarAllowed"] = false,
         ["wakeTurbulence"] = false,
         ["easyFlight"] = false,
         ["hideStick"] = false,
         ["radio"] = false,
         ["geffect"] = "realistic",
-        ["unrestrictedSATNAV"] = false,
-        ["cockpitStatusBarAllowed"] = false,
+        ["easyCommunication"] = true,
         ["reports"] = true,
-        ["tips"] = true,
-        ["autoTrimmer"] = false,
         ["heading_units"] = 1,
+        ["units"] = "imperial",
         ["externalViews"] = true,
+        ["autoTrimmer"] = false,
         ["controlsIndicator"] = true,
         ["RBDAI"] = true,
-        ["units"] = "imperial",
+        ["tips"] = true,
         ["userMarks"] = true,
+        ["unrestrictedSATNAV"] = false,
         ["labels"] = 1,
     }, -- end of ["difficulty"]
     ["VR"] = 
@@ -92,7 +91,7 @@ options =
         ["anisotropy"] = 3,
         ["water"] = 1,
         ["scaleGui"] = 1,
-        ["outputGamma"] = 2.2,
+        ["outputGamma"] = 2.8,
         ["aspect"] = 1.7777777777778,
         ["lights"] = 2,
         ["shadows"] = 3,
@@ -264,46 +263,18 @@ options =
             ["autoRudder"] = false,
             ["thtldetent"] = 0,
         }, -- end of ["MosquitoFBMkVI"]
-        ["CaptoGlove"] = 
+        ["A-10C"] = 
         {
-            ["shoulderJointZ_Right"] = 23,
-            ["armBending"] = 60,
-            ["shoulderJointX_Right"] = -15,
-            ["mouseClickSrc"] = 0,
-            ["shoulderJointZ_Left"] = 23,
-            ["shoulderJointX_Left"] = -15,
-            ["set_debug"] = false,
-            ["pitchOffsetGlove_Left"] = 0,
-            ["yawOffsetGlove_Left"] = 0,
-            ["yawOffsetShoulder_Right"] = 0,
-            ["useBending"] = false,
-            ["shoulderLength_Right"] = 40,
-            ["pitchOffsetGlove_Right"] = 0,
-            ["shoulderJointY_Left"] = -23,
-            ["forearmLength_Left"] = 30,
-            ["shoulderLength_Left"] = 40,
-            ["set_attach"] = false,
-            ["pitchOffsetShoulder_Right"] = 0,
-            ["forearmLength_Right"] = 30,
-            ["pitchOffsetShoulder_Left"] = 0,
-            ["set_symmetrically"] = false,
-            ["yawOffsetShoulder_Left"] = 0,
-            ["enable"] = false,
-            ["shoulderJointY_Right"] = -23,
-            ["yawOffsetGlove_Right"] = 0,
-        }, -- end of ["CaptoGlove"]
-        ["FC3"] = 
+            ["CPLocalList"] = "default",
+        }, -- end of ["A-10C"]
+        ["Ka-50"] = 
         {
-            ["CPLocalList_Su-25"] = "default",
-            ["CPLocalList_Su-27"] = "default",
-            ["CPLocalList_A-10A"] = "default",
-            ["CPLocalList_Su-33"] = "default",
-            ["CPLocalList_MiG-29S"] = "default",
-            ["CPLocalList_MiG-29A"] = "default",
-            ["CPLocalList_J-11A"] = "default",
-            ["CPLocalList_MiG-29G"] = "default",
-            ["CPLocalList_F-15C"] = "default",
-        }, -- end of ["FC3"]
+            ["Ka50TrimmingMethod"] = 0,
+            ["Ka50RudderTrimmer"] = false,
+            ["hmdEye"] = 1,
+            ["CPLocalList"] = "english",
+            ["helmetCircleDisplacement"] = 11,
+        }, -- end of ["Ka-50"]
         ["P-51D"] = 
         {
             ["assistance"] = 100,
@@ -372,21 +343,42 @@ options =
             ["USE_REAL_TDC"] = false,
             ["MPCD_EXPORT"] = false,
         }, -- end of ["AV8BNA"]
-        ["LeapMotion"] = 
+        ["Mi-24P"] = 
         {
-            ["handUseThrottle"] = false,
-            ["handsHorizontalShift"] = 0,
-            ["enable"] = false,
-            ["set_debug"] = false,
-            ["mouseClickSrc"] = 0,
-            ["handUseStick"] = false,
-        }, -- end of ["LeapMotion"]
+            ["Mi24StickTrimMethod"] = 0,
+            ["Mi24CockpitShake"] = 50,
+            ["Mi24PedalsTrimButton"] = 1,
+            ["weapTooltipsMi24"] = true,
+            ["CPLocalList"] = "default",
+            ["Mi24AIColorScheme"] = 0,
+            ["Mi24PedalsMicroswitchLogic"] = 1,
+            ["Aiming_mark"] = false,
+            ["Mi24AIVoiceLanguage"] = 0,
+            ["collectiveDisengage"] = 1,
+            ["collectiveBrake"] = 0,
+            ["Mi24PedalsTrimMode"] = 0,
+            ["controlHelperMi24"] = false,
+            ["Mi24AutoHandover"] = true,
+            ["Mi24PedalsInputSensitivity"] = 24,
+        }, -- end of ["Mi-24P"]
         ["FW-190D9"] = 
         {
             ["assistance"] = 100,
             ["CPLocalList"] = "default",
             ["autoRudder"] = false,
         }, -- end of ["FW-190D9"]
+        ["FC3"] = 
+        {
+            ["CPLocalList_Su-25"] = "default",
+            ["CPLocalList_Su-27"] = "default",
+            ["CPLocalList_A-10A"] = "default",
+            ["CPLocalList_Su-33"] = "default",
+            ["CPLocalList_MiG-29S"] = "default",
+            ["CPLocalList_MiG-29A"] = "default",
+            ["CPLocalList_J-11A"] = "default",
+            ["CPLocalList_MiG-29G"] = "default",
+            ["CPLocalList_F-15C"] = "default",
+        }, -- end of ["FC3"]
         ["M-2000C"] = 
         {
             ["FUEL_DETOT_AUTO"] = false,
@@ -412,10 +404,34 @@ options =
             ["RADAR_MAPOBJECTS"] = true,
             ["PCN_DIGIT_MSG"] = true,
         }, -- end of ["M-2000C"]
-        ["A-10C"] = 
+        ["CaptoGlove"] = 
         {
-            ["CPLocalList"] = "default",
-        }, -- end of ["A-10C"]
+            ["shoulderJointZ_Right"] = 23,
+            ["armBending"] = 60,
+            ["shoulderJointX_Right"] = -15,
+            ["mouseClickSrc"] = 0,
+            ["shoulderJointZ_Left"] = 23,
+            ["shoulderJointX_Left"] = -15,
+            ["set_debug"] = false,
+            ["pitchOffsetGlove_Left"] = 0,
+            ["yawOffsetGlove_Left"] = 0,
+            ["yawOffsetShoulder_Right"] = 0,
+            ["useBending"] = false,
+            ["shoulderLength_Right"] = 40,
+            ["pitchOffsetGlove_Right"] = 0,
+            ["shoulderJointY_Left"] = -23,
+            ["forearmLength_Left"] = 30,
+            ["shoulderLength_Left"] = 40,
+            ["set_attach"] = false,
+            ["pitchOffsetShoulder_Right"] = 0,
+            ["forearmLength_Right"] = 30,
+            ["pitchOffsetShoulder_Left"] = 0,
+            ["set_symmetrically"] = false,
+            ["yawOffsetShoulder_Left"] = 0,
+            ["enable"] = false,
+            ["shoulderJointY_Right"] = -23,
+            ["yawOffsetGlove_Right"] = 0,
+        }, -- end of ["CaptoGlove"]
         ["F-16C"] = 
         {
             ["abDetent"] = 0,
@@ -425,24 +441,36 @@ options =
             ["canopyTint"] = 1,
             ["mfdReflections"] = 0,
         }, -- end of ["F-16C"]
-        ["Mi-24P"] = 
+        ["MiG-19P"] = 
         {
-            ["Mi24StickTrimMethod"] = 0,
-            ["Mi24CockpitShake"] = 50,
-            ["Mi24PedalsTrimButton"] = 1,
-            ["weapTooltipsMi24"] = true,
+            ["GYROERR_Disable"] = false,
+            ["ARK5_Frequency"] = false,
+            ["CPT_Camera_OFF"] = false,
+            ["CPLocalList"] = "english",
+            ["ACHS1_System_Time"] = false,
+            ["RP5_Ground_Return"] = 0,
+        }, -- end of ["MiG-19P"]
+        ["TF-51D"] = 
+        {
+            ["assistance"] = 100,
             ["CPLocalList"] = "default",
-            ["Mi24AIColorScheme"] = 0,
-            ["Mi24PedalsMicroswitchLogic"] = 1,
-            ["Aiming_mark"] = false,
-            ["Mi24AIVoiceLanguage"] = 0,
-            ["collectiveDisengage"] = 1,
-            ["collectiveBrake"] = 0,
-            ["Mi24PedalsTrimMode"] = 0,
-            ["controlHelperMi24"] = false,
-            ["Mi24AutoHandover"] = true,
-            ["Mi24PedalsInputSensitivity"] = 24,
-        }, -- end of ["Mi-24P"]
+            ["autoRudder"] = false,
+        }, -- end of ["TF-51D"]
+        ["LeapMotion"] = 
+        {
+            ["handUseThrottle"] = false,
+            ["handsHorizontalShift"] = 0,
+            ["enable"] = false,
+            ["set_debug"] = false,
+            ["mouseClickSrc"] = 0,
+            ["handUseStick"] = false,
+        }, -- end of ["LeapMotion"]
+        ["A-4E-C"] = 
+        {
+            ["cssActivate"] = 15,
+            ["trimSpeed"] = 0,
+            ["cockpitShake"] = 100,
+        }, -- end of ["A-4E-C"]
         ["NS430"] = 
         {
             ["bf109k4_enabled"] = true,
@@ -488,26 +516,6 @@ options =
             ["miraj_enabled"] = true,
             ["sa342_enabled"] = true,
         }, -- end of ["NS430"]
-        ["TF-51D"] = 
-        {
-            ["assistance"] = 100,
-            ["CPLocalList"] = "default",
-            ["autoRudder"] = false,
-        }, -- end of ["TF-51D"]
-        ["A-4E-C"] = 
-        {
-            ["cssActivate"] = 15,
-            ["trimSpeed"] = 0,
-            ["cockpitShake"] = 100,
-        }, -- end of ["A-4E-C"]
-        ["Ka-50"] = 
-        {
-            ["Ka50TrimmingMethod"] = 0,
-            ["Ka50RudderTrimmer"] = false,
-            ["hmdEye"] = 1,
-            ["CPLocalList"] = "english",
-            ["helmetCircleDisplacement"] = 11,
-        }, -- end of ["Ka-50"]
         ["CA"] = 
         {
             ["kompass_options"] = 1,
@@ -523,8 +531,9 @@ options =
         {
             ["Ka50TrimmingMethod"] = 1,
             ["Ka50RudderTrimmer"] = false,
-            ["CPLocalList"] = "english",
+            ["hmdEye"] = 1,
             ["Ka50PedalsYawReqReset"] = true,
+            ["CPLocalList"] = "english",
             ["helmetCircleDisplacement"] = 11,
         }, -- end of ["Ka-50_3"]
         ["UH-60L"] = 
