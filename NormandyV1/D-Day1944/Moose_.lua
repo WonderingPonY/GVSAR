@@ -4826,7 +4826,8 @@ for _,_group in pairs(List)do
 local group=_group
 if group and group:IsAlive()then
 local name=group:GetName()
-local templateunder = string.gsub(name,"_(.+)$","")
+local templatecargo = string.gsub(name,"#CARGO","")
+local templateunder = string.gsub(templatecargo,"_(.+)$","")
 local template = string.gsub(templateunder,"-(.+)$","")
 if string.find(template,"#")then
 template=string.gsub(name,"#(%d+)$","")

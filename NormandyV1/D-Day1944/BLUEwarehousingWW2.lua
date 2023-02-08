@@ -11,6 +11,7 @@
 
 -- Groups for the warehouses  ----------BLUE----------
 --US
+EngineersUS = GROUP:FindByName("US Engineers")
 InfantryUS = GROUP:FindByName("US Infantry")
 HalfTrackUS = GROUP:FindByName("US APCM2A1")
 ShermanUS = GROUP:FindByName("US Sherman")
@@ -32,6 +33,7 @@ C47US = GROUP:FindByName("US C47")
 P47D40US = GROUP:FindByName("US P47D40")
 P51D30US = GROUP:FindByName("US P51D30")
 --UK
+EngineersUK = GROUP:FindByName("UK Engineers")
 InfantryUK = GROUP:FindByName("UK Infantry")
 MosquitoUK = GROUP:FindByName("UK Mosquito")
 SpitfireUK = GROUP:FindByName("UK Spitfire")
@@ -64,6 +66,7 @@ function addAssets()
         ----------- BLUE WAREHOUSE INVENTORY ---------------------------
         --***********FORD AF*********--
         --US
+        warehouseFordAF:AddAsset(EngineersUS, 100,nil,nil,nil,1000,AI.Skill.AVERAGE)
         warehouseFordAF:AddAsset(InfantryUS, 100,nil,nil,nil,1000,AI.Skill.AVERAGE)
         warehouseFordAF:AddAsset(HalfTrackUS, 100,nil,nil,nil,1000)
         warehouseFordAF:AddAsset(ShermanUS, 100,nil,nil,nil,1000)
@@ -88,6 +91,7 @@ function addAssets()
         warehouseFordAF:AddAsset(MosquitoUK, 100)
         warehouseFordAF:AddAsset(SpitfireUK, 100)
         warehouseFordAF:AddAsset(C47UK, 100, WAREHOUSE.Attribute.AIR_TRANSPORTPLANE)
+        warehouseFordAF:AddAsset(EngineersUK, 100)
         warehouseFordAF:AddAsset(InfantryUK, 100)
         warehouseFordAF:AddAsset(DaimlerUK, 100)
         warehouseFordAF:AddAsset(WillyJeepUK, 100)
@@ -111,6 +115,7 @@ function addAssets()
         warehouseLongues:AddAsset(MosquitoUK, 100)
         warehouseLongues:AddAsset(SpitfireUK, 100)
         warehouseLongues:AddAsset(C47UK, 100, WAREHOUSE.Attribute.AIR_TRANSPORTPLANE)
+        warehouseLongues:AddAsset(EngineersUK, 100)
         warehouseLongues:AddAsset(InfantryUK, 100)
         warehouseLongues:AddAsset(DaimlerUK, 100)
         warehouseLongues:AddAsset(WillyJeepUK, 100)
