@@ -111,7 +111,7 @@ end
 
 function mediumZonePicker(groupName)
   env.info(groupName.." has asked for a MEDIUM mission")
-  mzn = {  "MediumMission5"} --"MediumMission1","MediumMission2","MediumMission3","MediumMission4",
+  mzn = { "MediumMission4"} --"MediumMission1","MediumMission2","MediumMission3","MediumMission5",
   max = (#mzn)
   picked = math.random(1, max)
   count = 0

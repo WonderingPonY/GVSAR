@@ -21,7 +21,7 @@
 _____':::::_____________________________________\__\_________________________
 ___________________________GRACEY'S VILLAGE__________________________________
 _________________________ALWAYS BE A UNICORN_________________________________
-________________________DISCORD.GG/graceysvillage________________________________
+______________________DISCORD.GG/graceysvillage______________________________
 --]]
 
 --THIS IS FOR DUMPING THE INFORMATION SO WE CAN USE THE INFORMATION LATER
@@ -68,7 +68,7 @@ hospitalsHeliPads = {"Adana Main", "Adana Clinic", "Adana Shakirpasa Airport Nor
 --Menu Functions
 function version(groupName)
   group = Group.getByName(groupName)
-  trigger.action.outTextForGroup(group:getID(),"Search & Rescue Version 2.0", 15)
+  trigger.action.outTextForGroup(group:getID(),"Search & Rescue Version 2.0.1", 15)
 end
 
 function toDo(groupName)
@@ -90,7 +90,7 @@ end
 --Mission Functions
 function easyZonePicker(groupName)
   env.info(groupName.." has asked for a EASY mission")
-  ezn = { "EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7","EasyMission8","EasyMission9","EasyMission10"} --
+  ezn = { "EasyMission1","EasyMission2","EasyMission3","EasyMission4","EasyMission5","EasyMission6","EasyMission7","EasyMission8","EasyMission9"} --"EasyMission10"
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
@@ -111,7 +111,7 @@ end
 
 function mediumZonePicker(groupName)
   env.info(groupName.." has asked for a MEDIUM mission")
-  mzn = {  "MediumMission5"} --"MediumMission1","MediumMission2","MediumMission3","MediumMission4",
+  mzn = { "MediumMission4"} --"MediumMission1","MediumMission2","MediumMission3","MediumMission5",
   max = (#mzn)
   picked = math.random(1, max)
   count = 0
@@ -408,6 +408,7 @@ function cancelMission(params)
     env.info("Deactivated Group2 Scenery")
   end
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
+  groupsOnMissions[mission] = nil
   groupsOnEasyMissions[mission] = nil
   groupsOnMediumMissions[mission] = nil
   missionCommands.addCommandForGroup(group:getID(), "Rescue Easy", rescueMenu, easyZonePicker, group:getName())
@@ -549,13 +550,13 @@ function PLAYERLEAVES:onEvent(Event)
              params = {group, mission}
              env.info("PLAYER LEFT CANCELLING MISSION "..mission)
              cancelMission(params)
-             missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue Easy"})
-             missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue Medium"})
-             missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "What to do"})
-             missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Sar Version"})
-             missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Missions"})
            end
          end
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "What to do"})
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Sar Version"})
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Missions"})
        end
      end
    end

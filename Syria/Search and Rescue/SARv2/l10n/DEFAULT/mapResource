@@ -1,7 +1,6 @@
 mapResource = 
 {
-    ["ResKey_Action_14"] = "mission_groupdata.lua",
-    ["ResKey_Action_12"] = "SARv2.lua",
-    ["ResKey_Action_17"] = "Moose 2.7.6.lua",
+    ["ResKey_Action_19"] = "mission_groupdata.lua",
+    ["ResKey_Action_20"] = "SARv2.lua",
     ["ResKey_Action_16"] = "SARv2 Zone Scanner.lua",
 } -- end of mapResource
