@@ -594,7 +594,7 @@ options =
         ["switches"] = 100,
         ["play_audio_while_minimized"] = true,
         ["headphones"] = 60,
-        ["music"] = 30,
+        ["music"] = 0,
         ["voice_chat_input"] = "",
         ["gui"] = 60,
     }, -- end of ["sound"]

@@ -111,7 +111,7 @@ end
 
 function mediumZonePicker(groupName)
   env.info(groupName.." has asked for a MEDIUM mission")
-  mzn = { "MediumMission4"} --"MediumMission1","MediumMission2","MediumMission3","MediumMission5",
+  mzn = { "MediumMission5" } --"MediumMission1","MediumMission2","MediumMission3", "MediumMission4",
   max = (#mzn)
   picked = math.random(1, max)
   count = 0
@@ -298,8 +298,8 @@ function mediumMissions(zonename,groupName)
     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
     trigger.action.markToGroup((groupId*51515151),"Medium Mission 3",zone["point"],groupId,true)
   elseif (zonename == "MediumMission4") then
-    coalition.addGroup(80,3,MediumMission4Scenery) -- adds the scenery for the mission
-    coalition.addGroup(80,3,MediumMission4)
+    coalition.addGroup(80,2,MediumMission4Scenery) -- adds the scenery for the mission(first number is coalition ID, Second is the group class, IE ship = 3)
+    coalition.addGroup(80,2,MediumMission4)
     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
     trigger.action.outText("Medium Mission #4 Spawned!",15)
     missioninfo = "An urgent patient transfer is needed from Karsi to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
@@ -308,8 +308,8 @@ function mediumMissions(zonename,groupName)
     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
     trigger.action.markToGroup((groupId*51515151),"Medium Mission 4",zone["point"],groupId,true)
   elseif (zonename == "MediumMission5") then
-    coalition.addGroup(80,3,MediumMission5Scenery) -- adds the scenery for the mission
-    coalition.addGroup(80,3,MediumMission5)
+    coalition.addGroup(80,2,MediumMission5Scenery) -- adds the scenery for the mission
+    coalition.addGroup(80,2,MediumMission5)
     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
     trigger.action.outText("Medium Mission #5 Spawned!",15)
     missioninfo = "A diver has suffered a heart attack and needs transport to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
@@ -317,6 +317,16 @@ function mediumMissions(zonename,groupName)
     params = {groupId,missioninfo}
     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
     trigger.action.markToGroup((groupId*51515151),"Medium Mission 5",zone["point"],groupId,true)
+  elseif (zonename == "MediumMission6") then
+    coalition.addGroup(80,2,MediumMission6Scenery) -- adds the scenery for the mission
+    coalition.addGroup(80,2,MediumMission6)
+    -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+    trigger.action.outText("Medium Mission #6 Spawned!",15)
+    missioninfo = "A man has been bitten by a venomous snake and needs transport to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
+    groupId = group:getID()
+    params = {groupId,missioninfo}
+    missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+    trigger.action.markToGroup((groupId*51515151),"Medium Mission 6",zone["point"],groupId,true)
   end
 end
 
