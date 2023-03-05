@@ -298,7 +298,7 @@ function mediumMissions(zonename,groupName)
     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
     trigger.action.markToGroup((groupId*51515151),"Medium Mission 3",zone["point"],groupId,true)
   elseif (zonename == "MediumMission4") then
-    coalition.addGroup(80,3,MediumMission4Scenery) -- adds the scenery for the mission
+    coalition.addGroup(80,3,MediumMission4Scenery) -- adds the scenery for the mission(first number is coalition ID, Second is the group class, IE ship = 3)
     coalition.addGroup(80,3,MediumMission4)
     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
     trigger.action.outText("Medium Mission #4 Spawned!",15)
