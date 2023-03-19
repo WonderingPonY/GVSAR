@@ -56,6 +56,9 @@
 ----Killing allied players = -5 points
 ----If player ejects or disconnects(check is timeout?) with GOOD WORKING aircraft, they lose 69% of points
 
+--//WEAPONS
+---Show make sure that the aircraft you can fly do not have anything that has long range like Aim54, Aim120, SLAMER, etc
+
 --//PLAYER HELPERS
 --\\HOW TO
 
