@@ -43,11 +43,11 @@
 -------Potentials
 --A cost system
 ---The cost system will mean that, all resources such as Units, Aircraft, Ammunition(within the confines of DCS) has a value.
----The values should be near accurate to 1944 dollar value. 
+---The values should be near accurate to 1944 dollar value or at least a best guess to the value of the object based on known costs of the time. 
 ----This may require several other people to help with. Maybe we can ask about this when the mission gains some traction.
 --Selecting the side you would be on
 ---This would require SpecialK to add some functionality to the bot. As we would be(hopefully) using his bot for the slot blocking.
-----If we cannot us his bot, Stevie~B would have to be updated to handle the side registration. 
+----If we cannot use his bot, Stevie~B would have to be updated to handle the side registration. 
 ---When selecting a side, firstly you would select Allies or Axis
 ----Axis would only have one country at the time
 ----Allies side will consist of the Canadians, British, and Americans
@@ -134,6 +134,7 @@ warehouseCherbourg.GetNumberOfAssets(WAREHOUSE.Descriptor.GROUPNAME, "Sherman3")
 --This will load a file outside of the ME Triggers
 dofile([[C:\\Users\\grace\\Saved Games\\DCS.openbeta\\Missions\\saveMeNormandy.lua]])
 dofile([[C:\\Users\\grace\\Saved Games\\DCS.openbeta\\Missions\\GVSAR\\NormandyV1\\D-Day1944\\saveMeNormandy.lua]])
+dofile([[C:\\Users\\grace\\Saved Games\\DCS.openbeta\\Missions\\GVSAR\\NormandyV1\\D-Day1944\\mist.lua]])
 
 --Couple issues noticed
 ---Sometimes arecraft that transfer troops do no despawn-or return to base
