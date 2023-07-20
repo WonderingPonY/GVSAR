@@ -68,7 +68,7 @@ hospitalsHeliPads = {"Adana Main", "Adana Clinic", "Adana Shakirpasa Airport Nor
 --Menu Functions
 function version(groupName)
   group = Group.getByName(groupName)
-  trigger.action.outTextForGroup(group:getID(),"Search & Rescue Version 2.0.1", 15)
+  trigger.action.outTextForGroup(group:getID(),"Search & Rescue Version 2.0.2", 15)
 end
 
 function toDo(groupName)
@@ -111,7 +111,7 @@ end
 
 function mediumZonePicker(groupName)
   env.info(groupName.." has asked for a MEDIUM mission")
-  mzn = { "MediumMission1","MediumMission2","MediumMission3", "MediumMission4","MediumMission5", "MediumMission6", "MediumMission7" } --
+  mzn = { "MediumMission1","MediumMission2","MediumMission3", "MediumMission4", "MediumMission6", "MediumMission7" } --
   max = (#mzn)
   picked = math.random(1, max)
   count = 0
