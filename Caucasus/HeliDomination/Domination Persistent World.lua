@@ -63,7 +63,7 @@ function file_exists(name) --check if the file already exists for writing
 end
 
 function writemission(data, file)--Function for saving to file (commonly found)
-	File = io.open(("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
+	File = io.open(("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\"..file), "w")
 	File:write(data)
 	File:close()
 end
@@ -195,9 +195,9 @@ SEFDeletedUnitCount = 0
 SEFDeletedStaticCount = 0
 
 --////LOAD UNITS
-if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua") then
+if file_exists("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua") then
 
-	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua")
+	dofile("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugUnitInterment.lua")
 
 	UnitIntermentTableLength = SEF_GetTableLength(SeaSlugUnitInterment)
 	--trigger.action.outText("Unit Table Length Is "..UnitIntermentTableLength, 15)
@@ -217,9 +217,9 @@ else
 	UnitIntermentTableLength = 0
 end
 --////Static units
-if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
+if file_exists("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
 
-	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
+	dofile("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
 
 	UnitIntermentTableLength = SEF_GetTableLength(SeaSlugStaticInterment)
 	--trigger.action.outText("Unit Table Length Is "..UnitIntermentTableLength, 15)
@@ -240,9 +240,9 @@ else
 end
 
 --////LOAD STATICS
-if file_exists("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
+if file_exists("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua") then
 
-	dofile("S:\\Users\\Graceys-Village-DCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
+	dofile("S:\\Users\\GraceysVillageDCS\\Saved Games\\DCS.domination\\Persistent Files\\SeaSlugStaticInterment.lua")
 
 	StaticIntermentTableLength = SEF_GetTableLength(SeaSlugStaticInterment)
 	--trigger.action.outText("Static Table Length Is "..StaticIntermentTableLength, 15)
