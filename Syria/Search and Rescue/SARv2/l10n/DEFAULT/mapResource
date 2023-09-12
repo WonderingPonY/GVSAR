@@ -1,6 +1,0 @@
-mapResource = 
-{
-    ["ResKey_Action_19"] = "mission_groupdata.lua",
-    ["ResKey_Action_20"] = "SARv2.lua",
-    ["ResKey_Action_16"] = "SARv2 Zone Scanner.lua",
-} -- end of mapResource
