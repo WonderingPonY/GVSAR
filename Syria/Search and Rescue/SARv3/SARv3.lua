@@ -61,8 +61,87 @@ function dump(o)
  
  groupsOnMissions = {}
  groupsOnIsraelMissions = {}
+ groupsOnSyriaMissions = {}
+ groupsOnTurkeyMissions = {}
+ groupsOnCyprusMissions = {}
+ groupsOnLebanonMissions = {}
  groupsRegisteredForMissions = {}
- hospitalsHeliPads = {"Rambam Health Care Campus", "Carmel Health Centre", "Nicosia General Hospital"}
+ hospitalsTurkey = {
+  "Adana Sakirpasa Helipad South",
+  "Adana Sakirpasa Helipad North",
+  "Adana University Hospital",
+  "Adana Yuregir Hospital",
+  "Gazipasa Airport",
+  "Gaziantep Airport",
+  "Sanliurfa Airport"
+ }
+hospitalsCyprus = {
+  "Akrotiri Airport",
+  "Ercan Airport",
+  "Gecitkale Airport",
+  "Kingsfield Airport",
+  "Larnaca Airport",
+  "Larnaca General Hospital",
+  "Limassol General Hospital",
+  "Nicosia General Hospital",
+  "Paphos Airport",
+  "Paphos General Hospital",
+  "Pinarbashi Airport"
+}
+hospitalsSyria = {
+  "Aleppo International Airport",
+  "Bassel Al-Assad Airport",
+  "Damascus International Airport"
+}
+hospitalsLebanon = {
+  "Saint George University Hospital",
+  "Rene Mouawad Airport",
+  "Nawoura HeliDrome",
+  "Rayak Airport"
+}
+hospitalsIsrael = {
+  "Rosh Pina Airport",
+  "Haifa Airport",
+  "Kiryat Shmona Airport",
+  "Rambam Health Care Centre",
+  "Caremel Health Care Centre",
+  "Eyn Shemer Airport"
+}
+ hospitalsHeliPads = {
+  "Adana Sakirpasa Helipad South",
+  "Adana Sakirpasa Helipad North",
+  "Adana University Hospital",
+  "Adana Yuregir Hospital",
+  "Akrotiri Airport",
+  "Aleppo International Airport",
+  "Bassel Al-Assad Airport",
+  "Beirut Rafic International Airport",
+  "Carmel Heath Centre",
+  "Damascus International Airport",
+  "Ercan Airport",
+  "Eyn Shemer Airport",
+  "Gaziantep Airport",
+  "Gecitkale Airport",
+  "Haifa Airport",
+  "Hatay Airport",
+  "Kingsfield Airport",
+  "Kiryat Shmona Airport",
+  "Lakatamia Airport",
+  "Larnaca Airport",
+  "Larnaca General Hospital",
+  "Limassol General Hospital",
+  "Naqoura HeliDrome",
+  "Nicosia General Hospital",
+  "Paphos Airport",
+  "Paphos General Hospital",
+  "Pinarbashi Airport",
+  "Rambam Health Care Campus",
+  "Rayak Airport",
+  "Rene Mouawad Airport",
+  "Rosh Pina Airport",
+  "Saint George University Hospital",
+  "Sanliurfa Airport"
+}
  
  --Menu Functions
  function version(groupName)
@@ -80,12 +159,8 @@ function dump(o)
 end
  
  function missionHelp(groupName)
-   group = Group.getByName(groupName)
-  if string.find(groupName,"Haifa") then
-    trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to set yourself to Active Duty in the F10 menu to recieve missions.", 40)
-  elseif string.find(groupName,"Damascus") then
-    trigger.action.outTextForGroup(group:getID(),"Your are at Damasucus", 40)
-  end
+  group = Group.getByName(groupName)
+  trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to set yourself to Active Duty in the F10 menu to recieve missions.\n\nMissions will be recieved after a period of time. They are all random and without diffuculty selection.", 40)
  end
  
  function displayMissionInfo(params)
@@ -97,6 +172,7 @@ end
  --Missions Registration
  function missionRegister(groupName)
   groupsRegisteredForMissions[groupName] = "registered"
+  -- add a outtext to tell everyone that a player has registered for missions***********
  end
 
  --Timed mission
@@ -117,6 +193,12 @@ end
   return time + TimerLoopTime
  end
  
+--Mission Builder
+function missionBuilder()
+  -- if player registered for mission
+  -- then select mission pieces from lists
+end
+
  --Mission Functions
 function zonePickerIsrael(groupName)
   env.info(groupName.." has asked for a EASY mission")
@@ -404,9 +486,35 @@ end
      missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Patient Menu"})
    end
  end
+
+function atisMarkers(args,time)
+  airbases = coalition.getAirbases(2)
+  for i, ab in pairs(airbases) do
+    abPoint = Airbase.getPoint(ab)
+    abPoint.y = abPoint.y + 1
+    abBaseID = (Airbase.getID(ab) + 100000)
+    wind = atmosphere.getWind(abPoint)
+    direction = math.floor(math.deg(math.atan2(wind.z, wind.x)) + 0.5)
+    if direction < 0 then
+      direction = 360 + direction
+    end
+    if direction > 180 then
+      direction = direction - 180
+    else
+      direction = direction + 180
+    end
+    strength = math.floor((math.sqrt((wind.x)^2+(wind.z)^2)*1.94384) + 0.5)
+    temp, pressure = atmosphere.getTemperatureAndPressure(abPoint)
+    temp = math.floor((temp - 273.15) + 0.5)
+    pressure = string.format("%.2f",(pressure / 3386))
+    trigger.action.markToAll(abBaseID, "Wind: "..direction.." Degrees @ "..strength.." knots\n\nTemp & Pressure: "..temp.." Celsius "..pressure.." Inmg", abPoint, true, false)
+  end
+  return time + 300
+end
  
  --TIMERS
  timer.scheduleFunction(missionSelect, {}, timer.getTime() + TimerLoopTime)
+ timer.scheduleFunction(atisMarkers, {}, timer.getTime() + 1)
  
  world.addEventHandler(PLAYERTAKESOFF)
  world.addEventHandler(PLAYERENTERS)
