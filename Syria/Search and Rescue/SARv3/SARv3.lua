@@ -23,7 +23,7 @@ ___________________________GRACEY'S VILLAGE__________________________________
 _________________________ALWAYS BE A UNICORN_________________________________
 ______________________DISCORD.GG/graceysvillage______________________________
 --]]
-
+TimerLoopTime = 17
 --THIS IS FOR DUMPING THE INFORMATION SO WE CAN USE THE INFORMATION LATER
 function dump(o)
     if type(o) == 'table' then
@@ -59,15 +59,10 @@ function dump(o)
      return char..degrees.."°"..minutes.."."..seconds
  end
  
- groupTableIsrael = {"Israel-Medivac-1"}
- groupTableTurkey = {"Turkey-Medivac-1"}
- groupTableCyprus = {"Cyprus-Medivac-1"}
- groupTableLebanon = {"Lebanon-Medivac-1"}
- groupTableSyria = {"Syria-Medivac-1"}
  groupsOnMissions = {}
- groupsOnEasyMissions = {}
- groupsOnMediumMissions = {}
- hospitalsHeliPads = {"RambBam Health Care Campus", "Carmel Health Centre","Nicosia General Hospital"}
+ groupsOnIsraelMissions = {}
+ groupsRegisteredForMissions = {}
+ hospitalsHeliPads = {"Rambam Health Care Campus", "Carmel Health Centre", "Nicosia General Hospital"}
  
  --Menu Functions
  function version(groupName)
@@ -76,13 +71,21 @@ function dump(o)
  end
  
  function toDo(groupName)
-   group = Group.getByName(groupName)
-   trigger.action.outTextForGroup(group:getID(),"TO\n\nDO", 40)
- end
+  group = Group.getByName(groupName)
+  if string.find(groupName,"Haifa") then
+      trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Haifa, Israel.", 40)
+  elseif string.find(groupName,"Damascus") then
+      trigger.action.outTextForGroup(group:getID(),"Your are at Damasucus", 40)
+  end
+end
  
  function missionHelp(groupName)
    group = Group.getByName(groupName)
-   trigger.action.outTextForGroup(group:getID(),"MISSION\n\nHELP", 60)
+  if string.find(groupName,"Haifa") then
+    trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to set yourself to Active Duty in the F10 menu to recieve missions.", 40)
+  elseif string.find(groupName,"Damascus") then
+    trigger.action.outTextForGroup(group:getID(),"Your are at Damasucus", 40)
+  end
  end
  
  function displayMissionInfo(params)
@@ -90,275 +93,67 @@ function dump(o)
    missioninfo = params[2]
    trigger.action.outTextForGroup(groupid,missioninfo,60)
  end
+
+ --Missions Registration
+ function missionRegister(groupName)
+  groupsRegisteredForMissions[groupName] = "registered"
+ end
+
+ --Timed mission
+ function missionSelect(var,time)
+  for group, registered in pairs(groupsRegisteredForMissions) do
+    needsMission = true
+    for mission, groupOnMission in pairs(groupsOnMissions) do
+      if group == groupOnMission then
+        needsMission = false
+      end
+    end
+    if needsMission then
+      if string.find(group,"Haifa") then
+        zonePickerIsrael(group)
+      end
+    end
+  end
+  return time + TimerLoopTime
+ end
  
  --Mission Functions
- function easyZonePicker(groupName)
-   env.info(groupName.." has asked for a EASY mission")
-   ezn = { "EasyMission1"}
-   max = (#ezn)
-   picked = math.random(1, max)
-   count = 0
-   while(groupsOnEasyMissions[ezn[picked]] and count < 10) do
-     picked = math.random(1, max)
-     count = count +1
-   end
-   if groupsOnEasyMissions[ezn[picked]] then
-     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
-   else
-     groupsOnEasyMissions[ezn[picked]] = groupName
-     groupsOnMissions[ezn[picked]] = groupName
-       env.info(dump(groupsOnEasyMissions))
-     env.info(ezn[picked])
-     easyMissions(ezn[picked],groupName)
-   end
- end
- 
- function mediumZonePicker(groupName)
-   env.info(groupName.." has asked for a MEDIUM mission")
-   mzn = { "MediumMission1"} --
-   max = (#mzn)
-   picked = math.random(1, max)
-   count = 0
-   while(groupsOnMediumMissions[mzn[picked]] and count < 10) do
-     picked = math.random(1, max)
-     count = count +1
-   end
-   if groupsOnMediumMissions[mzn[picked]] then
-     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
-   else
-     groupsOnMediumMissions[mzn[picked]] = groupName
-     groupsOnMissions[mzn[picked]] = groupName
-       env.info(dump(groupsOnMediumMissions))
-     env.info(mzn[picked])
-     mediumMissions(mzn[picked],groupName)
-   end
- end
- 
- function easyMissions(zonename,groupName)
-   group = Group.getByName(groupName)
-   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
-   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
-   commandparams = {groupName, zonename}
-   missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
-   zone = trigger.misc.getZone(zonename)
-   lat, lon, alt = coord.LOtoLL(zone["point"])
-   env.info(lat)
-   lattitude = toDegreesMinutesAndSeconds(lat,"N")
-   longitude = toDegreesMinutesAndSeconds(lon,"E")
-   if (zonename == "EasyMission1") then
-     coalition.addGroup(80,2,easyMission1Guy) --Adds the Group for the mission
-     -- trigger.action.smoke(zone.point,2) --Spawns smoke at the target location
-     -- trigger.action.signalFlare(zone.point,2,30) -- Drops signalflare at the Zone location
-     -- trigger.action.effectSmokeBig(zone.point,3,1) -- Adds smoke on the zone center
-     trigger.action.outText("Easy Mission #1 Spawned!",15)
-     missioninfo = "A Mechanic has broken his leg while working on his Vehicle. He needs to be taken to the hospital and is at "..lattitude.." "..longitude.." Look for a Blue Vehicle, there is a mark on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 1",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission2") then
-     coalition.addGroup(80,2,EasyMission2BuildingFire)
-     trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Easy Mission #2 Spawned!",15)
-     missioninfo = "A structure has caught fire. There are fire rescue on the way however they will not be there in time you must retreive the victims and take them to one of the Hospitals in Adana. The structure fire is located at "..lattitude.." "..longitude.." South East of Yenidam, there is a mark on your map as well."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 2",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission3") then
-     coalition.addGroup(80,2,EasyMission3)
-     coalition.addGroup(80,2,EasyMission3Scenery)
-     trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #3 Spawned!",15)
-     missioninfo = "There has been a bus crash. You need to go pickup the Patients. There is Rescue Crews on scene. "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 3",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission4") then
-     coalition.addGroup(80,2,EasyMission4)
-     coalition.addGroup(80,2,EasyMission4Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #4 Spawned!",15)
-     missioninfo = "Some workers spraying the orchard north of the village Cihadiye. They have inhaled some of the chemicals and need to be transported to Hospital. Crews are on scene and waiting for your arrival. "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 4",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission5") then
-     coalition.addGroup(80,2,EasyMission5)
-     coalition.addGroup(80,2,EasyMission5Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #5 Spawned!",15)
-     missioninfo = "Someone fishing alone 10NM north of Adana International has fallen and was unconcious for several hours. He has asked for medical assistance. Due to his distance from Adana we are sending your to retrieve him. He is at "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 5",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission6") then
-     coalition.addGroup(80,2,EasyMission6)
-     coalition.addGroup(80,2,EasyMission6Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #6 Spawned!",15)
-     missioninfo = "An 90 year old had a heart attack in her home in the villag of Seyhmurat. She need immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 6",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission7") then
-     coalition.addGroup(80,2,EasyMission7)
-     coalition.addGroup(80,2,EasyMission7Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #7 Spawned!",15)
-     missioninfo = "Man has fallen from a tree and suffered severe head trama. He needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 7",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission8") then
-     coalition.addGroup(80,2,EasyMission8)
-     coalition.addGroup(80,2,EasyMission8Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission3-Smoke")
-     trigger.action.outText("Easy Mission #8 Spawned!",15)
-     missioninfo = "Two men have been injured in a 4x4 accident. They needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 8",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission9") then
-     coalition.addGroup(80,2,EasyMission9)
-     coalition.addGroup(80,2,EasyMission9Scenery)
-     trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission9-smoke")
-     trigger.action.outText("Easy Mission #9 Spawned!",15)
-     missioninfo = "A boating accident has occered causing severe injury to two individuals. They needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 9",zone["point"],groupId,true)
-   elseif (zonename == "EasyMission10") then
-     coalition.addGroup(80,2,EasyMission10)
-     coalition.addGroup(80,2,EasyMission10Scenery)
-     --trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission9-smoke")
-     trigger.action.outText("Easy Mission #10 Spawned!",15)
-     missioninfo = "A traffic accident has occered at a railline loading station causing severe injury to three individuals. They needs immediate transport to Adana Main Hospital. The location is "..lattitude.." "..longitude.." There is a mark placed on your map."
-     groupId = group:getID()
-     trigger.action.outTextForGroup(groupId,missioninfo,15)
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Easy Mission 10",zone["point"],groupId,true)
-   end
- end
- 
- function mediumMissions(zonename,groupName)
-   group = Group.getByName(groupName)
-   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
-   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
-   commandparams = {groupName, zonename}
-   missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
-   zone = trigger.misc.getZone(zonename)
-   lat, lon, alt = coord.LOtoLL(zone["point"])
-   env.info(lat)
-   lattitude = toDegreesMinutesAndSeconds(lat,"N")
-   longitude = toDegreesMinutesAndSeconds(lon,"E")
-   if (zonename == "MediumMission1") then
-     coalition.addGroup(80,2,MediumMission1Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,2,MediumMission1) --Adds the Group for the mission
-     -- trigger.action.smoke(zone.point,2) --Spawns smoke at the target location
-     -- trigger.action.signalFlare(zone.point,2,30) -- Drops signalflare at the Zone location
-     -- trigger.action.effectSmokeBig(zone.point,3,1) -- Adds smoke on the zone center
-     trigger.action.outText("Medium Mission #1 Spawned!",15)
-     missioninfo = "There was an accident at a fuel oil transfer station. There is downed workers who need to be transported to the Adana Hostpital. You will need to land on the dock to recieve the Patient(s) "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 1",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission2") then
-     coalition.addGroup(80,2,MediumMission2Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,2,MediumMission2)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Medium Mission #2 Spawned!",15)
-     missioninfo = "There are serious injuries reported at a Structure fire in the city of Adana. You will need to land in a parking lot to recieve the Patients(s). "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 2",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission3") then
-     coalition.addGroup(80,3,MediumMission3Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,3,MediumMission3Group2Scenery)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Medium Mission #3 Spawned!",15)
-     missioninfo = "A Sailor has had a heart attack on the Bulker ship BALTIC COVE. Head for the ship and retrieve the Patient. Take them to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 3",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission4") then
-     coalition.addGroup(80,2,MediumMission4Scenery) -- adds the scenery for the mission(first number is coalition ID, Second is the group class, IE ship = 3)
-     coalition.addGroup(80,2,MediumMission4)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Medium Mission #4 Spawned!",15)
-     missioninfo = "An urgent patient transfer is needed from Karsi to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 4",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission5") then
-     coalition.addGroup(80,2,MediumMission5Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,2,MediumMission5)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Medium Mission #5 Spawned!",15)
-     missioninfo = "A diver has suffered a heart attack and needs transport to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 5",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission6") then
-     coalition.addGroup(80,2,MediumMission6Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,2,MediumMission6)
-     -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-     trigger.action.outText("Medium Mission #6 Spawned!",15)
-     missioninfo = "A man has been bitten by a venomous snake and needs transport to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 6",zone["point"],groupId,true)
-   elseif (zonename == "MediumMission7") then
-     coalition.addGroup(80,2,MediumMission7Scenery) -- adds the scenery for the mission
-     coalition.addGroup(80,2,MediumMission7)
-     trigger.action.effectSmokeBig(zone.point,1,1, "MediumMission7")
-     trigger.action.outText("Medium Mission #7 Spawned!",15)
-     missioninfo = "A structure fire has caused two burn victims that needs transport to Adana Main Hopital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
-     groupId = group:getID()
-     params = {groupId,missioninfo}
-     missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-     trigger.action.markToGroup((groupId*51515151),"Medium Mission 7",zone["point"],groupId,true)
-   end
- end
- 
- function loadPatient(params)
-   unit = Unit.getByName(params[1])
-   mission = params[2]
-    if areDoorsOpen(unit) then
-       trigger.action.outText("Loaded Patient(s)", 15)
-       patientLoad = 120
-       trigger.action.setUnitInternalCargo(unit:getName(), patientLoad)
-       groupname = mission.."-Patient"
-       env.info(groupname)
-       trigger.action.deactivateGroup(Group.getByName(groupname))
-       missionCommands.removeItemForGroup(unit:getGroup():getID(), {[1] = "Patient Menu", [2] = "Load Patient"})
-    else
-       trigger.action.outTextForGroup(group:getID(),"You need to open your doors to load the Patient!!!", 15)
+function zonePickerIsrael(groupName)
+  env.info(groupName.." has asked for a EASY mission")
+  ezn = { "IsraelMission1","IsraelMission2"}
+  max = (#ezn)
+  picked = math.random(1, max)
+  count = 0
+  while(groupsOnIsraelMissions[ezn[picked]] and count < 10) do
+    picked = math.random(1, max)
+    count = count +1
   end
- end
+  if groupsOnIsraelMissions[ezn[picked]] then
+    trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+  else
+    groupsOnIsraelMissions[ezn[picked]] = groupName
+    groupsOnMissions[ezn[picked]] = groupName
+      env.info(dump(groupsOnIsraelMissions))
+    env.info(ezn[picked])
+    missionsIsrael(ezn[picked],groupName)
+  end
+end
+ 
+function loadPatient(params)
+  unit = Unit.getByName(params[1])
+  mission = params[2]
+  if areDoorsOpen(unit) then
+      trigger.action.outText("Loaded Patient(s)", 15)
+      patientLoad = 120
+      trigger.action.setUnitInternalCargo(unit:getName(), patientLoad)
+      groupname = mission.."-Patient"
+      env.info(groupname)
+      trigger.action.deactivateGroup(Group.getByName(groupname))
+      missionCommands.removeItemForGroup(unit:getGroup():getID(), {[1] = "Patient Menu", [2] = "Load Patient"})
+  else
+      trigger.action.outTextForGroup(group:getID(),"You need to open your doors to load the Patient!!!", 15)
+  end
+end
  
  function areDoorsOpen(unit)
    typename = unit:getTypeName()
@@ -448,7 +243,6 @@ function dump(o)
  
  --Help Menus
  helpMenu = missionCommands.addSubMenu("Help")
- 
  
  --Rescue Mission Menus
  rescueMenu = missionCommands.addSubMenu("Rescue", searchRescueMenu)
@@ -611,6 +405,8 @@ function dump(o)
    end
  end
  
+ --TIMERS
+ timer.scheduleFunction(missionSelect, {}, timer.getTime() + TimerLoopTime)
  
  world.addEventHandler(PLAYERTAKESOFF)
  world.addEventHandler(PLAYERENTERS)
