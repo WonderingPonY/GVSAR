@@ -172,7 +172,9 @@ end
  --Missions Registration
  function missionRegister(groupName)
   groupsRegisteredForMissions[groupName] = "registered"
-  -- add a outtext to tell everyone that a player has registered for missions***********
+  unit1 = Group.getUnit(Group.getByName(groupName),1)
+  area = string.match(groupName, '^[^-]*')
+  trigger.action.outText(Unit.getPlayerName(unit1).." has registered for missions at "..area, 15)
  end
 
  --Timed mission
@@ -187,21 +189,16 @@ end
     if needsMission then
       if string.find(group,"Haifa") then
         zonePickerIsrael(group)
+      elseif string.find(group,"Damascus") then
+        zonePickerSyria(group)
       end
     end
   end
   return time + TimerLoopTime
  end
- 
---Mission Builder
-function missionBuilder()
-  -- if player registered for mission
-  -- then select mission pieces from lists
-end
 
- --Mission Functions
+ --Mission Picking Israel
 function zonePickerIsrael(groupName)
-  env.info(groupName.." has asked for a EASY mission")
   ezn = { "IsraelMission1","IsraelMission2"}
   max = (#ezn)
   picked = math.random(1, max)
@@ -211,6 +208,27 @@ function zonePickerIsrael(groupName)
     count = count +1
   end
   if groupsOnIsraelMissions[ezn[picked]] then
+    trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+  else
+    groupsOnIsraelMissions[ezn[picked]] = groupName
+    groupsOnMissions[ezn[picked]] = groupName
+      env.info(dump(groupsOnIsraelMissions))
+    env.info(ezn[picked])
+    missionsIsrael(ezn[picked],groupName)
+  end
+end
+
+-- Mission Picking Syria
+function zonePickerSyria(groupName)
+  ezn = { "SyriaMission1","SyriaMission2"}
+  max = (#ezn)
+  picked = math.random(1, max)
+  count = 0
+  while(groupsOnSyriaMissions[ezn[picked]] and count < 10) do
+    picked = math.random(1, max)
+    count = count +1
+  end
+  if groupsOnSyriaMissions[ezn[picked]] then
     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
   else
     groupsOnIsraelMissions[ezn[picked]] = groupName
@@ -263,6 +281,7 @@ end
   end
  end
  
+ -- Patient Unloading
  function unloadPatientDoorsOpen(unit,group,mission)
    trigger.action.outText("Unloaded Patient(s)", 15)
    patientUnload = 0
@@ -270,23 +289,18 @@ end
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
-   missionCommands.addCommandForGroup(group:getID(), "Rescue Easy", rescueMenu, easyZonePicker, group:getName())
-   missionCommands.addCommandForGroup(group:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, group:getName())
+   missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    trigger.action.removeMark((group:getID()*51515151))
    trigger.action.effectSmokeStop(mission.."-Smoke")
    scenery = Group.getByName(mission.."-Scenery")
    if scenery then
      trigger.action.deactivateGroup(scenery)
    end
-   if string.find(mission,"Easy") then
-     groupsOnEasyMissions[mission] = nil
-     env.info(dump(groupsOnEasyMissions))
-   elseif string.find(mission,"Medium") then
-     groupsOnMediumMissions[mission] = nil
-     env.info(dump(groupsOnMediumMissions))
-   end
+    groupsOnMissions[mission] = nil
+    env.info(dump(groupsOnMissions))
  end
  
+ -- Canceling Mission
  function cancelMission(params)
    group = Group.getByName(params[1])
    mission = params[2]
@@ -310,10 +324,7 @@ end
    end
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
    groupsOnMissions[mission] = nil
-   groupsOnEasyMissions[mission] = nil
-   groupsOnMediumMissions[mission] = nil
-   missionCommands.addCommandForGroup(group:getID(), "Rescue Easy", rescueMenu, easyZonePicker, group:getName())
-   missionCommands.addCommandForGroup(group:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, group:getName())
+   missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
    trigger.action.outTextForGroup(group:getID(),"Mission Cancelled", 15)
@@ -328,30 +339,6 @@ end
  
  --Rescue Mission Menus
  rescueMenu = missionCommands.addSubMenu("Rescue", searchRescueMenu)
- 
- 
- -- for i, groupName in pairs(groupTable) do
- --  if Group.getByName(groupName) then
- --     foundGroup = Group.getByName(groupName)
- --     groupId = Group.getID(foundGroup)
- --     helpMenuWhatToDo = missionCommands.addCommandForGroup(groupId,"What to do", helpMenu, toDo, groupName)
- --     helpMenuVersion = missionCommands.addCommandForGroup(groupId,"Sar Version", helpMenu, version, groupName)
- --     helpMenuMissions = missionCommands.addCommandForGroup(groupId,"Missions", helpMenu, missionHelp, groupName)
- --     helpme = missionCommands.addCommandForGroup(groupId, "Rescue Easy", rescueMenu, easyZonePicker, groupName)
- --  end
- -- end
- 
- 
- -- rescueMenuEasy = missionCommands.addCommand("Rescue Easy", rescueMenu, easyZonePicker)
- -- rescueMenuMedium = missionCommands.addCommand("Rescue Medium", rescueMenu, rescueEasy)
- -- rescueMenuHard = missionCommands.addCommand("Rescue Hard", rescueMenu, rescueEasy)
- 
- --Search Mission Menus
- -- sarMenu = missionCommands.addSubMenu("Search & Rescue", searchRescueMenu)
- -- sarMenuEasy = missionCommands.addCommand("Search & Rescue Easy", sarMenu, searchEasy)
- -- sarMenuMedium = missionCommands.addCommand("Search & Rescue Medium", sarMenu, searchEasy)
- -- sarMenuHard = missionCommands.addCommand("Search & Rescue Hard", sarMenu, sear
- 
  
  MEDEVACEVENTHANDLER = {}
  function MEDEVACEVENTHANDLER:onEvent(Event)
@@ -452,8 +439,7 @@ end
               cancelMission(params)
             end
           end
-          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
-          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})
           missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "What to do"})
           missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Sar Version"})
           missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Missions"})
@@ -473,8 +459,7 @@ end
      missionCommands.addCommandForGroup(unitGroup:getID(),"What to do", helpMenu, toDo, unitGroup:getName())
      missionCommands.addCommandForGroup(unitGroup:getID(),"Sar Version", helpMenu, version, unitGroup:getName())
      missionCommands.addCommandForGroup(unitGroup:getID(),"Missions", helpMenu, missionHelp, unitGroup:getName())
-     missionCommands.addCommandForGroup(unitGroup:getID(), "Rescue Easy", rescueMenu, easyZonePicker, unitGroup:getName())
-     missionCommands.addCommandForGroup(unitGroup:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, unitGroup:getName())
+     missionCommands.addCommandForGroup(unitGroup:getID(), "Register", rescueMenu, missionRegister, unitGroup:getName())
    end
  end
  

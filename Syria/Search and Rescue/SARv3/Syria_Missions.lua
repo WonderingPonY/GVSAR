@@ -24,7 +24,7 @@ _________________________ALWAYS BE A UNICORN_________________________________
 ______________________DISCORD.GG/graceysvillage______________________________
 --]]
 
-function missionsIsrael(zonename,groupName)
+function missionsSyria(zonename,groupName)
     group = Group.getByName(groupName)
     missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})
     commandparams = {groupName, zonename}
@@ -35,7 +35,7 @@ function missionsIsrael(zonename,groupName)
     lattitude = toDegreesMinutesAndSeconds(lat,"N")
     longitude = toDegreesMinutesAndSeconds(lon,"E")
     unit1 = Group.getUnit(Group.getByName(groupName),1)
-    if (zonename == "IsraelMission1") then
+    if (zonename == "SyriaMission1") then
         -- coalition.addGroup(80,2,easyMission1Guy) --Adds the Group for the mission
         -- trigger.action.smoke(zone.point,2) --Spawns smoke at the target location
         -- trigger.action.signalFlare(zone.point,2,30) -- Drops signalflare at the Zone location
@@ -46,8 +46,8 @@ function missionsIsrael(zonename,groupName)
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
         missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-        trigger.action.markToGroup((groupId*51515151),"Israel Mission 1 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
-    elseif (zonename == "IsraelMission2") then
+        trigger.action.markToGroup((groupId*51515151),"Syria Mission 1 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+    elseif (zonename == "SyriaMission2") then
         -- coalition.addGroup(80,2,EasyMission2BuildingFire)
         -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
         -- trigger.action.outText("Easy Mission #2 Spawned!",15)
@@ -56,6 +56,6 @@ function missionsIsrael(zonename,groupName)
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
         missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
-        trigger.action.markToGroup((groupId*51515151),"Israel Mission 2 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+        trigger.action.markToGroup((groupId*51515151),"Syria Mission 2 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
     end
 end
