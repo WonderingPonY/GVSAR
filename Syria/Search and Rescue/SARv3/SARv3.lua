@@ -69,6 +69,20 @@ function dump(o)
  israelPlayerLocations = {
   Haifa = "Haifa"
  }
+ syriaPlayerLocations = {
+  Damascus = "Damascus"
+  Aleppo = "Aleppo"
+ }
+ turkeyPlayerLocations = {
+  Adana = "Adana"
+ }
+ cyprusPlayerLocations = {
+  Lakatamia = "Lakatamia"
+  Akrotiri = "Akrotiri"
+ }
+ lebanonPlayerLocations = {
+  Beirut = "Beirut"
+ }
  hospitalsTurkey = {
   "Adana Sakirpasa Helipad South",
   "Adana Sakirpasa Helipad North",
@@ -301,9 +315,17 @@ end
    end
     groupsOnMissions[mission] = nil
     area = string.match(group:getName(), '^[^-]*')
-   if israelPlayerLocations[area] then
+    if israelPlayerLocations[area] then
     groupsOnIsraelMissions[mission] = nil
-   else 
+    elseif cyprusPlayerLocations[area] then
+    cyprusPlayerLocations[mission] = nil
+    elseif lebanonPlayerLocations[area] then
+      lebanonPlayerLocations[mission] = nil
+    elseif syriaPlayerLocations[area] then
+      syriaPlayerLocations[mission] = nil
+    elseif turkeyPlayerLocations[area] then
+      turkeyPlayerLocations[mission] = nil
+    else
     env.info("Unknown Area "..area)
    end
     env.info(dump(groupsOnMissions))
@@ -334,11 +356,19 @@ end
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
    groupsOnMissions[mission] = nil
    area = string.match(group:getName(), '^[^-]*')
-   if israelPlayerLocations[area] then
-    groupsOnIsraelMissions[mission] = nil
-   else 
-    env.info("Unknown Area "..area)
-   end
+  if israelPlayerLocations[area] then
+  groupsOnIsraelMissions[mission] = nil
+  elseif cyprusPlayerLocations[area] then
+  cyprusPlayerLocations[mission] = nil
+  elseif lebanonPlayerLocations[area] then
+    lebanonPlayerLocations[mission] = nil
+  elseif syriaPlayerLocations[area] then
+    syriaPlayerLocations[mission] = nil
+  elseif turkeyPlayerLocations[area] then
+    turkeyPlayerLocations[mission] = nil
+  else
+  env.info("Unknown Area "..area)
+  end
    missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
