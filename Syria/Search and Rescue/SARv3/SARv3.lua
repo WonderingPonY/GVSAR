@@ -66,6 +66,9 @@ function dump(o)
  groupsOnCyprusMissions = {}
  groupsOnLebanonMissions = {}
  groupsRegisteredForMissions = {}
+ israelPlayerLocations = {
+  Haifa = "Haifa"
+ }
  hospitalsTurkey = {
   "Adana Sakirpasa Helipad South",
   "Adana Sakirpasa Helipad North",
@@ -297,6 +300,12 @@ end
      trigger.action.deactivateGroup(scenery)
    end
     groupsOnMissions[mission] = nil
+    area = string.match(group:getName(), '^[^-]*')
+   if israelPlayerLocations[area] then
+    groupsOnIsraelMissions[mission] = nil
+   else 
+    env.info("Unknown Area "..area)
+   end
     env.info(dump(groupsOnMissions))
  end
  
@@ -324,6 +333,12 @@ end
    end
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
    groupsOnMissions[mission] = nil
+   area = string.match(group:getName(), '^[^-]*')
+   if israelPlayerLocations[area] then
+    groupsOnIsraelMissions[mission] = nil
+   else 
+    env.info("Unknown Area "..area)
+   end
    missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
@@ -342,7 +357,6 @@ end
  
  MEDEVACEVENTHANDLER = {}
  function MEDEVACEVENTHANDLER:onEvent(Event)
- 
      if Event.id == world.event.S_EVENT_LAND then
      env.info("Someone has Landed")
          if Event.initiator then
@@ -368,6 +382,7 @@ end
                   env.info(foundGroup)
                   if foundGroup == group then
                     match = true
+                    env.info("MATCH TRUE")
                   end
                 end
                 if match then
@@ -377,6 +392,8 @@ end
                   commandparams = {unitname, mission}
                   missionCommands.addCommandForGroup(unit:getGroup():getID(), "Load Patient", loadMenu, loadPatient, commandparams)
                   env.info(dump(loadPatient))
+                else
+                  env.info("NO MATCH")
                 end
               end
             end

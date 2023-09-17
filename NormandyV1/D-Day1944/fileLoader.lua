@@ -1,0 +1,1 @@
+dofile("C:\\Users\\ME\\AppData\\Local\\Temp\\DCS\\Mission\\CoreData.lua")

@@ -26,7 +26,6 @@ ______________________DISCORD.GG/graceysvillage______________________________
 
 function missionsIsrael(zonename,groupName)
     group = Group.getByName(groupName)
-    missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})
     commandparams = {groupName, zonename}
     missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
     zone = trigger.misc.getZone(zonename)
@@ -49,9 +48,9 @@ function missionsIsrael(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Israel Mission 1 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
     elseif (zonename == "IsraelMission2") then
         -- coalition.addGroup(80,2,EasyMission2BuildingFire)
-        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
-        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
-        missioninfo = "A structure has caught fire. There are fire rescue on the way however they will not be there in time you must retreive the victims and take them to one of the Hospitals in Adana. The structure fire is located at "..lattitude.." "..longitude.." South East of Yenidam, there is a mark on your map as well."
+        trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        trigger.action.outText("Israel Mission #2 Started!",15)
+        missioninfo = "A structure has caught fire. There are fire rescue on scene, retreive the victim(s) and take them to one of the Hospitals in Haifa. The structure fire is located at "..lattitude.." "..longitude.." South East of Yenidam, there is a mark on your map as well."
         groupId = group:getID()
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
