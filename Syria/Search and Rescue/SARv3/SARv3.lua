@@ -169,15 +169,23 @@ hospitalsIsrael = {
  function toDo(groupName)
   group = Group.getByName(groupName)
   if string.find(groupName,"Haifa") then
-      trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Haifa, Israel.", 40)
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Haifa, Israel.", 40)
   elseif string.find(groupName,"Damascus") then
-      trigger.action.outTextForGroup(group:getID(),"Your are at Damasucus", 40)
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Damascuc, Syria", 40)
+  elseif string.find(groupName,"Beirut") then
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Beirut, Lebanon", 40)
+  elseif string.find(groupName,"Adana") then
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Adana, Turkey", 40)
+  elseif string.find(groupName,"Lakatima") then
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Lakatima, Cyprus", 40)
+  elseif string.find(groupName,"Akrotiri") then
+    trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Akrotiri, United Kingdom", 40)
   end
 end
  
  function missionHelp(groupName)
   group = Group.getByName(groupName)
-  trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to set yourself to Active Duty in the F10 menu to recieve missions.\n\nMissions will be recieved after a period of time. They are all random and without diffuculty selection.", 40)
+  trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to register for Active Duty in the F10 menu to recieve missions.\n\nMissions will be recieved after a period of time. They are all random and without diffuculty selection.", 40)
  end
  
  function displayMissionInfo(params)
@@ -208,6 +216,14 @@ end
         zonePickerIsrael(group)
       elseif string.find(group,"Damascus") then
         zonePickerSyria(group)
+      elseif string.find(group,"Beirut") then
+        zonePickerSyria(group)
+      elseif string.find(group,"Adana") then
+        zonePickerSyria(group)
+      elseif string.find(group,"Lakatima") then
+        zonePickerSyria(group)
+      elseif string.find(group,"Akrotiri") then
+        zonePickerSyria(group)
       end
     end
   end
@@ -229,32 +245,116 @@ function zonePickerIsrael(groupName)
   else
     groupsOnIsraelMissions[ezn[picked]] = groupName
     groupsOnMissions[ezn[picked]] = groupName
-      env.info(dump(groupsOnIsraelMissions))
+    env.info(dump(groupsOnIsraelMissions))
     env.info(ezn[picked])
     missionsIsrael(ezn[picked],groupName)
   end
 end
 
--- Mission Picking Syria
-function zonePickerSyria(groupName)
-  ezn = { "SyriaMission1","SyriaMission2"}
-  max = (#ezn)
-  picked = math.random(1, max)
-  count = 0
-  while(groupsOnSyriaMissions[ezn[picked]] and count < 10) do
-    picked = math.random(1, max)
-    count = count +1
-  end
-  if groupsOnSyriaMissions[ezn[picked]] then
-    trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
-  else
-    groupsOnIsraelMissions[ezn[picked]] = groupName
-    groupsOnMissions[ezn[picked]] = groupName
-      env.info(dump(groupsOnIsraelMissions))
-    env.info(ezn[picked])
-    missionsIsrael(ezn[picked],groupName)
-  end
-end
+-- -- Mission Picking Syria
+-- function zonePickerSyria(groupName)
+--   ezn = { "SyriaMission1","SyriaMission2"}
+--   max = (#ezn)
+--   picked = math.random(1, max)
+--   count = 0
+--   while(groupsOnSyriaMissions[ezn[picked]] and count < 10) do
+--     picked = math.random(1, max)
+--     count = count +1
+--   end
+--   if groupsOnSyriaMissions[ezn[picked]] then
+--     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+--   else
+--     groupsOnSyriaMissions[ezn[picked]] = groupName
+--     groupsOnMissions[ezn[picked]] = groupName
+--       env.info(dump(groupsOnSyriaMissions))
+--     env.info(ezn[picked])
+--     missionsSyria(ezn[picked],groupName)
+--   end
+-- end
+
+-- -- Mission Picking Lebanon
+-- function zonePickerLebanon(groupName)
+--   ezn = { "LebanonMission1","LebanonMission2"}
+--   max = (#ezn)
+--   picked = math.random(1, max)
+--   count = 0
+--   while(groupsOnLebanonMissions[ezn[picked]] and count < 10) do
+--     picked = math.random(1, max)
+--     count = count +1
+--   end
+--   if groupsOnLebanonMissions[ezn[picked]] then
+--     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+--   else
+--     groupsOnLebanonMissions[ezn[picked]] = groupName
+--     groupsOnMissions[ezn[picked]] = groupName
+--       env.info(dump(groupsOnLebanonMissions))
+--     env.info(ezn[picked])
+--     missionsLebanon(ezn[picked],groupName)
+--   end
+-- end
+
+-- -- Mission Picking Turkey
+-- function zonePickerTurkey(groupName)
+--   ezn = { "TurkeyMission1","TurkeyMission2"}
+--   max = (#ezn)
+--   picked = math.random(1, max)
+--   count = 0
+--   while(groupsOnTurkeyMissions[ezn[picked]] and count < 10) do
+--     picked = math.random(1, max)
+--     count = count +1
+--   end
+--   if groupsOnTurkeyMissions[ezn[picked]] then
+--     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+--   else
+--     groupsOnTurkeyMissions[ezn[picked]] = groupName
+--     groupsOnMissions[ezn[picked]] = groupName
+--       env.info(dump(groupsOnTurkeyMissions))
+--     env.info(ezn[picked])
+--     missionsTurkey(ezn[picked],groupName)
+--   end
+-- end
+
+-- -- Mission Picking Cyprus
+-- function zonePickerCyprus(groupName)
+--   ezn = { "CyprusMission1","CyprusMission2"}
+--   max = (#ezn)
+--   picked = math.random(1, max)
+--   count = 0
+--   while(groupsOnCyprusMissions[ezn[picked]] and count < 10) do
+--     picked = math.random(1, max)
+--     count = count +1
+--   end
+--   if groupsOnCyprusMissions[ezn[picked]] then
+--     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+--   else
+--     groupsOnCyprusMissions[ezn[picked]] = groupName
+--     groupsOnMissions[ezn[picked]] = groupName
+--       env.info(dump(groupsOnCyprusMissions))
+--     env.info(ezn[picked])
+--     missionsCyprus(ezn[picked],groupName)
+--   end
+-- end
+
+-- -- Mission Picking United Kingdom
+-- function zonePickerUK(groupName)
+--   ezn = { "UKMission1","UKMission2"}
+--   max = (#ezn)
+--   picked = math.random(1, max)
+--   count = 0
+--   while(groupsOnUKMissions[ezn[picked]] and count < 10) do
+--     picked = math.random(1, max)
+--     count = count +1
+--   end
+--   if groupsOnUKMissions[ezn[picked]] then
+--     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+--   else
+--     groupsOnUKMissions[ezn[picked]] = groupName
+--     groupsOnMissions[ezn[picked]] = groupName
+--       env.info(dump(groupsOnUKMissions))
+--     env.info(ezn[picked])
+--     missionsUK(ezn[picked],groupName)
+--   end
+-- end
  
 function loadPatient(params)
   unit = Unit.getByName(params[1])
@@ -466,7 +566,6 @@ end
  
  PLAYERLEAVES = {}
  function PLAYERLEAVES:onEvent(Event)
- 
      if Event.id == world.event.S_EVENT_PLAYER_LEAVE_UNIT or Event.id == world.event.S_EVENT_CRASH or Event.id == world.event.S_EVENT_PILOT_DEAD then
      env.info("PLAYER LEFT UNIT")
          if Event.initiator then
