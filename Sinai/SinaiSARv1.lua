@@ -63,6 +63,7 @@ groupTable = {"Medevac","Medevac-1","Medevac-2","Medevac-3","Medevac-4","Medevac
 groupsOnMissions = {}
 groupsOnEasyMissions = {}
 groupsOnMediumMissions = {}
+groupsOnHardMissions = {}
 hospitalsHeliPads = {"Cairo International Airport", "Cairo University Hospital", "Adana Shakirpasa Airport North", "Adana Shakirpasa Airport South"}
 
 --Menu Functions
@@ -130,10 +131,33 @@ function mediumZonePicker(groupName)
   end
 end
 
+function hardZonePicker(groupName)
+  env.info(groupName.." has asked for a Hard mission")
+  mzn = { "HardMission1", } --
+  max = (#mzn)
+  picked = math.random(1, max)
+  count = 0
+  while(groupsOnHardMissions[mzn[picked]] and count < 10) do
+    picked = math.random(1, max)
+    count = count +1
+  end
+  if groupsOnHardMissions[mzn[picked]] then
+    trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+  else
+    groupsOnHardMissions[mzn[picked]] = groupName
+    groupsOnMissions[mzn[picked]] = groupName
+      env.info(dump(groupsOnHardMissions))
+    env.info(mzn[picked])
+    hardMissions(mzn[picked],groupName)
+  end
+end
+
+
 function easyMissions(zonename,groupName)
   group = Group.getByName(groupName)
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+  missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Hard"})
   commandparams = {groupName, zonename}
   missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
   zone = trigger.misc.getZone(zonename)
@@ -280,6 +304,7 @@ function mediumMissions(zonename,groupName)
   group = Group.getByName(groupName)
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+  missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Hard"})
   commandparams = {groupName, zonename}
   missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
   zone = trigger.misc.getZone(zonename)
@@ -404,6 +429,33 @@ function mediumMissions(zonename,groupName)
   end
 end
 
+function hardMissions(zonename,groupName)
+  group = Group.getByName(groupName)
+  missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
+  missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+  missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Hard"})
+  commandparams = {groupName, zonename}
+  missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
+  zone = trigger.misc.getZone(zonename)
+  lat, lon, alt = coord.LOtoLL(zone["point"])
+  env.info(lat)
+  lattitude = toDegreesMinutesAndSeconds(lat,"N")
+  longitude = toDegreesMinutesAndSeconds(lon,"E")
+  if (zonename == "HardMission1") then
+    coalition.addGroup(80,2,HardMission1Scenery) -- adds the scenery for the mission
+    coalition.addGroup(80,2,HardMission1) --Adds the Group for the mission
+    -- trigger.action.smoke(zone.point,2) --Spawns smoke at the target location
+    -- trigger.action.signalFlare(zone.point,2,30) -- Drops signalflare at the Zone location
+    -- trigger.action.effectSmokeBig(zone.point,3,1) -- Adds smoke on the zone center
+    trigger.action.outText("Hard Mission #1 Spawned!",15)
+    missioninfo = "There was an accident at an electrical sub-station. There is downed workers who need to be transported to the Hostpital. "..lattitude.." "..longitude.." There is a mark placed on your map at the location of the incident."
+    groupId = group:getID()
+    params = {groupId,missioninfo}
+    missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+    trigger.action.markToGroup((groupId*51515151),"Hard Mission 1",zone["point"],groupId,true)
+  end
+end
+
 function loadPatient(params)
   unit = Unit.getByName(params[1])
   mission = params[2]
@@ -455,6 +507,7 @@ function unloadPatientDoorsOpen(unit,group,mission)
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
   missionCommands.addCommandForGroup(group:getID(), "Rescue Easy", rescueMenu, easyZonePicker, group:getName())
   missionCommands.addCommandForGroup(group:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, group:getName())
+  missionCommands.addCommandForGroup(group:getID(), "Rescue Hard", rescueMenu, hardZonePicker, group:getName())
   trigger.action.removeMark((group:getID()*51515151))
   trigger.action.effectSmokeStop(mission.."-Smoke")
   scenery = Group.getByName(mission.."-Scenery")
@@ -467,6 +520,9 @@ function unloadPatientDoorsOpen(unit,group,mission)
   elseif string.find(mission,"Medium") then
     groupsOnMediumMissions[mission] = nil
     env.info(dump(groupsOnMediumMissions))
+  elseif string.find(mission,"Hard") then
+    groupsOnHardMissions[mission] = nil
+    env.info(dump(groupsOnHardMissions))
   end
 end
 
@@ -495,8 +551,10 @@ function cancelMission(params)
   groupsOnMissions[mission] = nil
   groupsOnEasyMissions[mission] = nil
   groupsOnMediumMissions[mission] = nil
+  groupsOnHardMissions[mission] = nil
   missionCommands.addCommandForGroup(group:getID(), "Rescue Easy", rescueMenu, easyZonePicker, group:getName())
   missionCommands.addCommandForGroup(group:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, group:getName())
+  missionCommands.addCommandForGroup(group:getID(), "Rescue Hard", rescueMenu, hardZonePicker, group:getName())
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
   missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
   trigger.action.outTextForGroup(group:getID(),"Mission Cancelled", 15)
@@ -638,6 +696,7 @@ function PLAYERLEAVES:onEvent(Event)
          end
          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Easy"})
          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Medium"})
+         missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Rescue Hard"})
          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "What to do"})
          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Sar Version"})
          missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Help", [2] = "Missions"})
@@ -659,6 +718,7 @@ function PLAYERENTERS:onEvent(Event)
     missionCommands.addCommandForGroup(unitGroup:getID(),"Missions", helpMenu, missionHelp, unitGroup:getName())
     missionCommands.addCommandForGroup(unitGroup:getID(), "Rescue Easy", rescueMenu, easyZonePicker, unitGroup:getName())
     missionCommands.addCommandForGroup(unitGroup:getID(), "Rescue Medium", rescueMenu, mediumZonePicker, unitGroup:getName())
+    missionCommands.addCommandForGroup(unitGroup:getID(), "Rescue Hard", rescueMenu, hardZonePicker, unitGroup:getName())
   end
 end
 
