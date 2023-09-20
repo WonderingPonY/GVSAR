@@ -41,13 +41,13 @@ function dump(o)
        return tostring(o)
     end
  end
- 
+
  function table.removekey(table, key)
     local element = table[key]
     table[key] = nil
     return element
  end
- 
+
  function toDegreesMinutesAndSeconds(coordinate,char)
    env.info(coordinate)
      absolute = math.abs(coordinate)
@@ -55,10 +55,10 @@ function dump(o)
      minutesNotTruncated = (absolute - degrees) * 60
      minutes = math.floor(minutesNotTruncated)
      seconds = math.floor((minutesNotTruncated - minutes) * 60)
- 
+
      return char..degrees.."°"..minutes.."."..seconds
  end
- 
+
  groupsOnMissions = {}
  groupsOnIsraelMissions = {}
  groupsOnSyriaMissions = {}
@@ -159,13 +159,13 @@ hospitalsIsrael = {
   "Saint George University Hospital",
   "Sanliurfa Airport"
 }
- 
+
  --Menu Functions
  function version(groupName)
    group = Group.getByName(groupName)
    trigger.action.outTextForGroup(group:getID(),"Search & Rescue Version 3", 15)
  end
- 
+
  function toDo(groupName)
   group = Group.getByName(groupName)
   if string.find(groupName,"Haifa") then
@@ -182,12 +182,12 @@ hospitalsIsrael = {
     trigger.action.outTextForGroup(group:getID(),"You are a SAR pilot flying out of Akrotiri, United Kingdom", 40)
   end
 end
- 
+
  function missionHelp(groupName)
   group = Group.getByName(groupName)
   trigger.action.outTextForGroup(group:getID(),"SAR missions are given at random intervals. You need to register for Active Duty in the F10 menu to recieve missions.\n\nMissions will be recieved after a period of time. They are all random and without diffuculty selection.", 40)
  end
- 
+
  function displayMissionInfo(params)
    groupid = params[1]
    missioninfo = params[2]
@@ -232,7 +232,7 @@ end
 
  --Mission Picking Israel
 function zonePickerIsrael(groupName)
-  ezn = { "IsraelMission1","IsraelMission2"}
+  ezn = { "IsraelMission1"}--,"IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12"
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
@@ -355,7 +355,7 @@ end
 --     missionsUK(ezn[picked],groupName)
 --   end
 -- end
- 
+
 function loadPatient(params)
   unit = Unit.getByName(params[1])
   mission = params[2]
@@ -371,7 +371,7 @@ function loadPatient(params)
       trigger.action.outTextForGroup(group:getID(),"You need to open your doors to load the Patient!!!", 15)
   end
 end
- 
+
  function areDoorsOpen(unit)
    typename = unit:getTypeName()
    doors_open = false
@@ -386,7 +386,7 @@ end
    end
    return doors_open
  end
- 
+
  function unloadPatient(params)
    unit = Unit.getByName(params[1])
    mission = params[2]
@@ -397,7 +397,7 @@ end
        trigger.action.outTextForGroup(group:getID(),"You need to open your doors to unload the Patient(s)!!!", 15)
   end
  end
- 
+
  -- Patient Unloading
  function unloadPatientDoorsOpen(unit,group,mission)
    trigger.action.outText("Unloaded Patient(s)", 15)
@@ -430,7 +430,7 @@ end
    end
     env.info(dump(groupsOnMissions))
  end
- 
+
  -- Canceling Mission
  function cancelMission(params)
    group = Group.getByName(params[1])
@@ -475,16 +475,16 @@ end
    trigger.action.outTextForGroup(group:getID(),"Mission Cancelled", 15)
    trigger.action.removeMark((group:getID()*51515151))
  end
- 
+
  -- RADIO MENU
  searchRescueMenu = missionCommands.addSubMenu("Rescue Command")
- 
+
  --Help Menus
  helpMenu = missionCommands.addSubMenu("Help")
- 
+
  --Rescue Mission Menus
  rescueMenu = missionCommands.addSubMenu("Rescue", searchRescueMenu)
- 
+
  MEDEVACEVENTHANDLER = {}
  function MEDEVACEVENTHANDLER:onEvent(Event)
      if Event.id == world.event.S_EVENT_LAND then
@@ -563,7 +563,7 @@ end
      end
    end
  end
- 
+
  PLAYERLEAVES = {}
  function PLAYERLEAVES:onEvent(Event)
      if Event.id == world.event.S_EVENT_PLAYER_LEAVE_UNIT or Event.id == world.event.S_EVENT_CRASH or Event.id == world.event.S_EVENT_PILOT_DEAD then
@@ -594,7 +594,7 @@ end
     end
   end
  end
- 
+
  PLAYERENTERS = {}
  function PLAYERENTERS:onEvent(Event)
    if Event.id == world.event.S_EVENT_BIRTH then
@@ -608,7 +608,7 @@ end
      missionCommands.addCommandForGroup(unitGroup:getID(), "Register", rescueMenu, missionRegister, unitGroup:getName())
    end
  end
- 
+
  PLAYERTAKESOFF = {}
  function PLAYERTAKESOFF:onEvent(Event)
    if Event.id == world.event.S_EVENT_TAKEOFF then
@@ -642,13 +642,12 @@ function atisMarkers(args,time)
   end
   return time + 300
 end
- 
+
  --TIMERS
  timer.scheduleFunction(missionSelect, {}, timer.getTime() + TimerLoopTime)
  timer.scheduleFunction(atisMarkers, {}, timer.getTime() + 1)
- 
+
  world.addEventHandler(PLAYERTAKESOFF)
  world.addEventHandler(PLAYERENTERS)
  world.addEventHandler(MEDEVACEVENTHANDLER)
  world.addEventHandler(PLAYERLEAVES)
- 
