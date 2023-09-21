@@ -232,7 +232,7 @@ end
 
  --Mission Picking Israel
 function zonePickerIsrael(groupName)
-  ezn = {"IsraelMission10"}--"IsraelMission1","IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12"
+  ezn = {"IsraelMission13"}--"IsraelMission1","IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12","IsraelMission13","IsraelMission14","IsraelMission15","IsraelMission16","IsraelMission17","IsraelMission18","IsraelMission19","IsraelMission20","IsraelMission21","IsraelMission22","IsraelMission23","IsraelMission24"
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
