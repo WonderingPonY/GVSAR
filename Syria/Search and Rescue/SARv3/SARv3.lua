@@ -70,14 +70,14 @@ function dump(o)
   Haifa = "Haifa"
  }
  syriaPlayerLocations = {
-  Damascus = "Damascus"
+  Damascus = "Damascus",
   Aleppo = "Aleppo"
  }
  turkeyPlayerLocations = {
   Adana = "Adana"
  }
  cyprusPlayerLocations = {
-  Lakatamia = "Lakatamia"
+  Lakatamia = "Lakatamia",
   Akrotiri = "Akrotiri"
  }
  lebanonPlayerLocations = {
@@ -232,7 +232,7 @@ end
 
  --Mission Picking Israel
 function zonePickerIsrael(groupName)
-  ezn = { "IsraelMission1"}--,"IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12"
+  ezn = {"IsraelMission10"}--"IsraelMission1","IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12"
   max = (#ezn)
   picked = math.random(1, max)
   count = 0

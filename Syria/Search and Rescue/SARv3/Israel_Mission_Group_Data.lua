@@ -556,7 +556,7 @@ Mission3Scenery = {
     }, -- end of ["units"]
     ["y"] = -43969.667374665,
     ["x"] = -246637.70056677,
-    ["name"] = "IsraelMission3-Scenery-1",
+    ["name"] = "IsraelMission3-Scenery",
     ["start_time"] = 0,
 }
 
@@ -697,7 +697,7 @@ Mission4Scenery = {
     }, -- end of ["units"]
     ["y"] = -45696.647139564,
     ["x"] = -292072.11696743,
-    ["name"] = "IsraelMission4-Scenery-1",
+    ["name"] = "IsraelMission4-Scenery",
     ["start_time"] = 0,
 }
 
@@ -850,7 +850,7 @@ Mission5Scenery = {
     }, -- end of ["units"]
     ["y"] = -69635.040898845,
     ["x"] = -294385.64705134,
-    ["name"] = "IsraelMission5-Scenery-1",
+    ["name"] = "IsraelMission5-Scenery",
     ["start_time"] = 0,
 }
 
@@ -871,13 +871,13 @@ Mission6 = {
         {
             [1] =
             {
-                ["alt"] = 366,
+                ["alt"] = 354,
                 ["type"] = "Turning Point",
                 ["ETA"] = 0,
                 ["alt_type"] = "BARO",
                 ["formation_template"] = "",
-                ["y"] = -78987.621257827,
-                ["x"] = -275016.60213837,
+                ["y"] = -78047.673956744,
+                ["x"] = -275064.13278392,
                 ["ETA_locked"] = true,
                 ["speed"] = 0,
                 ["action"] = "Off Road",
@@ -895,7 +895,7 @@ Mission6 = {
             }, -- end of [1]
         }, -- end of ["points"]
     }, -- end of ["route"]
-    ["groupId"] = 201,
+    ["groupId"] = 218,
     ["hidden"] = false,
     ["units"] =
     {
@@ -904,16 +904,16 @@ Mission6 = {
             ["skill"] = "Average",
             ["coldAtStart"] = false,
             ["type"] = "Soldier M4",
-            ["unitId"] = 222,
-            ["y"] = -78987.621257827,
-            ["x"] = -275016.60213837,
+            ["unitId"] = 283,
+            ["y"] = -78047.673956744,
+            ["x"] = -275064.13278392,
             ["name"] = "IsraelMission6-Patient",
             ["heading"] = 1.8849555921539,
             ["playerCanDrive"] = false,
         }, -- end of [1]
     }, -- end of ["units"]
-    ["y"] = -78987.621257827,
-    ["x"] = -275016.60213837,
+    ["y"] = -78047.673956744,
+    ["x"] = -275064.13278392,
     ["name"] = "IsraelMission6-Patient",
     ["start_time"] = 0,
 }
@@ -930,31 +930,18 @@ Mission6Scenery = {
     {
         ["spans"] =
         {
-            [1] =
-            {
-                [1] =
-                {
-                    ["y"] = -82514.760326227,
-                    ["x"] = -220500.18223075,
-                }, -- end of [1]
-                [2] =
-                {
-                    ["y"] = -82514.760326227,
-                    ["x"] = -220500.18223075,
-                }, -- end of [2]
-            }, -- end of [1]
         }, -- end of ["spans"]
         ["points"] =
         {
             [1] =
             {
-                ["alt"] = 367,
+                ["alt"] = 355,
                 ["type"] = "Turning Point",
                 ["ETA"] = 0,
                 ["alt_type"] = "BARO",
                 ["formation_template"] = "",
-                ["y"] = -78971.262028609,
-                ["x"] = -275026.56495492,
+                ["y"] = -78039.667365463,
+                ["x"] = -275061.52595601,
                 ["ETA_locked"] = true,
                 ["speed"] = 0,
                 ["action"] = "Off Road",
@@ -972,7 +959,7 @@ Mission6Scenery = {
             }, -- end of [1]
         }, -- end of ["points"]
     }, -- end of ["route"]
-    ["groupId"] = 202,
+    ["groupId"] = 219,
     ["hidden"] = false,
     ["units"] =
     {
@@ -981,41 +968,53 @@ Mission6Scenery = {
             ["skill"] = "Average",
             ["coldAtStart"] = false,
             ["type"] = "AA8",
-            ["unitId"] = 224,
-            ["y"] = -78971.262028609,
-            ["x"] = -275026.56495492,
-            ["name"] = "IsraelMission6-Scenery-1-1",
-            ["heading"] = 5.4977871437821,
+            ["unitId"] = 290,
+            ["y"] = -78039.667365463,
+            ["x"] = -275061.52595601,
+            ["name"] = "IsraelMission6-Scenery-1",
+            ["heading"] = 4.1015237421867,
             ["playerCanDrive"] = false,
         }, -- end of [1]
         [2] =
         {
             ["skill"] = "Average",
             ["coldAtStart"] = false,
-            ["type"] = "ZIL-4331",
-            ["unitId"] = 225,
-            ["y"] = -78982.750689043,
-            ["x"] = -275032.0749833,
-            ["name"] = "IsraelMission6-Scenery-1-2",
-            ["heading"] = 5.8992128717408,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 292,
+            ["y"] = -78048.007888517,
+            ["x"] = -275062.67871123,
+            ["name"] = "IsraelMission6-Scenery-3",
+            ["heading"] = 4.1015237421867,
             ["playerCanDrive"] = false,
         }, -- end of [2]
         [3] =
         {
             ["skill"] = "Average",
             ["coldAtStart"] = false,
-            ["type"] = "MAZ-6303",
-            ["unitId"] = 223,
-            ["y"] = -78984.316794563,
-            ["x"] = -275029.46349623,
-            ["name"] = "IsraelMission6-Scenery-1",
-            ["heading"] = 0.95993108859688,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 291,
+            ["y"] = -78049.616813887,
+            ["x"] = -275064.24706964,
+            ["name"] = "IsraelMission6-Scenery-2",
+            ["heading"] = 0.92502450355699,
             ["playerCanDrive"] = false,
         }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 289,
+            ["y"] = -78046.380469385,
+            ["x"] = -275063.42461167,
+            ["name"] = "IsraelMission6-Scenery",
+            ["heading"] = 4.1015237421867,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
     }, -- end of ["units"]
-    ["y"] = -78971.262028609,
-    ["x"] = -275026.56495492,
-    ["name"] = "IsraelMission6-Scenery-1",
+    ["y"] = -78039.667365463,
+    ["x"] = -275061.52595601,
+    ["name"] = "IsraelMission6-Scenery",
     ["start_time"] = 0,
 }
 
@@ -1264,7 +1263,7 @@ Mission7Scenery = {
     }, -- end of ["units"]
     ["y"] = -87062.527558987,
     ["x"] = -277402.90522815,
-    ["name"] = "IsraelMission7-Scenery-1",
+    ["name"] = "IsraelMission7-Scenery",
     ["start_time"] = 0,
 }
 
@@ -1417,7 +1416,7 @@ Mission8Scenery = {
     }, -- end of ["units"]
     ["y"] = -104183.56208425,
     ["x"] = -280174.2850066,
-    ["name"] = "IsraelMission8-Scenery-1",
+    ["name"] = "IsraelMission8-Scenery",
     ["start_time"] = 0,
 }
 
@@ -1642,7 +1641,7 @@ Mission9Scenery = {
     }, -- end of ["units"]
     ["y"] = -87892.379504186,
     ["x"] = -255587.10611741,
-    ["name"] = "IsraelMission9-Scenery-1",
+    ["name"] = "IsraelMission9-Scenery",
     ["start_time"] = 0,
 }
 
@@ -1807,7 +1806,7 @@ Mission10Scenery = {
     }, -- end of ["units"]
     ["y"] = -91641.093986754,
     ["x"] = -251446.55163931,
-    ["name"] = "IsraelMission10-Scenery-1",
+    ["name"] = "IsraelMission10-Scenery",
     ["start_time"] = 0,
 }
 

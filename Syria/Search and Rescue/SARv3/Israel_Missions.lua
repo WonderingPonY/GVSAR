@@ -101,7 +101,7 @@ function missionsIsrael(zonename,groupName)
         coalition.addGroup(80,2,Mission6Scenery) --Adds the Group for the mission
         --trigger.action.effectSmokeBig(zone.point,3,1,"Mission3-Smoke") -- Adds smoke on the zone center
         trigger.action.outText("Israel Mission #6 Started!",15)
-        missioninfo = "A traffic collision has occured at a round about in the city of Umm al-Fahm. There is one patient that needs evac to the nearest Hospital. The victim is located at "..lattitude.." "..longitude.." Look for the t-boned semi, there is also a mark on your map."
+        missioninfo = "A workplace accident has severed a workers arm. There is one patient that needs evac to the nearest Hospital. The victim is located at "..lattitude.." "..longitude.." Look a blue roofed mosque near by, there is also a mark on your map."
         groupId = group:getID()
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
@@ -109,11 +109,13 @@ function missionsIsrael(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Israel Mission 6 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "IsraelMission7") then
+      IsraelMission7Smoke = trigger.misc.getZone('IsraelMission7-1-Smoke').point
+      IsraelMission7Smoke.y = land.getHeight( {x =IsraelMission7Smoke.x, y = IsraelMission7Smoke.z} )
         coalition.addGroup(80,2,Mission7) --Adds the Group for the mission
         coalition.addGroup(80,2,Mission7Scenery) --Adds the Group for the mission
-        trigger.action.effectSmokeBig(zone.point,1,1,"IsraelMission7-Smoke-1") -- Adds smoke on the zone center
-        trigger.action.effectSmokeBig(zone.point,1,1,"IsraelMission7-Smoke-2")
-        trigger.action.effectSmokeBig(zone.point,1,1,"IsraelMission7-Smoke-3")
+        trigger.action.effectSmokeBig(IsraelMission7Smoke,2,1,"IsraelMission7-1-Smoke") -- Adds smoke on the zone center
+        --trigger.action.effectSmokeBig(zone.point,2,1,"IsraelMission7-2-Smoke")
+        --trigger.action.effectSmokeBig(zone.point,2,1,"IsraelMission7-3-Smoke")
         trigger.action.outText("Israel Mission #7 Started!",15)
         missioninfo = "A multi vehicle traffic collision has occured south of the city of Kafr Qara. There are four patients that needs evac to the nearest Hospital. The victim is located at "..lattitude.." "..longitude.." Look for the smoke south of the town, there is also a mark on your map."
         groupId = group:getID()
@@ -135,9 +137,11 @@ function missionsIsrael(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Israel Mission 8 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "IsraelMission9") then
+      IsraelMission9Smoke = trigger.misc.getZone('IsraelMission9-Smoke').point
+      IsraelMission9Smoke.y = land.getHeight( {x =IsraelMission9Smoke.x, y = IsraelMission9Smoke.z} )
         coalition.addGroup(80,2,Mission9) --Adds the Group for the mission
         coalition.addGroup(80,2,Mission9Scenery) --Adds the Group for the mission
-        trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission9-Smoke") -- Adds smoke on the zone center
+        trigger.action.effectSmokeBig(IsraelMission9Smoke,3,1,"IsraelMission9-Smoke") -- Adds smoke on the zone center
         trigger.action.outText("Israel Mission #9 Started!",15)
         missioninfo = "A structure has caught fire. There are fire rescue on scene, retreive the victim(s) and take them to one of the Hospitals in Haifa. The victim is located at "..lattitude.." "..longitude.." there is a mark on your map."
         groupId = group:getID()
@@ -184,6 +188,6 @@ function missionsIsrael(zonename,groupName)
 
 
 
-      end
+
     end
 end
