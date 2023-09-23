@@ -1,4 +1,4 @@
-Mission1 = {
+IsraelMission1 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -75,7 +75,7 @@ Mission1 = {
     ["start_time"] = 0,
 }
 
-Mission1Scenery = {
+IsraelMission1Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -194,7 +194,7 @@ Mission1Scenery = {
     ["start_time"] = 0,
 }
 
-Mission2 = {
+IsraelMission2 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -258,7 +258,7 @@ Mission2 = {
     ["start_time"] = 0,
 }
 
-Mission2Scenery = {
+IsraelMission2Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -371,7 +371,7 @@ Mission2Scenery = {
     ["start_time"] = 0,
 }
 
-Mission3 = {
+IsraelMission3 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -447,7 +447,7 @@ Mission3 = {
     ["start_time"] = 0,
 }
 
-Mission3Scenery = {
+IsraelMission3Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -560,7 +560,7 @@ Mission3Scenery = {
     ["start_time"] = 0,
 }
 
-Mission4 = {
+IsraelMission4 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -624,7 +624,7 @@ Mission4 = {
     ["start_time"] = 0,
 }
 
-Mission4Scenery = {
+IsraelMission4Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -701,7 +701,7 @@ Mission4Scenery = {
     ["start_time"] = 0,
 }
 
-Mission5 = {
+IsraelMission5 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -765,7 +765,7 @@ Mission5 = {
     ["start_time"] = 0,
 }
 
-Mission5Scenery = {
+IsraelMission5Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -854,7 +854,7 @@ Mission5Scenery = {
     ["start_time"] = 0,
 }
 
-Mission6 = {
+IsraelMission6 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -918,7 +918,7 @@ Mission6 = {
     ["start_time"] = 0,
 }
 
-Mission6Scenery = {
+IsraelMission6Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1018,7 +1018,7 @@ Mission6Scenery = {
     ["start_time"] = 0,
 }
 
-Mission7 = {
+IsraelMission7 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1118,7 +1118,7 @@ Mission7 = {
     ["start_time"] = 0,
 }
 
-Mission7Scenery = {
+IsraelMission7Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1267,7 +1267,7 @@ Mission7Scenery = {
     ["start_time"] = 0,
 }
 
-Mission8 = {
+IsraelMission8 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1331,7 +1331,7 @@ Mission8 = {
     ["start_time"] = 0,
 }
 
-Mission8Scenery = {
+IsraelMission8Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1420,7 +1420,7 @@ Mission8Scenery = {
     ["start_time"] = 0,
 }
 
-Mission9 = {
+IsraelMission9 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1496,7 +1496,7 @@ Mission9 = {
     ["start_time"] = 0,
 }
 
-Mission9Scenery = {
+IsraelMission9Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1645,7 +1645,7 @@ Mission9Scenery = {
     ["start_time"] = 0,
 }
 
-Mission10 = {
+IsraelMission10 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1709,7 +1709,7 @@ Mission10 = {
     ["start_time"] = 0,
 }
 
-Mission10Scenery = {
+IsraelMission10Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1810,7 +1810,7 @@ Mission10Scenery = {
     ["start_time"] = 0,
 }
 
-Mission11 = {
+IsraelMission11 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1874,7 +1874,7 @@ Mission11 = {
     ["start_time"] = 0,
 }
 
-Mission11Scenery = {
+IsraelMission11Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -1999,7 +1999,7 @@ Mission11Scenery = {
     ["start_time"] = 0,
 }
 
-Mission12 = {
+IsraelMission12 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2063,7 +2063,7 @@ Mission12 = {
     ["start_time"] = 0,
 }
 
-Mission12Scenery = {
+IsraelMission12Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2176,7 +2176,7 @@ Mission12Scenery = {
     ["start_time"] = 0,
 }
 
-Mission13 = {
+IsraelMission13 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2265,48 +2265,21 @@ Mission13 = {
     ["start_time"] = 0,
 }
 
-Mission13Scenery = {
-    ["heading"] = 0.034726385855684,
-    ["route"] =
-    {
-        ["points"] =
-        {
-            [1] =
-            {
-                ["alt"] = 0,
-                ["type"] = "",
-                ["name"] = "",
-                ["y"] = -24270.901502568,
-                ["speed"] = 0,
-                ["x"] = -246931.88569063,
-                ["formation_template"] = "",
-                ["action"] = "",
-            }, -- end of [1]
-        }, -- end of ["points"]
-    }, -- end of ["route"]
-    ["groupId"] = 219,
-    ["units"] =
-    {
-        [1] =
-        {
-            ["livery_id"] = "bare_metall",
-            ["category"] = "Planes",
-            ["type"] = "Yak-52",
-            ["unitId"] = 278,
-            ["rate"] = 20,
-            ["y"] = -24270.901502568,
-            ["x"] = -246931.88569063,
-            ["name"] = "IsraelMission13-Scenery",
-            ["heading"] = 0.034726385855684,
-        }, -- end of [1]
-    }, -- end of ["units"]
-    ["y"] = -24270.901502568,
-    ["x"] = -246931.88569063,
-    ["name"] = "IsraelMission13-Scenery",
-    ["dead"] = true,
-}
+-- Mission13Scenery = {
+--     ["heading"] = 4.5727626402251,
+--     ["groupId"] = 242,
+--     ["livery_id"] = "bare_metall",
+--     ["category"] = "Planes",
+--     ["type"] = "Yak-52",
+--     ["unitId"] = 342,
+--     ["rate"] = 20,
+--     ["y"] = -24264.232615727,
+--     ["x"] = -246990.58852024,
+--     ["name"] = "IsraelMission13-Scenery",
+--     ["dead"] = true,
+-- }
 
-Mission14 = {
+IsraelMission14 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2383,7 +2356,7 @@ Mission14 = {
     ["start_time"] = 0,
 }
 
-Mission14Scenery = {
+IsraelMission14Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2484,7 +2457,7 @@ Mission14Scenery = {
     ["start_time"] = 0,
 }
 
-Mission15 = {
+IsraelMission15 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2561,7 +2534,7 @@ Mission15 = {
     ["start_time"] = 0,
 }
 
-Mission15Scenery = {
+IsraelMission15Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2698,7 +2671,7 @@ Mission15Scenery = {
     ["start_time"] = 0,
 }
 
-Mission16 = {
+IsraelMission16 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2775,7 +2748,7 @@ Mission16 = {
     ["start_time"] = 0,
 }
 
-Mission16Scenery = {
+IsraelMission16Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2852,7 +2825,7 @@ Mission16Scenery = {
     ["start_time"] = 0,
 }
 
-Mission17 = {
+IsraelMission17 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -2953,7 +2926,7 @@ Mission17 = {
     ["start_time"] = 0,
 }
 
-Mission17Scenery = {
+IsraelMission17Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3150,7 +3123,7 @@ Mission17Scenery = {
     ["start_time"] = 0,
 }
 
-Mission18 = {
+IsraelMission18 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3227,7 +3200,7 @@ Mission18 = {
     ["start_time"] = 0,
 }
 
-Mission18Scenery = {
+IsraelMission18Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3340,7 +3313,7 @@ Mission18Scenery = {
     ["start_time"] = 0,
 }
 
-Mission19 = {
+IsraelMission19 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3429,7 +3402,7 @@ Mission19 = {
     ["start_time"] = 0,
 }
 
-Mission20 = {
+IsraelMission20 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3506,7 +3479,7 @@ Mission20 = {
     ["start_time"] = 0,
 }
 
-Mission20Scenery = {
+IsraelMission20Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3607,7 +3580,7 @@ Mission20Scenery = {
     ["start_time"] = 0,
 }
 
-Mission21 = {
+IsraelMission21 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3684,7 +3657,7 @@ Mission21 = {
     ["start_time"] = 0,
 }
 
-Mission21Scenery = {
+IsraelMission21Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3809,7 +3782,7 @@ Mission21Scenery = {
     ["start_time"] = 0,
 }
 
-Mission22 = {
+IsraelMission22 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3886,7 +3859,7 @@ Mission22 = {
     ["start_time"] = 0,
 }
 
-Mission22Scenery = {
+IsraelMission22Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -3987,7 +3960,7 @@ Mission22Scenery = {
     ["start_time"] = 0,
 }
 
-Mission23 = {
+IsraelMission23 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -4064,7 +4037,7 @@ Mission23 = {
     ["start_time"] = 0,
 }
 
-Mission23Scenery = {
+IsraelMission23Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -4201,7 +4174,7 @@ Mission23Scenery = {
     ["start_time"] = 0,
 }
 
-Mission24 = {
+IsraelMission24 = {
     ["visible"] = false,
     ["tasks"] =
     {
@@ -4278,7 +4251,7 @@ Mission24 = {
     ["start_time"] = 0,
 }
 
-Mission24Scenery = {
+IsraelMission24Scenery = {
     ["visible"] = false,
     ["tasks"] =
     {
