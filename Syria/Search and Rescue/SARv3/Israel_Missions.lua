@@ -340,5 +340,142 @@ function missionsIsrael(zonename,groupName)
         missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
         trigger.action.markToGroup((groupId*51515151),"Israel Mission 24 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
+    elseif (zonename == "IsraelMission25") then
+        coalition.addGroup(80,2,IsraelMission25) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission25Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(IsraelMission23Smoke,1,1,"IsraelMission23-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #25 Started!",15)
+        missioninfo = "A clinic located at "..lattitude.." "..longitude.." needs a patient transfer to Carmel Health Centre. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 25 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission26") then
+        coalition.addGroup(80,2,IsraelMission26) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission26Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(IsraelMission23Smoke,1,1,"IsraelMission23-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #26 Started!",15)
+        missioninfo = "We just received a call that a railroad worker tried to highfive a train lost his arm. Patient needs evac at "..lattitude.." "..longitude..". There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 26 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission27") then
+        coalition.addGroup(80,2,IsraelMission27) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission27Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(IsraelMission23Smoke,1,1,"IsraelMission23-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #27 Started!",15)
+        missioninfo = "Search and Rescue has been requested in the area of "..lattitude.." "..longitude..". A missing outdoorsman has been reported missing for several days now. Find them and transport them to the nearest Hospital for medical treatment. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 27 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission28") then
+        coalition.addGroup(80,2,IsraelMission28) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission28Scenery) --Adds the Group for the mission
+        trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-2-Smoke") -- Adds smoke on the zone center
+        trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-3-Smoke") -- Adds smoke on the zone center
+        trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-4-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #28 Started!",15)
+        missioninfo = "A steel factory located at "..lattitude.." "..longitude.." has reported a large explosion at their facility. Fire and Rescue are on the scene and have pulled several factory workers from the fire. They need evac to the closes hospital. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 28 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission29") then
+        coalition.addGroup(80,2,IsraelMission29) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission29Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #29 Started!",15)
+        missioninfo = "A medevac has been requested to the nearest hospital at a small pond Southwest of Rosh Pina. Coordinates are as followed "..lattitude.." "..longitude..". Report indicates boy was playing by the pond and got bit by some kind of snake. Shortly after the boy fell unconscious. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 29 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission30") then
+        coalition.addGroup(80,2,IsraelMission30) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission30Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(zone.point,3,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #30 Started!",15)
+        missioninfo = "We just received a call that a lineman working on high voltage lines has been electrocuted. Their reported location is "..lattitude.." "..longitude..". EMS has not arrived on the scene yet but the worker needs transport to the nearest hospital. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 30 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission31") then
+      IsraelMission31Smoke = trigger.misc.getZone('IsraelMission31-Smoke').point
+      IsraelMission31Smoke.y = land.getHeight( {x =IsraelMission31Smoke.x, y = IsraelMission31Smoke.z} )
+        coalition.addGroup(80,2,IsraelMission31) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission31Scenery) --Adds the Group for the mission
+        trigger.action.effectSmokeBig(IsraelMission31Smoke,1,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #31 Started!",15)
+        missioninfo = "A truck driver has lost control of his rig and hit a tree. Driver is in critical condition and needs transport to the nearest Hospital. Coordinates of the accident are "..lattitude.." "..longitude..". EMS is on scene and stabilizing the patient for transport. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 31 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission32") then
+        coalition.addGroup(80,2,IsraelMission32) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission32Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(IsraelMission31Smoke,1,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #32 Started!",15)
+        missioninfo = "A warehouse worker is complaining of tightness in the chest and arm pain. Medical on scene has requested a medevac at "..lattitude.." "..longitude..". There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 32 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission33") then
+        coalition.addGroup(80,2,IsraelMission33) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission33Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(IsraelMission31Smoke,1,1,"IsraelMission28-1-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #33 Started!",15)
+        missioninfo = "A farmer was found unconscious by his wife in their greenhouse. A medical team is on site and requesting an air evac to the nearest hospital. Coordinates of the greenhouses are as followed "..lattitude.." "..longitude..". There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 33 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission34") then
+        coalition.addGroup(80,2,IsraelMission34) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission34Scenery) --Adds the Group for the mission
+        trigger.action.effectSmokeBig(zone.point,2,1,"IsraelMission34-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #34 Started!",15)
+        missioninfo = "A structure fire has been reported at "..lattitude.." "..longitude..". A burn victim needs transport to the nearest hospital. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 34 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "IsraelMission35") then
+        coalition.addGroup(80,2,IsraelMission35) --Adds the Group for the mission
+        coalition.addGroup(80,2,IsraelMission35Scenery) --Adds the Group for the mission
+        --trigger.action.effectSmokeBig(zone.point,2,1,"IsraelMission34-Smoke") -- Adds smoke on the zone center
+        trigger.action.outText("Israel Mission #35 Started!",15)
+        missioninfo = "A clinic located at "..lattitude.." "..longitude.." has a kidney transplant patient that needs transport to Carmel Health Centre. There is a mark on your map."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Israel Mission 35 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
     end
 end

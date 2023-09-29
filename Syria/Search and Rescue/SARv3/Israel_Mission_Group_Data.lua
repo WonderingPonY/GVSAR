@@ -4351,3 +4351,1802 @@ IsraelMission24Scenery = {
     ["name"] = "IsraelMission24-Scenery",
     ["start_time"] = 0,
 }
+
+IsraelMission25 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 1163,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -17885.413095835,
+                ["x"] = -194037.28567033,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 243,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 343,
+            ["y"] = -17885.413095835,
+            ["x"] = -194037.28567033,
+            ["name"] = "IsraelMission25-Patient-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -17885.413095835,
+    ["x"] = -194037.28567033,
+    ["name"] = "IsraelMission25-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission25Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 1161,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -17883.089614843,
+                ["x"] = -194048.02328047,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 244,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 366,
+            ["y"] = -17883.089614843,
+            ["x"] = -194048.02328047,
+            ["name"] = "IsraelMission25-Scenery-3",
+            ["heading"] = 4.1189770347066,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 369,
+            ["y"] = -17889.292122138,
+            ["x"] = -194033.34199359,
+            ["name"] = "IsraelMission25-Scenery-6",
+            ["heading"] = 4.1189770347066,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 368,
+            ["y"] = -17892.201636192,
+            ["x"] = -194034.7816293,
+            ["name"] = "IsraelMission25-Scenery-5",
+            ["heading"] = 5.8643062867009,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 367,
+            ["y"] = -17888.612865899,
+            ["x"] = -194035.72959264,
+            ["name"] = "IsraelMission25-Scenery-4",
+            ["heading"] = 5.3232542185827,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
+        [5] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 365,
+            ["y"] = -17886.474833232,
+            ["x"] = -194041.96552125,
+            ["name"] = "IsraelMission25-Scenery-2",
+            ["heading"] = 4.1189770347066,
+            ["playerCanDrive"] = true,
+        }, -- end of [5]
+        [6] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "house1arm",
+            ["unitId"] = 344,
+            ["y"] = -17906.07346601,
+            ["x"] = -194043.74721514,
+            ["name"] = "IsraelMission25-Scenery-1",
+            ["heading"] = 4.0491638646268,
+            ["playerCanDrive"] = false,
+        }, -- end of [6]
+    }, -- end of ["units"]
+    ["y"] = -17883.089614843,
+    ["x"] = -194048.02328047,
+    ["name"] = "IsraelMission25-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission26 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -58473.350059455,
+                ["x"] = -271917.59354359,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 246,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 346,
+            ["y"] = -58473.350059455,
+            ["x"] = -271917.59354359,
+            ["name"] = "IsraelMission26-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -58473.350059455,
+    ["x"] = -271917.59354359,
+    ["name"] = "IsraelMission26-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission26Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -58471.692251695,
+                ["x"] = -271891.44660784,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 245,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 370,
+            ["y"] = -58471.692251695,
+            ["x"] = -271891.44660784,
+            ["name"] = "IsraelMission26-Scenery-1",
+            ["heading"] = 3.4208453339089,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 372,
+            ["y"] = -58475.435793506,
+            ["x"] = -271918.95023555,
+            ["name"] = "IsraelMission26-Scenery-3",
+            ["heading"] = 1.0471975511966,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 371,
+            ["y"] = -58474.811324076,
+            ["x"] = -271915.77111845,
+            ["name"] = "IsraelMission26-Scenery-2",
+            ["heading"] = 2.9146998508305,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 345,
+            ["y"] = -58467.448797915,
+            ["x"] = -271876.92952912,
+            ["name"] = "IsraelMission26-Scenery",
+            ["heading"] = 3.4208453339089,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
+    }, -- end of ["units"]
+    ["y"] = -58471.692251695,
+    ["x"] = -271891.44660784,
+    ["name"] = "IsraelMission26-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission27 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 539,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -82853.892460976,
+                ["x"] = -331361.59626718,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 248,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 348,
+            ["y"] = -82853.892460976,
+            ["x"] = -331361.59626718,
+            ["name"] = "IsraelMission27-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -82853.892460976,
+    ["x"] = -331361.59626718,
+    ["name"] = "IsraelMission27-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission27Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 1123,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -82883.239239896,
+                ["x"] = -331375.36529684,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                            [1] =
+                            {
+                                ["number"] = 1,
+                                ["auto"] = true,
+                                ["id"] = "WrappedAction",
+                                ["enabled"] = true,
+                                ["params"] =
+                                {
+                                    ["action"] =
+                                    {
+                                        ["id"] = "EPLRS",
+                                        ["params"] =
+                                        {
+                                            ["value"] = true,
+                                            ["groupId"] = 1,
+                                        }, -- end of ["params"]
+                                    }, -- end of ["action"]
+                                }, -- end of ["params"]
+                            }, -- end of [1]
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 247,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Hummer",
+            ["unitId"] = 347,
+            ["y"] = -82883.239239896,
+            ["x"] = -331375.36529684,
+            ["name"] = "IsraelMission27-Scenery",
+            ["heading"] = 4.2586033748662,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -82883.239239896,
+    ["x"] = -331375.36529684,
+    ["name"] = "IsraelMission27-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission28= {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 15,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -106857.13764179,
+                ["x"] = -299405.59812184,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 250,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 384,
+            ["y"] = -106857.13764179,
+            ["x"] = -299405.59812184,
+            ["name"] = "IsraelMission28-Patient-2",
+            ["heading"] = 1.0471975511966,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 383,
+            ["y"] = -106856.6500795,
+            ["x"] = -299404.63466791,
+            ["name"] = "IsraelMission28-Patient-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 350,
+            ["y"] = -106858.11311171,
+            ["x"] = -299405.13992091,
+            ["name"] = "IsraelMission28-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+    }, -- end of ["units"]
+    ["y"] = -106857.13764179,
+    ["x"] = -299405.59812184,
+    ["name"] = "IsraelMission28-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission28Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 15,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -106860.34950406,
+                ["x"] = -299406.44112836,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 249,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 373,
+            ["y"] = -106860.34950406,
+            ["x"] = -299406.44112836,
+            ["name"] = "IsraelMission28-Scenery-1",
+            ["heading"] = 2.3911010752322,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "HEMTT TFFT",
+            ["unitId"] = 378,
+            ["y"] = -106550.84740852,
+            ["x"] = -299413.59385737,
+            ["name"] = "IsraelMission28-Scenery-6",
+            ["heading"] = 3.6128315516283,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "HEMTT TFFT",
+            ["unitId"] = 377,
+            ["y"] = -106561.18908891,
+            ["x"] = -299520.06053434,
+            ["name"] = "IsraelMission28-Scenery-5",
+            ["heading"] = 0.27925268031909,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "HEMTT TFFT",
+            ["unitId"] = 376,
+            ["y"] = -106587.46815383,
+            ["x"] = -299524.0624224,
+            ["name"] = "IsraelMission28-Scenery-4",
+            ["heading"] = 0.82030474843733,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
+        [5] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "HEMTT TFFT",
+            ["unitId"] = 375,
+            ["y"] = -106723.39895157,
+            ["x"] = -299472.83825524,
+            ["name"] = "IsraelMission28-Scenery-3",
+            ["heading"] = 0.82030474843733,
+            ["playerCanDrive"] = false,
+        }, -- end of [5]
+        [6] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "HEMTT TFFT",
+            ["unitId"] = 374,
+            ["y"] = -106715.66196799,
+            ["x"] = -299410.54219779,
+            ["name"] = "IsraelMission28-Scenery-2",
+            ["heading"] = 3.2288591161895,
+            ["playerCanDrive"] = false,
+        }, -- end of [6]
+        [7] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 382,
+            ["y"] = -106828.0257577,
+            ["x"] = -299390.12643559,
+            ["name"] = "IsraelMission28-Scenery-10",
+            ["heading"] = 3.8397243543875,
+            ["playerCanDrive"] = false,
+        }, -- end of [7]
+        [8] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 381,
+            ["y"] = -106833.36548619,
+            ["x"] = -299392.4893143,
+            ["name"] = "IsraelMission28-Scenery-9",
+            ["heading"] = 2.7052603405912,
+            ["playerCanDrive"] = false,
+        }, -- end of [8]
+        [9] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 380,
+            ["y"] = -106855.39882599,
+            ["x"] = -299406.79596286,
+            ["name"] = "IsraelMission28-Scenery-8",
+            ["heading"] = 5.0090949532237,
+            ["playerCanDrive"] = false,
+        }, -- end of [9]
+        [10] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 379,
+            ["y"] = -106859.39882599,
+            ["x"] = -299403.96739144,
+            ["name"] = "IsraelMission28-Scenery-7",
+            ["heading"] = 3.8397243543875,
+            ["playerCanDrive"] = false,
+        }, -- end of [10]
+        [11] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 349,
+            ["y"] = -106831.75583286,
+            ["x"] = -299394.76465358,
+            ["name"] = "IsraelMission28-Scenery",
+            ["heading"] = 3.8397243543875,
+            ["playerCanDrive"] = true,
+        }, -- end of [11]
+    }, -- end of ["units"]
+    ["y"] = -106860.34950406,
+    ["x"] = -299406.44112836,
+    ["name"] = "IsraelMission28-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission29 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 89,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -52786.175371841,
+                ["x"] = -238290.21868884,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 251,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 385,
+            ["y"] = -52786.175371841,
+            ["x"] = -238290.21868884,
+            ["name"] = "IsraelMission29-Patient-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 351,
+            ["y"] = -52783.741094884,
+            ["x"] = -238297.03466433,
+            ["name"] = "IsraelMission29-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+    }, -- end of ["units"]
+    ["y"] = -52786.175371841,
+    ["x"] = -238290.21868884,
+    ["name"] = "IsraelMission29-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission29Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 89,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -52774.759576815,
+                ["x"] = -238289.15881415,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 252,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "ZIL-4331",
+            ["unitId"] = 352,
+            ["y"] = -52774.759576815,
+            ["x"] = -238289.15881415,
+            ["name"] = "IsraelMission29-Scenery",
+            ["heading"] = 1.221730476396,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -52774.759576815,
+    ["x"] = -238289.15881415,
+    ["name"] = "IsraelMission29-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission30 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 39,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -53294.071451642,
+                ["x"] = -239500.07916713,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 253,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 353,
+            ["y"] = -53294.071451642,
+            ["x"] = -239500.07916713,
+            ["name"] = "IsraelMission30-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -53294.071451642,
+    ["x"] = -239500.07916713,
+    ["name"] = "IsraelMission30-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission30Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 38,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -53310.115179012,
+                ["x"] = -239480.6888954,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 254,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "GAZ-66",
+            ["unitId"] = 386,
+            ["y"] = -53310.115179012,
+            ["x"] = -239480.6888954,
+            ["name"] = "IsraelMission30-Scenery-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 388,
+            ["y"] = -53301.193578884,
+            ["x"] = -239501.66244711,
+            ["name"] = "IsraelMission30-Scenery-3",
+            ["heading"] = 0.78539816339745,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 387,
+            ["y"] = -53302.98365935,
+            ["x"] = -239496.22335647,
+            ["name"] = "IsraelMission30-Scenery-2",
+            ["heading"] = 2.0420352248334,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "GAZ-66",
+            ["unitId"] = 354,
+            ["y"] = -53309.910746731,
+            ["x"] = -239496.9510642,
+            ["name"] = "IsraelMission30-Scenery",
+            ["heading"] = 5.2010811709431,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
+    }, -- end of ["units"]
+    ["y"] = -53310.115179012,
+    ["x"] = -239480.6888954,
+    ["name"] = "IsraelMission30-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission31 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 454,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -63314.212476762,
+                ["x"] = -221754.64975536,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 255,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 355,
+            ["y"] = -63314.212476762,
+            ["x"] = -221754.64975536,
+            ["name"] = "IsraelMission31-Patient",
+            ["heading"] = 4.4854961776254,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -63314.212476762,
+    ["x"] = -221754.64975536,
+    ["name"] = "IsraelMission31-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission31Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 454,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -63308.63578937,
+                ["x"] = -221757.81295835,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 256,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 390,
+            ["y"] = -63308.63578937,
+            ["x"] = -221757.81295835,
+            ["name"] = "IsraelMission31-Scenery-2",
+            ["heading"] = 6.2133721370998,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 393,
+            ["y"] = -63313.983905333,
+            ["x"] = -221755.84975536,
+            ["name"] = "IsraelMission31-Scenery-5",
+            ["heading"] = 6.2133721370998,
+            ["playerCanDrive"] = false,
+        }, -- end of [2]
+        [3] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 392,
+            ["y"] = -63293.393649795,
+            ["x"] = -221743.73836895,
+            ["name"] = "IsraelMission31-Scenery-4",
+            ["heading"] = 6.2133721370998,
+            ["playerCanDrive"] = false,
+        }, -- end of [3]
+        [4] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 391,
+            ["y"] = -63310.862618933,
+            ["x"] = -221751.22507001,
+            ["name"] = "IsraelMission31-Scenery-3",
+            ["heading"] = 0.59341194567807,
+            ["playerCanDrive"] = false,
+        }, -- end of [4]
+        [5] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Paratrooper AKS-74",
+            ["unitId"] = 389,
+            ["y"] = -63312.310047805,
+            ["x"] = -221753.12170094,
+            ["name"] = "IsraelMission31-Scenery-1",
+            ["heading"] = 3.2986722862693,
+            ["playerCanDrive"] = false,
+        }, -- end of [5]
+        [6] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "MAZ-6303",
+            ["unitId"] = 356,
+            ["y"] = -63297.685409985,
+            ["x"] = -221726.89775013,
+            ["name"] = "IsraelMission31-Scenery",
+            ["heading"] = 4.5902159327451,
+            ["playerCanDrive"] = false,
+        }, -- end of [6]
+    }, -- end of ["units"]
+    ["y"] = -63308.63578937,
+    ["x"] = -221757.81295835,
+    ["name"] = "IsraelMission31-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission32 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 732,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -55283.737859371,
+                ["x"] = -225391.91281499,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 257,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 357,
+            ["y"] = -55283.737859371,
+            ["x"] = -225391.91281499,
+            ["name"] = "IsraelMission32-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -55283.737859371,
+    ["x"] = -225391.91281499,
+    ["name"] = "IsraelMission32-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission32Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 732,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -55289.582728991,
+                ["x"] = -225393.62768301,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 258,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 358,
+            ["y"] = -55289.582728991,
+            ["x"] = -225393.62768301,
+            ["name"] = "IsraelMission32-Scenery",
+            ["heading"] = 5.9864793343406,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -55289.582728991,
+    ["x"] = -225393.62768301,
+    ["name"] = "IsraelMission32-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission33 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 214,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -48526.392785981,
+                ["x"] = -256226.47712496,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 259,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 359,
+            ["y"] = -48526.392785981,
+            ["x"] = -256226.47712496,
+            ["name"] = "IsraelMission33-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -48526.392785981,
+    ["x"] = -256226.47712496,
+    ["name"] = "IsraelMission33-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission33Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 214,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -48526.353928176,
+                ["x"] = -256207.65515757,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 260,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 394,
+            ["y"] = -48526.353928176,
+            ["x"] = -256207.65515757,
+            ["name"] = "IsraelMission33-Scenery-1",
+            ["heading"] = 5.9864793343406,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 360,
+            ["y"] = -48520.506494082,
+            ["x"] = -256226.78125269,
+            ["name"] = "IsraelMission33-Scenery",
+            ["heading"] = 5.9864793343406,
+            ["playerCanDrive"] = true,
+        }, -- end of [2]
+    }, -- end of ["units"]
+    ["y"] = -48526.353928176,
+    ["x"] = -256207.65515757,
+    ["name"] = "IsraelMission33-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission34 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -45996.514621917,
+                ["x"] = -279609.6220469,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 261,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 361,
+            ["y"] = -45996.514621917,
+            ["x"] = -279609.6220469,
+            ["name"] = "IsraelMission34-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -45996.514621917,
+    ["x"] = -279609.6220469,
+    ["name"] = "IsraelMission34-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission34Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -45991.718628778,
+                ["x"] = -279610.04982895,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 262,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 395,
+            ["y"] = -45991.718628778,
+            ["x"] = -279610.04982895,
+            ["name"] = "IsraelMission34-Scenery-1",
+            ["heading"] = 0,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+        [2] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 362,
+            ["y"] = -45964.050432534,
+            ["x"] = -279569.12433609,
+            ["name"] = "IsraelMission34-Scenery",
+            ["heading"] = 4.939281783144,
+            ["playerCanDrive"] = true,
+        }, -- end of [2]
+    }, -- end of ["units"]
+    ["y"] = -45991.718628778,
+    ["x"] = -279610.04982895,
+    ["name"] = "IsraelMission34-Scenery",
+    ["start_time"] = 0,
+}
+
+IsraelMission35 = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -50645.14171493,
+                ["x"] = -277781.20450811,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 263,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "Soldier M4",
+            ["unitId"] = 363,
+            ["y"] = -50645.14171493,
+            ["x"] = -277781.20450811,
+            ["name"] = "IsraelMission35-Patient",
+            ["heading"] = 0,
+            ["playerCanDrive"] = false,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -50645.14171493,
+    ["x"] = -277781.20450811,
+    ["name"] = "IsraelMission35-Patient",
+    ["start_time"] = 0,
+}
+
+IsraelMission35Scenery = {
+    ["visible"] = false,
+    ["tasks"] =
+    {
+    }, -- end of ["tasks"]
+    ["uncontrollable"] = false,
+    ["task"] = "Ground Nothing",
+    ["taskSelected"] = true,
+    ["route"] =
+    {
+        ["spans"] =
+        {
+        }, -- end of ["spans"]
+        ["points"] =
+        {
+            [1] =
+            {
+                ["alt"] = 3,
+                ["type"] = "Turning Point",
+                ["ETA"] = 0,
+                ["alt_type"] = "BARO",
+                ["formation_template"] = "",
+                ["y"] = -50651.234693779,
+                ["x"] = -277783.62500656,
+                ["ETA_locked"] = true,
+                ["speed"] = 0,
+                ["action"] = "Off Road",
+                ["task"] =
+                {
+                    ["id"] = "ComboTask",
+                    ["params"] =
+                    {
+                        ["tasks"] =
+                        {
+                        }, -- end of ["tasks"]
+                    }, -- end of ["params"]
+                }, -- end of ["task"]
+                ["speed_locked"] = true,
+            }, -- end of [1]
+        }, -- end of ["points"]
+    }, -- end of ["route"]
+    ["groupId"] = 264,
+    ["hidden"] = false,
+    ["units"] =
+    {
+        [1] =
+        {
+            ["skill"] = "Average",
+            ["coldAtStart"] = false,
+            ["type"] = "AA8",
+            ["unitId"] = 396,
+            ["y"] = -50651.234693779,
+            ["x"] = -277783.62500656,
+            ["name"] = "IsraelMission35-Scenery-1",
+            ["heading"] = 2.3387411976724,
+            ["playerCanDrive"] = true,
+        }, -- end of [1]
+    }, -- end of ["units"]
+    ["y"] = -50651.234693779,
+    ["x"] = -277783.62500656,
+    ["name"] = "IsraelMission35-Scenery",
+    ["start_time"] = 0,
+}
