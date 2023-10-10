@@ -232,7 +232,8 @@ end
 
  --Mission Picking Israel
 function zonePickerIsrael(groupName)
-  ezn = {"IsraelMission1","IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12","IsraelMission13","IsraelMission14","IsraelMission15","IsraelMission16","IsraelMission17","IsraelMission18","IsraelMission19","IsraelMission20","IsraelMission21","IsraelMission22","IsraelMission23","IsraelMission24" }-- "IsraelMission25","IsraelMission26", "IsraelMission27", "IsraelMission28","IsraelMission29","IsraelMission30","IsraelMission31","IsraelMission32","IsraelMission33","IsraelMission34","IsraelMission35"
+  ezn = {"IsraelMission1","IsraelMission2","IsraelMission3","IsraelMission4","IsraelMission5","IsraelMission6","IsraelMission7","IsraelMission8","IsraelMission9","IsraelMission10","IsraelMission11","IsraelMission12","IsraelMission13","IsraelMission14","IsraelMission15","IsraelMission16",
+  "IsraelMission17","IsraelMission18","IsraelMission19","IsraelMission20","IsraelMission21","IsraelMission22","IsraelMission23","IsraelMission24", "IsraelMission25", "IsraelMission26", "IsraelMission27", "IsraelMission28", "IsraelMission29", "IsraelMission30", "IsraelMission31", "IsraelMission32", "IsraelMission33", "IsraelMission34", "IsraelMission35" }
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
@@ -272,26 +273,26 @@ end
 --   end
 -- end
 
--- -- Mission Picking Lebanon
--- function zonePickerLebanon(groupName)
---   ezn = { "LebanonMission1","LebanonMission2"}
---   max = (#ezn)
---   picked = math.random(1, max)
---   count = 0
---   while(groupsOnLebanonMissions[ezn[picked]] and count < 10) do
---     picked = math.random(1, max)
---     count = count +1
---   end
---   if groupsOnLebanonMissions[ezn[picked]] then
---     trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
---   else
---     groupsOnLebanonMissions[ezn[picked]] = groupName
---     groupsOnMissions[ezn[picked]] = groupName
---       env.info(dump(groupsOnLebanonMissions))
---     env.info(ezn[picked])
---     missionsLebanon(ezn[picked],groupName)
---   end
--- end
+-- Mission Picking Lebanon
+function zonePickerLebanon(groupName)
+  ezn = { "LebanonMission1","LebanonMission2"}
+  max = (#ezn)
+  picked = math.random(1, max)
+  count = 0
+  while(groupsOnLebanonMissions[ezn[picked]] and count < 10) do
+    picked = math.random(1, max)
+    count = count +1
+  end
+  if groupsOnLebanonMissions[ezn[picked]] then
+    trigger.action.outText("Unable to get a mission, all missions may be taken", 15)
+  else
+    groupsOnLebanonMissions[ezn[picked]] = groupName
+    groupsOnMissions[ezn[picked]] = groupName
+      env.info(dump(groupsOnLebanonMissions))
+    env.info(ezn[picked])
+    missionsLebanon(ezn[picked],groupName)
+  end
+end
 
 -- -- Mission Picking Turkey
 -- function zonePickerTurkey(groupName)
