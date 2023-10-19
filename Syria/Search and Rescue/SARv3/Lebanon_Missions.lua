@@ -124,7 +124,7 @@ function missionsLebanon(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Lebanon Mission 7 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "LebanonMission8") then
-      LebanonMission8Smoke = trigger.misc.getZone('IsraelMission8-Smoke').point
+      LebanonMission8Smoke = trigger.misc.getZone('LebanonMission8-Smoke').point
       LebanonMission8Smoke.y = land.getHeight( {x =LebanonMission8Smoke.x, y = LebanonMission8Smoke.z} )
         coalition.addGroup(80,2,LebanonMission8)
         --coalition.addGroup(80,2,LebanonMission6Scenery)
@@ -138,7 +138,7 @@ function missionsLebanon(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Lebanon Mission 8 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "LebanonMission9") then
-      LebanonMission9Smoke = trigger.misc.getZone('IsraelMission9-Smoke').point
+      LebanonMission9Smoke = trigger.misc.getZone('LebanonMission9-Smoke').point
       LebanonMission9Smoke.y = land.getHeight( {x =LebanonMission9Smoke.x, y = LebanonMission9Smoke.z} )
         coalition.addGroup(80,2,LebanonMission9)
         coalition.addGroup(80,2,LebanonMission9Scenery)
@@ -164,7 +164,7 @@ function missionsLebanon(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Lebanon Mission 10 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "LebanonMission11") then
-      LebanonMission11Smoke = trigger.misc.getZone('IsraelMission11-Smoke').point
+      LebanonMission11Smoke = trigger.misc.getZone('LebanonMission11-Smoke').point
       LebanonMission11Smoke.y = land.getHeight( {x =LebanonMission11Smoke.x, y = LebanonMission11Smoke.z} )
         coalition.addGroup(80,2,LebanonMission11)
         coalition.addGroup(80,2,LebanonMission11Scenery)
@@ -298,22 +298,22 @@ function missionsLebanon(zonename,groupName)
         trigger.action.markToGroup((groupId*51515151),"Lebanon Mission 21 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
 
     elseif (zonename == "LebanonMission22") then
-      LebanonMission22Smoke1 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke1 = trigger.misc.getZone('LebanonMission22-1-Smoke').point
       LebanonMission22Smoke1.y = land.getHeight( {x =LebanonMission22Smoke1.x, y = LebanonMission22Smoke1.z} )
 
-      LebanonMission22Smoke2 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke2 = trigger.misc.getZone('LebanonMission22-2-Smoke').point
       LebanonMission22Smoke2.y = land.getHeight( {x =LebanonMission22Smoke2.x, y = LebanonMission22Smoke2.z} )
 
-      LebanonMission22Smoke3 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke3 = trigger.misc.getZone('LebanonMission22-3-Smoke').point
       LebanonMission22Smoke3.y = land.getHeight( {x =LebanonMission22Smoke3.x, y = LebanonMission22Smoke3.z} )
 
-      LebanonMission22Smoke4 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke4 = trigger.misc.getZone('LebanonMission22-4-Smoke').point
       LebanonMission22Smoke4.y = land.getHeight( {x =LebanonMission22Smoke4.x, y = LebanonMission22Smoke4.z} )
 
-      LebanonMission22Smoke5 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke5 = trigger.misc.getZone('LebanonMission22-5-Smoke').point
       LebanonMission22Smoke5.y = land.getHeight( {x =LebanonMission22Smoke5.x, y = LebanonMission22Smoke5.z} )
 
-      LebanonMission22Smoke6 = trigger.misc.getZone('IsraelMission22-1-Smoke').point
+      LebanonMission22Smoke6 = trigger.misc.getZone('LebanonMission22-6-Smoke').point
       LebanonMission22Smoke6.y = land.getHeight( {x =LebanonMission22Smoke6.x, y = LebanonMission22Smoke6.z} )
         coalition.addGroup(80,2,LebanonMission22)
         coalition.addGroup(80,2,LebanonMission22Scenery)

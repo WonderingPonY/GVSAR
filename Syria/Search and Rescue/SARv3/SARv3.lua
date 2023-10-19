@@ -275,7 +275,7 @@ end
 
 -- Mission Picking Lebanon
 function zonePickerLebanon(groupName)
-  ezn = { "LebanonMission4"}--"LebanonMission1","LebanonMission2","LebanonMission3","LebanonMission4","LebanonMission5","LebanonMission6","LebanonMission7","LebanonMission8","LebanonMission9","LebanonMission10","LebanonMission11","LebanonMission12","LebanonMission13","LebanonMission14","LebanonMission15","LebanonMission16","LebanonMission17","LebanonMission18","LebanonMission19","LebanonMission20","LebanonMission21",
+  ezn = { "LebanonMission17"}--"LebanonMission1","LebanonMission2","LebanonMission3","LebanonMission4","LebanonMission5","LebanonMission6","LebanonMission7","LebanonMission8","LebanonMission9","LebanonMission10","LebanonMission11","LebanonMission12","LebanonMission13","LebanonMission14","LebanonMission15","LebanonMission16","LebanonMission17","LebanonMission18","LebanonMission19","LebanonMission20","LebanonMission21",
 --,"LebanonMission22","LebanonMission23","LebanonMission24","LebanonMission25","LebanonMission26","LebanonMission27","LebanonMission28","LebanonMission29","LebanonMission30"
   max = (#ezn)
   picked = math.random(1, max)
