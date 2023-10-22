@@ -4404,13 +4404,13 @@ LebanonMission28Scenery = {
         {
             [1] =
             {
-                ["alt"] = 0,
+                ["alt"] = -0,
                 ["type"] = "Turning Point",
                 ["ETA"] = 0,
                 ["alt_type"] = "BARO",
                 ["formation_template"] = "",
-                ["y"] = -102177.60291705,
-                ["x"] = -124370.50654863,
+                ["y"] = -102103.31545985,
+                ["x"] = -124291.17674479,
                 ["ETA_locked"] = true,
                 ["speed"] = 0,
                 ["action"] = "Turning Point",
@@ -4426,33 +4426,9 @@ LebanonMission28Scenery = {
                 }, -- end of ["task"]
                 ["speed_locked"] = true,
             }, -- end of [1]
-            [2] =
-            {
-                ["alt"] = 0,
-                ["type"] = "Turning Point",
-                ["ETA"] = 3430.8606715705,
-                ["alt_type"] = "BARO",
-                ["formation_template"] = "",
-                ["y"] = -102635.53992457,
-                ["x"] = -149076.07614925,
-                ["ETA_locked"] = false,
-                ["speed"] = 7.20222,
-                ["action"] = "Turning Point",
-                ["task"] =
-                {
-                    ["id"] = "ComboTask",
-                    ["params"] =
-                    {
-                        ["tasks"] =
-                        {
-                        }, -- end of ["tasks"]
-                    }, -- end of ["params"]
-                }, -- end of ["task"]
-                ["speed_locked"] = true,
-            }, -- end of [2]
         }, -- end of ["points"]
     }, -- end of ["route"]
-    ["groupId"] = 301,
+    ["groupId"] = 308,
     ["hidden"] = false,
     ["units"] =
     {
@@ -4461,19 +4437,20 @@ LebanonMission28Scenery = {
             ["modulation"] = 0,
             ["skill"] = "Average",
             ["type"] = "Ship_Tilde_Supply",
-            ["unitId"] = 401,
-            ["y"] = -102177.60291705,
-            ["x"] = -124370.50654863,
+            ["unitId"] = 415,
+            ["y"] = -102103.31545985,
+            ["x"] = -124291.17674479,
             ["name"] = "LebanonMission28-Scenery",
-            ["heading"] = 3.1601263114035,
+            ["heading"] = 5.3058009260628,
             ["frequency"] = 127500000,
         }, -- end of [1]
     }, -- end of ["units"]
-    ["y"] = -102177.60291705,
-    ["x"] = -124370.50654863,
+    ["y"] = -102103.31545985,
+    ["x"] = -124291.17674479,
     ["name"] = "LebanonMission28-Scenery",
     ["start_time"] = 0,
 }
+
 
 --LebanonMission29 =
 

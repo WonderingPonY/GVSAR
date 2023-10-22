@@ -396,7 +396,7 @@ function missionsLebanon(zonename,groupName)
         coalition.addGroup(80,3,LebanonMission28Scenery)
         --trigger.action.effectSmokeBig(zone.point,1,1, "LebanonMission11-Smoke")
         trigger.action.outText("Lebanon Mission #28 Spawned!",13)
-        missioninfo = "A distress signal has been sent from the supply ship Tilde. They report one of their engineers got his arm stuck in some machinery below deck. The ship's last reported position was "..lattitude.." "..longitude..". There is a mark on your map as well. The Tilde was sailing in a southern course at unknown speed. Find the ship, pick up the engineer, and take them to the nearest hospital or airport (in Lebanon)."
+        missioninfo = "A distress signal has been sent from the supply ship Tilde. They report one of their engineers got his arm stuck in some machinery below deck. The ship's last reported position was "..lattitude.." "..longitude..". There is a mark on your map as well. Find the ship, pick up the engineer, and take them to the nearest hospital or airport (in Lebanon)."
         groupId = group:getID()
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
