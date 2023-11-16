@@ -41,7 +41,7 @@ function missionsCyprus(zonename,groupName)
         -- trigger.action.signalFlare(zone.point,2,30) -- Drops signalflare at the Zone location
         -- trigger.action.effectSmokeBig(zone.point,3,1) -- Adds smoke on the zone center
         -- trigger.action.outText("Easy Mission #1 Spawned!",15)
-        missioninfo = "A Mechanic has broken his leg while working on his Vehicle. He needs to be taken to the hospital and is at "..lattitude.." "..longitude.." Look for a Blue Vehicle, there is a mark on your map."
+        missioninfo = "A power plant worker has been electrocuted needs to be taken to the hospital. Emergency crew is on scene stabalizing the worker. Power plant is at "..lattitude.." "..longitude.." There is a mark on your map."
         groupId = group:getID()
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
@@ -52,11 +52,67 @@ function missionsCyprus(zonename,groupName)
         -- coalition.addGroup(80,2,EasyMission2BuildingFire)
         -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
         -- trigger.action.outText("Easy Mission #2 Spawned!",15)
-        missioninfo = "A structure has caught fire. There are fire rescue on the way however they will not be there in time you must retreive the victims and take them to one of the Hospitals in Adana. The structure fire is located at "..lattitude.." "..longitude.." South East of Yenidam, there is a mark on your map as well."
+        missioninfo = "An accident has occured at a boating ramp at the Dağdere Reservoir, north of the town of Myrtou. A man has been run over while trying to back his boat down the ramp. The boat ramp is located at "..lattitude.." "..longitude..". There is a mark on your map as well. EMTs are on scene prepping the victim for transport."
         groupId = group:getID()
         trigger.action.outTextForGroup(groupId,missioninfo,15)
         params = {groupId,missioninfo}
         missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
         trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 2 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "CyprusMission3") then
+        -- coalition.addGroup(80,2,EasyMission2BuildingFire)
+        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
+        missioninfo = "An injured hiker needs evac from a fire watch station just to the east of Mount Olympus . The landing pad being used for pick up is located at "..lattitude.." "..longitude..". There is a mark on your map as well."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 3 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "CyprusMission4") then
+        -- coalition.addGroup(80,2,EasyMission2BuildingFire)
+        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
+        missioninfo = "A structure fire has broken out in the town of Pentageia. There is one burn victim that needs transport. The structure fire is located at "..lattitude.." "..longitude..". There is a mark on your map as well."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 4 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "CyprusMission5") then
+        -- coalition.addGroup(80,2,EasyMission2BuildingFire)
+        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
+        missioninfo = "A farmer has been crushed by a hay bale and needs transport to the nearest hospital. The farm is located at "..lattitude.." "..longitude..". There is a mark on your map as well."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 5 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "CyprusMission6") then
+        -- coalition.addGroup(80,2,EasyMission2BuildingFire)
+        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
+        missioninfo = "A tourist has fallen off a historical tower and needs transport to the nearest hospital. The ancient city of Soli is located at "..lattitude.." "..longitude..". There is a mark on your map as well.A tourist has become deathly ill at a local resort and local doctors arent sure whats wrong with them. He needs transport to the closest hospital. The resort is located at "..lattitude.." "..longitude..". There is a mark on your map as well."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 6 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
+    elseif (zonename == "CyprusMission7") then
+        -- coalition.addGroup(80,2,EasyMission2BuildingFire)
+        -- trigger.action.effectSmokeBig(zone.point,1,1, "EasyMission2-Smoke")
+        -- trigger.action.outText("Easy Mission #2 Spawned!",15)
+        missioninfo = "A tourist has become deathly ill at a local resort and local doctors arent sure whats wrong with them. He needs transport to the closest hospital. The resort is located at "..lattitude.." "..longitude..". There is a mark on your map as well."
+        groupId = group:getID()
+        trigger.action.outTextForGroup(groupId,missioninfo,15)
+        params = {groupId,missioninfo}
+        missionCommands.addCommandForGroup(groupId, "Mission Info", {[1] = "Rescue Command"}, displayMissionInfo, params)
+        trigger.action.markToGroup((groupId*51515151),"Cyprus Mission 7 for "..Unit.getPlayerName(unit1),zone["point"],groupId,true)
+
     end
 end
