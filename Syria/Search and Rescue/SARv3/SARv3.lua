@@ -491,7 +491,7 @@ end
  function MEDEVACEVENTHANDLER:onEvent(Event)
      if Event.id == world.event.S_EVENT_LAND then
     unit = Event.initiator
-     env.info(unit.." has Landed")
+     env.info(" has Landed")
          if Event.initiator then
             if ( unit:getCategory() == 0) then 	-- UNIT
          env.info("Is a Unit")
