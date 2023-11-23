@@ -198,8 +198,10 @@ end
  function missionRegister(groupName)
   groupsRegisteredForMissions[groupName] = "registered"
   unit1 = Group.getUnit(Group.getByName(groupName),1)
+  unitGroup = Group.getByName(groupName)
   area = string.match(groupName, '^[^-]*')
   trigger.action.outText(Unit.getPlayerName(unit1).." has registered for missions at "..area, 15)
+  missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})
  end
 
  --Timed mission
@@ -584,6 +586,7 @@ end
               params = {group, mission}
               env.info("PLAYER LEFT CANCELLING MISSION "..mission)
               cancelMission(params)
+              groupsRegisteredForMissions[unitGroupName] = nil
             end
           end
           missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})

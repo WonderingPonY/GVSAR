@@ -26,7 +26,6 @@ ______________________DISCORD.GG/graceysvillage______________________________
 
 function missionsLebanon(zonename,groupName)
     group = Group.getByName(groupName)
-    missionCommands.removeItemForGroup(unitGroup:getID(), {[1] = "Rescue Command", [2] = "Rescue", [3] = "Register"})
     commandparams = {groupName, zonename}
     missionCommands.addCommandForGroup(group:getID(), "Cancel Mission", {[1] = "Rescue Command"}, cancelMission, commandparams)
     zone = trigger.misc.getZone(zonename)
