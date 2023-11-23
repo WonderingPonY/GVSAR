@@ -492,10 +492,10 @@ end
      if Event.id == world.event.S_EVENT_LAND then
     unit = Event.initiator
      env.info(" has Landed")
-         if Event.initiator then
-            if ( unit:getCategory() == 0) then 	-- UNIT
+        if Event.initiator then
+        if ( Event.initiator:getCategory() == 0) then 	-- UNIT
          env.info("Is a Unit")
-         if (unit:getDesc().category == 1) then --HELICOPTER
+         if (Event.initiator:getDesc().category == 1) then --HELICOPTER
            env.info("Is a HELICOPTER")
            unitGroup = unit:getGroup():getName()
            env.info(unitGroup)
