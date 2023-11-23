@@ -408,7 +408,6 @@ end
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Patient Menu"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
-   missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    trigger.action.removeMark((group:getID()*51515151))
    trigger.action.effectSmokeStop(mission.."-Smoke")
    scenery = Group.getByName(mission.."-Scenery")
@@ -471,7 +470,7 @@ end
   else
   env.info("Unknown Area "..area)
   end
-   missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
+  --  missionCommands.addCommandForGroup(group:getID(), "Register", rescueMenu, missionRegister, group:getName())
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Cancel Mission"})
    missionCommands.removeItemForGroup(group:getID(), {[1] = "Rescue Command", [2] = "Mission Info"})
    trigger.action.outTextForGroup(group:getID(),"Mission Cancelled", 15)
@@ -571,7 +570,7 @@ end
      if Event.id == world.event.S_EVENT_PLAYER_LEAVE_UNIT or Event.id == world.event.S_EVENT_CRASH or Event.id == world.event.S_EVENT_PILOT_DEAD then
      env.info("PLAYER LEFT UNIT")
          if Event.initiator then
-             if ( Event.initiator:getCategory() == 1) then 	-- UNIT
+             if ( Event.initiator:getCategory() == 0) then 	-- UNIT
          env.info("Is a Unit")
          if (Event.initiator:getDesc().category == 1) then --HELICOPTER
            env.info("Is a HELICOPTER")
