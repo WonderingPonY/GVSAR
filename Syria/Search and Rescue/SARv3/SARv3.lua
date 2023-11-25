@@ -421,13 +421,13 @@ end
     if israelPlayerLocations[area] then
     groupsOnIsraelMissions[mission] = nil
     elseif cyprusPlayerLocations[area] then
-    cyprusPlayerLocations[mission] = nil
+    groupsOnCyprusMissions[mission] = nil
     elseif lebanonPlayerLocations[area] then
-      lebanonPlayerLocations[mission] = nil
+      groupsOnLebanonMissions[mission] = nil
     elseif syriaPlayerLocations[area] then
-      syriaPlayerLocations[mission] = nil
+      groupsOnSyriaMissions[mission] = nil
     elseif turkeyPlayerLocations[area] then
-      turkeyPlayerLocations[mission] = nil
+      groupsOnTurkeyMissions[mission] = nil
     else
     env.info("Unknown Area "..area)
    end
@@ -462,13 +462,13 @@ end
   if israelPlayerLocations[area] then
   groupsOnIsraelMissions[mission] = nil
   elseif cyprusPlayerLocations[area] then
-  cyprusPlayerLocations[mission] = nil
+  groupsOnCyprusMissions[mission] = nil
   elseif lebanonPlayerLocations[area] then
-    lebanonPlayerLocations[mission] = nil
+    groupsOnLebanonMissions[mission] = nil
   elseif syriaPlayerLocations[area] then
-    syriaPlayerLocations[mission] = nil
+    groupsOnSyriaMissions[mission] = nil
   elseif turkeyPlayerLocations[area] then
-    turkeyPlayerLocations[mission] = nil
+    groupsOnTurkeyMissions[mission] = nil
   else
   env.info("Unknown Area "..area)
   end
