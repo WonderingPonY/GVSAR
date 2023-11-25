@@ -321,7 +321,7 @@ function missionsLebanon(zonename,groupName)
         trigger.action.effectSmokeBig(LebanonMission22Smoke3,4,1, "LebanonMission22-3-Smoke")
         trigger.action.effectSmokeBig(LebanonMission22Smoke4,4,1, "LebanonMission22-4-Smoke")
         trigger.action.effectSmokeBig(LebanonMission22Smoke5,4,1, "LebanonMission22-5-Smoke")
-        trigger.action.smoke(LebanonMission22Smoke6,3)
+        --trigger.action.smoke(LebanonMission22Smoke6,3)
         trigger.action.outText("Lebanon Mission #22 Spawned!",13)
         missioninfo = "A fire has broke out at a power plant south of the town of Saida "..lattitude.." "..longitude..". There is a mark on your map as well. Fire fighters have marked a safe place to land with orange smoke. Several power plant workers have suffered severe burns and need transport to the nearest hospital or airport (in Lebanon)."
         groupId = group:getID()
