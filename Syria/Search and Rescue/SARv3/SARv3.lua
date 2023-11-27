@@ -223,9 +223,9 @@ end
       elseif string.find(group,"Adana") then
         zonePickerSyria(group)
       elseif string.find(group,"Lakatima") then
-        zonePickerSyria(group)
+        zonePickerCyprus(group)
       elseif string.find(group,"Akrotiri") then
-        zonePickerSyria(group)
+        zonePickerCyprus(group)
       end
     end
   end
@@ -320,7 +320,8 @@ end
 
 -- Mission Picking Cyprus
 function zonePickerCyprus(groupName)
-  ezn = { "CyprusMission1","CyprusMission2"}
+  ezn = { "CyprusMission1","CyprusMission2","CyprusMission3","CyprusMission4","CyprusMission5","CyprusMission6","CyprusMission7","CyprusMission8","CyprusMission9","CyprusMission10","CyprusMission11","CyprusMission12","CyprusMission13","CyprusMission14","CyprusMission15","CyprusMission16","CyprusMission17","CyprusMission18","CyprusMission19","CyprusMission20"
+,"CyprusMission21","CyprusMission22","CyprusMission23","CyprusMission24","CyprusMission25","CyprusMission26","CyprusMission27","CyprusMissio28","CyprusMission29","CyprusMission30","CyprusMission31","CyprusMission32","CyprusMission33","CyprusMission34","CyprusMission35"}
   max = (#ezn)
   picked = math.random(1, max)
   count = 0
