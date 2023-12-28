@@ -495,7 +495,7 @@ end
     unit = Event.initiator
      env.info(" has Landed")
         if Event.initiator then
-        if ( Event.initiator:getCategory() == 0) then 	-- UNIT
+        if ( Event.initiator:getCategory() == 1) then 	-- UNIT
          env.info("Is a Unit")
          if (Event.initiator:getDesc().category == 1) then --HELICOPTER
            env.info("Is a HELICOPTER")
@@ -573,7 +573,7 @@ end
      if Event.id == world.event.S_EVENT_PLAYER_LEAVE_UNIT or Event.id == world.event.S_EVENT_CRASH or Event.id == world.event.S_EVENT_PILOT_DEAD then
      env.info("PLAYER LEFT UNIT")
          if Event.initiator then
-             if ( Event.initiator:getCategory() == 0) then 	-- UNIT
+             if ( Event.initiator:getCategory() == 1) then 	-- UNIT
          env.info("Is a Unit")
          if (Event.initiator:getDesc().category == 1) then --HELICOPTER
            env.info("Is a HELICOPTER")
