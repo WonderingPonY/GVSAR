@@ -481,7 +481,7 @@ function MEDEVACEVENTHANDLER:onEvent(Event)
 		unit = Event.initiator
      env.info(" has Landed")
          if Event.initiator then
-            if ( unit:getCategory() == 0) then 	-- UNIT
+            if ( unit:getCategory() == 1) then 	-- UNIT
          env.info("Is a Unit")
          if (unit:getDesc().category == 1) then --HELICOPTER
           env.info("Is a HELICOPTER")
